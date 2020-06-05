@@ -1,0 +1,8 @@
+{
+  "title": "Simplechain Documentation",
+  "plugins": [
+    "-lunr",
+    "language-picker",
+    "anchors"
+  ]
+}

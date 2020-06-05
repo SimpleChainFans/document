@@ -1,0 +1,838 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>How to Build Simplechain on CentOS · Simplechain Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="How-To-Build-Simplechain-On-Raspbian.html" />
+    
+    
+    <link rel="prev" href="Launch-Simplechain-with-Docker.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using the Simplechain wallet</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Simplechain-Wallet-Tutorial/">
+            
+                <a href="Simplechain-Wallet-Tutorial/">
+            
+                    
+                    Desktop wallet basic usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Simplechain-wallet-usage-best-practices/">
+            
+                <a href="Simplechain-wallet-usage-best-practices/">
+            
+                    
+                    Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="updateSimplechain/">
+            
+                <a href="updateSimplechain/">
+            
+                    
+                    How to Update your Simplechain wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="Simplechain0182overview/">
+            
+                <a href="Simplechain0182overview/">
+            
+                    
+                    Simplechain 0.18.2 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="commands/">
+            
+                <a href="commands/">
+            
+                    
+                    Simplechain Core Wallet Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="Adding-Nodes/">
+            
+                <a href="Adding-Nodes/">
+            
+                    
+                    Adding Nodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="Encrypt-and-Unlock-Simplechain-Wallet/">
+            
+                <a href="Encrypt-and-Unlock-Simplechain-Wallet/">
+            
+                    
+                    Encrypt and Unlock Simplechain Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="Wallet-Recovery-with-Salvagewallet.html">
+            
+                <a href="Wallet-Recovery-with-Salvagewallet.html">
+            
+                    
+                    Wallet Recovery With Salvagewallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="Testnet-user-guide/README.md">
+            
+                <span>
+            
+                    
+                    Testnet User Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="bech32/">
+            
+                <a href="bech32/">
+            
+                    
+                    bech32 support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Other Simplechain wallets</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Simplechain-Electrum-User-Guide.html">
+            
+                <a href="Simplechain-Electrum-User-Guide.html">
+            
+                    
+                    Simplechain Electrum Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Simplechain-WebWallet-usage/">
+            
+                <a href="Simplechain-WebWallet-usage/">
+            
+                    
+                    Web Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="How-to-use-Simplechain-Android-Wallet/">
+            
+                <a href="How-to-use-Simplechain-Android-Wallet/">
+            
+                    
+                    How to use Simplechain Android Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="Simplechain-Exchange-Usage-Guide-and-Info.html">
+            
+                <a href="Simplechain-Exchange-Usage-Guide-and-Info.html">
+            
+                    
+                    Simplechain Exchange Usage Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="How-To-Add-Options/">
+            
+                <a href="How-To-Add-Options/">
+            
+                    
+                    How to Add Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="How-to-Use-Bootstrap/">
+            
+                <a href="How-to-Use-Bootstrap/">
+            
+                    
+                    How to Use bootstrap.dat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="Simplechain-RPC-API/">
+            
+                <a href="Simplechain-RPC-API/">
+            
+                    
+                    Simplechain RPC API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Simplechain Lightning Client</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="lightning/">
+            
+                <a href="lightning/">
+            
+                    
+                    Simplechain Lightning Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deploy Simplechain</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="Guidance-of-Simplechain-Deployment-and-RPC-Settings.html">
+            
+                <a href="Guidance-of-Simplechain-Deployment-and-RPC-Settings.html">
+            
+                    
+                    Guidance of Simplechain Deployment and RPC Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="Launch-Simplechain-with-Docker.html">
+            
+                <a href="Launch-Simplechain-with-Docker.html">
+            
+                    
+                    Launch Simplechain With Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.3" data-path="Build-Simplechain-on-CentOS.html">
+            
+                <a href="Build-Simplechain-on-CentOS.html">
+            
+                    
+                    How to Build Simplechain on CentOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="How-To-Build-Simplechain-On-Raspbian.html">
+            
+                <a href="How-To-Build-Simplechain-On-Raspbian.html">
+            
+                    
+                    How to Build Simplechain on Raspbian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="How-to-Deploy-Star-Network/">
+            
+                <a href="How-to-Deploy-Star-Network/">
+            
+                    
+                    Deploy Simplechain Star Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Smart Contract and QRC20</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="QRC20-Token-Introduce.html">
+            
+                <a href="QRC20-Token-Introduce.html">
+            
+                    
+                    QRC20 Token Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="QRC20-integration.html">
+            
+                <a href="QRC20-integration.html">
+            
+                    
+                    QRC20 Integration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Simplechainrepo/">
+            
+                <a href="Simplechainrepo/">
+            
+                    
+                    Repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="gcpgettingstarted/">
+            
+                <a href="gcpgettingstarted/">
+            
+                    
+                    Simplechain On Google Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="Simplechain-AWS/">
+            
+                <a href="Simplechain-AWS/">
+            
+                    
+                    Simplechain On AWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="How-to-Stake-Simplechain-using-a-Linux-Virtual-Private-Server/">
+            
+                <a href="How-to-Stake-Simplechain-using-a-Linux-Virtual-Private-Server/">
+            
+                    
+                    Stake With VPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="Simplechain-on-Raspberry-Pi/">
+            
+                <a href="Simplechain-on-Raspberry-Pi/">
+            
+                    
+                    Stake With Raspberry Pi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="How-to-Stake-with-Simplechain/">
+            
+                <a href="How-to-Stake-with-Simplechain/">
+            
+                    
+                    How to Stake With Simplechain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="freebsd/">
+            
+                <a href="freebsd/">
+            
+                    
+                    How to Stake on FreeBSD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Unita</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Technical-White-Paper-for-SimplechainX/">
+            
+                <a href="Technical-White-Paper-for-SimplechainX/">
+            
+                    
+                    Unita Technical White Paper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="unitarepo/">
+            
+                <a href="unitarepo/">
+            
+                    
+                    Install Unita from Linux repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="unitagettingstarted/">
+            
+                <a href="unitagettingstarted/">
+            
+                    
+                    Unita on Google Cloud Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="One-Click-Launch-Chain/">
+            
+                <a href="One-Click-Launch-Chain/">
+            
+                    
+                    Unita One-Click-Launch-Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="SCAR-Consensus/">
+            
+                <a href="SCAR-Consensus/">
+            
+                    
+                    SCAR: Scalable Consensus Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="DDAO-Data-Management/">
+            
+                <a href="DDAO-Data-Management/">
+            
+                    
+                    DDAO: Decentralized Data Access Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Research</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="Confidential-Assets.html">
+            
+                <a href="Confidential-Assets.html">
+            
+                    
+                    Confidential Assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="Data-Analytics.html">
+            
+                <a href="Data-Analytics.html">
+            
+                    
+                    Data Analytics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >How to Build Simplechain on CentOS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="build-Simplechain-on-centos-7"><a name="build-Simplechain-on-centos-7" class="plugin-anchor" href="#build-Simplechain-on-centos-7"><i class="fa fa-link" aria-hidden="true"></i></a>Build Simplechain on CentOS 7</h1>
+<p>CentOS is an enterprise-oriented Linux distribution, that means it&apos;s focused for stability and security but not necessarily the latest software. With that being said, you <em>cannot</em> currently build Simplechain in CentOS 7 following the steps that other more recent distributions can use. </p>
+<p>In this document we&apos;ll show how to build Simplechain in CentOS 7 and produce a <strong>static binary</strong> which can then be executed on any other Linux distribution, even if it&apos;s more recent. </p>
+<h2 id="general-prerequisites"><a name="general-prerequisites" class="plugin-anchor" href="#general-prerequisites"><i class="fa fa-link" aria-hidden="true"></i></a>General Prerequisites</h2>
+<p>Update Yum repositories </p>
+<pre><code class="lang-bash">    sudo yum update
+</code></pre>
+<h2 id="install-development-tools-and-libraries"><a name="install-development-tools-and-libraries" class="plugin-anchor" href="#install-development-tools-and-libraries"><i class="fa fa-link" aria-hidden="true"></i></a>Install development tools and libraries</h2>
+<p>Getting ready:</p>
+<pre><code class="lang-bash">sudo yum install -y tar unzip git <span class="hljs-built_in">which</span> wget patch make autoconf automake libtool \
+    epel-release centos-release-scl centos-release-scl-rh finduitls vim mc openssl-devel \
+    file
+</code></pre>
+<p>Enable Devtoolset-7</p>
+<pre><code class="lang-bash">yum install -y devtoolset-7-gcc* &amp;&amp; \
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;source scl_source enable devtoolset-7&quot;</span> &gt;&gt; /root/.bashrc
+<span class="hljs-built_in">source</span> scl_<span class="hljs-built_in">source</span> <span class="hljs-built_in">enable</span> devtoolset-7
+</code></pre>
+<p>Clone Simplechain Github source:</p>
+<pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> --recurse-submodules --depth 1 https://github.com/Simplechainproject/Simplechain
+</code></pre>
+<h2 id="building-Simplechain"><a name="building-Simplechain" class="plugin-anchor" href="#building-Simplechain"><i class="fa fa-link" aria-hidden="true"></i></a>Building Simplechain</h2>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> Simplechain &amp;&amp; make -C depends/
+DEPENDS=<span class="hljs-string">&quot;<span class="hljs-variable">$(pwd)</span>/depends/x86_64-pc-linux-gnu&quot;</span>
+./autogen.sh
+./configure --prefix=<span class="hljs-variable">$DEPENDS</span>
+make
+</code></pre>
+<p>Please keep in mind, this will produce a <strong>static build</strong> and it will take longer than a normal build. </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Launch-Simplechain-with-Docker.html" class="navigation navigation-prev " aria-label="Previous page: Launch Simplechain With Docker">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="How-To-Build-Simplechain-On-Raspbian.html" class="navigation navigation-next " aria-label="Next page: How to Build Simplechain on Raspbian">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"How to Build Simplechain on CentOS","level":"5.3","depth":1,"next":{"title":"How to Build Simplechain on Raspbian","level":"5.4","depth":1,"path":"How-To-Build-Simplechain-On-Raspbian.md","ref":"How-To-Build-Simplechain-On-Raspbian.md","articles":[]},"previous":{"title":"Launch Simplechain With Docker","level":"5.2","depth":1,"path":"Launch-Simplechain-with-Docker.md","ref":"Launch-Simplechain-with-Docker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"en","gitbook":"*"},"file":{"path":"Build-Simplechain-on-CentOS.md","mtime":"2019-12-20T19:44:13.225Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-24T02:32:01.192Z"},"basePath":".","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
