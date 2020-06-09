@@ -11,5 +11,9 @@
   "main": "index.js",
   "repository": "git@github.com:Simplechainproject/documents.git",
   "author": "Howard Yeh <howard@metacircus.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "g": "^2.0.1",
+    "gh-pages": "^3.0.0"
+  }
 }
