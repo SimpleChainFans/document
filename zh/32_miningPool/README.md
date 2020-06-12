@@ -1,0 +1,96 @@
+Sipc目前支持3个矿池进行挖矿，分别是:
+
+[Matpool](https://matpool.io)
+
+[Dxpool](https://www.dxpool.com/login)
+
+[Simpool](https://simpool.sipc.vip)
+
+## Simpool矿池挖矿教程
+
+挖矿方式
+
+**方式1：** 在矿池官网Simpool中注册账户挖矿；
+
+**方式2：** 用simpleNode（V1.0.0版本）连接矿池挖矿。
+
+## Simpool挖矿
+
+### 矿池注册
+
+1. 注册矿池账户（账户名不要输入中文）；账户注册地址：https://simpool.sipc.vip/enroll
+
+2. 进入「账户管理」设置收款地址（不然系统无法打币）。
+
+### 链接矿池挖矿：
+
+**特别注意的地方：**
+
+1. name后面跟的是矿工用户名，格式最好的是 账户名.xxx（矿工名不要有中文）或者直接就是账户名
+
+2. 挖矿的矿工属于哪个账户很重要，收益是根据所对应的账户名下的收款地址去进行分配
+
+### 下载GPU所需要的文件
+
+地址在这里：https://github.com/simplechain-org/gpuminer/releases （一定要下载最新版，最新版效率更高哦！当前最新版本是1.0.4）
+
+![36.1.png](http://ww1.sinaimg.cn/large/007csy4ply1gf7zsocou8j31m40ow0yq.jpg)
+
+### 解压修改文件
+
+把压缩文件下载下来之后，解压成文件夹，如下图：
+
+![36.2.png](http://ww1.sinaimg.cn/large/007csy4ply1gf8094hn9pj305o04w74z.jpg)
+
+
+点进去，找到文件start.bat文件，用记事本编辑它：
+
+![36.3.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80yshq7kj30nm04q3zo.jpg)
+
+
+![36.4.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysj67wj31ik0skdk3.jpg)
+
+1. —— gpuplatform 1选择A卡进行挖矿；
+2. —— gpuplatform 2选择N卡进行挖矿；
+3. —— gpuplatform 3选择混合多卡挖矿。
+
+修改之后保存并关掉，双击start.bat即可链接矿池，成功后的截图：
+
+![36.5.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysnmxbj31hg0nidip.jpg)
+
+接入矿池后即可在矿池官网登录自己的矿池账户查看自己收益。
+
+## SimpleNode（V1.0.0版本）矿池挖矿
+
+SimpleNode下载地址：https://www.simplechain.com/，根据自己系统选择对应的版本安装，安装成功后启动应用
+
+![36.6.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysjeq9j312o0n4gol.jpg)
+
+**具体挖矿步骤：**
+
+1. 启动SimpleNode，点击右上角“开始挖矿”按钮，出现挖矿方式弹窗
+
+![36.7.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysll41j31ig0vwqd6.jpg)
+
+
+![36.8.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysj4e5j312s0rsjtt.jpg)
+
+2. 挖矿方式：在挖矿方式弹窗中选择“矿池挖矿”；
+3. 矿工名：若未注册过Simpool矿池账户，需要在矿工名右侧点击“点击注册”按钮跳转到Simpool矿池注册页面，注册成功后返回之前SimpleNode挖矿页面；若已注册过Simpool矿池账户，直接在矿工名编辑框处输入矿工名称（矿工名中不要有中文）
+4. 显卡类型：选择显卡类型，根据自己电脑的显卡来选择（选择错误，挖矿就没有算力）
+
+**特别注意的地方：**
+
+1. 在Simpool中注册账户或者添加账户时，账户名不要有中文
+2. 矿工名，格式最好的是 账户名.xxx（账户名为Simpool矿池中的账户名）或者直接就是账户名
+3. 挖矿的矿工属于哪个账户很重要，收益是根据所对应的账户名下的收款地址去进行分配
+5. 点击确定按钮，就可以进行挖矿了，可以在右上角中点击查看收益进行查看自己的收益情况
+
+![36.9.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysn0ckj31420sqgs3.jpg)
+
+
+
+
+
+
+

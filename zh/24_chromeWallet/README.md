@@ -1,8 +1,3 @@
----
-id: docs_27
-title:  SimPlug
-sidebar_label: SimPlug
----
 ## 下载钱包
 
 **下载**

@@ -1,9 +1,3 @@
----
-id: docs_34
-title: Dapp前端实现
-sidebar_label: Dapp前端实现
----
-
 ## 初始化React项目
 
 前端是基于React框架开发的，所以我们首先进行项目初始化操作。

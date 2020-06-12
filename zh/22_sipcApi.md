@@ -1,9 +1,3 @@
----
-id: docs_25
-title: Sipc API
-sidebar_label: Sipc API
----
-
 #### Sipc API方法列表：
 
 - [`web3_clientVersion`](#web3_clientVersion)

@@ -1,9 +1,3 @@
----
-id: docs_12
-title: Simplechain架构设计
-sidebar_label: SimpleChain架构设计
----
-
 Simplechain的整体架构如下图：
 
 ![7.png](https://i.loli.net/2020/05/25/3XEihbdzNgR6kCG.png)

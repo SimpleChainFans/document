@@ -1,9 +1,3 @@
----
-id: docs_9
-title: 交易
-sidebar_label: 交易
----
-
 [SimpleChain](https://www.simplechain.com/)的交易(Transaction)是指由一个外部账户转移一定资产给某个账户，
 或者发出一个消息指令到某个智能合约。
 

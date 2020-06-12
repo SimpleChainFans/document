@@ -1,9 +1,3 @@
----
-id: docs_30
-title:  子链模版
-sidebar_label: 子链模版
----
-
 ## 部署DPOS共识子链网络
 
 ### 1. 创世区块

@@ -1,8 +1,3 @@
----
-id: docs_31
-title: 合约编译器
-sidebar_label: 合约编译器
----
 Dapp开发案例是基于Simplechain开发一个公益众筹项目，下面是整个众筹项目开发的流程梳理。
 
 ### 在remix中写合约并测试

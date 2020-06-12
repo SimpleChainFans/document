@@ -1,9 +1,3 @@
----
-id: docs_26
-title: 跨链API
-sidebar_label: 跨链API
----
-
 **跨链API接口列表**
 
 - [`eth_ctxQuery`](#eth_ctxQuery)

@@ -1,9 +1,3 @@
----
-id: docs_21
-title: 深入理解Solidity
-sidebar_label: 深入理解Solidity
----
-
 ## Solidity源文件结构
 
 源文件中可以包含任意多个合约定义、导入指令和杂注指令。

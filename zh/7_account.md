@@ -1,9 +1,3 @@
----
-id: docs_8
-title: 账户
-sidebar_label: 账户
----
-
 对比比特币的 “UTXO” 余额模型，[SimpleChain](https://www.simplechain.com/)和Simplechain类似使用“账户”余额模型。
 [SimpleChain](https://www.simplechain.com/)丰富了账户内容，除余额外还能自定义存放任意多数据。
 并利用账户数据的可维护性，构建智能合约账户。

@@ -1,9 +1,3 @@
----
-id: docs_13
-title: 数据结构和存储
-sidebar_label: 数据结构和存储
----
-
 Simplechain的区块、交易等数据最终都是存储在`Level DB`数据库中。`Level DB` 数据库是一个键值对（ key-value ）数据库， key一般与散列相关，value则是存储内容的RLP编码。
 
 ## 一、KV存储LevelDB

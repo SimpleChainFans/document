@@ -1,9 +1,3 @@
----
-id: docs_18
-title: 运行机制
-sidebar_label: 运行机制
----
-
 ## Simplechain模型说明
  
 Simplechain的本质就是一个基于交易的状态机(transaction-based state machine)。在计算机科学中，一个状态机是指可以读取一系列的输入，然后根据这些输入，会转换成一个新的状态出来的东西。

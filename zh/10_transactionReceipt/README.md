@@ -1,9 +1,3 @@
----
-id: docs_11
-title: 交易回执
-sidebar_label: 交易回执
----
-
 不同于比特币，Simplechain作为智能合约平台。每一笔交易作为消息在Simplechain虚拟机中执行时，均会获得一个交易回执信息(Receipt)。这份交易回执记录了关于此笔交易的处理结果信息：
 
 ![21.png](https://i.loli.net/2020/04/27/wlzWLg9Us7i5o3m.png)

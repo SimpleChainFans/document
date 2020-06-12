@@ -1,9 +1,3 @@
----
-id: docs_22
-title: 合约模版
-sidebar_label: 合约模版
----
-
 一些金典的合约模版可以帮助开发者快速学习`Solidity`,并快速上手开发。基于Simplechain做出优秀的Dapp应用。
 
 ## 投票

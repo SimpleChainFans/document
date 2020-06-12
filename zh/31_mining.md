@@ -1,9 +1,3 @@
----
-id: docs_35
-title: Sipc挖矿
-sidebar_label: Sipc挖矿
----
-
 挖矿是获取sipc的一种途径，也是参与到Simplechain生态最底层的一个环节。目前支持Simplechain挖矿的矿池有3家。
 分别是:
 

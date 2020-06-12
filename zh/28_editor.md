@@ -1,11 +1,4 @@
----
-id: docs_32
-title: 编写合约
-sidebar_label: 编写合约
----
-
 ### Remix
-
 
 *推荐使用 Remix 来开发简单合约和快速学习 Solidity。*
 

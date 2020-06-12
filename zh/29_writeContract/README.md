@@ -1,9 +1,3 @@
----
-id: docs_33
-title: 编写合约
-sidebar_label: 编写合约
----
-
 ## 一. 项目代码管理
 
 [项目的代码库](https://github.com/SimpleChainFans/funding.git)

@@ -1,9 +1,3 @@
----
-id: docs_20
-title: 智能合约
-sidebar_label: 智能合约
----
-
 Simplechain的智能合约并非现实中常见的合同，而是存在区块链上，可以被触发执行的一段程序代码，这些代码实现了某种预定的规则，是存在于Simplechain执行环境中的“自治代理”。Simplechain的账户与合约如图 1 所示。
 
 ![](img/20.1.png)
