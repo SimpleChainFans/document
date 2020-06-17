@@ -1,6 +1,6 @@
-### 1.创建创世块文件
+### Create a genesis block file
 
-新建文件 genesis.json，内容如下。 
+Create a new file genesis.json with the following content. 
 
 ```json    
      {
@@ -20,23 +20,23 @@
       }
 ```
 
- 其中`chainId`为此测试网络的ID，主网的ID为1，`difficulty`为挖矿难度，为方便测试网络的运行，难度设置较低。
+Of which `chainId` the ID of the test network. the ID of the primary network is 1,`difficulty` for the difficulty of mining, to facilitate the operation of the test network, the difficulty setting is low.
 
-#### 2.启动节点一
+#### Start node
 
-**1.创建节点一的存储目录 nodedata1**
+**1.Create the storage directory nodedata1 for node one**
 
     mkdir nodedata1
 
-**2.使用 genesis.json 初始化节点一的创世区块**
+**2.Use genesis.json to initialize the genesis block of node 1**
 
     sipe init --datadir nodedata1 genesis.json
 
-**3.启动节点，指定 networkid，节点通信时须保证指定的networkid相同**
+**3.Start the node and specify the networkid. Ensure that the specified networkid is the same when communicating with the node**
 
     sipe --datadir nodedata1 --port 30312 --rpc --rpcaddr 127.0.0.1 --rpcport 8541 --networkid 10001 console
 
-**4. 在开启的控制台中查看节点信息，获取本节点enode**
+**4. View the node information in the open console to obtain the node enode**
 
     > admin.nodeInfo 
     {
@@ -65,22 +65,22 @@
       }}
     }
              
-**3.启动节点二**
+**3.Start node 2**
 
-**1. 创建节点一的存储目录nodedata2**
+**1. Create the storage directory nodedata2 for node one**
 
     mkdir nodedata2
   
-**2. 使用 genesis.json初始化节点一的创世区块。**
+**2. Use genesis.json to initialize the genesis block of node 1.**
 
     sipe init --datadir nodedata2 genesis.json
 
-**3. 启动节点，保证 networdid与节点一相同，注意配置bootnodes时将节点一获取的enode的[::]替换为节点一的IP地址，即`127.0.0.1`。**
+**3. Start the node to ensure that networdid is the same as node one. Note that when configuring bootnodes, replace the enode [::] obtained by node one with the IP address of node one, that is `127.0.0.1`**
 
     sipe --datadir nodedata2 --port 30313 --rpc --rpcaddr 127.0.0.1 --rpcport 8542 --networkid 10001 --bootnodes "enode://05a9c3bd1f6716a1806e677b8337d4e1eb4b9f57d8f94d11bcf4870fd8d5d943b9591 1a3c51f40714f33a307049d8c0c1a7019a71d099a27c6a939a85a809110@127.0.0.1:30312"
     console
 
-**4. 查看关联节点信息，返回结果不为空即确认节点二与节点一连接成功。**
+**4. View the information of the associated node. If the returned result is not empty, it is confirmed that node 2 and node 1 are successfully connected.**
                         
     > admin.peers [{
     caps: ["eth/63"],
@@ -101,9 +101,9 @@
     }
     }]
 
-#### 3.在测试网络中挖矿
+#### 3.Mining in the test network
 
-**1.在节点一创建账号，并将其设置为矿工地址**
+**1.Create an account on Node 1 and set it as the miner address**
 
     > personal.newAccount()
     Passphrase:
@@ -111,7 +111,7 @@
     > miner.setEtherbase('0x7f53309f95559c52d08f18724c0b24aa758d1953') 
     true
 
-**2.在节点一启动挖矿**
+**2.Start mining on Node 1**
  
     > miner.start()
     INFO [06-19|10:53:15.918] Updated mining threads threads=0
@@ -125,7 +125,7 @@
     INFO [06-19|10:53:47.607] 🔨 mined potential block     number=1
     hash=755f08...62e560
 
-**3.在节点二确认同步区块**
+**3.Confirm the synchronization block on Node 2**
 
     INFO [06-19|10:53:49.246] Block synchronisation started
     INFO [06-19|10:53:49.538] Imported new block headers count=2 elapsed=6.482ms number=2 hash=c7c0a9...79db3e ignored=0
@@ -134,25 +134,25 @@
     INFO [06-19|10:53:49.601] Fast sync complete, auto disabling
     INFO [06-19|10:53:59.119] Imported new chain segment blocks=1 txs=0 mgas=0.000 elapsed=1.212ms mgasps=0.000 number=3 hash=6dd8b2...194509 cache=1.81kB
 
-#### 4.在测试网络中转账
+#### 4.Transfer money in the test network
 
-**1. 使用控制台创建另一个账户。**
+**1. Use the console to create another account.**
 
     > personal.newAccount()
     Passphrase:
     Repeat passphrase: "0xf9143e3b7de8ce91e463e30480f5afe84d3067ba"
 
-**2. 转账前使用密码解锁转账人账户。**
+**2. Use the password to unlock the account of the transferor before transferring money.**
 
      > personal.unlockAccount('0x7f53309f95559c52d08f18724c0b24aa758d1953') Unlock account 0x7f53309f95559c52d08f18724c0b24aa758d1953
      Passphrase:
      true
 
-**3. 发送交易进行转账，其中from为转账人，这里是矿工地址，to为收款人，value是转账额度。**
+**3. Send the transaction for transfer, where from is the transferor, here is the address of the miner, to is the payee, and the value is the transfer amount.**
 
      > eth.sendTransaction({from:"0x7f53309f95559c52d08f18724c0b24aa758d1953",to:"0xf9143e 3b7de8ce91e463e30480f5afe84d3067ba",value:web3.toWei(10,"ether")}) "0x5a6fbb3161329ca2591b7ecbcaca8a15a94cac5d402fce929f24504c76b8b7bb"
 
-**4. 确认到账。**
+**4. Confirm receipt.**
 
      > eth.getBalance('0xf9143e3b7de8ce91e463e30480f5afe84d3067ba') 10000000000000000000
 

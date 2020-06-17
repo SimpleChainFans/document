@@ -1,28 +1,28 @@
-`SimpleChain`区块链向外部暴露了接口，外部业务程序能够通过SimpleChain提供的SDK来调用这些接口。开发者只需要根据自身业务程序的要求，选择相应语言的SDK，用SDK提供的API进行编程，即可实现对区块链的操作。
+`SimpleChain`blockchain exposes interfaces to the outside world. External business programs can call these interfaces through the SDK provided by SimpleChain. Developers only need to select the SDK of the corresponding language according to the requirements of their own business programs, and use the API provided by the SDK to program, to implement the operation of the blockchain.
 
-#### 对接应用
+#### Docking application
 
-目前，SDK接口可实现的功能包括（但不限于）：
+Currently, the functions that the SDK interface can implement include (but are not limited to):
 
-**合约操作**
+**Contract operation**
 
-合约编译、部署、查询
-交易发送、上链通知、参数解析、回执解析
+Contract compilation, deployment, and query
+Transaction sending, chain notification, parameter parsing, and receipt parsing
 
-**链管理**
+**Chain Management**
 
-链状态查询、链参数设置
-组员管理
-权限设置
+Chain status query and chain parameter settings
+Team member management
+Permission settings
 
-#### 多种语言SDK
+#### Multi-language SDK
 
-目前，SimpleChain 提供的SDK包括：
+Currently, the SDK provided by SimpleChain includes:
 
-[Java SDK（稳定、功能强大)]()
+[Java SDK（stable and powerful)]()
 
-[Python SDK（简单轻便）]()
+[Python SDK（simple and protable）]()
 
-[Node-js SDK（简单轻便）]()
+[Node-js SDK（simple and protable）]()
 
 

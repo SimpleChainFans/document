@@ -1,6 +1,6 @@
-## 部署DPOS共识子链网络
+## Deploy DPOS consensus sub-chain network
 
-### 1. 创世区块
+### 1. Genesis block
 
 ```json
 {
@@ -45,115 +45,115 @@
 }
 ```
 
-+ `period` dpos出块间隔时间，单位为秒
-+ `epoch` dpos间隔多少个块定期清除投票（清除后需要投票者重新发起投票交易)
-+ `maxSignersCount` dpos最大允许的生产者数量
-+ `minVoterBalance` dpos最小允许的投票额度，单位为Wei
-+ `voterReward` dpos投票者能否获得奖励（若开启，则在生产者出块时投票者也能获得分红）
-+ `genesisTimestamp` dpos允许初始块出块的时间，并通过此时间计算后续出块的时间与生产者
-+ `signers` dpos初始生产者列表
-+ `pbft` dpos是否在每轮出块后使用pbft的方式确认每一个区块
-+ `alloc` dpos初始生产者抵押投票数额
++ `period` dpos block-out interval, in seconds
++ `epoch` How many blocks are there in the dpos interval to regularly clear the votes (after clearing, the voters need to re-initiate the voting transaction)
++ `maxSignersCount` Maximum number of producers allowed for dpos
++ `minVoterBalance` The minimum amount of votes allowed by dpos. Unit: Wei
++ `voterReward` Whether dpos voters can get rewards (if enabled, voters can also get dividends when producers issue blocks)
++ `genesisTimestamp` dpos allows the initial block output time, and calculates the subsequent block output time and the producer based on this time.
++ `signers` dpos initial producer list
++ `pbft` Whether dpos uses pbft to confirm each block after each round of block output
++ `alloc` dpos initial producer mortgage vote amount
 
-### 2. 子链初始化流程
+### 2. Sub-chain initialization process
 
-#### 方式一. 使用sipe初始化
+#### Method 1. Use sipe to initialize
 
-1.创建或导入生产者账户
+1.Create or import a producer account
 
 ```shell script
 sipe --datadir=dposdata account new 
 ``` 
-2.将创建或导入的生产者地址写入genesis.json中，同时写入初始投票数额（参考1.创世区块）
+2.Write the created or imported producer address into genesis.json, and write the initial voting amount at the same time (refer to 1. genesis block)
 
-3.初始化子链节点
+3.Initialize sub-chain nodes
     
 ```shell script
 sipe --datadir=dposdata --role=subchain init genesis.json
 ```
-#### 方式二. 使用consensus工具一键初始化集群
+#### Method 2. Use the consensus tool to initialize the cluster with one click
 
-在`cmd/consensus`目录下运行`init_dpos.sh`
+in `cmd/consensus` run under directory`init_dpos.sh`
 
 ```shell script
 cd cmd/consensus
 ./init_dpos.sh --numNodes 3
 ```
-+ `numNodes` 生成集群节点数量
++ `numNodes` Number of cluster nodes generated
 
-初始化完成后，会在`cmd/consensus/dposdata`目录下建立对应节点文件
+After initialization is completed `cmd/consensus/dposdata` create corresponding node files under the Directory
 
-### 3. 子链启动流程
+### 3. Sub-chain startup process
 
-1. 启动节点
+1. Startup node
    
 ```bash
 sipe --datadir=dposdata --mine --etherbase=<生产者地址> --unlock=<生产者地址> --password=<密码文件> --port=30303  --role=subchain --v5disc
 ```
   
-2. 连接其他节点
+2. Connect to other nodes
    
 ```bash
 sipe --datadir=dposdata --mine --etherbase=<生产者地址> --unlock=<生产者地址> --password=<密码文件> --port=30304  --role=subchain --v5disc --bootnodesv5={enode1} --bootnodesv4={enode1}
 ```
 
-### 4. 投票与提案
+### 4. Votes and proposals
 
-#### 4.1 发起投票交易
+#### 4.1 initiate voting transaction
 
 ```bash
 > eth.sendTransaction({from:"<投票地址>",to:"<被投票地址>",value:0,data:web3.toHex("dpos:1:event:vote")})
 ```
-#### 4.2 发起取消投票交易
+#### 4.2 initiate the cancellation of voting transaction
 
 ```bash
 > eth.sendTransaction({from:"<投票地址>",to:"<投票地址>",value:0,data:web3.toHex("dpos:1:event:devote")})
 ``` 
 
-#### 4.3 发起更改矿工奖励的提案
+#### 4.3 initiate a proposal to change miner rewards
 
-+ 将矿工区块奖励比例改为`666‰`
+Change the miner block reward ratio`666‰`
 
 ```bash
 > eth.sendTransaction({from:"<提案地址>",to:"<提案地址>",value:0,data:web3.toHex("dpos:1:event:proposal:proposal_type:3:mrpt:666")})
 ```
 
-#### 4.4 发起更改最小允许投票额度的提案
+#### 4.4 initiate a proposal to change the minimum allowed vote limit
 
-+ 将最小允许投票额度改为`10` ether
++ Change the minimum allowed vote limit `10` ether
 
 ```bash
 > eth.sendTransaction({from:"<提案地址>",to:"<提案地址>",value:0,data:web3.toHex("dpos:1:event:proposal:proposal_type:6:mvb:10")})
 ```
 
-#### 4.5 通过或反对提案
+#### 4.5 pass or oppose the proposal
 
-+ `yes`通过提案，`no`反对提案
++ `yes` through the proposal,`no` objection proposal
 
 ```bash
 > eth.sendTransaction({from:"<投票地址>",to:"<投票地址>",value:0,data:web3.toHex("dpos:1:event:declare:hash:<提案hash值>:decision:yes")})
 ```
 
     
-### 5. 查看共识状态
+### 5. View consensus status
 
 ```bash
 > dpos.getSnapshot()
 ```
-+ `candidates` 矿工候选者名单
-+ `confirmedNumber` 确认的区块高度
-+ `historyHash` 最近两轮出块的块hash，用来计算新一轮的生产者出块顺序
-+ `minerReward` 每个块生产者获得的奖励千分比，若开启`voterReward`，剩下的为投票者的奖励
-+ `signers` 列举生产者名单与出块顺序
-+ `punished` 列举每个生产者因未按时出块受到的惩罚信息
-+ `tally` 列举每个候选人的总得票数
-+ `votes` 列举投票信息
-+ `voters` 投票人发起投票的区块高度
-+ `proposals` 提案列表
++ `candidates` Miner candidate list
++ `confirmedNumber` Confirmed block height
++ `historyHash` The block hash of the last two rounds of block output, which is used to calculate the block output order of the producer in the new round.
++ `minerReward` The reward percentage of each block producer, if enabled `voterReward` , the rest is the reward of voters
++ `signers` List producers and block order
++ `punished` List the punishment information of each producer for not releasing blocks on time
++ `tally` List the total votes of each candidate
++ `votes` List voting information
++ `voters` The height of the block where the voters vote
++ `proposals` Proposal list
 
-## 部署PBFT共识子链网络
+## Deploy PBFT consensus sub-chain network
 
-### 1. 创世区块
+### 1. Genesis block
 
 ```json
 {
@@ -177,72 +177,72 @@ sipe --datadir=dposdata --mine --etherbase=<生产者地址> --unlock=<生产者
   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
 }
 ```
-+ `epoch` pbft间隔多少个块定期清除投票
-+ `policy` pbft提议者轮询方式，0为roundRobin（按顺序更换），1为sticky（提议者未出错时不更换提议者）
-+ `mixHash` pbft区块须将mixHash指定为0x63746963616c2062797a616e74696e65206661756c7420746f6c6572616e6365
-+ `extraData` pbft初始生产者计算后得到的header.extra
-+ `alloc` pbft暂无区块奖励，因此需要提前分配代币
++ `epoch` How many blocks are there at pbft intervals to regularly clear votes
++ `policy` The polling method of pbft proposer: 0 is roundRobin (replaced in order), and 1 is sticky (if the proposer is not wrong, do not replace the proposer)
++ `mixHash` pbft block shall mixhash specified as 0x63746963616c2062797a616e74696e65206661756c7420746f6c6572616e6365
++ `extraData` header.extra calculated by the initial pbft producer
++ `alloc` pbft does not have a block reward currently, so tokens need to be allocated in advance.
 
-### 2. 子链初始化流程
+### 2. Sub-chain initialization process
 
-#### 方式一. 使用sipe初始化
+#### Method 1. Use sipe to initialize
 
-1.创建或导入生产者账户
+1.Create or import a producer account
 
 ```shell script
 sipe --datadir=pbftdata account new 
 ``` 
    
-2.使用consensus工具生成extraData，写入到genesis.json中（参考1.创世区块）
+2.Use the consensus tool to generate extraData and write it to genesis.json (refer to 1. genesis block)
 
 ```shell script
 cd cmd/consensus
 ./init_pbft.sh --numNodes 1 --validator <生产者地址> 
 ```
-3.初始化子链节点
+3.Initialize sub-chain nodes
 
 ```shell script
 sipe --datadir=pbftdata --role=subchain init genesis.json
 ```
    
-4. 将节点的nodekey写入到pbftdata/static-nodes.json中（nodekey公钥为生产者公钥）
+4.Write the node's nodekey to pbftdata/static-nodes.json (the nodekey public key is the producer public key)
 
-#### 方式二. 使用consensus工具一键初始化集群
+#### Method 2. Use the consensus tool to initialize the cluster with one click
 
-在cmd/consensus目录下运行init_pbft.sh
+Run init_pbft.sh in the cmd/consensus Directory
 
 ```bash
  cd cmd/consensus
  ./init_pbft.sh --numNodes 3 --ip 127.0.0.1 127.0.0.2 127.0.0.3 --port 21001 21002 21003
 ```
-+ `numNodes` 生成集群节点数量
-+ `ip` 指定节点的ip列表（默认ip为127.0.0.1）
-+ `port` 指定节点的端口列表（默认端口为21001~2100x，x为numNodes）
++ `numNodes` Number of cluster nodes generated
++ `ip` List of ip addresses of the specified node (the default ip address is 127.0.0.1)
++ `port` The list of ports for the specified node. The default port is 21001 ~ 2100x, and x is numNodes.
 
-初始化完成后，会在`cmd/consensus/pbftdata`目录下建立对应节点文件
+After initialization is completed`cmd/consensus/pbftdata`Create corresponding node files under the Directory
 
-### 3. 子链启动流程
+### 3. Sub-chain startup process
 
 ```bash
 sipe --datadir=pbftdata --istanbul.requesttimeout=10000 --istanbul.blockperiod=5 --syncmode=full --mine --minerthreads=1 --port=21001 --role=subchain
 ```
 
-+ `port` 需要和static-nodes.json中配置的enode保持一致
-+ `istanbul.requesttimeout` pbft每个view的过期时间，单位毫秒，默认值为10000
-+ `istanbul.blockperiod` pbft出块间隔，单位秒，默认值为1
++ `port` Must be consistent with the enode configured in static-nodes.json
++ `istanbul.requesttimeout` The expiration time of each view in milliseconds. The default value is 10000.
++ `istanbul.blockperiod` pbft block output interval, in seconds, the default value is 1
 
-### 4.查看共识状态
+### 4.View consensus status
 
 ```shell script
 > istanbul.getSnapshot()
 ```
-+ `validators` pbft区块生产者名单
-+ `votes` 新增validator或移除validator的投票
-+ `tally` 总投票情况
++ `validators` pbft Block producer list
++ `votes` Votes for adding or removing validators
++ `tally` Total voting situation
 
-## 部署RAFT共识子链网络
+## Deploy RAFT consensus sub-chain network
 
-### 1. 创世区块
+### 1. Genesis block
 
 ```json
 {
@@ -274,57 +274,58 @@ sipe --datadir=pbftdata --istanbul.requesttimeout=10000 --istanbul.blockperiod=5
 }
 ```
 
-+ `raft` true为使用raft共识
-+ `alloc` raft共识只有存在交易的时候才打包区块，因此需要提前分配代币
++ `raft` true indicates the use of raft consensus
++ `alloc` The raft consensus packages blocks only when a transaction exists. Therefore, tokens need to be allocated in advance.
 
-### 2. 子链初始化流程
+### 2. Sub-chain initialization process
 
-#### 方式一. 使用sipe初始化
+#### Method 1. Use sipe to initialize
 
-1.创建或导入生产者账户
+1.Create or import a producer account
 
 ```bash
 sipe --datadir=raftdata account new 
 ``` 
    
-2.初始化子链节点
+2.Initialize sub-chain nodes
     
 ```bash
 sipe --datadir=raftdata --role=subchain init genesis.json
 ```
 
-4.将节点的`nodekey`写入`raftdata/static-nodes.json`中（nodekey公钥为生产者公钥）
+4.`nodekey` Write `raftdata/static-nodes.json` (The nodekey public key is the producer public key)
 
-#### 方式二. 使用consensus工具一键初始化集群
+#### Method 2. Use the consensus tool to initialize the cluster with one click
 
-在`cmd/consensu`s目录下运行`init_pbft.sh`
+under `cmd/consensu`Run under the Director`init_pbft.sh`
 
 ```bash
 cd cmd/consensus
 ./init_raft.sh --numNodes 3 --ip 127.0.0.1 127.0.0.2 127.0.0.3 --port 21001 21002 21003 --raftport 50401 50402 50403
 ```
-+ `numNodes` 生成集群节点数量
-+ `ip` 指定节点的ip列表（默认ip为127.0.0.1）
-+ `port` 指定节点的端口列表（默认端口为21001~2100x，x为numNodes）
-+ `raftport` 指定节点的raft通信端口列表（默认端口为50401~5040x，x为numNodes）
-初始化完成后，会在cmd/consensus/raftdata目录下建立对应节点文件
++ `numNodes` Number of cluster nodes generated
++ `ip` List of ip addresses of the specified node (the default ip address is 127.0.0.1)
++ `port` The list of ports for the specified node. The default port is 21001 ~ 2100x, and x is numNodes.
++ `raftport` List of raft communication ports for the specified node (the default port is 50401 ~ 5040x, and x is numNodes)
 
-### 3. 子链启动流程
+After initialization, the corresponding node file is created in the cmd/consensus/raftdata directory.
+
+### 3. Sub-chain startup process
 
 ```bash
 sipe --datadir=raftdata --raft --port=21001 --raftport=50401 --role=subchain
 ```
-+ `port` 需要和static-nodes.json中配置的enode保持一致
-+ `raft` 使用raft模式
-+ `raftport` raft端口号，需要和static-nodes.json中配置的enode保持一致
++ `port` Must be consistent with the enode configured in static-nodes.json
++ `raft` Use raft mode
++ `raftport` raft port number, which must be consistent with the enode configured in static-nodes.json
 
-### 4.查看共识状态
+### 4.View consensus status
 
 ```bash
 > istanbul.getSnapshot()
 ```
-+ `validators` pbft区块生产者名单
-+ `votes` 新增validator或移除validator的投票
-+ `tally` 总投票情况
++ `validators` pbft Block producer list
++ `votes` Votes for adding or removing validators
++ `tally` Total voting situation
 
 

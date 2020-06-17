@@ -1,4 +1,4 @@
-#### Sipc API方法列表：
+#### Sipc API method list:
 
 - [`web3_clientVersion`](#web3_clientVersion)
 - [`web3_sha3`](#web3_sha3)
@@ -53,9 +53,9 @@ Default JSON-RPC endpoints:
 
 ---
 
-##  默认区块参数
+##  Default block parameters
 
-以下方法有一个额外的默认区块参数:
+The following method has an additional default block parameter:
 
 - eth_getBalance
 - eth.getCode
@@ -63,27 +63,27 @@ Default JSON-RPC endpoints:
 - eth_getStorageAt
 - eth_call
 
-当请求作用于simplechain的状态时，最后一个默认的区块参数决定了区块的高度。
+When the request acts on the status of simplechain, the last default block parameter determines the height of the block.
 
-以下选项可用于默认区块参数:
+The following options can be used for the default block parameters:
 
-- `HEX String` -整数区块数
-- `String "earliest"` 最早的/创世块
-- `String "latest"` - 最新挖出来的区块
-- `String "pending"` - 对于待处理状态/交易
+- `HEX String` -Integer number of blocks
+- `String "earliest"` - The earliest/genesis block
+- `String "latest"` - Newly dug blocks
+- `String "pending"` - For pending status/transactions
 
 
 ## web3_clientVersion
 
-返回当前的客户端版本
+Returns the current client version.
 
-**参数**
+**Parameter**
 
-- `无`
+- `No`
 
-**返回**
+**Return**
 
-- `string:` 当前客户端版本
+- `string:` Current client version
 
 **示例**
 
@@ -102,15 +102,15 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 
 ## web3_sha3
 
-返回给定数据的keccak-256（不是标准化的sha3-256）
+Returns the keccak-256 of the given data (not a standardized sha3-256)
 
-**参数**
+**Parameter**
 
-- `string:` 要计算 SHA3 哈希的数据必须是（hex string）
+- `string:` The data to calculate the SHA3 hash must be (hex string)
 
-**返回值**
+**Return value**
 
-- `string:` 指定字符串的 SHA3 结果
+- `string:` Specifies the SHA3 result of the string.
 
 **示例**
 
@@ -129,15 +129,15 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 
 ## net_version
 
-返回当前连接网络的ID
+Returns the ID of the current connection network.
 
-**参数**
+**Parameter**
 
-- `无`
+- `no`
 
-**返回值**
+**Return value**
 
-- `String:` 当前连接网络的ID,`"1": Simplechain主网`,`"3": 测试网络`;
+- `String:` The ID of the current connection network,`"1": Simplechain mainnet`,`"3": testnet`;
 
 **示例**
 
@@ -156,17 +156,17 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 
 ## net_listening
 
-返回客户端是否处于监听网络连接状态，如果处于监听则返回`true`,否则返回`false`.
+Returns whether the client is in the listening network connection state. If the client is in the listening state, the system returns `true`, otherwise return `false`.
 
-**参数**
+**Parameter**
 
 - `无`
 
-**返回值**
+**Return value**
 
-- `bool:` 客户端处于监听状态时返回 true，否则返回 false
+- `bool:` Returns true when the client is listening. Otherwise, false is returned
 
-**示例**
+**Example**
 
 ```javascript
 //Request
@@ -183,17 +183,17 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 
 ## net_peerCount
 
-返回当前连接到客户端的节点数。
+Returns the number of nodes currently connected to the client.
 
-**参数**
+**Parameter**
 
-- `无`
+- `No`
   
-**返回值**
+**Return value**
 
-- `Quantity:` 已经连接的节点数
+- `Quantity:` Number of connected nodes
 
-**示例**
+**Example**
 
 ```javascript
 //Request
@@ -210,15 +210,15 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 
 ## eth_protocolVersion
 
-返回当前simplechain的协议版本。
+Returns the protocol version of simplechain.
 
-**参数**
+**Parameter**
 
-- 无
+- `no`
 
 **返回**
 
-- `String` 当前simplechain的协议版本.
+- `String` The current protocol version of simplechain.
 
 **示例**
 
@@ -237,26 +237,25 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 
 ## eth_syncing
 
-返回包含有关同步状态的数据的对象 或者false
+Returns an object that contains data about the synchronization status or false
 
-**数参**
+**Number parameter**
 
-- `无`
+- `No`
 
-**返回值**
+**Return value**
 
-- `Object|Boolean`, 同步状态对象或 false。同步对象的结构如下: 
-- `startingBlock:` QUANTITY - 开始块
-- `currentBlock:` QUANTITY - 当前块，同eth_blockNumber 
-- `highestBlock:` QUANTITY - 预估最高块
+- `Object|Boolean`, synchronization status object or false. The structure of the synchronization object is as follows:
+- `startingBlock:` QUANTITY - start Block
+- `currentBlock:` QUANTITY - current block, and eth_blockNumber
+- `highestBlock:` QUANTITY - maximum estimated block
 
-**示例**
+**Example**
 
 ```javascript
 //Request
 curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
 //Response
-//在同步过程中
 {
    "id":1,
    "jsonrpc": "2.0", 
@@ -266,7 +265,6 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
        highestBlock: '0x454' 
    }
 }
-//未同步则结果如下:
 {
    "jsonrpc": "2.0",
    "id":1,
@@ -275,17 +273,17 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 ```
 ## eth_coinbase
 
-返回客户端矿工地址。 
+Returns the client miner address. 
 
-**参数**
+**Parameters**
 
-- `无`
+- `No`
 
-**返回值**
+**Return value**
 
-- `Data:` 20 bytes - 当前 coinbase 地址
+- `Data:` 20 bytes - current coinbase address
 
-**示例**
+**Example**
 
 ```javascript
 //Request
@@ -300,17 +298,17 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 
 ## eth_mining
 
-如果客户端在挖矿则返回`true`, 否则返回`false`。
+If the client is mining, return `true`, otherwise, return `false`。
 
-**参数**
+**Parameter**
 
-- `无`
+- `no`
 
-**返回值**
+**Return value**
 
-- `boolean` 当客户端在挖矿时返回 `true`，否则返回 `false`。
+- `boolean` When the client is mining, it returns true , otherwise, return false .
 
-**示例**
+**Exaple**
 
 ```javascript
 //Request
@@ -326,17 +324,17 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 
 ## eth_hashrate
 
-返回节点挖矿时每秒可算出的哈希率。
+Returns the hash rate per second that can be calculated during node mining.
  
-**参数**
+**Parameter**
 
-- `无`
+- `no`
 
-**返回**
+**Return**
 
-- `quantity:` 每秒算出的哈希率
+- `quantity:` Hash rate calculated per second
 
-**示例**
+**Example**
 
 ```javascript
 //Request
@@ -351,17 +349,17 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 ```
 ## eth_gasPrice
  
-返回当前每一`gas`价格，单位:`wei`。 
+Returns each current `gas` price, unit:`wei`。 
 
-**参数**
+**parameter**
 
-- `无`
+- `no`
 
-**返回值**
+**Return value**
 
-- `quantity:`整数，以 `wei`为单位的当前 `gas` 价格
+- `quantity:`Integer, `wei` Is the current unit `gas` price
 
-**示例**
+**Example**
 
 ```javascript
 //Request
@@ -377,17 +375,17 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 
 ## eth_accounts
 
-返回客户端持有的地址列表。
+Returns the list of addresses held by the client.
 
-**参数**
+**Parameter**
 
-- `无`
+- `no`
 
-**返回**
+**Return**
 
-- `string[]:`字符串数组，客户端持有的地址字符串列表。
+- `string[]:`String array, a list of address strings held by the client.
 
-**示例**
+**Example**
 
 ```javascript
 //Request
@@ -402,17 +400,17 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 
 ## eth_blockNumber
 
-返回最新块的块号（区块高度）
+Returns the block number (block height) of the latest block.
 
-**参数**
+**Parameter**
 
-- `无`
+- `No`
 
-**返回**
+**Return**
 
-- 客户端所在的当前块号的整数
+- The integer of the current block number where the client is located.
  
-**示例**
+**Example**
 
 ```javascript
 //Request
@@ -429,18 +427,18 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 
 ## eth_getBalance
 
-返回指定地址账户的余额。
+Returns the balance of the account at the specified address.
  
-**参数**
+**Parameter**
 
-- `data`20 字节，要检查余额的地址
-- `quantity|tag` - 整数块编号，或者字符串"latest", "earliest" 或 "pending"
+- `data`- 20 bytes, the address of the balance to be checked
+- `quantity|tag` - Integer block number, or string "latest", "earliest" or "pending"
 
-**返回值**
+**Return**
 
-- `quantity:`当前余额，单位:wei
+- `quantity:`Current balance, unit: wei
 
-**示例**
+**Example**
 
 ```javascript
 //Request
@@ -455,18 +453,18 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 
 ## eth_getTransactionCount
 
-返回指定地址发生的交易数量。
+Returns the number of transactions at the specified address.
 
-**参数**
+**Parameter**
 
-- `DATA:` 20 字节，地址
-- `QUANTITY|TAG` 整数块编号，或字符串"latest"、"earliest"或"pending"
+- `DATA:` 20 bytes, address
+- `QUANTITY|TAG` Integer block number, or string "latest", "earliest", or "pending"
  
-**返回**
+**Return**
 
-- `QUANTITY` 从指定地址发出的交易数量，整数。
+- `QUANTITY` The number of transactions sent from the specified address, an integer.
 
-**示例**
+**Example**
 
 ```javascript
 //Request
@@ -482,17 +480,17 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 
 ## eth_getBlockTransactionCountByHash
 
-使用哈希返回指定块内的交易数量。
+Returns the number of transactions in a specified block using a hash.
 
-**参数**
+**Parameter**
 
-- `DATA:` 32 字节，块哈希
+- `DATA:` 20 bytes, address
 
-**返回**
+**Return**
 
-- `QUANTITY` 指定块内的交易数量，整数
+- `QUANTITY` The number of transactions in the specified block, integer
 
-**示例**
+**Example**
 
 ```javascript
 //Request
@@ -507,17 +505,17 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
  
 ## eth_getBlockTransactionCountByNumber 
 
-返回与给定块号匹配的块中的交易数。
+Returns the number of transactions in a block that matches a given block number.
 
-**参数**
+**Parameter**
 
-- `QUANTITY|TAG:` 整数块编号，或字符串"earliest"、"latest"或"pending" 
+- `QUANTITY|TAG:` Integer block number, or string "earliest", "latest", or "pending"
 
-**返回**
+**Return**
 
-- `QUANTITY:` 指定块内的交易数量
+- `QUANTITY:` • The number of transactions in the specified block.
 
-**示例**
+**Example**
 
 ```javascript
 //Request

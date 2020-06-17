@@ -1,45 +1,45 @@
-## 下载钱包
+## Download wallet
 
-**下载**
+**Download**
 
-[插件钱包下载地址](https://wallet.simplechain.com/SimPluG-V1.0.0.zip)
+[Plug-In wallet download address](https://wallet.simplechain.com/SimPluG-V1.0.0.zip)
 
-**解压**
+**Decompression**
 
 ![1.png](https://i.loli.net/2020/05/22/AwoW8bx14XLiaG6.png)
 
-## 安装钱包
+## Install wallet
 
-1.打开google 浏览器，打开扩展程序
+1.Open google browser, open the extension program
 
 ![2.png](https://i.loli.net/2020/05/22/PIyhRv5gmNYjkbt.png)
 
-2.将安装包安装到扩展程序中
+2.Install the installation package into the extension program
 
 ![3.png](https://i.loli.net/2020/05/22/8yDVqKY4CnTQ17h.png)
 
-3.安装完以后打开钱包
+3.Open the wallet after installation
 
 ![4.png](https://i.loli.net/2020/05/22/XitTxs2q4Y8jgRN.png)
 
-4.打开钱包，选择主网或是测试网，如果已有钱包就直接导入，如果没有账户就直接创建账户。
+4.Open the wallet and select the main network or test network. If there is already a wallet, import it directly. If there is no account, create an account directly.
 
 ![5.png](https://i.loli.net/2020/05/22/2HeTk8tlCLifVAD.png)
 
-5.创建账户，备份私钥就可以进入自己的插件钱包。
+5.Create an account and back up the private key to enter your plug-in wallet.
 
 ![6.png](https://i.loli.net/2020/05/22/Rdfl56UkZq2x1gu.png)
 
-## 钱包调用方法
+## Wallet call method
 
-**前置条件**
+**Preconditions**
 
-1. 需要运行插件的应用（以下简称开发者）根据window.hasSimplug来判断插件是否可用。
-2. 开发者需要在页面中放置一个id为"run_contract_btn"的按钮触发simplug的事件。
-3. 开发者需要在页面中放置一个id为"run_contract_data"的隐藏input向sumpulg发送交易data。
+1. Applications that need to run the plug-in (hereinafter referred to as developers) determine whether the plug-in is available according to window.hasSimplug.
+2. Developers need to place a button with the id "run_contract_btn" in the page to trigger the simplug event.
+3. Developers need to place a hidden input with the id "run_contract_data" in the page to send transaction data to sumpulg.
 
-**操作过程**
+**Operation process**
 
-1. 用户点击或者脚本触发点击id为"run_contract_btn"的按钮。
-2. 与此同时开发者需要在页面中设置id为"run_contract_data"的input的值为需要发送交易的data。
-3. 插件会自动唤醒调用交易。
+1. The user clicks or the script triggers a button with the id "run_contract_btn.
+2. At the same time, developers need to set the input value with id "run_contract_data" to the data to be sent.
+3. The plug-in automatically wakes up the call transaction.

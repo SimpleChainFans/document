@@ -1,52 +1,52 @@
-Dapp开发案例是基于Simplechain开发一个公益众筹项目，下面是整个众筹项目开发的流程梳理。
+The Dapp development case is to develop a public-benefit crowdfunding project based on Simplechain. The following is a review of the development process of the entire crowdfunding project.
 
-### 在remix中写合约并测试
+### Write a contract and test it in remix
 
-下载安装`remix`，并尝试写合约方法。并进行测试。
+Download and Install remix , and try to write the contract method. And conduct tests.
 
-###  创建React的空工程
+###  Create an empty project for React
 
-创间React的空工程主要包含两条命令，首先要安装`create-react-app`这条命令：
+The empty project of The React creation mainly contains two commands. First, install create-react-app This command:
 
-    nstall-过create-react-app
+    install create-react-app
 
-它会安装你的node所需要依赖的目录，然后创建项目:
+It installs the directory on which your node depends and creates the project:
 
     ./create-react-app
 
-创建好项目以后，可以使用一下的命令对项目进行初始化的清理工作：
+After creating a project, you can use the following command to initialize the project:
 
     npm run start
 
-###  创建comple.js文件
+###  Create a comple.js file
 
-创建compile.js文件，然后安装solc编译器，命令如下：
+Create the compile.js file and install the solc compiler. The command is as follows:
 
     npm install solc
 
-安装完了solc以后，就可以调用solc.compile(sourceCode,1)对源码进行编译。编译完成后导出编译过的bytecode(字节码)，interface.
+After solc is installed, you can call solc.com pile(sourceCode,1) to compile the source code. After compilation, export the compiled bytecode (bytecode),interface.
 
-### 创建js文件
+### Create a js file
 
-搭建界面，调用web3,以及与区块链进行数据交互都需要js方法去实现，所以这一步需要创建多个js文件。具体需要创建的js文件如下图：
+To build an interface, call web3, and interact with the blockchain, you need to use the js method. Therefore, you need to create multiple js files in this step. The following figure shows the specific js file to be created:
 
 ![31.1.png](https://i.loli.net/2020/06/09/9KU2YTZQ5PDS1GB.png)
 
-### 发起合约功能
+### Initiate contract function
 
-发起合约功能主要有两个具体逻辑需要实现，一个是interaction中写具体方法，另一个是在CreateFundingTab中完成调用。
+The function of initiating a contract mainly has two specific logics to implement. One is to write specific methods in interaction, and the other is to complete the call in CreateFundingTab.
 
-### 发起参与众筹功能
+### Initiate and participate in crowdfunding
 
-发起参与众筹功能的实现具体主要有三个。一个如下：
+There are three main implementation functions of initiating and participating in crowdfunding. One is as follows:
 
-1. 在主界面传递一个回调函数onItemClick给CardList，用于返回用户点击的合约的详情
-2. 在CardList中传给MyCard
-3. 在MyCard中，当触发onClick的时候，调用这个onItemClick，返回相应的detail
+1. Pass a callback function onItemClick to CardList in the main interface to return the details of the contract clicked by the user.
+2. Pass to MyCard in CardList
+3. In MyCard, when onClick is triggered, the onItemClick is called and the corresponding detail is returned.
 
-通过上面这个三步方法可以得到合约的地址以及得到支持的金额。
+The address of the contract and the supported amount can be obtained through the above three-step method.
 
-第二个是在interaction中写具体方法，最后一个是在CreatorFundingTab中完成调用。图如下：
+The second is to write specific methods in interaction, and the last is to complete the call in CreatorFundingTab. The figure is as follows:
 
 ![31.2.png](https://i.loli.net/2020/06/09/J7ZKT6YdCp15aVO.png)
 

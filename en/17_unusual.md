@@ -1,15 +1,15 @@
-### 调用合约时报错
+### An error was reported when calling the contract
 
-可能的问题：
-一般的问题是合约执行失败导致，合约执行失败时Simplechain提示报错原因一般不是太直观，可能与错误无关。
+Possible problems:
+The common problem is that the contract execution fails. When the contract execution fails, Simplechain prompts that the cause of the error is generally not very intuitive and may not be related to the error.
 
-- 1.合约账户中代币和余额不足；
-- 2.当前操作账户是否有权限；
-- 3.合约执行失败。
+- 1.Insufficient tokens and balances in the contract account;
+- 2.Whether the current operating account has permissions;
+- 3.Contract execution failed.
 
-### spring boot应用程序使用web3j
+### spring boot applications use web3j
 
-可以直接使用web3j-spring-boot-starter 其中依赖的spring boot依赖包，不用重复依赖spring boot包
+You can directly use the spring boot dependency package that web3j-spring-boot-starter depends on without repeatedly depending on the spring boot package.
 
     <dependency>
     <groupId>org.web3j</groupId>
@@ -17,10 +17,11 @@
     <version>1.6.0</version>
     </dependency>
 
-### spring boot应用程序中是用web3J依赖报错？？
+### Does the spring boot application use web3J dependency to report an error
 
-我在demo中使用的gradle依赖web3j，功能完成没有问题，在正式项目中使用maven依赖web3j包相同的代码却报错，一直找不到具体问题。
-使用maven依赖web3j 3.5.0后报错，换成web3j 3.6.0还是报同样的错误，报错信息如下：
+The gradle I used in the demo depends on web3j, and there is no problem when the function is completed. In the formal project, the code that maven depends on web3j package is reported as the same, but no specific problem can be found.
+
+If you use maven to rely on web3j 3.5.0, an error is reported. If you use web3j 3.6.0, the same error is reported. The error message is as follows:
 
     at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[na:1.8.0_191]
     at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_191]
@@ -30,15 +31,16 @@
     at org.web3j.crypto.ECKeyPair.create(ECKeyPair.java:68) ~[crypto-3.5.0.jar:na]
     at org.web3j.crypto.Credentials.create(Credentials.java:36) ~[crypto-3.5.0.jar:na]
 
-解决办法：
-经排查原因是因为maven下载web3j依赖时下载的不完整导致有些文件没有下载完整，ec包不存在，
-删除maven本地仓库中已下载的web3j依赖包，然后下载maven工具，在项目目录中使用命令清除、安装依赖
+Solution:
+
+After troubleshooting, the reason is that the download of some files is incomplete when maven downloads the web3j dependency, and the ec package does not exist,
+Delete the downloaded web3j dependency package in the maven local repository, download the maven tool, and use the command to clear and install dependencies in the project directory.
 
     ->mvn clean
     ->mvn install
 
-打开Idea,刷新项目就可以正常编译运行了。
+Open Idea and refresh the project to compile and run normally.
 
-### we3j编译 .sol文件时文件中使用 “import ./safeERC20.sol” 时编译会报错，找不到import文件。
+### we3j reports an error when "import ./safeERC20.sol" is used in the file when compiling the. sol file. The import file cannot be found.
 
-解决办法是把import的contract或libary 写到当前文件中。
+The solution is to write the import contract or libary to the current file.

@@ -1,25 +1,25 @@
-在Simplechain上，用户通过运行部署在Simplechain上的合约，完成需要共识的操作。Simplechain虚拟机，是智能合约代码的执行器。所以当智能合约被编译成二进制文件后，被部署到Simplechain上。用户通过调用智能合约的接口，来触发智能合约的执行操作。EVM执行智能合约的代码，修改当前区块链上的数据（状态）。被修改的数据，会被共识，确保一致性。
+On Simplechain, you can run the contract deployed on Simplechain to complete the operations that require consensus. Simplechain virtual machine is the executor of intelligent contract code. Therefore, when the smart contract is compiled into a binary file, it is deployed on Simplechain. The user calls the smart contract interface to trigger the execution of the smart contract. EVM executes the code of the smart contract to modify the data (status) on the current blockchain. The modified data will be agreed to ensure consistency.
 
 ## SVMC
 
-可以从Simplechain中将EVM剥离出来，形成一个独立的模块。EVM与节点的交互，抽象出SVMC接口标准。通过SVMC接口标准，节点可以对接多种虚拟机，而不仅限于传统的基于solidity的虚拟机。
+EVM can be stripped from Simplechain to form an independent module. The interaction between EVM and nodes abstracts the SVMC interface standard. Through the SVMC interface standard, nodes can connect to a variety of virtual machines, not limited to traditional solidity-based virtual machines.
 
-传统的solidity虚拟机，在Simplechain中称为interpreter，下文主要解释interpreter的实现。
+The traditional solidity virtual machine is called interpreter in Simplechain. The implementation of the interpreter is mainly explained in the following section.
 
-## SVMC 接口
+## SVMC interface
 
-SVMC主要定义了两种调用的接口：
+SVMC mainly defines two calling interfaces:
 
-- Instance接口：节点调用EVM的接口
-- Callback接口：EVM回调节点的接口
+- Instance interface: the interface that the node calls EVM
+- Callback interface: the interface of the EVM Callback node.
 
-EVM本身不保存状态数据，节点通过instance接口操作EVM，EVM反过来，调Callback接口，对节点的状态进行操作。
+EVM itself does not save status data. The node operates EVM through the instance interface. In turn, EVM calls the Callback interface to operate the status of the node.
 
-**Instance 接口**
+**Instance interface**
 
-定义了节点对虚拟机的操作，包括创建，销毁，设置等。
+Defines the operations of nodes on virtual machines, including creation, destruction, and setting.
 
-接口定义在evmc_instance（evmc.h）中
+The interface is defined in evmc_instance(evmc.h)
 
 * abi_version  
 * name  
@@ -29,12 +29,11 @@ EVM本身不保存状态数据，节点通过instance接口操作EVM，EVM反过
 * set_tracer  
 * set_option
 
-**Callback接口**
+**Callback interface**
 
-定义了EVM对节点的操作，主要是对state读写、区块信息的读写等。
+Defines how EVM operates on nodes, mainly reading and writing state and block information.
 
-接口定义在evmc_context_fn_table（evmc.h）中。
-
+The interface is defined in evmc_context_fn_table(evmc.h).
 
 * evmc_account_exists_fn account_exists
 * evmc_get_storage_fn get_storage
@@ -50,17 +49,17 @@ EVM本身不保存状态数据，节点通过instance接口操作EVM，EVM反过
 * evmc_emit_log_fn emit_log
 
 
-## EVM 执行
+## EVM execution
 
-### EVM 指令
+### EVM instruction
 
-solidity是合约的执行语言，solidity被solc编译后，变成类似于汇编的EVM指令。Interpreter定义了一套完整的指令集。solidity被编译后，生成二进制文件，二进制文件就是EVM指令的集合，交易以二进制的形式发往节点，节点收到后，通过SVMC调用EVM执行这些指令。在EVM中，用代码模拟实现了这些指令的逻辑。
+ssolidity is the execution language of the contract. solidity is compiled by solc and becomes an EVM instruction similar to assembly. The Interpreter defines a complete set of instructions. After solidity is compiled, a binary file is generated. The binary file is a collection of EVM instructions. The transaction is sent to the node in the form of binary. After the node receives it, it calls EVM to execute these instructions through SVMC. In EVM, the logic of these instructions is simulated with code.
 
-Solidity是基于堆栈的语言，EVM在执行二进制时，也是以堆栈的方式进行调用。
+Solidity is a stack-based language. When EVM executes binary, it is also called as a stack.
 
-**算术指令举例**
+**Arithmetic instruction example**
 
-一条ADD指令，在EVM中的代码实现如下。SP是堆栈的指针，从栈顶第一和第二个位置（```SP[0]```、```SP[1]```）拿出数据，进行加和后，写入结果堆栈SPP的顶端```SPP[0]```。
+An ADD instruction. The code in EVM is implemented as follows. SP is the pointer of the stack, from the first and second positions on the top of the stack（```SP[0]```、```SP[1]```）take out the data, add and write it to the top of the result stack SP ```SPP[0]```。
 
 ``` cpp
 CASE(ADD)
@@ -73,9 +72,9 @@ CASE(ADD)
 }
 ```
 
-**跳转指令举例**
+**Jump instruction example**
 
-JUMP指令，实现了二进制代码间的跳转。首先从堆栈顶端```SP[0]```取出待跳转的地址，验证一下是否越界，放到程序计数器PC中，下一个指令，将从PC指向的位置开始执行。
+The JUMP command realizes the JUMP between binary codes. First from the top of the stack SP[0] Take out the address to be redirected, verify whether it is out of line, and put it in the program counter PC. The next instruction will start from the position pointed by the PC.
 
 ``` cpp
 CASE(JUMP)
@@ -86,9 +85,9 @@ CASE(JUMP)
 }
 ```
 
-**状态读指令举例**
+**Example of state read instruction**
 
-SLOAD可以查询状态数据。大致过程是，从堆栈顶端```SP[0]```取出要访问的key，把key作为参数，然后调evmc的callback函数```get_storage()``` ，查询相应的key对应的value。之后将读到的value写到结果堆栈SPP的顶端```SPP[0]```。
+SLOAD can query status data. The general process is from the top of the stack```SP[0]```take out the key to be accessed, take the key as a parameter, and then adjust the callback function of evmc```get_storage()```，To query the value of the corresponding key. Then write the read value to the top of the result stack SPP ```SPP[0]```。
 
 ``` cpp
 CASE(SLOAD)
@@ -104,9 +103,9 @@ CASE(SLOAD)
 }
 ```
 
-**状态写指令举例**
+**Example of state write instruction**
 
-SSTORE指令可以将数据写到节点的状态中，大致过程是，从栈顶第一和第二个位置（```SP[0]```、```SP[1]```）拿出key和value，把key和value作为参数，调用evmc的callback函数```set_storage()``` ，写入节点的状态。
+The SSTORE command can write data to the state of a node. The general process is from the first and second positions at the top of the stack（```SP[0]```、```SP[1]```）take out key and value, take key and value as parameters, and call the callback function of evmc ```set_storage()``` , write the status of the node.
 
 ``` cpp
 CASE(SSTORE)
@@ -134,9 +133,9 @@ CASE(SSTORE)
 }
 ```
 
-**合约调用指令举例**
+**Contract call instruction example**
 
-CALL指令能够根据地址调用另外一个合约。首先，EVM判断是CALL指令，调用```caseCall()```，在caseCall()```中，用```caseCallSetup()```从堆栈中拿出数据，封装成msg，作为参数，调用evmc的callback函数call。Eth在被回调```call()```后，启动一个新的EVM，处理调用，之后将新的EVM的执行结果，通过```call()```的参数返回给当前的EVM，当前的EVM将结果写入结果堆栈SSP中，调用结束。合约创建的逻辑与此逻辑类似。
+The CALL instruction can CALL another contract based on the address. First, EVM determines that the CALL instruction is called ```caseCall()```，caseCall() ```used```caseCallSetup()```Take the data from the stack, encapsulate it into msg, and call evmc's callback function as a parameter. Eth is being called back```call()```after，Start a new EVM, process the call, and then execute the result of the new EVM by```call()```parameter is returned to the current EVM. The current EVM writes the result to the result stack SSP and the call ends. The logic of contract creation is similar to this logic.
 
 ``` cpp
 CASE(CALL)
@@ -186,7 +185,6 @@ void VM::caseCall()
 }
 ```
 
-## 总结
+## Summary
 
-EVM是一个状态执行的机器，输入是solidity编译后的二进制指令和节点的状态数据，输出是节点状态的改变。Simplechain通过EVMC实现了多种虚拟机的兼容。
-
+EVM is a state execution machine. The input is the binary instruction compiled by solidity and the state data of the node. The output is the change of the node state. Simplechain implements compatibility with various virtual machines through EVMC.

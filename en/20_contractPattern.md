@@ -1,12 +1,12 @@
-一些金典的合约模版可以帮助开发者快速学习`Solidity`,并快速上手开发。基于Simplechain做出优秀的Dapp应用。
+Some contract templates of Jin Dian can help developers learn quickly `Solidity`,and quickly start the development. Create excellent Dapp applications based on Simplechain.
 
-## 投票
+## Vote
 
-以下的合约相当复杂，但展示了很多Solidity的功能。它实现了一个投票合约。
-当然，电子投票的主要问题是如何将投票权分配给正确的人员以及如何防止被操纵。
-我们不会在这里解决所有的问题，但至少我们会展示如何进行委托投票，同时，计票又是 **自动和完全透明的** 。
+The following contract is quite complex, but shows many Solidity functions. It achieved a voting contract.
+Of course, the main problem of electronic voting is how to distribute the voting rights to the right people and how to prevent manipulation.
+We will not solve all the problems here, but at least we will show how to conduct delegation voting. At the same time, counting votes is also **Automatic and fully transparent** 。
 
-我们的想法是为每个（投票）表决创建一份合约，为每个选项提供简称。然后作为合约的创造者——即主席，将给予每个独立的地址以投票权。地址后面的人可以选择自己投票，或者委托给他们信任的人来投票。在投票时间结束时，``winningProposal()`` 将返回获得最多投票的提案。
+Our idea is to create a contract for each (vote) vote and provide short for each option. Then as the creator of the contract-the chairman, he will give each independent address the right to vote. People behind the address can choose to vote by themselves or entrust people they trust to vote. At the end of the voting time，``winningProposal()`` the proposal that received the most votes will be returned.
 
 ```sh
     pragma solidity ^0.4.22;
@@ -139,21 +139,21 @@
     }
 ```
 
-**可能的优化**
+**Possible optimization**
 
-当前，为了把投票权分配给所有参与者，需要执行很多交易。你有没有更好的主意？
+At present, in order to distribute the voting rights to all participants, many transactions need to be executed. Do you have a better idea?
 
-**秘密竞价（盲拍）**
+**Secret bidding (blind auction)**
 
-在本节中，我们将展示如何轻松地在Simplechain上创建一个秘密竞价的合约。
-我们将从公开拍卖开始，每个人都可以看到出价，然后将此合约扩展到盲拍合约，
-在竞标期结束之前无法看到实际出价。
+In this section, we will show how to easily create a secret bidding contract on Simplechain.
+We will start from the public auction, everyone can see the bid, and then extend this contract to blind auction contract,
+The actual bid cannot be seen before the bidding period ends.
 
-**简单的公开拍卖**
+**Simple public auction**
 
-以下简单的拍卖合约的总体思路是每个人都可以在投标期内发送他们的出价。
-出价已经包含了资金/以太币，来将投标人与他们的投标绑定。
-如果最高出价提高了（被其他出价者的出价超过），之前出价最高的出价者可以拿回她的钱。在投标期结束后，受益人需要手动调用合约来接收他的钱 - 合约不能自己激活接收。
+The general idea of the following simple auction contract is that everyone can send their bids within the bidding period.
+The bid already contains funds/Ethernet coins to bind bidders to their bids.
+If the highest bid is raised (it is exceeded by other bidders), the former highest bidder can get her money back. At the end of the bidding period, the beneficiary needs to manually call the contract to receive his money-the contract cannot activate the receipt by itself.
 
 ```sh
     pragma solidity ^0.4.22;
@@ -264,24 +264,24 @@
         }
     }
 ```
-## 秘密竞拍(盲拍）
+## Secret auction (blind auction)
 
-之前的公开拍卖接下来将被扩展为一个秘密竞拍。
-秘密竞拍的好处是在投标结束前不会有时间压力。
-在一个透明的计算平台上进行秘密竞拍听起来像是自相矛盾，但密码学可以实现它。
+The previous public auction will then be expanded to a secret auction.
+The advantage of secret auction is that there will be no time pressure before the bid ends.
+Secret auction on a transparent computing platform sounds self-contradictory, but cryptography can realize it.
 
-在 **投标期间** ，投标人实际上并没有发送她的出价，而只是发送一个哈希版本的出价。
-由于目前几乎不可能找到两个（足够长的）值，其哈希值是相等的，因此投标人可通过该方式提交报价。
-在投标结束后，投标人必须公开他们的出价：他们不加密的发送他们的出价，合约检查出价的哈希值是否与投标期间提供的相同。
+In **Bidding period** ，the bidder did not actually send her bid, but only sent a hash version of the bid.
+Since it is almost impossible to find two (long enough) values at present and their hash values are equal, tenderers can submit quotations in this way.
+After the bidding is completed, bidders must disclose their bids: they send their bids unencrypted, and the contract checks whether the hash value of the bid is the same as that provided during the bidding period.
 
-另一个挑战是如何使拍卖同时做到 **绑定和秘密** :
-唯一能阻止投标者在她赢得拍卖后不付款的方式是，让她将钱连同出价一起发出。
-但由于资金转移在Simplechain中不能被隐藏，因此任何人都可以看到转移的资金。
+Another challenge is how to make the auction work at the same time **Binding and secret** :
+The only way to prevent the bidder from not paying after she wins the auction is to let her send out the money together with the bid.
+However, since the transfer of funds cannot be hidden in Simplechain, anyone can see the transferred funds.
 
-下面的合约通过接受任何大于最高出价的值来解决这个问题。
-当然，因为这只能在披露阶段进行检查，有些出价可能是 **无效** 的，
-并且，这是故意的(与高出价一起，它甚至提供了一个明确的标志来标识无效的出价):
-投标人可以通过设置几个或高或低的无效出价来迷惑竞争对手。
+The following contract solves this problem by accepting any value greater than the highest bid.
+Of course, because this can only be checked at the disclosure stage, some bids may be **Invalid** of，
+Moreover, this is intentional (together with the high bid, it even provides a clear mark to identify invalid bids):
+Bidders can confuse competitors by setting several high or low invalid bids.
 
 ```sh
     pragma solidity >0.4.23 <0.5.0;
@@ -419,7 +419,7 @@
     }
 ```
 
-## 安全的远程购买
+## Secure Remote purchase
 
 ```sh
     pragma solidity ^0.4.22;
