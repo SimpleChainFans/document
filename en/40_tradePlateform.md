@@ -4,46 +4,46 @@ title: 平台对接
 sidebar_label: 平台对接
 ---
 
-## 搭建SimpleChain节点
+## Build SimpleChain nodes
 
-### docker 搭建
+### docker build
 
-**获取镜像：**
+**Obtain an image:**
 
 ```sh
 docker pull simplechain/sipe:latest
 ```
-**开启RPC**
+**Enable RPC**
 
 ```sh
 docker run -it -p 8545:8545 -p 30312:30312 simplechain/sipe --rpc --rpcaddr "0.0.0.0"
 ```
-可以通过以下命令查看自己的节点是否启动成功：
+You can run the following command to check whether your node is successfully started:
 
 ```sh
 curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":68}'
 ```
 
-### 源码搭建
+### Source code construction
 
 `前期准备:Go 语言环境(1.10 或以上版本)、C 语言编译器`
 
-**1.下载 SimpleChain**
+**1.Download SimpleChain**
 
-可以通过 git 将项目 clone 到本地，也可以在 https://github.com/simplechain-org/go-
-simplechain 页面直接下载。
+You can clone a project locally through git or download directly from the https://github.com/simplechain-org/go-
+simplechain page.
 
     git clone https://github.com/simplechain-org/go-simplechain.git 
 
-**2.安装 sipe**
+**2.Install sipe**
 
-1.进入 go-simplechain 根目录。
+1.Enter the go-simplechain root directory.
 
 ```javascript
 cd go-simplechain
 ```
 
-2.使用 make 工具安装 sipe。
+2.Use the make tool to install sipe.
 
     make sipe
     >>> /usr/local/go/bin/go install -ldflags -X main.gitCommit=9d73f67e1dc5587a95f52c13fee93be6434b42ac -s -v ./cmd/sipe github.com/simplechain-org/go-simplechain/core
@@ -52,23 +52,22 @@ cd go-simplechain
     Done building.
     Run "/Users/yuanchao/go/src/github.com/simplechain-org/go-simplechain/build/bin/sipe" to launch sipe.
 
-当终端出现以上输出时，表示 make 执行成功，此时在 go-simplechain/build/bin 目录下 将会生成 sipe 可执行文件。可以将其移动到任何目录下或将其加入到环境变量中，以此 来便利得运行sipe程序。
+When the above output appears on the terminal, the make execution is successful. In this case, the sipe executable file is generated in the go-simplechain/build/bin directory. You can move it to any directory or add it to environment variables to facilitate the running of sipe programs.
 
-## 启动sipe
+## Start sipe
 
-**1.创建用于存储节点数据的文件夹,如果不**
+**1.Create a folder for storing node data, if not**
 
     mkdir chaindata
 
-**2.启动sipe主网节点**
+**2.Start the sipe Master network node**
 
-开启 RPC 服务并指定 RPC 监听地址为 127.0.0.1，端口 `8545`。节点数据存储目录为 `chaindata`
+Enable the RPC service and specify the RPC listening address as 127.0.0.1, Port 8545 . The node data storage directory is `chaindata`
 
 ```bash
 ./sipe --rpc --rpcaddr 127.0.0.1 --rpcport 8545 --datadir chaindata 
 ```
-
-当出现类似以下输出时，表示启动成功，并开始同步 SimpleChain 主网区块。
+When an output similar to the following appears, the startup is successful and the SimpleChain master Network block is synchronized.
 
 ```bash
 INFO [06-19|09:35:01.481] Maximum peer count               ETH=25 LES=0 total=25
@@ -79,14 +78,14 @@ INFO [06-19|09:35:36.756] Imported new block headers       count=192\
 elapsed=22.273ms number=192 hash=bb758a...bea1b6 ignored=0
 ```
 
-## 社区节点
+## Community node
 
-**rpc地址和端口号：**
+**rpc address and port number:**
 
 ```bash
 47.110.48.207:8545
 ```
-**测试：**
+**Test:**
 ```json
 //Request
 curl -X POST 47.110.48.207:8545  -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":68}'
@@ -98,29 +97,29 @@ curl -X POST 47.110.48.207:8545  -H "Content-Type:application/json" --data '{"js
 }
 ```
 
-## 连接SimpleChain节点
+## Connect to the SimpleChain node
 
-创建一个 sipc.js，然后编写如下代码：
+Create a sipc.js file and write the following code:
 
 ```javascript
 const config = require('../../config') //节点服务器的配置信息
 const Web3 = require('web3')
 module.exports = new Web3(config.uri)
 ```
-## 创建SimpleChain钱包服务
+## Create SimpleChain wallet service
 
-现在开始进入Simplechain钱包服务的核心特性开发阶段。
+Now we are entering the development phase of the core features of Simplechain wallet service.
 
-### 创建新的Simplechain账户
+### Create a new Simplechain account
 
-交易所和支付网关需要为客户生成新地址，以便用户可以向服务充值，或者为产品付费。生成一个没有用过的`sipc`地址是任何数字资产服务的基本需求，因此看一下具体实现。
+The exchange and payment gateway need to generate a new address for the customer so that the user can recharge the service or pay for the product. Generate an unused sipc Address is the basic requirement of any digital asset service, so let's take a look at the specific implementation.
 
-首先，创建一个commands.js，在其中我们订阅队列中的消息。主要包括以下几个步骤：
+First, create a command.js where we subscribe to messages in the queue. It mainly includes the following steps:
 
-连接到command主题，监听新的create_account命令
-当收到新的create_account命令时，创建新的密钥对并存入密码库
-生成account_created消息并发送到队列的account_created主题
-代码如下：
+Connect to the command topic and listen to the new create_account command When a new create_account command is received, a new key pair is created and stored in the password library.
+
+The account_created topic that generates the account_created message and sends it to the queue.
+The code is as follows:
 
 ```javascript
 const web3 = require("./ethereum")
@@ -146,11 +145,11 @@ async function create_account(meta = {}) {
 
 module.exports.listen_to_commands = listen_to_commands
 ```
-### 处理新交易
+### Handle new transactions
 
-我们的钱包还没写完，当我们创建的地址收到用户充值时应当得到通知才对。为此，Simplechain的web3客户端提供了newBlockHeaders订阅机制。此外，如果我们的服务偶然宕机，那么服务就会错过在宕机期间生产的区块，因此我们还需要检查钱包是否已经同步到了网络的最新区块。
+We haven't finished our wallet yet. When the address we created receives the user's recharge, it should be notified. To this end, the web3 client of Simplechain provides the newBlockHeaders subscription mechanism. In addition, if our service goes down accidentally, the service will miss the blocks produced during the downtime. Therefore, we also need to check whether the wallet has been synchronized to the latest blocks on the network.
 
-创建 `sync_blocks.js` 文件，编写如下代码：
+Create `sync_blocks.js` file, write the following code:
 
 ```javascript
 const web3 = require('./ethereum')
@@ -197,12 +196,12 @@ async function sync_to_block(index, latest, opts) {
 module.exports = sync_blocks
 ```
 
-在上面的代码中，我们从钱包服务之前处理的最新区块开始，一直同步到区块链的当前最新区块。一旦我们同步到最新区块，就开始订阅新区块事件。对于每一个区块，我们都执行如下的回调函数以处理区块头以及区块中的交易列表：
+In the preceding code, we synchronize the latest block processed by the wallet service to the current latest block in the blockchain. Once we synchronize to the latest block, we begin to subscribe to the new Block event. For each block, we execute the following callback function to process the block header and the transaction list in the block:
 
 - `onTransactions`
 - `onBlock`
 
-**通常包含如下的处理步骤：**
+**Generally, the following processing steps are included:**
 
 - `监听新区块，获取区块中的全部交易`
 - `过滤掉与钱包地址无关的交易`
@@ -210,7 +209,7 @@ module.exports = sync_blocks
 - `将地址上的资金归集到安全的存储`
 - `更新已处理的区块编号`
 
-**最终的代码如下：**
+**The final code is as follows:**
 
 ```javascript
 const web3 = require("web3") //调用web3
@@ -288,14 +287,14 @@ async function process_transaction(transaction) {
 module.exports = start_syncing_blocks
 ```
 
-# 总结
+#  Summary
 
-我们已经完成了交易所Simplechain钱包服务的设计与实现，这个服务还可以从以下几个方面加以改进：
+We have completed the design and implementation of Simplechain wallet service of the exchange. This service can also be improved from the following aspects:
 
-- 增加错误处理
-- 增加命令类型
-- 交易签名与交易广播
-- 部署合约
+- Add error handling
+- Add command type
+- Transaction Signature and transaction broadcast
+- Deployment Contract
 
 
 

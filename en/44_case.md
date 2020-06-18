@@ -1,24 +1,18 @@
----
-id: docs_48
-title: 落地案例
-sidebar_label: 落地案例
----
+SimpleChain（SIPC）is a public chain with the design concept of "simple blockchain, mutual promotion and win-win. As a revolutionary blockchain application infrastructure design, blockchain supports the underlying consensus-POW algorithm of the main chain. Sub-chains support multiple consensus and performance requirements to ensure stable and safe operation, so as to meet the rich business application scenarios. The systematic tool module provides a simple configuration, deployment, and development environment for various application scenarios to implement simple blockchain. SimpleChain is exploring a broader space for blockchain applications and has made great achievements in multiple fields such as judicial registration, cultural copyright, game entertainment, and scenario payment. Since the launch of Simplechain's main network, community developers have made joint efforts. More and more applications are developed based on Simplechain. Here are some detailed implementation cases.
 
-SimpleChain（SIPC）是一款以“简单上链、共促共赢”为设计理念的公有链。作为一项革命性的区块链应用基础设施设计，上链支持主链底层共识—POW算法，子链通过支持多元共识和性能要求来保障平稳安全运行，从而满足丰富的商业应用场景。通过体系化工具模组为各类应用场景提供简便的配置、部署与开发环境，实现简单上链。在区块链应用的道路上SimpleChain正在探索更广阔的空间，并在司法存证、文化版权、游戏娱乐、场景支付等多重领域成绩斐然。从Simplechain主网上线以来，经过社区开发者的共同努力。基于Simplechain开发的应用越来越多，下面是一些详细的落地案例。
+**Judicial deposit:** As the first sub-chain of judicial field based on SimpleChain underlying technology, the exclusive technical support security network of "The first case of Block Chain certificate storage in China" is the security chain, in addition to reaching cooperation with several law firms and judicial authentication institutions, it has also established close contact with the three major domestic internet courts and the first Internet notary office in China, and its 5.0 version of the evaluation report of China Standard Institute will be released soon;
 
-**司法存证：** “全国首例区块链存证案例”的独家技术支持方保全网作为基于SimpleChain底层技术的首条司法领域子链——保全链，与数家律所和司法鉴定机构达成合作外，更与国内三大互联网法院及全国首家互联网公证处建立紧密联系，其5.0版本的中国标准院测评报告也即将发布；
+**Cultural copyright：** In addition to the sub-chain security network (security chain) providing "block chain +" certificate storage services for domestic cultural media companies such as rights protection Knights, haojubang, and Babbitt, it has also reached deep cooperation with one-stop novel reading and copyright investment platform fun;
 
-**文化版权：** 除子链保全网（保全链）为国内诸如维权骑士、好剧邦、巴比特等文化传媒公司提供“区块链+”存证服务外，也与一站式小说阅读和版权投资平台版趣达成深度合作；
+**游戏娱乐：** GWC, an overseas game platform, has established a system based on credit rating and quality rating of the game industry on SimpleChain. Participants can score the game and its production team to obtain corresponding game operation dividends;
 
-**游戏娱乐：** 海外游戏平台GWC在SimpleChain上做了一套基于游戏行业信用评级、质量评分的体系，参与者可以通过对游戏及其制作团队打分，获得相应的游戏运营分红；
+**Philanthropy:** The SimpleChain team and the entrepreneurship team of Zhejiang University have jointly created the world's first blockchain intelligent coffee machine, which has been successively put into shared office space, independent start-up companies and other places. Its system supports SIPC payment, without centralized payment tools such as WeChat and Alipay, you can enjoy the most convenient blockchain payment method.
 
-**场景支付：** SimpleChain团队与浙大创业团队共同打造了全球首款区块链智能咖啡机，其咖啡机已被陆续投放在共享办公空间、独立创业公司等场所，其系统支持SIPC支付，无需拥有微信、支付宝等中心化支付工具，即可享受最便捷的区块链支付方式。
+**Social E-Commerce:** SimplecChain, following the donation tracing platform of the digital Qin science and technology security network, donated more than ten thousand pieces of protective clothing to Wuhan Jiuzhou tongrenshou Hall nursing home, the Second Affiliated Hospital of Zhejiang University Medical College and other institutions to support front-line medical staff. Through the blockchain technology, the whole process of the circulation process and time node of donated goods and materials is recorded, recorded and tracked, providing the whole process of blockchain solutions for charitable donations in the epidemic situation. At the same time, it also reached a strategic cooperation agreement with Bithelp's global digital public welfare platform and jointly launched public welfare fund-raising activities.
 
-**公益慈善：** SimplecChain继携手数秦科技保全网捐赠溯源平台，向武汉九州通人寿堂养老院、浙江大学医学院附属第二医院等机构捐赠万余件防护服，以支援一线医护人员。通过区块链技术实现了捐赠物资流转过程、时间节点的全流程存证、记录与跟踪，为疫情中慈善捐赠提供全流程上链解决方案。同时，还与与Bithelp全球性的数字公益平台达成战略合作协议，共同发起了公益募捐活动。
+**社交电商：** SimpleChain helps boutique social e-commerce platforms build the "blockchain + social e-commerce" model all over the world, which connects the ecological relationships among platform merchants, e-commerce platforms, and community users, and changes the previous platform centralization model, the three-party interest ecology will be re-integrated. They will participate in the whole interest chain together and exist as an equal relationship.
 
-**社交电商：** SimpleChain帮助精品社交电商平台全球时刻打造“区块链+社交电商”模式，将平台商户、电商平台、社群用户三者生态关系打通，改变了以往平台中心化的模式，三方利益生态将会被重新整合，他们将共同参与整个利益链条，而且是作为平等的关系存在。
-
-**资产加密：** SimpleChain与Keystore 合作，共同推进区块链技术和应用的发展。双方在资产托管、节点服务、市场拓展等领域展开合作，携手拓展企业级加密资产服务市场。
+**Asset encryption:** SimpleChain cooperates with Keystore to promote the development of blockchain technology and applications. The two parties cooperate in the fields of asset trusteeship, node services, and market expansion, and jointly expand the enterprise-level encrypted asset service market.
 
 
 

@@ -1,64 +1,64 @@
-Simpool矿池挖矿教程
+Simpool mining tutorial
 
-**挖矿方式**
+**Mining method**
 
-**方式1**: 在矿池官网Simpool中注册账户挖矿。
+**Mode 1 :**: register an account for mining in Simpool, the official website of the mining pool.
 
-**方式2**: 用simpleNode（V1.0.0版本）连接矿池挖矿。
+**Mode 2:**: use simpleNode(V1.0.0 version) to connect to the mining pool for mining.
 
-## 矿池注册
+## Mine pool registration
 
-1. 注册矿池账户（账户名不要输入中文); 账户注册地址：https://simpool.sipc.vip/enroll
-2. 进入「账户管理」设置收款地址（不然系统无法打币）。
+1. Register the mine pool account (do not enter the account name in Chinese); Account registration address: https://simpool.sipc.vip/enroll
+2. Enter account management to set the payment address (otherwise the system cannot make coins).
 
-## 链接矿池挖矿
+## Link mining pool mining
 
-**特别注意的地方：**
+**Special attention:**
 
-1. name后面跟的是矿工用户名，格式最好的是 账户名.xxx（矿工名不要有中文）或者直接就是账户名
+1. name is followed by the miner user name, the best format is the account name. xxx (Miner name does not have Chinese) or directly the account name
 
-2. 挖矿的矿工属于哪个账户很重要，收益是根据所对应的账户名下的收款地址去进行分配
+2. It is very important which account the miner belongs to, and the income is distributed according to the payment address under the corresponding account name.
 
-## 下载GPU所需要的文件
+## Download the files required by the GPU
 
-地址在这里：https://github.com/simplechain-org/gpuminer/releases（一定要下载最新版，最新版效率更高哦！`最新版本是1.0.4`）
+The address is here: https://github.com/simplechain-org/gpuminer/releases（Be sure to download the latest version, the latest version is more efficient!`最新版本是1.0.4`）
 
-## 解压修改文件
+## Decompress the modified file
 
-把压缩文件下载下来之后，解压成文件夹。点进去，找到文件start.bat文件，用记事本编辑它：
+Download the compressed file and decompress it into a folder. Click in, find the file start.bat, and edit it with Notepad:
 
-1. -gpuplatform 1选择A卡进行挖矿；
+1. -gpuplatform 1 Select Card A for mining;
 
-2. -gpuplatform 2选择N卡进行挖矿；
+2. -gpuplatform 2 choose N card for mining;
 
-3. -gpuplatform 3选择混合多卡挖矿。
+3. -gpuplatform 3 select hybrid multi-card mining.
 
-修改之后保存并关掉，双击start.bat即可链接矿池，成功后截图。接入矿池后即可在矿池官网登录自己的矿池账户查看自己收益。
+After modification, save it and turn it off. Double-click start.bat to link the mine pool and take a screenshot. After accessing the mine pool, you can log on to your mine pool account on the mine pool official website to view your income.
 
-## SimpleNode（V1.0.0版本）矿池挖矿
+## SimpleNode（V1.0.0 version）mining pool mining
 
-SimpleNode下载地址：https://www.simplechain.com/，根据自己系统选择对应的版本安装，安装成功后启动应用。
+SimpleNode download address：https://www.simplechain.com/，select the corresponding version to install according to your system, and start the application after the installation is successful.
 
 ![8.7.png](https://i.loli.net/2020/05/08/eFHYhwvdqI4AKUE.png)
 
-**具体挖矿步骤：**
+**Specific mining steps:**
 
-一. 启动SimpleNode，点击右上角“开始挖矿”按钮，出现挖矿方式弹窗
+一. Start SimpleNode, click the "start mining" button in the upper right corner, and the mining method pop-up window appears
 
-二. 挖矿方式选择:
-1. 挖矿方式：在挖矿方式弹窗中选择“矿池挖矿”；
-2. 矿工名：若未注册过Simpool矿池账户，需要在矿工名右侧点击“点击注册”按钮跳转到Simpool矿池注册页面，注册成功后返回之前SimpleNode挖矿页面；若已注册过Simpool矿池账户，直接在矿工名编辑框处输入矿工名称（矿工名中不要有中文）
-3. 显卡类型：选择显卡类型，根据自己电脑的显卡来选择（选择错误，挖矿就没有算力）
+二. Mining method selection:
+1. Mining method: Select "mining pool mining" in the popup window of mining method ";
+2. Miner name: if you have not registered a Simpool account, you need to click the "Click register" button on the right side of the miner name to go to the Simpool registration page. After the registration is successful, return to the previous SimpleNode mining page; if you have registered a Simpool account, enter the miner name directly in the miner name editing box (Miner name does not contain Chinese)
+3. Graphics card type: select the type of graphics card, according to your computer's graphics card to choose (wrong choice, mining has no computing power)
 
-**特别注意的地方：**
+**Special attention:**
 
-1. 在Simpool中注册账户或者添加账户时，账户名不要有中文
+1. When you register an account or add an account in Simpool, the account name must not be in Chinese.
 
-2. 矿工名，格式最好的是 账户名.xxx（账户名为Simpool矿池中的账户名）或者直接就是账户名
+2. Miner name, the best format is the account name. xxx (account name is the account name in the Simpool) or directly the account name
 
-3. 挖矿的矿工属于哪个账户很重要，收益是根据所对应的账户名下的收款地址去进行分配
+3. It is very important which account the miner belongs to, and the income is distributed according to the payment address under the corresponding account name.
 
-三. 点击确定按钮，就可以进行挖矿了，可以在右上角中点击查看收益进行查看自己的收益情况
+三. Click the OK button to mine. You can click view revenue in the upper right corner to view your revenue
 
 
 

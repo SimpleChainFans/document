@@ -1,53 +1,52 @@
-## 同步基础流程
+## Basic synchronization process
 
-同步，是区块链节点非常重要的功能。它是`共识`的辅助，给共识提供必需的运行条件。同步分为交易的同步和状态的同步。交易的同步，确保了每笔交易能正确的到达每个节点上。状态的同步，能确保区块落后的节点能正确的回到最新的状态。只有持有最新区块状态的节点，才能参与到共识中去。
+Synchronization is a very important function of blockchain nodes. It is `consensus` to provide the consensus with the necessary operating conditions. Synchronization is divided into transaction synchronization and status synchronization. Transaction synchronization ensures that each transaction can reach each node correctly. Status synchronization can ensure that the backward nodes in the block can return to the latest status correctly. Only nodes with the latest block status can participate in the consensus.
 
-## 交易同步
+## Transaction synchronization
 
-交易同步，是让区块链的上的交易尽可能的到达所有的节点。为共识中将交易打包成区块提供基础。
+Transaction synchronization allows transactions on the blockchain to reach all nodes as much as possible. Provides the basis for packaging transactions into blocks in consensus.
 
-一笔交易（tx1），从客户端上发往某个节点，节点在接收到交易后，会将交易放入自身的交易池（Tx Pool）中供共识去打包。与此同时，节点会将交易广播给其它的节点，其它节点收到交易后，也会将交易放到自身的交易池中。交易在发送的过程中，会有丢失的情况，为了能让交易尽可能的到达所有的节点，收到广播过来交易的节点，会根据一定的策略，选择其它的节点，再进行一次广播。
+A transaction (tx1) is sent from the client to a node. After receiving the transaction, the node will put the transaction into its own transaction Pool (Tx Pool) for consensus packaging. At the same time, the node broadcasts the transaction to other nodes. After receiving the transaction, other nodes will also put the transaction into their own transaction pool. The transaction may be lost during the process of sending. In order to make the transaction reach all nodes as much as possible, the node that receives the broadcast transaction will choose other nodes according to a certain strategy, broadcast again.
 
-**交易广播策略**
+**Transaction broadcast strategy**
 
-如果每个节点都没有限制的转发/广播收到的交易，带宽将被占满，出现交易广播雪崩的问题。为了避免交易广播的雪崩，Simplechain根据经验，选择了较为精巧的交易广播策略。在尽可能保证交易可达性的前提下，尽量的减少重复的交易广播。
+If each node has no restrictions on forwarding or broadcasting received transactions, the bandwidth will be occupied and the transaction broadcast avalanche will occur. In order to avoid the avalanche of transaction Broadcasting, Simplechain chose a relatively delicate transaction broadcasting strategy based on experience. On the premise of ensuring the reachability of the transaction as much as possible, reduce the repeated transaction broadcast as much as possible.
 
-* 对于SDK来的交易，广播给所有的节点
-* 一条交易在一个节点上，只广播一次，当收到了重复的交易，不会进行二次广播
+* For transactions from the SDK, broadcast to all nodes
+* A transaction is broadcast only once on a node. When a duplicate transaction is received, no secondary broadcast is performed.
 
-通过上述的策略，能够尽量的让交易到达所有的节点，但也会在极小的概率下出现某交易无法到达某节点的情况。此情况是允许的。交易尽可能到达更多的节点，是为了让此交易尽快的被打包、共识、确认，尽量的让交易能够更快的得到执行的结果。当交易未到达某个节点时，只会使得交易的执行时间变长，不会影响交易的正确性。
+Through the above strategy, transactions can reach all nodes as much as possible, but a transaction cannot reach a node with a minimum probability. This situation is allowed. The purpose of reaching as many nodes as possible is to package, reach consensus, and confirm the transaction as soon as possible, so that the transaction can be executed as quickly as possible. When the transaction does not reach a certain node, the transaction execution time will only be longer and the correctness of the transaction will not be affected.
 
-## 状态同步
+## Status synchronization
 
-状态同步，是让区块链节点的状态保持在最新。区块链的状态的新旧，是指区块链节点当前持有数据的新旧，即节点持有的当前区块块高的高低。若一个节点的块高是区块链的最高块高，则此节点就拥有区块链的最新状态。只有拥有最新状态的节点，才能参与到共识中去，进行下一个新区块的共识。
-
-
-在一个全新的节点加入到区块链上，或一个已经断网的节点恢复了网络时，此节点的区块落后于其它节点，状态不是最新的。此时就需要进行状态同步。如图，需要状态同步的节点（Node 1），会主动向其它节点请求下载区块。整个下载的过程会将下载的负载分散到多个节点上。
-
-**状态同步与下载队列**
-
-区块链节点在运行时，会定时向其它节点广播自身的最高块高。节点收到其它节点广播过来的块高后，会和自身的块高进行比较，若自身的块高落后于此块高，就会启动区块下载流程。
-
-区块的下载通过请求的方式完成。进入下载流程的节点，会随机的挑选满足要求的节点，发送需要下载的区块区间。收到下载请求的节点，会根据请求的内容，回复相应的区块。
+Status synchronization is to keep the status of blockchain nodes up to date. The status of a blockchain is the new and old data that a blockchain node currently holds, that is, the height of the current block that a node holds. If the block height of a node is the highest block height of the blockchain, the node has the latest status of the blockchain. Only nodes with the latest status can participate in the consensus and carry out the consensus of the next new district.
 
 
-收到回复区块的节点，在本地维护一个下载队列，用来对下载下来的区块进行缓冲和排序。下载队列是一个以块高为顺序的优先队列。下载下来的区块，会不断的插入到下载队列中，当队列中的区块能连接上节点当前本地的区块链，则将区块从下载队列中取出，真正的连接到当前本地的区块链上。
+When a new node is added to the blockchain, or a node that has been disconnected is restored to the network, the block of this node lags behind other nodes, and the status is not up to date. Status synchronization is required. As shown in the figure, the Node (Node 1) that needs state synchronization initiatively requests other nodes to download the block. During the entire download process, the download load is distributed to multiple nodes.
 
-## 同步场景举例
+**Status synchronization and Download Queue**
 
-### 交易同步
+When a blockchain node is running, it regularly broadcasts its highest block height to other nodes. After a node receives the block height broadcasted by other nodes, it compares it with its own block height. If its own block height falls behind this block height, the block download process is started.
 
-一笔交易被广播到所有节点的过程：
+The download of the block is completed by request. The node that enters the download process randomly selects the node that meets the requirements and sends the block interval to be downloaded. The node that receives the download request will reply to the corresponding block based on the request content.
 
-1. 一笔交易通过channel或RPC发送到某节点上
-2. 收到交易的节点全量广播此交易给其它节点
-3. 其它节点收到交易后，为了保险起见，选择25%的节点再广播一次
-4. 节点收到广播过的交易，不会再次广播
+The node that receives the reply block maintains a download queue locally to buffer and sort the downloaded blocks. A download queue is a priority queue in order of block heights. The downloaded blocks are continuously inserted into the Download Queue. When the blocks in the queue can connect to the current local blockchain of the node, the blocks are taken out of the download queue, connect to the current local blockchain.
 
-### 状态同步
+## Examples of synchronization scenarios
 
-节点出块时的广播逻辑
+### Transaction synchronization
 
-1. 某个节点出块
-2. 此节点将自己最新的状态（最新块高，最高块哈希，创世块哈希）广播给所有的节点
-3. 其它的节点收到peer的状态后，更新在本地管理的peer数据
+The process of broadcasting a transaction to all nodes:
+
+1. A transaction is sent to a node through a channel or RPC
+2. The node that receives the transaction broadcasts the transaction to other nodes in full.
+3. After other nodes receive the transaction, to be on the safe side, select 25% of the nodes to broadcast again
+4. The node receives a broadcast transaction and will not broadcast it again
+
+### Status synchronization
+
+Broadcast logic when node blocks
+
+1. Outbound block of a node
+2. This section broadcasts its latest status (latest block height, highest block hash, Genesis block hash) to all nodes
+3. After other nodes receive the peer status, the peer data managed locally is updated.

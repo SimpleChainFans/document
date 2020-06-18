@@ -1,21 +1,21 @@
-SimpleChain是一个由社区主导，对外开源的公有底层区块链平台，由SimpleChain基金会成立的开源工作组与技术社区成员写作打造。
+SimpleChain is a community-led and open-source public underlying blockchain platform. It is created by an open-source working group established by SimpleChain Foundation and members of the technology community.
 
-## Simplechain资源列表
+## Simplechain resource list
 
-[Github主页](https://github.com/simplechain-org)
+[Github home page](https://github.com/simplechain-org)
 
-[技术文档](https://simplechainfans.github.io/sipc-docs/docs/docs_1)
+[Technical documentation](https://simplechainfans.github.io/sipc-docs/docs/docs_1)
 
-[深度解析系列文章](https://www.jianshu.com/u/ef5c221114f5)
+[Deep Analysis Series](https://www.jianshu.com/u/ef5c221114f5)
 
-[贡献代码](https://github.com/simplechain-org/go-simplechain)
+[Contribution code](https://github.com/simplechain-org/go-simplechain)
 
-[反馈问题](https://github.com/simplechain-org/go-simplechain/issues)
+[Feedback problem](https://github.com/simplechain-org/go-simplechain/issues)
 
-[应用案例集合](https://simplechainfans.github.io/sipc-docs/docs/docs_48)
+[Application Case Collection](https://simplechainfans.github.io/sipc-docs/docs/docs_48)
 
 
-## 加入Simlechain社区
+## Join the Simlechain community
 
 ![47.2.png](https://i.loli.net/2020/05/14/akWxgyB5f6qJrYc.png)
 

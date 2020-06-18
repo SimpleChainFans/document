@@ -1,72 +1,72 @@
-### 矿池相关问题
+### Mine pool related issues
 
-**1.收款地址我该填什么？**
+**1.What should I fill in the receiving address?**
 
-建议填写SIPC钱包地址，因为你掌握了币种的私钥，是更安全的。
+We recommend that you fill in the SIPC wallet address, because you have the private key of the currency, which is more secure.
 
-**2.SimPool 可以挖哪些币？**
+**2.What coins can SimPool dig ?**
 
-当前支持SIPC挖矿。
+Currently, SIPC mining is supported.
 
-**3. 如何挖矿？**
+**3. How to mine ？**
 
-大致步骤为：注册账户——创建挖矿账户——配置电脑——查看收益。具体步骤见SIPC挖矿教程。
+The general steps are: register an account-create a mining account-configure a computer-view revenue. For specific steps, see SIPC mining tutorial.
 
-**4. 我的算力有多高？**
+**4. How high is my computing power?**
 
-实际连接上矿池挖矿后的算力不一定等于标称算力，具体以矿池显示算力为准。
+The actual computing power after connecting the mining pool for mining is not necessarily equal to the nominal computing power, and the specific computing power displayed by the mining pool is the standard.
 
-**5. 为什么我的收益在减少？**
+**5. Why is my income decreasing?**
 
-首先确认以下几点：
+First confirm the following points:
 
-- (1) 挖矿设备是否正常运行；
+- (1) whether the mining equipment operates normally;
 
-- (2) 挖矿配置是否正确；
+- (2) whether the mining configuration is correct;
 
-- (3) 网络连接是否正常；
+- (3) whether the network connection is normal;
 
-- (4) 挖矿难度是否变化（若难度变动之后收益会有波动）；并且随着挖矿设备的增多、全网算力的增加，挖矿难度会增大，单个设备挖矿收益会逐渐变少。
+- (4) whether the difficulty of mining changes (if the difficulty changes, the profit will fluctuate); And with the increase of mining equipment and the increase of the whole network computing power, the difficulty of mining will increase, the mining revenue of a single device will gradually decrease.
 
-**5. 每日收益什么时候结算？**
+**5. When will the daily income be settled?**
 
-每个小时进行一次整点结算，然后凌晨12点打币，个人收益（每小时）具体计算方法如下：
+The hourly settlement is conducted once every hour, and then the coin is made at 12 a.m. the specific calculation method of personal income (per hour) is as follows:
 
-- 矿池收益=矿池平均算力/全网算力*全网每天产出SIPC数+叔快收益；
+- Mining pool revenue = average computing power of the mining pool/computing power of the whole network * The number of SIPC output per day of the whole network + super-fast revenue;
 
-- 个人收益=个人接受数总和/全网接受数*矿池收益；
+- Personal income = total personal acceptance/total network acceptance * mine pool income;
 
-**6. 为什么有时候网络不稳定？**
+**6. Why is the network unstable sometimes?**
 
-有时候会有技术上的调整，调整的时候不太稳定，但是调整一般30分钟到2小时就能解决；也有可能有攻击，攻击有针对比特币网络的攻击，也有针对矿池服务器的攻击。如果是个人网络问题，则需要个人调试解决或寻求网络运营商的帮助。
+Sometimes there will be technical adjustments, which are not stable, but generally can be solved in 30 to 2 hours. There may also be attacks, attacks against bitcoin networks, there are also attacks against mine pool servers. If it is a personal network problem, you need personal debugging to solve it or seek help from the network operator.
 
-**7. 算力下降了怎么办？**
+**7. What if the computing power drops?**
 
-请您先检查如下问题:
+Please check the following questions first:
 
-- (1) 挖矿设备是否正常运行；
+- (1) whether the mining equipment operates normally;
 
-- (2) 挖矿配置是否正确；
+- (2) whether the mining configuration is correct;
 
-- (3) 网络连接是否正常；
+- (3) whether the network connection is normal;
 
-上述故障排除后算力仍然下降请在Simpool群内找客服解决。
+After the above troubleshooting, the computational power still decreases. Please find customer service in the Simpool group to solve the problem.
 
-**8. 什么是工作量？网络难度是什么？**
+**8. What is workload? What is the network difficulty?**
 
-工作量是指矿工为挖取新块付出的算力贡献，网络难度是指全网爆块的计算难度，它会根据所有矿工的算力总和动态调整。
+The workload refers to the contribution of the miner to the computing power for digging new blocks. The network difficulty refers to the computing difficulty of the whole network explosion block, which is dynamically adjusted according to the total computing power of all miners.
 
-**9. 矿池有哪几种结算方式？**
+**9. What are the settlement methods for the mine pool?**
 
-目前矿池采用PPLNS结算方式（全称Pay Per Last N Shares），意思是说“依据过去的N个股份来支付收益”。这意味着，全部的矿工一旦发现了一个区块，大家将依据每一个人自己贡献的股份数量占比来分配区块中的货币。
+At present, the mining pool adopts the PPLNS settlement method (full name: Pay Per Last N Shares), which means "Pay the income according to the past N Shares". This means that once all miners find a block, they will distribute the currency in the block according to the proportion of shares each person contributes.
 
-**10. 没有设置收款地址收益会丢失吗？**
+**10. Will the revenue be lost if the collection address is not set?**
 
-若你没有填写收款地址，你的收益会暂时存放在Simpool账户里。等你设置地址后，我们会在地址生效后给你支付收益。
+If you do not fill in the receiving address, your revenue will be temporarily stored in the Simpool account. After you set the address, we will pay you the income after the address takes effect.
 
-**11. 用SimpleNode钱包选择矿池挖矿时，高级选项显卡参数怎么设置？**
+**11. When using SimpleNode wallet to select mining pool for mining, how to set the parameters of advanced graphics card?**
 
-已知显卡调优参数：
+Known video card tuning parameters:
 
 - (1) `NVIDIA GTX-750-Ti`
 
@@ -80,32 +80,32 @@
 
       gpuplatform=2, memsize=2048, globalworksize=4096, localworksize=64, lookupgap=4
 
->`gpuplatform`: AMD显卡填1, NVIDIA显卡填2
+>`gpuplatform`: AMD graphics card fill in 1, NVIDIA graphics card fill in 2
 
->`memsize:` 筛选不小于这个显存容量(默认2048MB)的显卡，NVIDIA GTX-750-Ti 显存是1999MB
+>`memsize:` Filter graphics cards that are not less than the video memory capacity (default 2048MB), NVIDIA GTX-750-Ti video memory is 1999MB
 
->`globalworksize:` 并行计算项，一般是1024的倍数，最大不能大于显卡的Max work item sizes ，但调优时，AMD的RX570设置8000效率最高。
+>`globalworksize:` The parallel computing item is generally a multiple of 1024, and the maximum can not be greater than the Max work item sizes of the graphics card. However, when adjusting, AMD's RX570 setting 8000 has the highest efficiency.
 
->`localworksize:` 每个显卡计算单元的工作项，一般是64/128/256/512，globalworksize/localworksize不能大于显卡支持的 Max work group size
+>`localworksize:` The work item of each graphics card calculation unit is generally 64/128/256/512. globalworksize/localworksize cannot be greater than the Max work group size supported by the graphics card.
 
->`lookupgap:` 这个值最后调，取值范围1/2/4/8，默认是2，在性能与显存之间做调整。等于1时，用的显存最多，以此为基准，等于2时用其二分之一，等于8时用其八分之一。
+>`lookupgap:` This value is finally adjusted. The value range is 1/2/4/8. The default value is 2. Adjust the performance between video memory and video memory. When it is equal to 1, the memory used is the most. Based on this, 1/2 is used when it is equal to 2, and 1/8 is used when it is equal to 8.
 
 ### SimpleNode X1
 
-**1.一个账户可以多关联几台矿机吗？**
+**1.Can an account be associated with several more mining machines？**
 
-可以，只要保证矿机的供电量充足，一台电脑上可以串联多台矿机。
+Yes, as long as the power supply of the mining machine is guaranteed to be sufficient, multiple mining machines can be connected in series on one computer.
 
-- 如果使用Solo挖矿方式，则收益直接打入挖矿的账户地址；
-- 如果使用矿池挖矿方式，则收益打入与矿工关联的账户地址。
+- If the Solo mining method is used, the profit will be directly transferred to the mining account address;
+- If you use the mining pool mining method, the profit is transferred to the account address associated with the miner.
 
-**2.关联多台矿机后，如何查看各台矿机的状态？**
+**2.How to check the status of each mining machine after connecting multiple mining machines?**
 
-如有多台矿机同时挖矿，在SimpleNode软件上点击“停止挖矿”后面的小箭头即可查看各台矿机的状态。
+If multiple mining machines are mining at the same time, click the small arrow behind "stop mining" on SimpleNode software to view the status of each mining machine.
 
 ![7.18.png](https://i.loli.net/2020/05/07/H6j7wUXFPvMNu1R.png)
 
-**3.家里的网络和电脑最多可以拖几台矿机？**
+**3.How many mining machines can the network and computer at home drag at most?**
 
-网络带宽对矿机影响较小，只要保证SimpleNode能连上Simpool矿池即可；只要保证矿机的供电量充足，每台电脑可以串联多台矿机，一般最多可支持2-3台左右；增加需要外接电源。
+The network bandwidth has little impact on the mining machine, as long as the SimpleNode can be connected to the Simpool mining pool; As long as the power supply of the mining machine is guaranteed to be sufficient, each computer can be connected with multiple mining machines, generally, it can support about 2-3 sets at most; Additional external power supply is required.
 

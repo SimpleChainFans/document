@@ -1,4 +1,4 @@
-Simplechain作为一个社区开源项目，长期以来受到很多社区开发者的支持。下面是社区开发这贡献的一些优秀的项目：
+Simplechain, as an open-source community project, has long been supported by many community developers. The following are some excellent projects contributed by community development:
 
 ## SDK
 
@@ -9,9 +9,9 @@ Simplechain作为一个社区开源项目，长期以来受到很多社区开发
 [JavaScript-SDK](https://web3js.readthedocs.io/en/v1.2.8/)
 
 
-## Google 插件钱包
+## Google plug-in wallet
 
-[插件钱包下载及使用教程](https://simplechainfans.github.io/sipc-docs/docs/docs_28)
+[Plug-In wallet download and usage tutorial](https://simplechainfans.github.io/sipc-docs/docs/docs_28)
 
 
 

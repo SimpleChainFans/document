@@ -1,59 +1,59 @@
-在开始了解Simplechain，以及方便后续更好的学习Simplechain的内容，我们需要了解一些常见的术语和名词。
+We need to know some common terms and nouns before we begin to understand Simplechain and learn more about Simplechain in the future.
 
-## 专有名词
+## Proper noun
 
-> **外部账户**：EOAs（External Owned Accounts），关联个人掌握的私钥。可以用于发送交易（转移Sipc或发送消息），形同一张带数字ID的储蓄卡。
+> **External account**：EOAs(External Owned Accounts), associated with personal private key. Can be used to send transactions (transfer Sipc or send messages), like a savings card with a digital ID.
 
-> **合约账户**：Contracts Accounts，可以在Simplechain上存储合约代码与合约数据的账户，外部不能直接操作此账户。只能由外部账户直接或间接调用。
+> **Contract account**：Contracts Accounts, which can store contract codes and contract data on Simplechain. External users cannot directly operate this account. It can only be called directly or indirectly from an external account.
 
-> **账户状态**： account state，表示一个账户在Simplechain中的状态。账户状态在账户数据变化时变化。账户状态包含四项信息：nonce、余额、账户存储内容根哈希值、账户代码哈希值。状态数据不直接存储在区块上。
+> **Account Status**： account state, which indicates the status of an account in Simplechain. The account status changes when the account data changes. The account status includes four items: nonce, balance, root hash value of account storage content, and hash value of account code. Status data is not directly stored in the block.
 
-> **账户Nonce**: 账户随机数，是账户的交易计数。以防止重放攻击。
+> **Account Nonce**: account random number, which is the transaction count of the account. To prevent replay attacks.
 
-> **智能合约**：Smart Contract，Simplechain支持通过图灵完备的高级编程语言编写智能合约代码。部署在链上后，可以接受来自外部的交易请求和事件，以触发执行特定的合约代码逻辑，进一步生成新的交易和事件。甚至调用其他的智能合约。
+> **Smart Contract**：Smart Contract,Simplechain supports writing Smart Contract code through Turing's complete advanced programming language. After being deployed on the chain, you can accept transaction requests and events from outside to trigger the execution of specific contract code logic and further generate new transactions and events. Even call other smart contracts.
 
-> **世界状态**：state，管理账户地址到账户状态的映射关系。所有账户的状态构成整个区块链状态。
+> **World State**：state, which manages the mapping relationship between account address and account state. The status of all accounts constitutes the status of the entire blockchain.
 
-> **交易**：Transaction，是外部与Simplechain交互的唯一途径，必须由外部账户签名，矿工执行交易，最终打包到区块中。
+> **Trading**：Transaction is the only way for external interaction with Simplechain. It must be signed by an external account. The miner executes the Transaction and finally packages it into the block.
 
-> **交易收据**：Receipt，是方便对交易进行零知识证明、索引和搜索，将交易执行过程中的一些特定信息编码为交易收据。
+> **Transaction receipt**：Receipt, which is convenient for zero-knowledge proof, index and search of transactions, and codes some specific information during transaction execution as transaction receipts.
 
-> **区块**：block，是由一组交易和一些辅助信息（简称区块头）、其他区块头哈希构成的数据块。其他区块头哈希表示父区块或者叔背区块。
+> **Block**：block is a data block composed of a set of transactions, some auxiliary information (block header for short), and other block header hashes. Other block header hash indicates the parent block or the back block.
 
-> **叔块**：Uncle Block，不能成为主链一部分的孤儿区块，如果有幸被后来的区块收留进区块链就变成了叔块。收留了孤块的区块有额外的奖励。孤块一旦成为叔块，该区块统一可获得奖励。通过叔块奖励机制，来降低Simplechain软分叉和平衡网速慢的矿工利益。
+> **uncle block**：Uncle Block，an orphan Block that cannot be part of the main chain. If you are lucky enough to be taken into the Block chain by later blocks, it becomes Uncle Block. Additional rewards will be given to the blocks that have retained the isolated blocks. Once a block becomes a block, the block will be rewarded. Reduce Simplechain soft forking and balance the benefits of miners with slow network speed through the block reward mechanism.
 
-> **随机数**：nonce，记录在区块头中，努力工作的证明。
+> **Random number**：nonce，recorded in the block header, proof of hard work.
 
-> **Gas**：燃料是交易打包到区块时，在EVM运行所消耗的资源量的一种形象化概念，比喻需要燃料才能运行EVM。在Simplechain中，将CPU资源、存储资源按内置的规则，统一使用 Gas 作为资源单位表达。每执行一次虚拟机指令，均消耗一定的Gas。
+> **Gas**：fuel is a visualized concept of the amount of resources consumed during the operation of EVM when a transaction is packaged into a block. It is a metaphor that fuel is required to run EVM. In Simplechain, CPU resources and storage resources are expressed in accordance with built-in rules and Gas is used as a resource unit. Each time a virtual machine command is executed, a certain amount of Gas is consumed.
 
-> **GasPrice**: 燃料价格，任何交易都需要包含一个愿意支付的燃料单价，最终根据交易消耗的燃料量，计算手续费(usedGas*gasPrice)支付给矿工。
+> **GasPrice**: fuel price, any transaction needs to include a unit price of fuel that is willing to pay, and finally according to the amount of fuel consumed by the transaction, the handling fee (usedGas * gasPrice) is calculated and paid to the miners.
 
-> **价格预测**：GPO(Gas Price Oracle)，Gas 价格预测，根据历史交易的GasPrice预测未来GasPrice走势。
+> **Price forecast**：GPO(Gas Price Oracle),Gas Price forecast, predict the future GasPrice trend according to GasPrice of historical transactions.
 
-## 技术术语
+## Technical terms
 
-> **ZKP**: Zero Knowledge Proof，零知识证明。
+> **ZKP**: Zero Knowledge Proof.
 
-> **EVM**：Ethereum Virtual Machine，虚拟机是执行交易的一个轻量级沙盒虚拟机。
+> **EVM**：Ethereum Virtual Machine，which is a lightweight sandbox Virtual Machine for executing transactions.
 
-> **Message**：消息，是一个不能序列化的，并且只存在于Simplechain运行环境中的虚拟对象，一条消息主要包括：消息的发送方、接收方、gasLimit等等；
+> **Message**：A message is a virtual object that cannot be serialized and only exists in the running environment of Simplechain. A message mainly includes the sender, receiver, and gasLimit of the message;
 
-> **序列化**：将数据使用RLP编码为一组字节数据，便于数据交换与存储。
+> **序列化**：RLP is used to encode data into a set of byte data to facilitate data exchange and storage.
 
-> **RLP**: 递归长度前缀编码，一种能够压缩数据的数据编码协议，在Simplechain中常用于序列化数据。
+> **RLP**: ecursive length prefix encoding, a data encoding protocol that can compress data, is often used to serialize data in Simplechain.
 
-> **MPT**：默克尔压缩前缀树， Merkle Patricia Tree，是一种经过改良的、融合了默克尔树和前缀树两种树结构优点的数据结构，是Simplechain中用来组织管理账户数据、生成交易集合哈希的重要数据结构。
+> **MPT**：Merkel compressed prefix Tree, Merkle Patricia Tree, is a modified data structure that combines the advantages of Merkel Tree and prefix Tree, it is an important data structure used in Simplechain to organize and manage account data and generate transaction set hash.
 
-> **Patricia Trie**: 一种压缩前缀树，是一种更节省空间的树，对于 trie 的每个节点，如果该节点是其父节点唯一的儿子的话，就和父节点结合；
+> **Patricia Trie**: a compressed prefix tree, a tree that saves more space. For each node of trie, if the node is the only son of its parent node, it is combined with the parent node;
 
-> **Merkle Tree**: 默克尔树，也称为 Hash Tree，默克尔树叶子节点的value是数据项的内容，或者是数据项的哈希值；非叶子节点的value根据其孩子节点的信息，然后按照Hash算法计算而得出的。
+> **Merkle Tree**: Merkel Tree, also known as Hash Tree, the value of the leaf node of Merkel Tree is the content of the data item, or the Hash value of the data item; The value of the non-leaf node is based on the information of its child node, then it is calculated according to the Hash algorithm.
 
-> **Whisper**：密语，是一种依托于P2P的通信协议，通过 Whisper 协议，节点可以将信息发送给某个特定节点，实现双节点私聊和按主题在多个节点上通信。主要用于大规模的点对点数据发现、信号协商、最小传输通信、完全隐私保护的 DApp 而设计的。
+> **Whisper**：ciphertext is a communication protocol based on P2P. Through Whisper, nodes can send information to a specific node, achieve dual-node private chat and communication on multiple nodes by topic. It is mainly designed for DApp with large-scale point-to-point data discovery, signal negotiation, minimum transmission communication and complete privacy protection.
  
-> **Swarm**： 是一个分布式存储平台和内容分发服务，是Simplechain web3 技术栈的本地基础层服务;  
+> **Swarm**： it is a distributed storage platform and content distribution service, and is the local basic Layer Service of Simplechain web3 technology stack; 
 
-> **LLL，Sperpent、Mutan和Solidity**：用于编写智能合约代码的的编程语言，能被编译成EVM代码。
+> **LLL，Sperpent、Mutan和Solidity**：the programming language used to write intelligent contract code, which can be compiled into EVM code.
 
-> **ERC20**: 可以理解成 Simplechain 的一个 Token 协议规范，所有基于 Simplechain 开发的 Token 合约都遵守这个规范。遵守 ERC20 协议规范的 Token 可以被各种 Simplechain 钱包支持。
+> **ERC20**: it can be understood as a Token protocol specification of Simplechain. All Token contracts developed based on Simplechain comply with this specification. Tokens that comply with the ERC20 protocol specifications can be supported by various Simplechain wallets.
 
-> **ERC721**: 是在ERC20标准上建立的Token协议规范，是针对不可互换Token(non-fungible tokens 简称NFTs)做的智能合约标准。
+> **ERC721**: it is a Token protocol specification established on the ERC20 standard and a smart contract standard for non-fundable tokens (NFTs for short).

@@ -1,46 +1,46 @@
-访问浏览器: [浏览器地址](https://explorer.simplechain.com/)
+Visit the browser: [Browser Address](https://explorer.simplechain.com/)
 
-> 打开区块链浏览器，根据自己的需要切换 Main NetWork(主网) 或者 Test NetWork(测试网)。如下图：
+> Open the Blockchain browser and switch to the Main NetWork or Test NetWork as needed. As shown below:
 
 ![1.png](https://i.loli.net/2020/04/23/eI1r49TdX7oxK5p.png)
 
-**区块搜索**
+**Block search**
 
-> 有关所有块的信息 - 从创世块到所有当前块 - 可以在此页面上找到，包括块高度，其前一个块以及相应的字节大小。 
+> Information about all blocks-from Genesis blocks to all current blocks-can be found on this page, including the block height, its previous block, and the corresponding byte size. 
 
 ![2.png](https://i.loli.net/2020/04/23/O64uwKCDyv3c5Fm.png)
 
-**交易搜索**
+**Transaction search**
 
-> 您可以在此页面上搜索交易记录。 可以找到有发送交易地址和接收地址的信息，传输的SIPC数量，交易记录的块高度，相应的哈希和生产时间。 您还可以使用搜索栏查找哈希的特定交易。
+> You can search for transaction records on this page. You can find the information with the sending transaction address and receiving address, the number of sipcs transmitted, the block height of the transaction record, the corresponding hash and the production time. You can also use the search bar to find specific transactions for hashes.
 
 ![3.png](https://i.loli.net/2020/04/23/xFf3HNpQUwMJInA.png)
 
-**查看叔块**
+**View uncle block**
 
-> 再此页面上，可以查看每一个区块高度，以及其叔块对应的区块高度，出块时间，以及打包矿工和矿工获得奖励。如下图：
+> On this page, you can view the height of each block, the block height corresponding to its uncle block, the block time, and the rewards of packaged miners and miners. As shown below:
 
 ![4.png](https://i.loli.net/2020/04/23/dID7LgewEN4rbji.png)
 
-**验证合约**
+**Verification contract**
 
-> 如果想验证合约，输入要验证的合约地址，选择合约编译器类型和编译器版本，就可以验证合约。如下图：
+> If you want to verify the contract, enter the contract address to be verified, and select the contract compiler type and compiler version to verify the contract. As shown below:
 
 ![5.png](https://i.loli.net/2020/04/23/sVdGBAJitkgFMHu.png)
 
-**验证后的合约列表**
+**List of verified contracts**
 
-> 点击验证合约列表，可以查看到20条验证的合约信息。信息展示着合约地址，合约名称，编译器，版本，账户余额，验证时间等！
+> Click the verify contract list to view the information of 20 verified contracts. The information shows the contract address, contract name, compiler, version, account balance, verification time, etc!
 
 ![6.png](https://i.loli.net/2020/04/23/GrTd2XzARLUEhJm.png)
 
-合约验证一共有三种验证方式：
+There are three verification methods for contract verification:
 
-1. 单文件文件验证方式
-2. 多文件验证方式
-3. Json文件验证方式
+1. Single file verification method
+2. Multi-file authentication method
+3. Json file validation method
 
-## 单文件验证
+## Single file verification
 
 ```go
 pragma solidity ^0.5.12;
@@ -59,17 +59,17 @@ contract PayALL{
 ```
 ![29.1.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfawz7lnj30n20ikjt4.jpg)
 
-粘贴源码：
+Paste source code:
 
 ![29.2.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfax1kskj30n20eo0ua.jpg)
 
-验证通过后；
+After the verification is passed：
  
 ![29.3.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfawysn9j30n20c2mxz.jpg)
 
-## 多文件验证
+## Multi-file verification
 
-因在合约书写过程中，文件的依赖可以引用另一个文件。
+Because in the contract writing process, the dependency of the file can refer to another file.
 
 ```go
 	// test1.sol文件
@@ -98,11 +98,11 @@ contract Test2 is Hello {
 ```
 ![29.4.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfawzq5aj30n208g75s.jpg)
  
-执行结果：
+Execution result:
 	
 ![29.5.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfawzd71j30n20b80ut.jpg)
 
-此类验证使用，多文件验证。验证方式如下，获取已部署的合约地址：
+This type of authentication is used for multi-file authentication. The verification method is as follows to obtain the deployed contract address:
 
 `0x6e1ace6e6cf09a4ab096f272cfc029c0a1d883ac`
  
@@ -110,27 +110,27 @@ contract Test2 is Hello {
 
 ![29.7.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfax43ypj30n20g4taz.jpg)
  
-`Optimization`指的是合约编译的次数，如何合约的部署是选择了优化次数，那么在验证时，也需要选择相应的次数，默认不优化。
+`Optimization`it refers to the number of contract compilation times. The number of optimized times is selected for contract deployment. Therefore, the corresponding number of times must be selected for verification. By default, no optimization is performed.
 
-`Constructor Arguments ABI-encoded`表示合约是否填有构造参数，构造参数是部署时产生，验证这里不需要用户填写。
+`Constructor Arguments ABI-encoded` indicates whether the contract has construction parameters. The construction parameters are generated during deployment. You do not need to fill in the construction parameters for verification.
 
-`Contract Library Address`涉及library合约，普通合约不做填写。后续会增加此类验证的详解。
+`Contract Library Address` When it comes to library contracts, ordinary contracts are not filled in. Details of this type of verification will be added later.
 
-**查看验证成功**
+**View verification successful**
 
 ![29.8.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfax3k8oj30n20aaq4l.jpg) 
 
-当前验证后的多文件合约源码
+Multi-file contract source code after current verification
 
 ![29.9.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfax7p9fj30n2092myv.jpg)
 
-源码通过json 格式展示，分别包含两个文件源码。
+The source code is displayed in json format, including two file source codes.
 
-**Json 文件验证：**
+**Json file validation:**
 
-Json 文件验证方式较为复制，需要用户了解solidity的编译参数，solidity会通过用户传递的json文件进行编译，但前提是这份json文件必须满足编译的规范。
+The Json file verification method is relatively copied. You need to know the compilation parameters of solidity. solidity compiles the json file passed by the user, provided that the json file meets the compilation requirements.
 
-Json文件：
+Json file：
 ```json
 {
   "language": "Solidity",
@@ -160,13 +160,13 @@ Json文件：
 
 ![29.11.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfax8g49j30n20f0dj1.jpg)
 
-## Library 的合约验证
+## Library contract verification
 
-[首先了解一下什么是library合约](https://blog.csdn.net/weixin_43343144/article/details/88251579)
+[First of all, understand what is a library contract](https://blog.csdn.net/weixin_43343144/article/details/88251579)
 
-浏览器是支持`library`库的合约验证的，`Library` 合约在部署过程中，会连续并且嵌套依次部署合约，所有会部署多条合约（合约内部包括library库，会被一同部署)并产生多条hash。
+Browser support `library` the contract verification of the library,`Library` during the deployment process, contracts are deployed in sequence and nested. All contracts are deployed with multiple contracts (including library libraries inside the contracts, which are deployed together) and multiple hash records are generated.
 
-**合约源码:**
+**Contract source code:**
 
 ```go
 /**
@@ -195,13 +195,13 @@ library SetHFG {
   }
 
 ```
-如下是部署记录：
+the following is the deployment record:
 
 ![29.12.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfaxgzfkj30n20e0q6j.jpg)
 
-CHU 为主合约: `0x1c622ed2035acc8514259788caafb3cf69d9bbe3`
+CHU as the main contract: `0x1c622ed2035acc8514259788caafb3cf69d9bbe3`
 
-**Library合约地址分别为：**
+**The contract address of the Library is:**
 Bcc：`0x0da8bd0dd96f78ac6e155b2d5e9fb6d15ca89fad`
 
 Fcc：`0x7b05897e605a3878d3511069924d750ef3954da5`
@@ -210,13 +210,13 @@ Acc：`0x13a6cb372333394caa8ea0e5876a4a52167a95ce`
 
 SetHFG: `0x5386710eb4d02b41e7a253d3ebb00ca8795c930f`
 
-验证方式与单文件相同, 如下图：
+Verification way and single-file same, as shown below:
 
 ![29.13.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfax8jotj30n20j0myv.jpg)
 
 ![29.14.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfaxbe2uj30n20cw0ue.jpg)
 
-**验证通过**
+**Verification passed**
 
 ![29.15.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfaxa38zj30n20bemyy.jpg)
 
