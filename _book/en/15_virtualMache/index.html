@@ -1,0 +1,1135 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>virtual machine · Simplechain Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../16_runMechanism/" />
+    
+    
+    <link rel="prev" href="../14_consensus/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Quick Start</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1_quickStart.html">
+            
+                <a href="../1_quickStart.html">
+            
+                    
+                    Quick Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../2_BuildNode/">
+            
+                <a href="../2_BuildNode/">
+            
+                    
+                    Build Node
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Sipc Coin Negotiate</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../47_techniqueLanguage.html">
+            
+                <a href="../47_techniqueLanguage.html">
+            
+                    
+                    Technical Manual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../3_sipcCoin.html">
+            
+                <a href="../3_sipcCoin.html">
+            
+                    
+                    Sipc Coin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../4_PublishCoin/">
+            
+                <a href="../4_PublishCoin/">
+            
+                    
+                    Publish Coin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basic Data Struct</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../5_concoct.html">
+            
+                <a href="../5_concoct.html">
+            
+                    
+                    Deploy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../6_genesis/">
+            
+                <a href="../6_genesis/">
+            
+                    
+                    Genesis Block
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../7_account.html">
+            
+                <a href="../7_account.html">
+            
+                    
+                    Account
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../8_transaction/">
+            
+                <a href="../8_transaction/">
+            
+                    
+                    Transaction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../9_block/">
+            
+                <a href="../9_block/">
+            
+                    
+                    Block
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../10_transactionReceipt/">
+            
+                <a href="../10_transactionReceipt/">
+            
+                    
+                    Transaction Receipt
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Construct</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../11_constructDesign/">
+            
+                <a href="../11_constructDesign/">
+            
+                    
+                    Structure Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../12_structAndStore/">
+            
+                <a href="../12_structAndStore/">
+            
+                    
+                    Data Struct and 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../50_togetherStep.html">
+            
+                <a href="../50_togetherStep.html">
+            
+                    
+                    Data Synchronize
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Underlying Core Technology</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../13_p2pNetwork.html">
+            
+                <a href="../13_p2pNetwork.html">
+            
+                    
+                    p2p network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../14_consensus/">
+            
+                <a href="../14_consensus/">
+            
+                    
+                    Consensus mechanism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    virtual machine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../16_runMechanism/">
+            
+                <a href="../16_runMechanism/">
+            
+                    
+                    Operating mechanism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../17_unusual.html">
+            
+                <a href="../17_unusual.html">
+            
+                    
+                    Handle exceptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Smart contract</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../18_contract/">
+            
+                <a href="../18_contract/">
+            
+                    
+                    Smart contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../19_understandSolidity/">
+            
+                <a href="../19_understandSolidity/">
+            
+                    
+                    understand Solidity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../20_contractPattern.html">
+            
+                <a href="../20_contractPattern.html">
+            
+                    
+                    Contract template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Developer tools</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../21_buildTest.html">
+            
+                <a href="../21_buildTest.html">
+            
+                    
+                    Build Test network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../22_sipcApi.html">
+            
+                <a href="../22_sipcApi.html">
+            
+                    
+                    Sip API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../23_crossChainApi.html">
+            
+                <a href="../23_crossChainApi.html">
+            
+                    
+                    Cross-chain API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../24_chromeWallet/">
+            
+                <a href="../24_chromeWallet/">
+            
+                    
+                    SimPlug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../25_sdk/">
+            
+                <a href="../25_sdk/">
+            
+                    
+                    SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Cross-chain</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../48_crossChain/">
+            
+                <a href="../48_crossChain/">
+            
+                    
+                    Cross-chain solution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../26_smallChain.html">
+            
+                <a href="../26_smallChain.html">
+            
+                    
+                    Subchain template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../49_crossChainOrder/">
+            
+                <a href="../49_crossChainOrder/">
+            
+                    
+                    Cross-chain process
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp develop</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../27_dappFlow/">
+            
+                <a href="../27_dappFlow/">
+            
+                    
+                    Dapp process carding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../28_editor.html">
+            
+                <a href="../28_editor.html">
+            
+                    
+                    translater
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../29_writeContract/">
+            
+                <a href="../29_writeContract/">
+            
+                    
+                    Write contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../30_frontRealize/">
+            
+                <a href="../30_frontRealize/">
+            
+                    
+                    Front-end development
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Mining</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../31_mining.html">
+            
+                <a href="../31_mining.html">
+            
+                    
+                    sipc mining
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../32_miningPool/">
+            
+                <a href="../32_miningPool/">
+            
+                    
+                    MinePool access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../33_gpuMining/">
+            
+                <a href="../33_gpuMining/">
+            
+                    
+                    GPU Mining
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="../34_SimPool/">
+            
+                <a href="../34_SimPool/">
+            
+                    
+                    Simpool Mining
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="../35_SimpleNode_x1/">
+            
+                <a href="../35_SimpleNode_x1/">
+            
+                    
+                    SimpleNode x1 Mining
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Client</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../36_SIPC.html">
+            
+                <a href="../36_SIPC.html">
+            
+                    
+                    SIPC.VIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="../37_wallet/">
+            
+                <a href="../37_wallet/">
+            
+                    
+                    Sipc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="../38_ChainBox/">
+            
+                <a href="../38_ChainBox/">
+            
+                    
+                    ChainBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="../39_blockBrowser/">
+            
+                <a href="../39_blockBrowser/">
+            
+                    
+                    Explore
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Ecology</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../40_tradePlateform.html">
+            
+                <a href="../40_tradePlateform.html">
+            
+                    
+                    Exchange docking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../41_commityProduct.html">
+            
+                <a href="../41_commityProduct.html">
+            
+                    
+                    Community Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="../42_commityActity.html">
+            
+                <a href="../42_commityActity.html">
+            
+                    
+                    Community Activity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="../43_commityEnters/">
+            
+                <a href="../43_commityEnters/">
+            
+                    
+                    Community Entrance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Landing scheme</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../44_case.html">
+            
+                <a href="../44_case.html">
+            
+                    
+                    Landing case
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Other</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../45_faq.html">
+            
+                <a href="../45_faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="../46_supportOnline/">
+            
+                <a href="../46_supportOnline/">
+            
+                    
+                    Online technical support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >virtual machine</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>On Simplechain, you can run the contract deployed on Simplechain to complete the operations that require consensus. Simplechain virtual machine is the executor of intelligent contract code. Therefore, when the smart contract is compiled into a binary file, it is deployed on Simplechain. The user calls the smart contract interface to trigger the execution of the smart contract. EVM executes the code of the smart contract to modify the data (status) on the current blockchain. The modified data will be agreed to ensure consistency.</p>
+<h2 id="svmc"><a name="svmc" class="plugin-anchor" href="#svmc"><i class="fa fa-link" aria-hidden="true"></i></a>SVMC</h2>
+<p>EVM can be stripped from Simplechain to form an independent module. The interaction between EVM and nodes abstracts the SVMC interface standard. Through the SVMC interface standard, nodes can connect to a variety of virtual machines, not limited to traditional solidity-based virtual machines.</p>
+<p>The traditional solidity virtual machine is called interpreter in Simplechain. The implementation of the interpreter is mainly explained in the following section.</p>
+<h2 id="svmc-interface"><a name="svmc-interface" class="plugin-anchor" href="#svmc-interface"><i class="fa fa-link" aria-hidden="true"></i></a>SVMC interface</h2>
+<p>SVMC mainly defines two calling interfaces:</p>
+<ul>
+<li>Instance interface: the interface that the node calls EVM</li>
+<li>Callback interface: the interface of the EVM Callback node.</li>
+</ul>
+<p>EVM itself does not save status data. The node operates EVM through the instance interface. In turn, EVM calls the Callback interface to operate the status of the node.</p>
+<p><strong>Instance interface</strong></p>
+<p>Defines the operations of nodes on virtual machines, including creation, destruction, and setting.</p>
+<p>The interface is defined in evmc_instance(evmc.h)</p>
+<ul>
+<li>abi_version  </li>
+<li>name  </li>
+<li>version  </li>
+<li>destroy  </li>
+<li>execute  </li>
+<li>set_tracer  </li>
+<li>set_option</li>
+</ul>
+<p><strong>Callback interface</strong></p>
+<p>Defines how EVM operates on nodes, mainly reading and writing state and block information.</p>
+<p>The interface is defined in evmc_context_fn_table(evmc.h).</p>
+<ul>
+<li>evmc_account_exists_fn account_exists</li>
+<li>evmc_get_storage_fn get_storage</li>
+<li>evmc_set_storage_fn set_storage</li>
+<li>evmc_get_balance_fn get_balance</li>
+<li>evmc_get_code_size_fn get_code_size</li>
+<li>evmc_get_code_hash_fn get_code_hash</li>
+<li>evmc_copy_code_fn copy_code</li>
+<li>evmc_selfdestruct_fn selfdestruct</li>
+<li>evmc_call_fn call</li>
+<li>evmc_get_tx_context_fn get_tx_context</li>
+<li>evmc_get_block_hash_fn get_block_hash</li>
+<li>evmc_emit_log_fn emit_log</li>
+</ul>
+<h2 id="evm-execution"><a name="evm-execution" class="plugin-anchor" href="#evm-execution"><i class="fa fa-link" aria-hidden="true"></i></a>EVM execution</h2>
+<h3 id="evm-instruction"><a name="evm-instruction" class="plugin-anchor" href="#evm-instruction"><i class="fa fa-link" aria-hidden="true"></i></a>EVM instruction</h3>
+<p>ssolidity is the execution language of the contract. solidity is compiled by solc and becomes an EVM instruction similar to assembly. The Interpreter defines a complete set of instructions. After solidity is compiled, a binary file is generated. The binary file is a collection of EVM instructions. The transaction is sent to the node in the form of binary. After the node receives it, it calls EVM to execute these instructions through SVMC. In EVM, the logic of these instructions is simulated with code.</p>
+<p>Solidity is a stack-based language. When EVM executes binary, it is also called as a stack.</p>
+<p><strong>Arithmetic instruction example</strong></p>
+<p>An ADD instruction. The code in EVM is implemented as follows. SP is the pointer of the stack, from the first and second positions on the top of the stack&#xFF08;<code>SP[0]</code>&#x3001;<code>SP[1]</code>&#xFF09;take out the data, add and write it to the top of the result stack SP <code>SPP[0]</code>&#x3002;</p>
+<pre><code class="lang-cpp">CASE(ADD)
+{
+    ON_OP();
+    updateIOGas();
+
+    <span class="hljs-comment">// pops two items and pushes their sum mod 2^256.</span>
+    m_SPP[<span class="hljs-number">0</span>] = m_SP[<span class="hljs-number">0</span>] + m_SP[<span class="hljs-number">1</span>];
+}
+</code></pre>
+<p><strong>Jump instruction example</strong></p>
+<p>The JUMP command realizes the JUMP between binary codes. First from the top of the stack SP[0] Take out the address to be redirected, verify whether it is out of line, and put it in the program counter PC. The next instruction will start from the position pointed by the PC.</p>
+<pre><code class="lang-cpp">CASE(JUMP)
+{
+    ON_OP();
+    updateIOGas();
+    m_PC = verifyJumpDest(m_SP[<span class="hljs-number">0</span>]);
+}
+</code></pre>
+<p><strong>Example of state read instruction</strong></p>
+<p>SLOAD can query status data. The general process is from the top of the stack<code>SP[0]</code>take out the key to be accessed, take the key as a parameter, and then adjust the callback function of evmc<code>get_storage()</code>&#xFF0C;To query the value of the corresponding key. Then write the read value to the top of the result stack SPP <code>SPP[0]</code>&#x3002;</p>
+<pre><code class="lang-cpp">CASE(SLOAD)
+{
+    m_runGas = m_rev &gt;= EVMC_TANGERINE_WHISTLE ? <span class="hljs-number">200</span> : <span class="hljs-number">50</span>;
+    ON_OP();
+    updateIOGas();
+
+    evmc_uint256be key = toEvmC(m_SP[<span class="hljs-number">0</span>]);
+    evmc_uint256be value;
+    m_context-&gt;fn_table-&gt;get_storage(&amp;value, m_context, &amp;m_message-&gt;destination, &amp;key);
+    m_SPP[<span class="hljs-number">0</span>] = fromEvmC(value);
+}
+</code></pre>
+<p><strong>Example of state write instruction</strong></p>
+<p>The SSTORE command can write data to the state of a node. The general process is from the first and second positions at the top of the stack&#xFF08;<code>SP[0]</code>&#x3001;<code>SP[1]</code>&#xFF09;take out key and value, take key and value as parameters, and call the callback function of evmc <code>set_storage()</code> , write the status of the node.</p>
+<pre><code class="lang-cpp">CASE(SSTORE)
+{
+    ON_OP();
+    <span class="hljs-keyword">if</span> (m_message-&gt;flags &amp; EVMC_STATIC)
+        throwDisallowedStateChange();
+
+    <span class="hljs-keyword">static_assert</span>(
+        VMSchedule::sstoreResetGas &lt;= VMSchedule::sstoreSetGas, <span class="hljs-string">&quot;Wrong SSTORE gas costs&quot;</span>);
+    m_runGas = VMSchedule::sstoreResetGas;  <span class="hljs-comment">// Charge the modification cost up front.</span>
+    updateIOGas();
+
+    evmc_uint256be key = toEvmC(m_SP[<span class="hljs-number">0</span>]);
+    evmc_uint256be value = toEvmC(m_SP[<span class="hljs-number">1</span>]);
+    <span class="hljs-keyword">auto</span> status =
+        m_context-&gt;fn_table-&gt;set_storage(m_context, &amp;m_message-&gt;destination, &amp;key, &amp;value);
+
+    <span class="hljs-keyword">if</span> (status == EVMC_STORAGE_ADDED)
+    {
+        <span class="hljs-comment">// Charge additional amount for added storage item.</span>
+        m_runGas = VMSchedule::sstoreSetGas - VMSchedule::sstoreResetGas;
+        updateIOGas();
+    }
+}
+</code></pre>
+<p><strong>Contract call instruction example</strong></p>
+<p>The CALL instruction can CALL another contract based on the address. First, EVM determines that the CALL instruction is called <code>caseCall()</code>&#xFF0C;caseCall() <code>used</code>caseCallSetup()<code>Take the data from the stack, encapsulate it into msg, and call evmc&apos;s callback function as a parameter. Eth is being called back</code>call()<code>after&#xFF0C;Start a new EVM, process the call, and then execute the result of the new EVM by</code>call()```parameter is returned to the current EVM. The current EVM writes the result to the result stack SSP and the call ends. The logic of contract creation is similar to this logic.</p>
+<pre><code class="lang-cpp">CASE(CALL)
+CASE(CALLCODE)
+{
+    ON_OP();
+    <span class="hljs-keyword">if</span> (m_OP == Instruction::DELEGATECALL &amp;&amp; m_rev &lt; EVMC_HOMESTEAD)
+        throwBadInstruction();
+    <span class="hljs-keyword">if</span> (m_OP == Instruction::STATICCALL &amp;&amp; m_rev &lt; EVMC_BYZANTIUM)
+        throwBadInstruction();
+    <span class="hljs-keyword">if</span> (m_OP == Instruction::CALL &amp;&amp; m_message-&gt;flags &amp; EVMC_STATIC &amp;&amp; m_SP[<span class="hljs-number">2</span>] != <span class="hljs-number">0</span>)
+        throwDisallowedStateChange();
+    m_bounce = &amp;VM::caseCall;
+}
+BREAK
+
+<span class="hljs-keyword">void</span> VM::caseCall()
+{
+    m_bounce = &amp;VM::interpretCases;
+
+    evmc_message msg = {};
+
+    <span class="hljs-comment">// Clear the return data buffer. This will not free the memory.</span>
+    m_returnData.clear();
+
+    bytesRef output;
+    <span class="hljs-keyword">if</span> (caseCallSetup(msg, output))
+    {
+        evmc_result result;
+        m_context-&gt;fn_table-&gt;call(&amp;result, m_context, &amp;msg);
+
+        m_returnData.assign(result.output_data, result.output_data + result.output_size);
+        bytesConstRef{&amp;m_returnData}.copyTo(output);
+
+        m_SPP[<span class="hljs-number">0</span>] = result.status_code == EVMC_SUCCESS ? <span class="hljs-number">1</span> : <span class="hljs-number">0</span>;
+        m_io_gas += result.gas_left;
+
+        <span class="hljs-keyword">if</span> (result.release)
+            result.release(&amp;result);
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        m_SPP[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;
+        m_io_gas += msg.gas;
+    }
+    ++m_PC;
+}
+</code></pre>
+<h2 id="summary"><a name="summary" class="plugin-anchor" href="#summary"><i class="fa fa-link" aria-hidden="true"></i></a>Summary</h2>
+<p>EVM is a state execution machine. The input is the binary instruction compiled by solidity and the state data of the node. The output is the change of the node state. Simplechain implements compatibility with various virtual machines through EVMC.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../14_consensus/" class="navigation navigation-prev " aria-label="Previous page: Consensus mechanism">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../16_runMechanism/" class="navigation navigation-next " aria-label="Next page: Operating mechanism">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"virtual machine","level":"6.3","depth":1,"next":{"title":"Operating mechanism","level":"6.4","depth":1,"path":"16_runMechanism/README.md","ref":"16_runMechanism/README.md","articles":[]},"previous":{"title":"Consensus mechanism","level":"6.2","depth":1,"path":"14_consensus/README.md","ref":"14_consensus/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"en","gitbook":"*"},"file":{"path":"15_virtualMache/README.md","mtime":"2020-06-17T02:51:20.570Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-22T06:55:07.263Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

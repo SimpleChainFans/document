@@ -1,0 +1,1075 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>p2p网络 · Simplechain Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="14_consensus/" />
+    
+    
+    <link rel="prev" href="50_togetherStep.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">快速了解</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="1_quickStart.html">
+            
+                <a href="1_quickStart.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="2_BuildNode/">
+            
+                <a href="2_BuildNode/">
+            
+                    
+                    搭建节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">sipc代币协议</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="47_techniqueLanguage.html">
+            
+                <a href="47_techniqueLanguage.html">
+            
+                    
+                    技术术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="3_sipcCoin.html">
+            
+                <a href="3_sipcCoin.html">
+            
+                    
+                    sipc代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="4_PublishCoin/">
+            
+                <a href="4_PublishCoin/">
+            
+                    
+                    发行代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="5_concoct.html">
+            
+                <a href="5_concoct.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="7_account.html">
+            
+                <a href="7_account.html">
+            
+                    
+                    账户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="8_transaction/">
+            
+                <a href="8_transaction/">
+            
+                    
+                    交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="9_block/">
+            
+                <a href="9_block/">
+            
+                    
+                    区块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="6_genesis/">
+            
+                <a href="6_genesis/">
+            
+                    
+                    创世块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="10_transactionReceipt/">
+            
+                <a href="10_transactionReceipt/">
+            
+                    
+                    交易回执
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">架构</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="11_constructDesign/">
+            
+                <a href="11_constructDesign/">
+            
+                    
+                    架构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="12_structAndStore/">
+            
+                <a href="12_structAndStore/">
+            
+                    
+                    数据结构和存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="50_togetherStep.html">
+            
+                <a href="50_togetherStep.html">
+            
+                    
+                    数据同步优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">底层核心技术</li>
+        
+        
+    
+        <li class="chapter active" data-level="6.1" data-path="13_p2pNetwork.html">
+            
+                <a href="13_p2pNetwork.html">
+            
+                    
+                    p2p网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="14_consensus/">
+            
+                <a href="14_consensus/">
+            
+                    
+                    共识机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="15_virtualMache/">
+            
+                <a href="15_virtualMache/">
+            
+                    
+                    虚拟机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="16_runMechanism/">
+            
+                <a href="16_runMechanism/">
+            
+                    
+                    运行机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="17_unusual.html">
+            
+                <a href="17_unusual.html">
+            
+                    
+                    处理异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">智能合约</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="18_contract/">
+            
+                <a href="18_contract/">
+            
+                    
+                    智能合约
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="19_understandSolidity/">
+            
+                <a href="19_understandSolidity/">
+            
+                    
+                    深入理解Solidity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="20_contractPattern.html">
+            
+                <a href="20_contractPattern.html">
+            
+                    
+                    合约模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开发者工具</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="21_buildTest.html">
+            
+                <a href="21_buildTest.html">
+            
+                    
+                    搭建测试链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="22_sipcApi.html">
+            
+                <a href="22_sipcApi.html">
+            
+                    
+                    Sip API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="23_crossChainApi.html">
+            
+                <a href="23_crossChainApi.html">
+            
+                    
+                    跨链API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="24_chromeWallet/">
+            
+                <a href="24_chromeWallet/">
+            
+                    
+                    SimPlug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="25_sdk/">
+            
+                <a href="25_sdk/">
+            
+                    
+                    SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">跨链</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="48_crossChain/">
+            
+                <a href="48_crossChain/">
+            
+                    
+                    跨链方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="26_smallChain.html">
+            
+                <a href="26_smallChain.html">
+            
+                    
+                    子链模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="49_crossChainOrder/">
+            
+                <a href="49_crossChainOrder/">
+            
+                    
+                    跨链流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp开发</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="27_dappFlow/">
+            
+                <a href="27_dappFlow/">
+            
+                    
+                    Dapp流程梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="28_editor.html">
+            
+                <a href="28_editor.html">
+            
+                    
+                    编译器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="29_writeContract/">
+            
+                <a href="29_writeContract/">
+            
+                    
+                    编写合约
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="30_frontRealize/">
+            
+                <a href="30_frontRealize/">
+            
+                    
+                    前端实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">挖矿</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="31_mining.html">
+            
+                <a href="31_mining.html">
+            
+                    
+                    sipc挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="32_miningPool/">
+            
+                <a href="32_miningPool/">
+            
+                    
+                    矿池接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="33_gpuMining/">
+            
+                <a href="33_gpuMining/">
+            
+                    
+                    GPU挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="34_SimPool/">
+            
+                <a href="34_SimPool/">
+            
+                    
+                    Simpool挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="35_SimpleNode_x1/">
+            
+                <a href="35_SimpleNode_x1/">
+            
+                    
+                    SimpleNode x1挖矿教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">客户端</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="36_SIPC.html">
+            
+                <a href="36_SIPC.html">
+            
+                    
+                    SIPC.VIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="37_wallet/">
+            
+                <a href="37_wallet/">
+            
+                    
+                    sipc全节点钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="38_ChainBox/">
+            
+                <a href="38_ChainBox/">
+            
+                    
+                    ChainBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="39_bolckBrowser/">
+            
+                <a href="39_bolckBrowser/">
+            
+                    
+                    区块链浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">生态</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="40_tradePlateform.html">
+            
+                <a href="40_tradePlateform.html">
+            
+                    
+                    交易所对接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="41_commityProduct.html">
+            
+                <a href="41_commityProduct.html">
+            
+                    
+                    社区项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="42_commityActity.html">
+            
+                <a href="42_commityActity.html">
+            
+                    
+                    社区活动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="43_commityEnters/">
+            
+                <a href="43_commityEnters/">
+            
+                    
+                    社区入口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">落地方案</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="44_case.html">
+            
+                <a href="44_case.html">
+            
+                    
+                    落地案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其它</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="45_faq.html">
+            
+                <a href="45_faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="46_supportOnline/">
+            
+                <a href="46_supportOnline/">
+            
+                    
+                    在线技术支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >p2p网络</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x8BBE;&#x8BA1;&#x76EE;&#x6807;"><a name="&#x8BBE;&#x8BA1;&#x76EE;&#x6807;" class="plugin-anchor" href="#&#x8BBE;&#x8BA1;&#x76EE;&#x6807;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x8BA1;&#x76EE;&#x6807;</h2>
+<p>Simplechain <code>P2P</code>&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x9AD8;&#x6548;&#x3001;&#x901A;&#x7528;&#x548C;&#x5B89;&#x5168;&#x7684;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x57FA;&#x7840;&#x529F;&#x80FD;&#xFF0C;&#x652F;&#x6301;&#x533A;&#x5757;&#x94FE;&#x6D88;&#x606F;&#x7684;&#x5355;&#x64AD;&#x3001;&#x7EC4;&#x64AD;&#x548C;&#x5E7F;&#x64AD;&#xFF0C;&#x652F;&#x6301;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x72B6;&#x6001;&#x540C;&#x6B65;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x79CD;&#x534F;&#x8BAE;&#x3002;</p>
+<h2 id="p2p&#x4E3B;&#x8981;&#x529F;&#x80FD;"><a name="p2p&#x4E3B;&#x8981;&#x529F;&#x80FD;" class="plugin-anchor" href="#p2p&#x4E3B;&#x8981;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>P2P&#x4E3B;&#x8981;&#x529F;&#x80FD;</h2>
+<ul>
+<li><p><strong>&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x6807;&#x8BC6;:</strong> &#x901A;&#x8FC7;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x6807;&#x8BC6;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x4E00;&#x4E2A;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#xFF0C;&#x5728;&#x533A;&#x5757;&#x94FE;&#x7F51;&#x7EDC;&#x4E0A;&#x901A;&#x8FC7;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x6807;&#x8BC6;&#x5BF9;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x8FDB;&#x884C;&#x5BFB;&#x5740;</p>
+</li>
+<li><p><strong>&#x7BA1;&#x7406;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;:</strong>  &#x7EF4;&#x6301;&#x533A;&#x5757;&#x94FE;&#x7F51;&#x7EDC;&#x4E0A;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x95F4;&#x7684;TCP&#x957F;&#x8FDE;&#x63A5;&#xFF0C;&#x81EA;&#x52A8;&#x65AD;&#x5F00;&#x5F02;&#x5E38;&#x8FDE;&#x63A5;&#xFF0C;&#x81EA;&#x52A8;&#x53D1;&#x8D77;&#x91CD;&#x8FDE;</p>
+</li>
+<li><p><strong>&#x6D88;&#x606F;&#x6536;&#x53D1;:</strong> &#x5728;&#x533A;&#x5757;&#x94FE;&#x7F51;&#x7EDC;&#x7684;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x95F4;&#xFF0C;&#x8FDB;&#x884C;&#x6D88;&#x606F;&#x7684;&#x5355;&#x64AD;&#x3001;&#x7EC4;&#x64AD;&#x6216;&#x5E7F;&#x64AD;</p>
+</li>
+<li><p><strong>&#x72B6;&#x6001;&#x540C;&#x6B65;:</strong> &#x5728;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x95F4;&#x540C;&#x6B65;&#x72B6;&#x6001;</p>
+</li>
+</ul>
+<h2 id="simplechain&#x8282;&#x70B9;&#x6807;&#x8BC6;"><a name="simplechain&#x8282;&#x70B9;&#x6807;&#x8BC6;" class="plugin-anchor" href="#simplechain&#x8282;&#x70B9;&#x6807;&#x8BC6;"><i class="fa fa-link" aria-hidden="true"></i></a>Simplechain&#x8282;&#x70B9;&#x6807;&#x8BC6;</h2>
+<p>Simplechain&#x7684;&#x8282;&#x70B9;&#x6807;&#x8BC6;&#x7531;ECC&#x7B97;&#x6CD5;&#x7684;&#x516C;&#x94A5;&#x751F;&#x6210;&#xFF0C;&#x6BCF;&#x4E2A;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x5FC5;&#x987B;&#x6709;&#x552F;&#x4E00;&#x7684;ECC&#x5BC6;&#x94A5;&#x5BF9;&#xFF0C;&#x8282;&#x70B9;&#x6807;&#x8BC6;&#x5728;&#x533A;&#x5757;&#x94FE;&#x7F51;&#x7EDC;&#x4E2D;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x4E00;&#x4E2A;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x3002;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x8981;&#x52A0;&#x5165;&#x533A;&#x5757;&#x94FE;&#x7F51;&#x7EDC;&#xFF0C;&#x9700;&#x8981;ECC&#x683C;&#x5F0F;&#x7684;&#x8282;&#x70B9;&#x5BC6;&#x94A5;node.key&#x6587;&#x4EF6;&#x3002;</p>
+<p>Simplechain&#x8282;&#x70B9;&#x9664;&#x4E86;&#x6709;&#x552F;&#x4E00;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x6807;&#x8BC6;&#xFF0C;&#x8FD8;&#x80FD;&#x5173;&#x6CE8;Topic&#xFF0C;&#x4F9B;&#x5BFB;&#x5740;&#x4F7F;&#x7528;&#x3002;Simplechain&#x8282;&#x70B9;&#x5BFB;&#x5740;&#xFF1A;</p>
+<ul>
+<li><strong>&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x6807;&#x8BC6;&#x5BFB;&#x5740;&#xFF1A;</strong> &#x901A;&#x8FC7;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x6807;&#x8BC6;&#xFF0C;&#x5728;&#x533A;&#x5757;&#x94FE;&#x7F51;&#x7EDC;&#x4E2D;&#x5B9A;&#x4F4D;&#x552F;&#x4E00;&#x7684;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x3002;</li>
+<li><strong>Topic&#x5BFB;&#x5740;&#xFF1A;</strong> &#x901A;&#x8FC7;Topic&#xFF0C;&#x5728;&#x533A;&#x5757;&#x94FE;&#x7F51;&#x7EDC;&#x4E2D;&#x5B9A;&#x4F4D;&#x4E00;&#x7EC4;&#x5173;&#x6CE8;&#x8BE5;Topic&#x7684;&#x8282;&#x70B9;&#x3002;</li>
+</ul>
+<h2 id="&#x7BA1;&#x7406;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;"><a name="&#x7BA1;&#x7406;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;" class="plugin-anchor" href="#&#x7BA1;&#x7406;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7BA1;&#x7406;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;</h2>
+<p>Simplechain&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x53D1;&#x8D77;&#x548C;&#x7EF4;&#x6301;TCP&#x957F;&#x8FDE;&#x63A5;&#xFF0C;&#x5728;&#x7CFB;&#x7EDF;&#x6545;&#x969C;&#x3001;&#x7F51;&#x7EDC;&#x5F02;&#x5E38;&#x65F6;&#xFF0C;&#x4E3B;&#x52A8;&#x53D1;&#x8D77;&#x91CD;&#x8FDE;&#x3002;&#x8282;&#x70B9;&#x95F4;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;CA&#x8BC1;&#x4E66;&#x8FDB;&#x884C;&#x8BA4;&#x8BC1;</p>
+<h3 id="&#x8FDE;&#x63A5;&#x5EFA;&#x7ACB;&#x6D41;&#x7A0B;"><a name="&#x8FDE;&#x63A5;&#x5EFA;&#x7ACB;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#&#x8FDE;&#x63A5;&#x5EFA;&#x7ACB;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FDE;&#x63A5;&#x5EFA;&#x7ACB;&#x6D41;&#x7A0B;</h3>
+<pre><code class="lang-bash">participant &#x8282;&#x70B9;A
+participant &#x8282;&#x70B9;B
+
+&#x8282;&#x70B9;A-&gt;&gt;&#x8282;&#x70B9;A: &#x52A0;&#x8F7D;&#x5BC6;&#x94A5;
+&#x8282;&#x70B9;B-&gt;&gt;&#x8282;&#x70B9;B: &#x52A0;&#x8F7D;&#x5BC6;&#x94A5;
+&#x8282;&#x70B9;A-&gt;&gt;&#x8282;&#x70B9;B: &#x53D1;&#x8D77;&#x8FDE;&#x63A5;
+&#x8282;&#x70B9;B-&gt;&gt;&#x8282;&#x70B9;A: &#x8FDE;&#x63A5;&#x6210;&#x529F;
+&#x8282;&#x70B9;B-&gt;&#x8282;&#x70B9;A: &#x53D1;&#x8D77;SSL&#x63E1;&#x624B;
+&#x8282;&#x70B9;B-&gt;&#x8282;&#x70B9;A: &#x63E1;&#x624B;&#x6210;&#x529F;&#xFF0C;&#x5EFA;&#x7ACB;SSL&#x8FDE;&#x63A5;
+</code></pre>
+<h2 id="&#x6D88;&#x606F;&#x6536;&#x53D1;"><a name="&#x6D88;&#x606F;&#x6536;&#x53D1;" class="plugin-anchor" href="#&#x6D88;&#x606F;&#x6536;&#x53D1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D88;&#x606F;&#x6536;&#x53D1;</h2>
+<p>&#x8282;&#x70B9;&#x95F4;&#x6D88;&#x606F;&#x652F;&#x6301;&#x5355;&#x64AD;&#x3001;&#x7EC4;&#x64AD;&#x548C;&#x5E7F;&#x64AD;</p>
+<ul>
+<li>&#x5355;&#x64AD;&#xFF0C;&#x5355;&#x4E2A;&#x8282;&#x70B9;&#x5411;&#x5355;&#x4E2A;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF0C;&#x901A;&#x8FC7;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x6807;&#x8BC6;&#x5BFB;&#x5740;</li>
+<li>&#x7EC4;&#x64AD;&#xFF0C;&#x5355;&#x4E2A;&#x8282;&#x70B9;&#x5411;&#x4E00;&#x7EC4;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF0C;&#x901A;&#x8FC7;Topic&#x5BFB;&#x5740;</li>
+<li>&#x5E7F;&#x64AD;&#xFF0C;&#x5355;&#x4E2A;&#x8282;&#x70B9;&#x5411;&#x6240;&#x6709;&#x533A;&#x5757;&#x94FE;&#x8282;&#x70B9;&#x53D1;&#x9001;&#x6D88;&#x606F;</li>
+</ul>
+<h3 id="&#x5355;&#x64AD;&#x6D41;&#x7A0B;"><a name="&#x5355;&#x64AD;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#&#x5355;&#x64AD;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x64AD;&#x6D41;&#x7A0B;</h3>
+<pre><code class="lang-bash">sequenceDiagram
+   participant &#x8282;&#x70B9;A
+   participant &#x8282;&#x70B9;B
+
+   &#x8282;&#x70B9;A-&gt;&gt;&#x8282;&#x70B9;A: &#x6839;&#x636E;&#x8282;&#x70B9;ID&#xFF0C;&#x7B5B;&#x9009;&#x5728;&#x7EBF;&#x8282;&#x70B9;
+   &#x8282;&#x70B9;A-&gt;&gt;&#x8282;&#x70B9;B: &#x53D1;&#x9001;&#x6D88;&#x606F;
+   &#x8282;&#x70B9;B-&gt;&gt;&#x8282;&#x70B9;A: &#x6D88;&#x606F;&#x56DE;&#x5305;
+</code></pre>
+<h3 id="&#x7EC4;&#x64AD;&#x6D41;&#x7A0B;"><a name="&#x7EC4;&#x64AD;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#&#x7EC4;&#x64AD;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC4;&#x64AD;&#x6D41;&#x7A0B;</h3>
+<pre><code class="lang-bash">sequenceDiagram
+   participant  &#x8282;&#x70B9;A
+   participant  &#x8282;&#x70B9;B
+   participant  &#x8282;&#x70B9;C
+   participant  &#x8282;&#x70B9;D 
+
+   &#x8282;&#x70B9;A-&gt;&gt;&#x8282;&#x70B9;A: &#x6839;&#x636E;Topic 1&#xFF0C;&#x9009;&#x62E9;&#x8282;&#x70B9;B&#x3001;C
+   &#x8282;&#x70B9;A-&gt;&gt;&#x8282;&#x70B9;B: &#x53D1;&#x9001;&#x6D88;&#x606F;
+   &#x8282;&#x70B9;A-&gt;&gt;&#x8282;&#x70B9;C: &#x53D1;&#x9001;&#x6D88;&#x606F;
+        &#x8282;&#x70B9;B-&gt;&gt;&#x8282;&#x70B9;B: &#x6839;&#x636E;Topic 2&#xFF0C;&#x9009;&#x62E9;&#x8282;&#x70B9;C&#x3001;D
+        &#x8282;&#x70B9;B-&gt;&gt;&#x8282;&#x70B9;C: &#x53D1;&#x9001;&#x6D88;&#x606F;
+        &#x8282;&#x70B9;B-&gt;&gt;&#x8282;&#x70B9;D: &#x53D1;&#x9001;&#x6D88;&#x606F;
+        &#x8282;&#x70B9;C-&gt;&gt;&#x8282;&#x70B9;C: &#x6839;&#x636E;Topic 3&#xFF0C;&#x9009;&#x62E9;&#x8282;&#x70B9;D
+        &#x8282;&#x70B9;C-&gt;&gt;&#x8282;&#x70B9;D: &#x53D1;&#x9001;&#x6D88;&#x606F;
+</code></pre>
+<h3 id="&#x5E7F;&#x64AD;&#x6D41;&#x7A0B;"><a name="&#x5E7F;&#x64AD;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#&#x5E7F;&#x64AD;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E7F;&#x64AD;&#x6D41;&#x7A0B;</h3>
+<pre><code class="lang-bash">sequenceDiagram
+    participant &#x8282;&#x70B9;A
+    participant &#x8282;&#x70B9;B
+    participant &#x8282;&#x70B9;C
+    participant &#x8282;&#x70B9;D
+
+    &#x8282;&#x70B9;A-&gt;&gt;&#x8282;&#x70B9;A: &#x904D;&#x5386;&#x6240;&#x6709;&#x8282;&#x70B9;ID
+    &#x8282;&#x70B9;A-&gt;&gt;&#x8282;&#x70B9;B: &#x53D1;&#x9001;&#x6D88;&#x606F;
+    &#x8282;&#x70B9;A-&gt;&gt;&#x8282;&#x70B9;C: &#x53D1;&#x9001;&#x6D88;&#x606F;
+    &#x8282;&#x70B9;A-&gt;&gt;&#x8282;&#x70B9;D: &#x53D1;&#x9001;&#x6D88;&#x606F;
+    &#x8282;&#x70B9;B-&gt;&gt;&#x8282;&#x70B9;B: &#x904D;&#x5386;&#x6240;&#x6709;&#x8282;&#x70B9;ID
+    &#x8282;&#x70B9;B-&gt;&gt;&#x8282;&#x70B9;C: &#x53D1;&#x9001;&#x6D88;&#x606F;
+    &#x8282;&#x70B9;B-&gt;&gt;&#x8282;&#x70B9;D: &#x53D1;&#x9001;&#x6D88;&#x606F;
+    &#x8282;&#x70B9;C-&gt;&gt;&#x8282;&#x70B9;C: &#x904D;&#x5386;&#x6240;&#x6709;&#x8282;&#x70B9;ID
+    &#x8282;&#x70B9;C-&gt;&gt;&#x8282;&#x70B9;D: &#x53D1;&#x9001;&#x6D88;&#x606F;
+</code></pre>
+<h2 id="&#x72B6;&#x6001;&#x540C;&#x6B65;"><a name="&#x72B6;&#x6001;&#x540C;&#x6B65;" class="plugin-anchor" href="#&#x72B6;&#x6001;&#x540C;&#x6B65;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x72B6;&#x6001;&#x540C;&#x6B65;</h2>
+<p>&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x4F1A;&#x7EF4;&#x62A4;&#x81EA;&#x8EAB;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5E76;&#x5C06;&#x72B6;&#x6001;&#x7684;Seq&#x5728;&#x5168;&#x7F51;&#x5B9A;&#x65F6;&#x5E7F;&#x64AD;&#xFF0C;&#x4E0E;&#x5176;&#x5B83;&#x8282;&#x70B9;&#x540C;&#x6B65;</p>
+<pre><code class="lang-bash">sequenceDiagram
+    participant &#x8282;&#x70B9;A
+    participant &#x8282;&#x70B9;B
+
+    &#x8282;&#x70B9;A-&gt;&#x8282;&#x70B9;B: &#x5E7F;&#x64AD;seq
+    &#x8282;&#x70B9;A-&gt;&gt;&#x8282;&#x70B9;A: &#x5224;&#x65AD;&#x8282;&#x70B9;B&#x7684;seq&#x662F;&#x5426;&#x53D8;&#x5316;
+    &#x8282;&#x70B9;A-&gt;&gt;&#x8282;&#x70B9;B: seq&#x53D8;&#x5316;&#xFF0C;&#x53D1;&#x8D77;&#x72B6;&#x6001;&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;
+    &#x8282;&#x70B9;B-&gt;&gt;&#x8282;&#x70B9;A: &#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x72B6;&#x6001;
+    &#x8282;&#x70B9;A-&gt;&gt;&#x8282;&#x70B9;A: &#x66F4;&#x65B0;&#x8282;&#x70B9;B&#x7684;&#x72B6;&#x6001;&#x548C;seq
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="50_togetherStep.html" class="navigation navigation-prev " aria-label="Previous page: 数据同步优化">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="14_consensus/" class="navigation navigation-next " aria-label="Next page: 共识机制">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"p2p网络","level":"6.1","depth":1,"next":{"title":"共识机制","level":"6.2","depth":1,"path":"14_consensus/README.md","ref":"14_consensus/README.md","articles":[]},"previous":{"title":"数据同步优化","level":"5.3","depth":1,"path":"50_togetherStep.md","ref":"50_togetherStep.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"zh","gitbook":"*"},"file":{"path":"13_p2pNetwork.md","mtime":"2020-06-10T12:14:33.814Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-22T06:43:46.458Z"},"basePath":".","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1197 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>账户 · Simplechain Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8_transaction/" />
+    
+    
+    <link rel="prev" href="5_concoct.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">快速了解</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="1_quickStart.html">
+            
+                <a href="1_quickStart.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="2_BuildNode/">
+            
+                <a href="2_BuildNode/">
+            
+                    
+                    搭建节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">sipc代币协议</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="47_techniqueLanguage.html">
+            
+                <a href="47_techniqueLanguage.html">
+            
+                    
+                    技术术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="3_sipcCoin.html">
+            
+                <a href="3_sipcCoin.html">
+            
+                    
+                    sipc代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="4_PublishCoin/">
+            
+                <a href="4_PublishCoin/">
+            
+                    
+                    发行代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="5_concoct.html">
+            
+                <a href="5_concoct.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="7_account.html">
+            
+                <a href="7_account.html">
+            
+                    
+                    账户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="8_transaction/">
+            
+                <a href="8_transaction/">
+            
+                    
+                    交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="9_block/">
+            
+                <a href="9_block/">
+            
+                    
+                    区块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="6_genesis/">
+            
+                <a href="6_genesis/">
+            
+                    
+                    创世块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="10_transactionReceipt/">
+            
+                <a href="10_transactionReceipt/">
+            
+                    
+                    交易回执
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">架构</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="11_constructDesign/">
+            
+                <a href="11_constructDesign/">
+            
+                    
+                    架构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="12_structAndStore/">
+            
+                <a href="12_structAndStore/">
+            
+                    
+                    数据结构和存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="50_togetherStep.html">
+            
+                <a href="50_togetherStep.html">
+            
+                    
+                    数据同步优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">底层核心技术</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="13_p2pNetwork.html">
+            
+                <a href="13_p2pNetwork.html">
+            
+                    
+                    p2p网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="14_consensus/">
+            
+                <a href="14_consensus/">
+            
+                    
+                    共识机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="15_virtualMache/">
+            
+                <a href="15_virtualMache/">
+            
+                    
+                    虚拟机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="16_runMechanism/">
+            
+                <a href="16_runMechanism/">
+            
+                    
+                    运行机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="17_unusual.html">
+            
+                <a href="17_unusual.html">
+            
+                    
+                    处理异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">智能合约</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="18_contract/">
+            
+                <a href="18_contract/">
+            
+                    
+                    智能合约
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="19_understandSolidity/">
+            
+                <a href="19_understandSolidity/">
+            
+                    
+                    深入理解Solidity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="20_contractPattern.html">
+            
+                <a href="20_contractPattern.html">
+            
+                    
+                    合约模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开发者工具</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="21_buildTest.html">
+            
+                <a href="21_buildTest.html">
+            
+                    
+                    搭建测试链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="22_sipcApi.html">
+            
+                <a href="22_sipcApi.html">
+            
+                    
+                    Sip API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="23_crossChainApi.html">
+            
+                <a href="23_crossChainApi.html">
+            
+                    
+                    跨链API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="24_chromeWallet/">
+            
+                <a href="24_chromeWallet/">
+            
+                    
+                    SimPlug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="25_sdk/">
+            
+                <a href="25_sdk/">
+            
+                    
+                    SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">跨链</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="48_crossChain/">
+            
+                <a href="48_crossChain/">
+            
+                    
+                    跨链方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="26_smallChain.html">
+            
+                <a href="26_smallChain.html">
+            
+                    
+                    子链模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="49_crossChainOrder/">
+            
+                <a href="49_crossChainOrder/">
+            
+                    
+                    跨链流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp开发</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="27_dappFlow/">
+            
+                <a href="27_dappFlow/">
+            
+                    
+                    Dapp流程梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="28_editor.html">
+            
+                <a href="28_editor.html">
+            
+                    
+                    编译器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="29_writeContract/">
+            
+                <a href="29_writeContract/">
+            
+                    
+                    编写合约
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="30_frontRealize/">
+            
+                <a href="30_frontRealize/">
+            
+                    
+                    前端实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">挖矿</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="31_mining.html">
+            
+                <a href="31_mining.html">
+            
+                    
+                    sipc挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="32_miningPool/">
+            
+                <a href="32_miningPool/">
+            
+                    
+                    矿池接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="33_gpuMining/">
+            
+                <a href="33_gpuMining/">
+            
+                    
+                    GPU挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="34_SimPool/">
+            
+                <a href="34_SimPool/">
+            
+                    
+                    Simpool挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="35_SimpleNode_x1/">
+            
+                <a href="35_SimpleNode_x1/">
+            
+                    
+                    SimpleNode x1挖矿教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">客户端</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="36_SIPC.html">
+            
+                <a href="36_SIPC.html">
+            
+                    
+                    SIPC.VIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="37_wallet/">
+            
+                <a href="37_wallet/">
+            
+                    
+                    sipc全节点钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="38_ChainBox/">
+            
+                <a href="38_ChainBox/">
+            
+                    
+                    ChainBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="39_bolckBrowser/">
+            
+                <a href="39_bolckBrowser/">
+            
+                    
+                    区块链浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">生态</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="40_tradePlateform.html">
+            
+                <a href="40_tradePlateform.html">
+            
+                    
+                    交易所对接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="41_commityProduct.html">
+            
+                <a href="41_commityProduct.html">
+            
+                    
+                    社区项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="42_commityActity.html">
+            
+                <a href="42_commityActity.html">
+            
+                    
+                    社区活动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="43_commityEnters/">
+            
+                <a href="43_commityEnters/">
+            
+                    
+                    社区入口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">落地方案</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="44_case.html">
+            
+                <a href="44_case.html">
+            
+                    
+                    落地案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其它</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="45_faq.html">
+            
+                <a href="45_faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="46_supportOnline/">
+            
+                <a href="46_supportOnline/">
+            
+                    
+                    在线技术支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >账户</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x5BF9;&#x6BD4;&#x6BD4;&#x7279;&#x5E01;&#x7684; &#x201C;UTXO&#x201D; &#x4F59;&#x989D;&#x6A21;&#x578B;&#xFF0C;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x548C;Simplechain&#x7C7B;&#x4F3C;&#x4F7F;&#x7528;&#x201C;&#x8D26;&#x6237;&#x201D;&#x4F59;&#x989D;&#x6A21;&#x578B;&#x3002;
+<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x4E30;&#x5BCC;&#x4E86;&#x8D26;&#x6237;&#x5185;&#x5BB9;&#xFF0C;&#x9664;&#x4F59;&#x989D;&#x5916;&#x8FD8;&#x80FD;&#x81EA;&#x5B9A;&#x4E49;&#x5B58;&#x653E;&#x4EFB;&#x610F;&#x591A;&#x6570;&#x636E;&#x3002;
+&#x5E76;&#x5229;&#x7528;&#x8D26;&#x6237;&#x6570;&#x636E;&#x7684;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#xFF0C;&#x6784;&#x5EFA;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x8D26;&#x6237;&#x3002;</p>
+<p>&#x5B9E;&#x9645;&#x4E0A;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x662F;&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x800C;&#x63D0;&#x70BC;&#x7684;&#x8D26;&#x6237;&#x6A21;&#x578B;&#x3002;
+&#x4EE5;&#x8D26;&#x6237;&#x4E3A;&#x5355;&#x4F4D;&#xFF0C;&#x5B89;&#x5168;&#x9694;&#x79BB;&#x6570;&#x636E;&#x3002;&#x8D26;&#x6237;&#x95F4;&#x4FE1;&#x606F;&#x76F8;&#x4E92;&#x72EC;&#x7ACB;&#xFF0C;&#x4E92;&#x4E0D;&#x5E72;&#x6270;&#x3002;&#x518D;&#x914D;&#x5408;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x8BA9;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x6C99;&#x76D2;&#x8FD0;&#x884C;&#x3002;</p>
+<p><a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x4F5C;&#x4E3A;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x64CD;&#x4F5C;&#x5E73;&#x53F0;&#xFF0C;&#x5C06;&#x8D26;&#x6237;&#x5212;&#x5206;&#x4E3A;&#x4E24;&#x7C7B;&#xFF1A;&#x5916;&#x90E8;&#x8D26;&#x6237;&#xFF08;EOAs&#xFF09;&#x548C;&#x5408;&#x7EA6;&#x8D26;&#x6237;&#xFF08;contract account&#xFF09;&#x3002;</p>
+<h2 id="&#x5916;&#x90E8;&#x8D26;&#x6237;"><a name="&#x5916;&#x90E8;&#x8D26;&#x6237;" class="plugin-anchor" href="#&#x5916;&#x90E8;&#x8D26;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5916;&#x90E8;&#x8D26;&#x6237;</h2>
+<p>EOAs-&#x5916;&#x90E8;&#x8D26;&#x6237;(external owned accouts)&#x662F;&#x7531;&#x4EBA;&#x4EEC;&#x901A;&#x8FC7;&#x79C1;&#x94A5;&#x521B;&#x5EFA;&#x7684;&#x8D26;&#x6237;&#x3002;
+&#x662F;&#x771F;&#x5B9E;&#x4E16;&#x754C;&#x7684;&#x91D1;&#x878D;&#x8D26;&#x6237;&#x7684;&#x6620;&#x5C04;&#xFF0C;&#x62E5;&#x6709;&#x8BE5;&#x8D26;&#x6237;&#x79C1;&#x94A5;&#x7684;&#x4EFB;&#x4F55;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x8BE5;&#x8D26;&#x6237;&#x3002;
+&#x5982;&#x540C;&#x94F6;&#x884C;&#x5361;&#xFF0C;&#x5230;ATM&#x673A;&#x53D6;&#x6B3E;&#x65F6;&#x53EA;&#x9700;&#x8981;&#x5BC6;&#x7801;&#x8F93;&#x5165;&#x6B63;&#x786E;&#x5373;&#x53EF;&#x4EA4;&#x6613;&#x3002;
+&#x8FD9;&#x4E5F;&#x662F;&#x4EBA;&#x7C7B;&#x4E0E;Simplechain&#x8D26;&#x672C;&#x6C9F;&#x901A;&#x7684;&#x552F;&#x4E00;&#x5A92;&#x4ECB;&#xFF0C;&#x56E0;&#x4E3A;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x4E2D;&#x7684;&#x4EA4;&#x6613;&#x9700;&#x8981;&#x7B7E;&#x540D;&#xFF0C;
+&#x800C;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x62E5;&#x6709;&#x79C1;&#x6709;&#x5916;&#x90E8;&#x8D26;&#x6237;&#x7B7E;&#x540D;&#x3002;</p>
+<p>&#x5916;&#x90E8;&#x8D26;&#x6237;&#x7279;&#x70B9;&#x603B;&#x7ED3;&#xFF1A;</p>
+<ol>
+<li>&#x62E5;&#x6709;sipc&#x4F59;&#x989D;&#x3002;</li>
+<li>&#x80FD;&#x53D1;&#x9001;&#x4EA4;&#x6613;&#xFF0C;&#x5305;&#x62EC;&#x8F6C;&#x8D26;&#x548C;&#x6267;&#x884C;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#x3002;</li>
+<li>&#x88AB;&#x79C1;&#x94A5;&#x63A7;&#x5236;&#x3002;</li>
+<li>&#x6CA1;&#x6709;&#x76F8;&#x5173;&#x7684;&#x53EF;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x3002;</li>
+</ol>
+<h2 id="&#x5408;&#x7EA6;&#x8D26;&#x6237;"><a name="&#x5408;&#x7EA6;&#x8D26;&#x6237;" class="plugin-anchor" href="#&#x5408;&#x7EA6;&#x8D26;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5408;&#x7EA6;&#x8D26;&#x6237;</h2>
+<p>&#x542B;&#x6709;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#x7684;&#x8D26;&#x6237;&#x3002;
+&#x88AB;&#x5916;&#x90E8;&#x8D26;&#x6237;&#x6216;&#x8005;&#x5408;&#x7EA6;&#x521B;&#x5EFA;&#xFF0C;&#x5408;&#x7EA6;&#x5728;&#x521B;&#x5EFA;&#x65F6;&#x88AB;&#x81EA;&#x52A8;&#x5206;&#x914D;&#x5230;&#x4E00;&#x4E2A;&#x8D26;&#x6237;&#x5730;&#x5740;&#xFF0C;
+&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#x4EE5;&#x53CA;&#x5408;&#x7EA6;&#x90E8;&#x7F72;&#x6216;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x4EA7;&#x751F;&#x7684;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x3002;
+&#x5408;&#x7EA6;&#x8D26;&#x6237;&#x5730;&#x5740;&#x662F;&#x901A;&#x8FC7;SHA3&#x54C8;&#x5E0C;&#x7B97;&#x6CD5;&#x4EA7;&#x751F;&#xFF0C;&#x800C;&#x975E;&#x79C1;&#x94A5;&#x3002;
+&#x56E0;&#x65E0;&#x79C1;&#x94A5;&#xFF0C;&#x56E0;&#x6B64;&#x65E0;&#x4EBA;&#x53EF;&#x4EE5;&#x62FF;&#x5408;&#x7EA6;&#x8D26;&#x6237;&#x5F53;&#x505A;&#x5916;&#x90E8;&#x8D26;&#x6237;&#x4F7F;&#x7528;&#x3002;
+&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x5916;&#x90E8;&#x8D26;&#x6237;&#x6765;&#x9A71;&#x52A8;&#x5408;&#x7EA6;&#x6267;&#x884C;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x5408;&#x7EA6;&#x5730;&#x5740;&#x751F;&#x6210;&#x7B97;&#x6CD5;&#xFF1A;<code>Keccak256(rlp([sender,nonce])[12:]</code></p>
+<pre><code class="lang-go"><span class="hljs-comment">// crypto/crypto.go:74</span>
+<span class="hljs-keyword">func</span> CreateAddress(b common.Address, nonce <span class="hljs-keyword">uint64</span>) common.Address {
+    data, _ := rlp.EncodeToBytes([]<span class="hljs-keyword">interface</span>{}{b, nonce})
+    <span class="hljs-keyword">return</span> common.BytesToAddress(Keccak256(data)[<span class="hljs-number">12</span>:])
+}
+</code></pre>
+<p>&#x56E0;&#x4E3A;&#x5408;&#x7EA6;&#x7531;&#x5176;&#x4ED6;&#x8D26;&#x6237;&#x521B;&#x5EFA;&#xFF0C;&#x56E0;&#x6B64;&#x5C06;&#x521B;&#x5EFA;&#x8005;&#x5730;&#x5740;&#x548C;&#x8BE5;&#x4EA4;&#x6613;&#x7684;&#x968F;&#x673A;&#x6570;&#x8FDB;&#x884C;&#x54C8;&#x5E0C;&#x540E;&#x622A;&#x53D6;&#x90E8;&#x5206;&#x751F;&#x6210;&#x3002;</p>
+<p>&#x7279;&#x522B;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5728;<a href="http://eips.ethereum.org/EIPS/eip-1014" target="_blank">EIP1014</a>&#x4E2D;&#x63D0;&#x51FA;&#x7684;&#x53E6;&#x4E00;&#x79CD;&#x751F;&#x6210;&#x5408;&#x7EA6;&#x5730;&#x5740;&#x7684;&#x7B97;&#x6CD5;&#x3002;
+&#x5176;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x72B6;&#x6001;&#x901A;&#x9053;&#x63D0;&#x4F9B;&#x4FBF;&#x5229;&#xFF0C;&#x901A;&#x8FC7;&#x786E;&#x5B9A;&#x5185;&#x5BB9;&#x8F93;&#x51FA;&#x7A33;&#x5B9A;&#x7684;&#x5408;&#x7EA6;&#x5730;&#x5740;&#x3002;
+&#x5728;&#x90E8;&#x7F72;&#x5408;&#x7EA6;&#x524D;&#x5C31;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x786E;&#x5207;&#x7684;&#x5408;&#x7EA6;&#x5730;&#x5740;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x7B97;&#x6CD5;&#x65B9;&#x6CD5;:<code>keccak256( 0xff ++ address ++ salt ++ keccak256(init_code))[12:]</code>&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-comment">// crypto/crypto.go:81</span>
+<span class="hljs-keyword">func</span> CreateAddress2(b common.Address, salt [<span class="hljs-number">32</span>]<span class="hljs-keyword">byte</span>, inithash []<span class="hljs-keyword">byte</span>) common.Address {
+    <span class="hljs-keyword">return</span> common.BytesToAddress(Keccak256([]<span class="hljs-keyword">byte</span>{<span class="hljs-number">0xff</span>}, b.Bytes(), salt[:], inithash)[<span class="hljs-number">12</span>:])
+}
+</code></pre>
+<p>&#x5408;&#x7EA6;&#x8D26;&#x6237;&#x7279;&#x70B9;&#x603B;&#x7ED3;&#xFF1A;</p>
+<ol>
+<li>&#x62E5;&#x6709;sipc&#x4F59;&#x989D;&#x3002;</li>
+<li>&#x6709;&#x76F8;&#x5173;&#x7684;&#x53EF;&#x6267;&#x884C;&#x4EE3;&#x7801;&#xFF08;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#xFF09;&#x3002;</li>
+<li>&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#x80FD;&#x591F;&#x88AB;&#x4EA4;&#x6613;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x5408;&#x7EA6;&#x6D88;&#x606F;&#x8C03;&#x7528;&#x3002;</li>
+<li>&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#x88AB;&#x6267;&#x884C;&#x65F6;&#x53EF;&#x518D;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#x3002;</li>
+<li>&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#x88AB;&#x6267;&#x884C;&#x65F6;&#x53EF;&#x6267;&#x884C;&#x590D;&#x6742;&#x8FD0;&#x7B97;&#xFF0C;&#x53EF;&#x6C38;&#x4E45;&#x5730;&#x6539;&#x53D8;&#x5408;&#x7EA6;&#x5185;&#x90E8;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x3002;</li>
+</ol>
+<h2 id="&#x5DEE;&#x5F02;&#x5BF9;&#x6BD4;"><a name="&#x5DEE;&#x5F02;&#x5BF9;&#x6BD4;" class="plugin-anchor" href="#&#x5DEE;&#x5F02;&#x5BF9;&#x6BD4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5DEE;&#x5F02;&#x5BF9;&#x6BD4;</h2>
+<p>&#x7EFC;&#x4E0A;&#xFF0C;&#x4E0B;&#x9762;&#x8868;&#x683C;&#x5217;&#x51FA;&#x4E24;&#x7C7B;&#x8D26;&#x6237;&#x5DEE;&#x5F02;&#xFF0C;&#x5408;&#x7EA6;&#x8D26;&#x6237;&#x66F4;&#x4F18;&#x4E8E;&#x5916;&#x90E8;&#x8D26;&#x6237;&#x3002;
+&#x4F46;&#x5916;&#x90E8;&#x8D26;&#x6237;&#x662F;&#x4EBA;&#x4EEC;&#x548C;Simplechain&#x6C9F;&#x901A;&#x7684;&#x552F;&#x4E00;&#x5A92;&#x4ECB;&#xFF0C;&#x548C;&#x5408;&#x7EA6;&#x8D26;&#x6237;&#x76F8;&#x8F85;&#x76F8;&#x6210;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x9879;</th>
+<th>&#x5916;&#x90E8;&#x8D26;&#x6237;</th>
+<th>&#x5408;&#x7EA6;&#x8D26;&#x6237;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x79C1;&#x94A5; private Key</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2716;&#xFE0F;</td>
+</tr>
+<tr>
+<td>&#x4F59;&#x989D; balance</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+<tr>
+<td>&#x4EE3;&#x7801; code</td>
+<td>&#x2716;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+<tr>
+<td>&#x591A;&#x91CD;&#x7B7E;&#x540D;</td>
+<td>&#x2716;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+<tr>
+<td>&#x63A7;&#x5236;&#x65B9;&#x5F0F;</td>
+<td>&#x79C1;&#x94A5;&#x63A7;&#x5236;</td>
+<td>&#x901A;&#x8FC7;&#x5916;&#x90E8;&#x8D26;&#x6237;&#x6267;&#x884C;&#x5408;&#x7EA6;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E0A;&#x9762;&#x6709;&#x5217;&#x51FA;&#x591A;&#x91CD;&#x7B7E;&#x540D;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x5916;&#x90E8;&#x8D26;&#x6237;&#x53EA;&#x7531;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x79C1;&#x94A5;&#x521B;&#x5EFA;&#xFF0C;&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x591A;&#x7B7E;&#x3002;
+&#x4F46;&#x5408;&#x7EA6;&#x5177;&#x6709;&#x53EF;&#x7F16;&#x7A0B;&#x6027;&#xFF0C;&#x53EF;&#x7F16;&#x5199;&#x7B26;&#x5408;&#x591A;&#x91CD;&#x7B7E;&#x540D;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x652F;&#x6301;&#x591A;&#x7B7E;&#x7684;&#x8D26;&#x6237;&#x3002;</p>
+<h2 id="&#x8D26;&#x6237;&#x6570;&#x636E;&#x7ED3;&#x6784;"><a name="&#x8D26;&#x6237;&#x6570;&#x636E;&#x7ED3;&#x6784;" class="plugin-anchor" href="#&#x8D26;&#x6237;&#x6570;&#x636E;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D26;&#x6237;&#x6570;&#x636E;&#x7ED3;&#x6784;</h2>
+<p><a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x6570;&#x636E;&#x4EE5;&#x8D26;&#x6237;&#x4E3A;&#x5355;&#x4F4D;&#x7EC4;&#x7EC7;&#xFF0C;&#x8D26;&#x6237;&#x6570;&#x636E;&#x7684;&#x53D8;&#x66F4;&#x5F15;&#x8D77;&#x8D26;&#x6237;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x3002;
+&#x4ECE;&#x800C;&#x5F15;&#x8D77;Simplechain&#x72B6;&#x6001;&#x53D8;&#x5316;&#x3002;</p>
+<p>&#x5728;&#x7A0B;&#x5E8F;&#x903B;&#x8F91;&#x4E0A;&#x4E24;&#x7C7B;&#x8D26;&#x6237;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E00;&#x81F4;&#xFF1A;</p>
+<p><img src="https://i.loli.net/2020/05/09/Nrj4wSvnWyPtEkg.png" alt="Simplechain&#x8D26;&#x6237;&#x6570;&#x636E;&#x7ED3;&#x6784;"></p>
+<p>&#x5BF9;&#x5E94;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-comment">// core/state/state_object.go:100</span>
+<span class="hljs-keyword">type</span> Account <span class="hljs-keyword">struct</span> {
+    Nonce    <span class="hljs-keyword">uint64</span>
+    Balance  *big.Int
+    Root     common.Hash
+    CodeHash []<span class="hljs-keyword">byte</span>
+}
+</code></pre>
+<p>&#x4F46;&#x5728;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x4E0A;&#x7A0D;&#x6709;&#x4E0D;&#x540C;&#xFF0C;&#x56E0;&#x4E3A;&#x5916;&#x90E8;&#x8D26;&#x6237;&#x65E0;&#x5185;&#x90E8;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x548C;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#xFF0C;&#x56E0;&#x6B64;&#x5916;&#x90E8;&#x8D26;&#x6237;&#x6570;&#x636E;&#x4E2D; <code>StateRootHash</code> &#x548C; <code>CodeHash</code> &#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x4E00;&#x65E6;&#x5C5E;&#x4E8E;&#x7A7A;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x5B58;&#x50A8;&#x5BF9;&#x5E94;&#x7269;&#x7406;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;&#x5728;&#x7A0B;&#x5E8F;&#x903B;&#x8F91;&#x4E0A;&#xFF0C;&#x5B58;&#x5728;<code>code</code>&#x5219;&#x4E3A;&#x5408;&#x7EA6;&#x8D26;&#x6237;&#x3002;&#x5373; <code>CodeHash</code> &#x4E3A;&#x7A7A;&#x503C;&#x65F6;&#xFF0C;&#x8D26;&#x6237;&#x662F;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x8D26;&#x6237;&#xFF0C;&#x5426;&#x5219;&#x662F;&#x5408;&#x7EA6;&#x8D26;&#x6237;&#x3002;</p>
+<p><img src="https://i.loli.net/2020/05/09/J4iywoUuEhBM695.png" alt="14_sipc&#x8D26;&#x6237;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7ED3;&#x6784;.png"></p>
+<p>&#x4E0A;&#x56FE;&#x662F;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x8D26;&#x6237;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7ED3;&#x6784;&#xFF0C;&#x8D26;&#x6237;&#x5185;&#x90E8;&#x5B9E;&#x9645;&#x53EA;&#x5B58;&#x50A8;&#x5173;&#x952E;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#x4EE5;&#x53CA;&#x5408;&#x7EA6;&#x81EA;&#x8EAB;&#x6570;&#x636E;&#x5219;&#x901A;&#x8FC7;&#x5BF9;&#x5E94;&#x7684;&#x54C8;&#x5E0C;&#x503C;&#x5173;&#x8054;&#x3002;&#x56E0;&#x4E3A;&#x6BCF;&#x4E2A;&#x8D26;&#x6237;&#x5BF9;&#x8C61;&#xFF0C;&#x5C06;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x8D26;&#x6237;&#x6811;&#x7684;&#x4E00;&#x4E2A;&#x53F6;&#x5B50;&#x6570;&#x636E;&#x5B58;&#x50A8;&#xFF0C;&#x4E0D;&#x80FD;&#x592A;&#x5927;&#x3002;</p>
+<p>&#x5728;&#x5BC6;&#x7801;&#x5B66;&#x9886;&#x57DF;&#xFF0C;Nonce &#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x53EA;&#x4F7F;&#x7528;&#x4E00;&#x6B21;&#x7684;&#x6570;&#x5B57;&#x3002;&#x5B83;&#x5F80;&#x5F80;&#x662F;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x6216;&#x4F2A;&#x968F;&#x673A;&#x6570;&#xFF0C;&#x4EE5;&#x907F;&#x514D;&#x91CD;&#x590D;&#x3002;
+<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x8D26;&#x6237;&#x4E2D;&#x52A0;&#x5165; Nonce&#xFF0C;&#x53EF;&#x907F;&#x514D;&#x91CD;&#x653E;&#x653B;&#x51FB;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;&#x968F;&#x673A;&#x4EA7;&#x751F;&#x3002;
+&#x8D26;&#x6237; Nonce &#x8D77;&#x59CB;&#x503C;&#x662F; 0&#xFF0C;&#x540E;&#x7EED;&#x6BCF;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x8D26;&#x6237;&#x6267;&#x884C;&#x5219; Nonce &#x503C;&#x8BA1;&#x52A0;&#x4E00;&#x6B21;&#x3002;&#x5176;&#x4E2D;&#x4E00;&#x5904;&#x7684;&#x8BA1;&#x6570;&#x903B;&#x8F91;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-comment">// core/state_transition.go:212</span>
+st.state.SetNonce(msg.From(), st.state.GetNonce(sender.Address())+<span class="hljs-number">1</span>)
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x7684;&#x9644;&#x52A0;&#x597D;&#x5904;&#x662F;&#xFF0C;&#x4E00;&#x822C;&#x53EF;&#x5C06; Nonce &#x5F53;&#x505A;&#x8D26;&#x6237;&#x7684;&#x4EA4;&#x6613;&#x6B21;&#x6570;&#x8BA1;&#x6570;&#x5668;&#x4F7F;&#x7528;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5BF9;&#x4E8E;&#x5408;&#x7EA6;&#x8D26;&#x6237;&#x53EF;&#x4EE5;&#x51C6;&#x786E;&#x7684;&#x8BB0;&#x5F55;&#x5408;&#x7EA6;&#x88AB;&#x8C03;&#x7528;&#x6B21;&#x6570;&#x3002;</p>
+<p>&#x800C;<code>Balance</code>&#x5219;&#x8BB0;&#x5F55;&#x8BE5;&#x8D26;&#x6237;&#x6240;&#x62E5;&#x6709;&#x7684;sipc&#x6570;&#x91CF;&#xFF0C;&#x79F0;&#x4E3A;&#x8D26;&#x6237;&#x4F59;&#x989D;.&#x8F6C;&#x79FB;&#x8D44;&#x4EA7;(Transfer)&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x8D26;&#x6237;&#x7684;<code>Balance</code>&#x4E0A;&#x8BA1;&#x52A0;&#xFF0C;&#x5728;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x8D26;&#x6237;&#x8BA1;&#x51CF;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-comment">// core/evm.go:94</span>
+<span class="hljs-keyword">func</span> Transfer(db vm.StateDB, sender, recipient common.Address, amount *big.Int) {
+    db.SubBalance(sender, amount)
+    db.AddBalance(recipient, amount)
+}
+<span class="hljs-comment">// core/vm/evm.go:191</span>
+<span class="hljs-keyword">if</span> !evm.Context.CanTransfer(evm.StateDB, caller.Address(), value) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>, gas, ErrInsufficientBalance
+}
+<span class="hljs-comment">// core/vm/evm.go:214</span>
+evm.Transfer(evm.StateDB, caller.Address(), to.Address(), value)
+</code></pre>
+<p>&#x5F53;&#x7136;&#x5FC5;&#x987B;&#x4FDD;&#x8BC1;&#x8F6C;&#x8D26;&#x65B9;&#x4F59;&#x989D;&#x5145;&#x8DB3;&#xFF0C;&#x5728;&#x8F6C;&#x79FB;&#x524D;&#x9700;&#x8981;<code>CanTransfer</code>&#x68C0;&#x67E5;&#xFF0C;
+&#x5982;&#x679C;&#x4F59;&#x989D;&#x5145;&#x8DB3;&#xFF0C;&#x5219;&#x6267;&#x884C;<code>Transfer</code>&#x8F6C;&#x79FB;<code>Value</code>&#x6570;&#x91CF;&#x7684;&#x4EE5;&#x592A;&#x3002;</p>
+<p>&#x8D26;&#x6237;&#x72B6;&#x6001;&#x54C8;&#x5E0C;&#x503C; <code>StateRoot</code>&#xFF0C;&#x662F;&#x5408;&#x7EA6;&#x6240;&#x62E5;&#x6709;&#x7684;&#x65B9;&#x6CD5;&#x3001;&#x5B57;&#x6BB5;&#x4FE1;&#x606F;&#x6784;&#x6210;&#x7684;&#x4E00;&#x9897;&#x9ED8;&#x514B;&#x5C14;&#x538B;&#x7F29;&#x524D;&#x7F00;&#x6811;&#xFF08;Merkle Patricia Tree&#xFF09;&#x7684;&#x6839;&#x503C;&#xFF0C;&#x7B80;&#x5355;&#x5730;&#x8BB2;&#x662F;&#x4E00;&#x9897;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9;&#x503C;&#x3002;&#x5408;&#x7EA6;&#x72B6;&#x6001;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x9879;&#x7EC6;&#x5FAE;&#x53D8;&#x52A8;&#x90FD;&#x6700;&#x7EC8;&#x5F15;&#x8D77; <code>StateRoot</code> &#x53D8;&#x5316;&#xFF0C;&#x56E0;&#x6B64;&#x5408;&#x7EA6;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x4F1A;&#x53CD;&#x6620;&#x5728;&#x8D26;&#x6237;&#x7684;<code>StateRoot</code>&#x4E0A;&#x3002;</p>
+<p>&#x540C;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5229;&#x7528; <code>StateRoot</code> &#x4ECE; Leveldb &#x4E2D;&#x5FEB;&#x901F;&#x8BFB;&#x53D6;&#x5177;&#x4F53;&#x7684;&#x67D0;&#x4E2A;&#x72B6;&#x6001;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x5408;&#x7EA6;&#x7684;&#x521B;&#x5EFA;&#x8005;&#x3002;
+&#x901A;&#x8FC7;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>API <a href="">web3.eth.getStorageAt</a> &#x53EF;&#x8BFB;&#x53D6;&#x5408;&#x7EA6;&#x4E2D;&#x4EFB;&#x610F;&#x4F4D;&#x7F6E;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4E00;&#x6BB5;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x611F;&#x53D7;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x6570;&#x636E;&#x5B58;&#x50A8;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">import</span>(...)
+<span class="hljs-keyword">var</span> toAddr =common.HexToAddress
+<span class="hljs-keyword">var</span> toHash =common.BytesToHash
+
+<span class="hljs-keyword">func</span> main()  {
+    statadb, _ := state.New(common.Hash{},
+        state.NewDatabase(rawdb.NewMemoryDatabase()))<span class="hljs-comment">// 1</span>
+
+    acct1:=toAddr(<span class="hljs-string">&quot;0x0bB141C2F7d4d12B1D27E62F86254e6ccEd5FF9a&quot;</span>)<span class="hljs-comment">// 2</span>
+    acct2:=toAddr(<span class="hljs-string">&quot;0x77de172A492C40217e48Ebb7EEFf9b2d7dF8151B&quot;</span>)
+
+    statadb.AddBalance(acct1,big.NewInt(<span class="hljs-number">100</span>))
+    statadb.AddBalance(acct2,big.NewInt(<span class="hljs-number">888</span>))
+
+    contract:=crypto.CreateAddress(acct1,statadb.GetNonce(acct1))<span class="hljs-comment">//3</span>
+    statadb.CreateAccount(contract)
+    statadb.SetCode(contract,[]<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;contract code bytes&quot;</span>))<span class="hljs-comment">//4</span>
+
+    statadb.SetNonce(contract,<span class="hljs-number">1</span>)
+    statadb.SetState(contract,toHash([]<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;owner&quot;</span>)),toHash(acct1.Bytes()))<span class="hljs-comment">//5</span>
+    statadb.SetState(contract,toHash([]<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;name&quot;</span>)),toHash([]<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;ysqi&quot;</span>)))
+
+    statadb.SetState(contract,toHash([]<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;online&quot;</span>)),toHash([]<span class="hljs-keyword">byte</span>{<span class="hljs-number">1</span>})
+    statadb.SetState(contract,toHash([]<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;online&quot;</span>)),toHash([]<span class="hljs-keyword">byte</span>{}))<span class="hljs-comment">//6</span>
+
+    statadb.Commit(<span class="hljs-literal">true</span>)<span class="hljs-comment">//7</span>
+    fmt.Println(<span class="hljs-keyword">string</span>(statadb.Dump()))<span class="hljs-comment">//8</span>
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E86;&#x4E09;&#x4E2A;&#x8D26;&#x6237;&#xFF0C;&#x5E76;&#x4E14;&#x63D0;&#x4EA4;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;&#x6700;&#x7EC8;&#x6253;&#x5370;&#x51FA;&#x5F53;&#x524D;&#x6570;&#x636E;&#x4E2D;&#x6240;&#x6709;&#x8D26;&#x6237;&#x7684;&#x6570;&#x636E;&#x4FE1;&#x606F;&#xFF1A;</p>
+<ul>
+<li>&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x6D89;&#x53CA;&#x591A;&#x4E2A;&#x64CD;&#x4F5C;&#x3002;&#x9996;&#x5148;&#x662F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5185;&#x5B58;KV&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x518D;&#x5305;&#x88C5;&#x4E3A; stata &#x6570;&#x636E;&#x5E93;&#x5B9E;&#x4F8B;&#xFF0C;
+&#x6700;&#x540E;&#x5229;&#x7528;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;DB&#x7EA7;&#x7684;<code>StateRoot</code>&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;Simplechain statadb&#x3002;</li>
+<li>&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x8D26;&#x6237; acct1&#x548C;acct2&#xFF0C;&#x5E76;&#x5206;&#x522B;&#x6DFB;&#x52A0;100&#x548C;888&#x5230;&#x8D26;&#x6237;&#x4F59;&#x989D;&#x3002;</li>
+<li>&#x6A21;&#x62DF;&#x5408;&#x7EA6;&#x8D26;&#x6237;&#x7684;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;&#xFF0C;&#x7531;&#x5916;&#x90E8;&#x8D26;&#x6237; acct1 &#x521B;&#x5EFA;&#x5408;&#x7EA6;&#x8D26;&#x6237;&#x5730;&#x5740;&#xFF0C;&#x5E76;&#x5C06;&#x6B64;&#x5730;&#x5740;&#x8F7D;&#x5165; statadb&#x3002;</li>
+<li>&#x5728;&#x5C06;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#x52A0;&#x5165;&#x521A;&#x521A;&#x521B;&#x5EFA;&#x7684;&#x5408;&#x7EA6;&#x8D26;&#x6237;&#x4E2D;&#xFF0C;&#x5728;&#x5199;&#x5165;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#x7684;&#x540C;&#x65F6;&#xFF0C;
+&#x4F1A;&#x5229;&#x7528;<code>crypto.Keccak256Hash(code)</code>&#x8BA1;&#x7B97;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#x54C8;&#x5E0C;&#xFF0C;&#x4FDD;&#x7559;&#x5728;&#x8D26;&#x6237;&#x6570;&#x636E;&#x4E2D;&#x3002;</li>
+<li>&#x6A21;&#x62DF;&#x5408;&#x7EA6;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#xFF0C;&#x6D89;&#x53CA;&#x4FEE;&#x6539;&#x5408;&#x7EA6;&#x72B6;&#x6001;&#xFF0C;&#x65B0;&#x589E;&#x4E09;&#x9879;&#x72B6;&#x6001;&#x6570;&#x636E;<code>owner</code>,<code>name</code>&#x548C;<code>online</code>&#xFF0C;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x503C;&#x3002;</li>
+<li>&#x8FD9;&#x91CC;&#x548C;&#x524D;&#x9762;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x662F;&#x7ED9;&#x72B6;&#x6001;<code>online</code>&#x8D4B;&#x503C;&#x4E3A;&#x7A7A;<code>[]byte{}</code>&#xFF0C;&#x56E0;&#x4E3A;&#x6240;&#x6709;&#x72B6;&#x6001;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x5747;&#x662F;<code>[]byte{}</code>&#xFF0C;
+&#x5728;&#x63D0;&#x4EA4;&#x5230;&#x6570;&#x636E;&#x5E93;&#x65F6;&#xFF0C;&#x5982;Leveldb &#x8BA4;&#x4E3A;&#x8FD9;&#x4E9B;&#x72B6;&#x6001;&#x65E0;&#x6709;&#x6548;&#x503C;&#xFF0C;&#x4F1A;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x4E2D;&#x5220;&#x9664;&#x6B64;&#x8BB0;&#x5F55;&#x3002;
+&#x56E0;&#x6B64;&#xFF0C;&#x6B64;&#x64CD;&#x4F5C;&#x5B9E;&#x9645;&#x662F;&#x4E00;&#x4E2A;&#x5220;&#x9664;&#x72B6;&#x6001;<code>online</code>&#x64CD;&#x4F5C;&#x3002;</li>
+<li>&#x4E0A;&#x9762;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD8;&#x90FD;&#x53EA;&#x662F;&#x53D1;&#x751F;&#x5728; statdb &#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x5E76;&#x672A;&#x771F;&#x6B63;&#x7684;&#x5199;&#x5165;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x3002;
+&#x6267;&#x884C;<code>Commit</code>&#xFF0C;&#x624D;&#x4F1A;&#x5C06;&#x5173;&#x4E8E; statadb &#x7684;&#x6240;&#x6709;&#x53D8;&#x66F4;&#x66F4;&#x65B0;&#x5230;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</li>
+<li>&#x4E00;&#x65E6;&#x63D0;&#x4EA4;&#x6570;&#x636E;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>Dump</code> &#x547D;&#x4EE4;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x67E5;&#x627E;&#x6B64; stata &#x76F8;&#x5173;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x5305;&#x62EC;&#x6240;&#x6709;&#x8D26;&#x6237;&#x3002;
+&#x5E76;&#x4EE5; JSON &#x683C;&#x5F0F;&#x8FD4;&#x8FD8;&#x3002;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x8FD4;&#x8FD8;&#x7ED3;&#x679C;&#x76F4;&#x63A5;&#x6253;&#x5370;&#x8F93;&#x51FA;&#x3002;</li>
+</ul>
+<p>&#x4EE3;&#x7801;&#x6267;&#x884C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;root&quot;</span>: <span class="hljs-string">&quot;3a25b0816cf007c0b878ca7a62ba35ee0337fa53703f281c41a791a137519f00&quot;</span>,
+    <span class="hljs-string">&quot;accounts&quot;</span>: {
+        <span class="hljs-string">&quot;0bb141c2f7d4d12b1d27e62f86254e6cced5ff9a&quot;</span>: {
+            <span class="hljs-string">&quot;balance&quot;</span>: <span class="hljs-string">&quot;100&quot;</span>,
+            <span class="hljs-string">&quot;nonce&quot;</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-string">&quot;root&quot;</span>: <span class="hljs-string">&quot;56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421&quot;</span>,
+            <span class="hljs-string">&quot;codeHash&quot;</span>: <span class="hljs-string">&quot;c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470&quot;</span>,
+            <span class="hljs-string">&quot;code&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;storage&quot;</span>: {}
+        },
+        <span class="hljs-string">&quot;77de172a492c40217e48ebb7eeff9b2d7df8151b&quot;</span>: {
+            <span class="hljs-string">&quot;balance&quot;</span>: <span class="hljs-string">&quot;888&quot;</span>,
+            <span class="hljs-string">&quot;nonce&quot;</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-string">&quot;root&quot;</span>: <span class="hljs-string">&quot;56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421&quot;</span>,
+            <span class="hljs-string">&quot;codeHash&quot;</span>: <span class="hljs-string">&quot;c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470&quot;</span>,
+            <span class="hljs-string">&quot;code&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;storage&quot;</span>: {}
+        },
+        <span class="hljs-string">&quot;80580f576731dc1e1dcc53d80b261e228c447cdd&quot;</span>: {
+            <span class="hljs-string">&quot;balance&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
+            <span class="hljs-string">&quot;nonce&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;root&quot;</span>: <span class="hljs-string">&quot;1f6d937817f2ac217d8b123c4983c45141e50bd0c358c07f3c19c7b526dd4267&quot;</span>,
+            <span class="hljs-string">&quot;codeHash&quot;</span>: <span class="hljs-string">&quot;c668dac8131a99c411450ba912234439ace20d1cc1084f8e198fee0a334bc592&quot;</span>,
+            <span class="hljs-string">&quot;code&quot;</span>: <span class="hljs-string">&quot;636f6e747261637420636f6465206279746573&quot;</span>,
+            <span class="hljs-string">&quot;storage&quot;</span>: {
+                <span class="hljs-string">&quot;000000000000000000000000000000000000000000000000000000006e616d65&quot;</span>: <span class="hljs-string">&quot;8479737169&quot;</span>,
+                <span class="hljs-string">&quot;0000000000000000000000000000000000000000000000000000006f776e6572&quot;</span>: <span class="hljs-string">&quot;940bb141c2f7d4d12b1d27e62f86254e6cced5ff9a&quot;</span>
+            }
+        }
+    }
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x770B;&#x5230;&#x8FD9;&#x4E9B;&#x663E;&#x793A;&#x6570;&#x636E;&#xFF0C;&#x76F4;&#x63A5;&#x5BF9;&#x5E94;&#x6211;&#x4EEC;&#x521A;&#x521A;&#x7684;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x3002;
+&#x4E5F;&#x53EA;&#x6709;&#x5408;&#x7EA6;&#x8D26;&#x6237;&#x624D;&#x6709; <code>storage</code> &#x548C; <code>code</code>&#x3002;&#x800C;&#x5916;&#x90E8;&#x8D26;&#x6237;&#x7684;<code>codeHash</code>&#x548C;<code>root</code>&#x503C;&#x76F8;&#x540C;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="5_concoct.html" class="navigation navigation-prev " aria-label="Previous page: 配置">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8_transaction/" class="navigation navigation-next " aria-label="Next page: 交易">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"账户","level":"4.2","depth":1,"next":{"title":"交易","level":"4.3","depth":1,"path":"8_transaction/README.md","ref":"8_transaction/README.md","articles":[]},"previous":{"title":"配置","level":"4.1","depth":1,"path":"5_concoct.md","ref":"5_concoct.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"zh","gitbook":"*"},"file":{"path":"7_account.md","mtime":"2020-06-10T12:14:33.814Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-22T06:43:46.458Z"},"basePath":".","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

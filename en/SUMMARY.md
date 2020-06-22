@@ -16,8 +16,8 @@
 ## Basic Data Struct
 
 + [Deploy](5_concoct.md)
-+ [Genesis Block](6_genesisBlock/README.md)
-+ [Account](7_account.m)
++ [Genesis Block](6_genesis/README.md)
++ [Account](7_account.md)
 + [Transaction](8_transaction/README.md)
 + [Block](9_block/README.md)
 + [Transaction Receipt](10_transactionReceipt/README.md)
@@ -45,7 +45,7 @@
 ### Developer tools
 
 + [Build Test network](21_buildTest.md)
-+ [Sip API](22_sicApi.md)
++ [Sip API](22_sipcApi.md)
 + [Cross-chain API](23_crossChainApi.md)
 + [SimPlug](24_chromeWallet/README.md)
 + [SDK](25_sdk/README.md)
@@ -55,7 +55,7 @@
 
 + [Cross-chain solution](48_crossChain/README.md)
 + [Subchain template](26_smallChain.md)
-+ [Cross-chain process](49_crossChainOrder.md)
++ [Cross-chain process](49_crossChainOrder/README.md)
 
 ### Dapp develop
 
@@ -84,7 +84,7 @@
 + [Exchange docking](40_tradePlateform.md))
 + [Community Project](41_commityProduct.md)
 + [Community Activity](42_commityActity.md)
-+ [Community Entrance](43_commityEntersla.md)
++ [Community Entrance](43_commityEnters/README.md)
 
 
 ### Landing scheme
@@ -94,4 +94,4 @@
 ### Other
 
 + [FAQ](45_faq.md)
-+ [Online technical support](46_supportOnline.md)
++ [Online technical support](46_supportOnline/README.md)

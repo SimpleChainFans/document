@@ -16,10 +16,10 @@
 ## 基础数据结构
 
 + [配置](5_concoct.md)
-+ [创世块](6_genesisBlock/README.md)
 + [账户](7_account.md)
 + [交易](8_transaction/README.md)
 + [区块](9_block/README.md)
++ [创世块](6_genesis/README.md)
 + [交易回执](10_transactionReceipt/README.md)
 
 ## 架构
@@ -45,7 +45,7 @@
 ### 开发者工具
 
 + [搭建测试链](21_buildTest.md)
-+ [Sip API](22_sicApi.md)
++ [Sip API](22_sipcApi.md)
 + [跨链API](23_crossChainApi.md)
 + [SimPlug](24_chromeWallet/README.md)
 + [SDK](25_sdk/README.md)
@@ -54,7 +54,7 @@
 
 + [跨链方案](48_crossChain/README.md)
 + [子链模版](26_smallChain.md)
-+ [跨链流程](49_crossChainOrder.md)
++ [跨链流程](49_crossChainOrder/README.md)
 
 ### Dapp开发
 
@@ -76,14 +76,14 @@
 + [SIPC.VIP](36_SIPC.md)
 + [sipc全节点钱包](37_wallet/README.md)
 + [ChainBox](38_ChainBox/README.md)
-+ [区块链浏览器](39_blockBrowser/README.md)
++ [区块链浏览器](39_bolckBrowser/README.md)
 
 ### 生态
 
 + [交易所对接](40_tradePlateform.md)
 + [社区项目](41_commityProduct.md)
 + [社区活动](42_commityActity.md)
-+ [社区入口](43_commityEntersla.md)
++ [社区入口](43_commityEnters/README.md)
 
 
 ### 落地方案
@@ -93,4 +93,4 @@
 ### 其它
 
 + [FAQ](45_faq.md)
-+ [在线技术支持](46_supportOnline.md)
++ [在线技术支持](46_supportOnline/README.md)

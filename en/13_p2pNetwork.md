@@ -82,10 +82,10 @@ sequenceDiagram
 
 ```bash
 sequenceDiagram
-    participant 节点A
-    participant 节点B
-    participant 节点C
-    participant 节点D
+    participant node A
+    participant node B
+    participant node C
+    participant node D
 
     节点A->>节点A: 遍历所有节点ID
     节点A->>节点B: 发送消息
@@ -104,12 +104,12 @@ Each node maintains its own state, broadcasts the Seq of the state on the whole 
 
 ```bash
 sequenceDiagram
-    participant 节点A
-    participant 节点B
+    participant node A
+    participant node B
 
-    节点A->节点B: 广播seq
-    节点A->>节点A: 判断节点B的seq是否变化
-    节点A->>节点B: seq变化，发起状态查询请求
-    节点B->>节点A: 返回节点状态
-    节点A->>节点A: 更新节点B的状态和seq
+    node A->node B: 广播seq
+    node A->>node A: 判断节点B的seq是否变化
+    node A->>node B: seq变化，发起状态查询请求
+    node B->>node A: 返回节点状态
+    node A->>node A: 更新节点B的状态和seq
 ```
