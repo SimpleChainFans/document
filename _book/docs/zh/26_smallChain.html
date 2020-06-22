@@ -1,0 +1,1256 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>子链模版 · Simplechain Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="49_crossChainOrder/" />
+    
+    
+    <link rel="prev" href="48_crossChain/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">快速了解</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="1_quickStart.html">
+            
+                <a href="1_quickStart.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="2_BuildNode/">
+            
+                <a href="2_BuildNode/">
+            
+                    
+                    搭建节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">sipc代币协议</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="47_techniqueLanguage.html">
+            
+                <a href="47_techniqueLanguage.html">
+            
+                    
+                    技术术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="3_sipcCoin.html">
+            
+                <a href="3_sipcCoin.html">
+            
+                    
+                    sipc代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="4_PublishCoin/">
+            
+                <a href="4_PublishCoin/">
+            
+                    
+                    发行代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="5_concoct.html">
+            
+                <a href="5_concoct.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="7_account.html">
+            
+                <a href="7_account.html">
+            
+                    
+                    账户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="8_transaction/">
+            
+                <a href="8_transaction/">
+            
+                    
+                    交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="9_block/">
+            
+                <a href="9_block/">
+            
+                    
+                    区块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="6_genesis/">
+            
+                <a href="6_genesis/">
+            
+                    
+                    创世块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="10_transactionReceipt/">
+            
+                <a href="10_transactionReceipt/">
+            
+                    
+                    交易回执
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">架构</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="11_constructDesign/">
+            
+                <a href="11_constructDesign/">
+            
+                    
+                    架构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="12_structAndStore/">
+            
+                <a href="12_structAndStore/">
+            
+                    
+                    数据结构和存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="50_togetherStep.html">
+            
+                <a href="50_togetherStep.html">
+            
+                    
+                    数据同步优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">底层核心技术</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="13_p2pNetwork.html">
+            
+                <a href="13_p2pNetwork.html">
+            
+                    
+                    p2p网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="14_consensus/">
+            
+                <a href="14_consensus/">
+            
+                    
+                    共识机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="15_virtualMache/">
+            
+                <a href="15_virtualMache/">
+            
+                    
+                    虚拟机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="16_runMechanism/">
+            
+                <a href="16_runMechanism/">
+            
+                    
+                    运行机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="17_unusual.html">
+            
+                <a href="17_unusual.html">
+            
+                    
+                    处理异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">智能合约</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="18_contract/">
+            
+                <a href="18_contract/">
+            
+                    
+                    智能合约
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="19_understandSolidity/">
+            
+                <a href="19_understandSolidity/">
+            
+                    
+                    深入理解Solidity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="20_contractPattern.html">
+            
+                <a href="20_contractPattern.html">
+            
+                    
+                    合约模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开发者工具</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="21_buildTest.html">
+            
+                <a href="21_buildTest.html">
+            
+                    
+                    搭建测试链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="22_sipcApi.html">
+            
+                <a href="22_sipcApi.html">
+            
+                    
+                    Sip API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="23_crossChainApi.html">
+            
+                <a href="23_crossChainApi.html">
+            
+                    
+                    跨链API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="24_chromeWallet/">
+            
+                <a href="24_chromeWallet/">
+            
+                    
+                    SimPlug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="25_sdk/">
+            
+                <a href="25_sdk/">
+            
+                    
+                    SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">跨链</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="48_crossChain/">
+            
+                <a href="48_crossChain/">
+            
+                    
+                    跨链方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="9.2" data-path="26_smallChain.html">
+            
+                <a href="26_smallChain.html">
+            
+                    
+                    子链模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="49_crossChainOrder/">
+            
+                <a href="49_crossChainOrder/">
+            
+                    
+                    跨链流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp开发</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="27_dappFlow/">
+            
+                <a href="27_dappFlow/">
+            
+                    
+                    Dapp流程梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="28_editor.html">
+            
+                <a href="28_editor.html">
+            
+                    
+                    编译器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="29_writeContract/">
+            
+                <a href="29_writeContract/">
+            
+                    
+                    编写合约
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="30_frontRealize/">
+            
+                <a href="30_frontRealize/">
+            
+                    
+                    前端实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">挖矿</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="31_mining.html">
+            
+                <a href="31_mining.html">
+            
+                    
+                    sipc挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="32_miningPool/">
+            
+                <a href="32_miningPool/">
+            
+                    
+                    矿池接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="33_gpuMining/">
+            
+                <a href="33_gpuMining/">
+            
+                    
+                    GPU挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="34_SimPool/">
+            
+                <a href="34_SimPool/">
+            
+                    
+                    Simpool挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="35_SimpleNode_x1/">
+            
+                <a href="35_SimpleNode_x1/">
+            
+                    
+                    SimpleNode x1挖矿教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">客户端</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="36_SIPC.html">
+            
+                <a href="36_SIPC.html">
+            
+                    
+                    SIPC.VIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="37_wallet/">
+            
+                <a href="37_wallet/">
+            
+                    
+                    sipc全节点钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="38_ChainBox/">
+            
+                <a href="38_ChainBox/">
+            
+                    
+                    ChainBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="39_bolckBrowser/">
+            
+                <a href="39_bolckBrowser/">
+            
+                    
+                    区块链浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">生态</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="40_tradePlateform.html">
+            
+                <a href="40_tradePlateform.html">
+            
+                    
+                    交易所对接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="41_commityProduct.html">
+            
+                <a href="41_commityProduct.html">
+            
+                    
+                    社区项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="42_commityActity.html">
+            
+                <a href="42_commityActity.html">
+            
+                    
+                    社区活动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="43_commityEnters/">
+            
+                <a href="43_commityEnters/">
+            
+                    
+                    社区入口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">落地方案</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="44_case.html">
+            
+                <a href="44_case.html">
+            
+                    
+                    落地案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其它</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="45_faq.html">
+            
+                <a href="45_faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="46_supportOnline/">
+            
+                <a href="46_supportOnline/">
+            
+                    
+                    在线技术支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >子链模版</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x90E8;&#x7F72;dpos&#x5171;&#x8BC6;&#x5B50;&#x94FE;&#x7F51;&#x7EDC;"><a name="&#x90E8;&#x7F72;dpos&#x5171;&#x8BC6;&#x5B50;&#x94FE;&#x7F51;&#x7EDC;" class="plugin-anchor" href="#&#x90E8;&#x7F72;dpos&#x5171;&#x8BC6;&#x5B50;&#x94FE;&#x7F51;&#x7EDC;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x7F72;DPOS&#x5171;&#x8BC6;&#x5B50;&#x94FE;&#x7F51;&#x7EDC;</h2>
+<h3 id="1-&#x521B;&#x4E16;&#x533A;&#x5757;"><a name="1-&#x521B;&#x4E16;&#x533A;&#x5757;" class="plugin-anchor" href="#1-&#x521B;&#x4E16;&#x533A;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x521B;&#x4E16;&#x533A;&#x5757;</h3>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;config&quot;</span>: {
+    <span class="hljs-string">&quot;chainId&quot;</span>: <span class="hljs-number">10388</span>,
+    <span class="hljs-string">&quot;dpos&quot;</span>: {
+      <span class="hljs-string">&quot;period&quot;</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-string">&quot;epoch&quot;</span>: <span class="hljs-number">300</span>,
+      <span class="hljs-string">&quot;maxSignersCount&quot;</span>: <span class="hljs-number">21</span>,
+      <span class="hljs-string">&quot;minVoterBalance&quot;</span>: <span class="hljs-number">100000000000000000000</span>,
+      <span class="hljs-string">&quot;genesisTimestamp&quot;</span>: <span class="hljs-number">1554004800</span>,
+      <span class="hljs-string">&quot;signers&quot;</span>: [
+        <span class="hljs-string">&quot;3d50e12fa9c76e4e517cd4ace1b36c453e6a9bcd&quot;</span>,
+        <span class="hljs-string">&quot;f97df7fe5e064a9fe4b996141c2d9fb8a3e2b53e&quot;</span>,
+        <span class="hljs-string">&quot;ef90068860527015097cd031bd2425cb90985a40&quot;</span>
+      ],
+      <span class="hljs-string">&quot;pbft&quot;</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-string">&quot;voterReward&quot;</span>: <span class="hljs-literal">true</span>
+    }
+  },
+  <span class="hljs-string">&quot;nonce&quot;</span>: <span class="hljs-string">&quot;0x0&quot;</span>,
+  <span class="hljs-string">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;0x5ca03b40&quot;</span>,
+  <span class="hljs-string">&quot;extraData&quot;</span>: <span class="hljs-string">&quot;0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&quot;</span>,
+  <span class="hljs-string">&quot;gasLimit&quot;</span>: <span class="hljs-string">&quot;0x47b760&quot;</span>,
+  <span class="hljs-string">&quot;difficulty&quot;</span>: <span class="hljs-string">&quot;0x1&quot;</span>,
+  <span class="hljs-string">&quot;mixHash&quot;</span>: <span class="hljs-string">&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;</span>,
+  <span class="hljs-string">&quot;coinbase&quot;</span>: <span class="hljs-string">&quot;0x0000000000000000000000000000000000000000&quot;</span>,
+  <span class="hljs-string">&quot;alloc&quot;</span>: {
+    <span class="hljs-string">&quot;3d50e12fa9c76e4e517cd4ace1b36c453e6a9bcd&quot;</span>: {
+      <span class="hljs-string">&quot;balance&quot;</span>: <span class="hljs-string">&quot;0x21e19e0c9bab2400000&quot;</span>
+    },
+    <span class="hljs-string">&quot;ef90068860527015097cd031bd2425cb90985a40&quot;</span>: {
+      <span class="hljs-string">&quot;balance&quot;</span>: <span class="hljs-string">&quot;0x21e19e0c9bab2400000&quot;</span>
+    },
+    <span class="hljs-string">&quot;f97df7fe5e064a9fe4b996141c2d9fb8a3e2b53e&quot;</span>: {
+      <span class="hljs-string">&quot;balance&quot;</span>: <span class="hljs-string">&quot;0x21e19e0c9bab2400000&quot;</span>
+    }
+  },
+  <span class="hljs-string">&quot;number&quot;</span>: <span class="hljs-string">&quot;0x0&quot;</span>,
+  <span class="hljs-string">&quot;gasUsed&quot;</span>: <span class="hljs-string">&quot;0x0&quot;</span>,
+  <span class="hljs-string">&quot;parentHash&quot;</span>: <span class="hljs-string">&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;</span>
+}
+</code></pre>
+<ul>
+<li><code>period</code> dpos&#x51FA;&#x5757;&#x95F4;&#x9694;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x79D2;</li>
+<li><code>epoch</code> dpos&#x95F4;&#x9694;&#x591A;&#x5C11;&#x4E2A;&#x5757;&#x5B9A;&#x671F;&#x6E05;&#x9664;&#x6295;&#x7968;&#xFF08;&#x6E05;&#x9664;&#x540E;&#x9700;&#x8981;&#x6295;&#x7968;&#x8005;&#x91CD;&#x65B0;&#x53D1;&#x8D77;&#x6295;&#x7968;&#x4EA4;&#x6613;)</li>
+<li><code>maxSignersCount</code> dpos&#x6700;&#x5927;&#x5141;&#x8BB8;&#x7684;&#x751F;&#x4EA7;&#x8005;&#x6570;&#x91CF;</li>
+<li><code>minVoterBalance</code> dpos&#x6700;&#x5C0F;&#x5141;&#x8BB8;&#x7684;&#x6295;&#x7968;&#x989D;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;Wei</li>
+<li><code>voterReward</code> dpos&#x6295;&#x7968;&#x8005;&#x80FD;&#x5426;&#x83B7;&#x5F97;&#x5956;&#x52B1;&#xFF08;&#x82E5;&#x5F00;&#x542F;&#xFF0C;&#x5219;&#x5728;&#x751F;&#x4EA7;&#x8005;&#x51FA;&#x5757;&#x65F6;&#x6295;&#x7968;&#x8005;&#x4E5F;&#x80FD;&#x83B7;&#x5F97;&#x5206;&#x7EA2;&#xFF09;</li>
+<li><code>genesisTimestamp</code> dpos&#x5141;&#x8BB8;&#x521D;&#x59CB;&#x5757;&#x51FA;&#x5757;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;&#x6B64;&#x65F6;&#x95F4;&#x8BA1;&#x7B97;&#x540E;&#x7EED;&#x51FA;&#x5757;&#x7684;&#x65F6;&#x95F4;&#x4E0E;&#x751F;&#x4EA7;&#x8005;</li>
+<li><code>signers</code> dpos&#x521D;&#x59CB;&#x751F;&#x4EA7;&#x8005;&#x5217;&#x8868;</li>
+<li><code>pbft</code> dpos&#x662F;&#x5426;&#x5728;&#x6BCF;&#x8F6E;&#x51FA;&#x5757;&#x540E;&#x4F7F;&#x7528;pbft&#x7684;&#x65B9;&#x5F0F;&#x786E;&#x8BA4;&#x6BCF;&#x4E00;&#x4E2A;&#x533A;&#x5757;</li>
+<li><code>alloc</code> dpos&#x521D;&#x59CB;&#x751F;&#x4EA7;&#x8005;&#x62B5;&#x62BC;&#x6295;&#x7968;&#x6570;&#x989D;</li>
+</ul>
+<h3 id="2-&#x5B50;&#x94FE;&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;"><a name="2-&#x5B50;&#x94FE;&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#2-&#x5B50;&#x94FE;&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5B50;&#x94FE;&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;</h3>
+<h4 id="&#x65B9;&#x5F0F;&#x4E00;-&#x4F7F;&#x7528;sipe&#x521D;&#x59CB;&#x5316;"><a name="&#x65B9;&#x5F0F;&#x4E00;-&#x4F7F;&#x7528;sipe&#x521D;&#x59CB;&#x5316;" class="plugin-anchor" href="#&#x65B9;&#x5F0F;&#x4E00;-&#x4F7F;&#x7528;sipe&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x5F0F;&#x4E00;. &#x4F7F;&#x7528;sipe&#x521D;&#x59CB;&#x5316;</h4>
+<p>1.&#x521B;&#x5EFA;&#x6216;&#x5BFC;&#x5165;&#x751F;&#x4EA7;&#x8005;&#x8D26;&#x6237;</p>
+<p>```shell script
+sipe --datadir=dposdata account new </p>
+<pre><code>2.&#x5C06;&#x521B;&#x5EFA;&#x6216;&#x5BFC;&#x5165;&#x7684;&#x751F;&#x4EA7;&#x8005;&#x5730;&#x5740;&#x5199;&#x5165;genesis.json&#x4E2D;&#xFF0C;&#x540C;&#x65F6;&#x5199;&#x5165;&#x521D;&#x59CB;&#x6295;&#x7968;&#x6570;&#x989D;&#xFF08;&#x53C2;&#x8003;1.&#x521B;&#x4E16;&#x533A;&#x5757;&#xFF09;
+
+3.&#x521D;&#x59CB;&#x5316;&#x5B50;&#x94FE;&#x8282;&#x70B9;
+
+```shell script
+sipe --datadir=dposdata --role=subchain init genesis.json
+</code></pre><h4 id="&#x65B9;&#x5F0F;&#x4E8C;-&#x4F7F;&#x7528;consensus&#x5DE5;&#x5177;&#x4E00;&#x952E;&#x521D;&#x59CB;&#x5316;&#x96C6;&#x7FA4;"><a name="&#x65B9;&#x5F0F;&#x4E8C;-&#x4F7F;&#x7528;consensus&#x5DE5;&#x5177;&#x4E00;&#x952E;&#x521D;&#x59CB;&#x5316;&#x96C6;&#x7FA4;" class="plugin-anchor" href="#&#x65B9;&#x5F0F;&#x4E8C;-&#x4F7F;&#x7528;consensus&#x5DE5;&#x5177;&#x4E00;&#x952E;&#x521D;&#x59CB;&#x5316;&#x96C6;&#x7FA4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x5F0F;&#x4E8C;. &#x4F7F;&#x7528;consensus&#x5DE5;&#x5177;&#x4E00;&#x952E;&#x521D;&#x59CB;&#x5316;&#x96C6;&#x7FA4;</h4>
+<p>&#x5728;<code>cmd/consensus</code>&#x76EE;&#x5F55;&#x4E0B;&#x8FD0;&#x884C;<code>init_dpos.sh</code></p>
+<p>```shell script
+cd cmd/consensus
+./init_dpos.sh --numNodes 3</p>
+<pre><code>+ `numNodes` &#x751F;&#x6210;&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#x6570;&#x91CF;
+
+&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x4F1A;&#x5728;`cmd/consensus/dposdata`&#x76EE;&#x5F55;&#x4E0B;&#x5EFA;&#x7ACB;&#x5BF9;&#x5E94;&#x8282;&#x70B9;&#x6587;&#x4EF6;
+
+### 3. &#x5B50;&#x94FE;&#x542F;&#x52A8;&#x6D41;&#x7A0B;
+
+1. &#x542F;&#x52A8;&#x8282;&#x70B9;
+
+```bash
+sipe --datadir=dposdata --mine --etherbase=&lt;&#x751F;&#x4EA7;&#x8005;&#x5730;&#x5740;&gt; --unlock=&lt;&#x751F;&#x4EA7;&#x8005;&#x5730;&#x5740;&gt; --password=&lt;&#x5BC6;&#x7801;&#x6587;&#x4EF6;&gt; --port=30303  --role=subchain --v5disc
+</code></pre><ol>
+<li>&#x8FDE;&#x63A5;&#x5176;&#x4ED6;&#x8282;&#x70B9;</li>
+</ol>
+<pre><code class="lang-bash">sipe --datadir=dposdata --mine --etherbase=&lt;&#x751F;&#x4EA7;&#x8005;&#x5730;&#x5740;&gt; --unlock=&lt;&#x751F;&#x4EA7;&#x8005;&#x5730;&#x5740;&gt; --password=&lt;&#x5BC6;&#x7801;&#x6587;&#x4EF6;&gt; --port=30304  --role=subchain --v5disc --bootnodesv5={enode1} --bootnodesv4={enode1}
+</code></pre>
+<h3 id="4-&#x6295;&#x7968;&#x4E0E;&#x63D0;&#x6848;"><a name="4-&#x6295;&#x7968;&#x4E0E;&#x63D0;&#x6848;" class="plugin-anchor" href="#4-&#x6295;&#x7968;&#x4E0E;&#x63D0;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x6295;&#x7968;&#x4E0E;&#x63D0;&#x6848;</h3>
+<h4 id="41-&#x53D1;&#x8D77;&#x6295;&#x7968;&#x4EA4;&#x6613;"><a name="41-&#x53D1;&#x8D77;&#x6295;&#x7968;&#x4EA4;&#x6613;" class="plugin-anchor" href="#41-&#x53D1;&#x8D77;&#x6295;&#x7968;&#x4EA4;&#x6613;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1 &#x53D1;&#x8D77;&#x6295;&#x7968;&#x4EA4;&#x6613;</h4>
+<pre><code class="lang-bash">&gt; eth.sendTransaction({from:<span class="hljs-string">&quot;&lt;&#x6295;&#x7968;&#x5730;&#x5740;&gt;&quot;</span>,to:<span class="hljs-string">&quot;&lt;&#x88AB;&#x6295;&#x7968;&#x5730;&#x5740;&gt;&quot;</span>,value:0,data:web3.toHex(<span class="hljs-string">&quot;dpos:1:event:vote&quot;</span>)})
+</code></pre>
+<h4 id="42-&#x53D1;&#x8D77;&#x53D6;&#x6D88;&#x6295;&#x7968;&#x4EA4;&#x6613;"><a name="42-&#x53D1;&#x8D77;&#x53D6;&#x6D88;&#x6295;&#x7968;&#x4EA4;&#x6613;" class="plugin-anchor" href="#42-&#x53D1;&#x8D77;&#x53D6;&#x6D88;&#x6295;&#x7968;&#x4EA4;&#x6613;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2 &#x53D1;&#x8D77;&#x53D6;&#x6D88;&#x6295;&#x7968;&#x4EA4;&#x6613;</h4>
+<pre><code class="lang-bash">&gt; eth.sendTransaction({from:<span class="hljs-string">&quot;&lt;&#x6295;&#x7968;&#x5730;&#x5740;&gt;&quot;</span>,to:<span class="hljs-string">&quot;&lt;&#x6295;&#x7968;&#x5730;&#x5740;&gt;&quot;</span>,value:0,data:web3.toHex(<span class="hljs-string">&quot;dpos:1:event:devote&quot;</span>)})
+</code></pre>
+<h4 id="43-&#x53D1;&#x8D77;&#x66F4;&#x6539;&#x77FF;&#x5DE5;&#x5956;&#x52B1;&#x7684;&#x63D0;&#x6848;"><a name="43-&#x53D1;&#x8D77;&#x66F4;&#x6539;&#x77FF;&#x5DE5;&#x5956;&#x52B1;&#x7684;&#x63D0;&#x6848;" class="plugin-anchor" href="#43-&#x53D1;&#x8D77;&#x66F4;&#x6539;&#x77FF;&#x5DE5;&#x5956;&#x52B1;&#x7684;&#x63D0;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>4.3 &#x53D1;&#x8D77;&#x66F4;&#x6539;&#x77FF;&#x5DE5;&#x5956;&#x52B1;&#x7684;&#x63D0;&#x6848;</h4>
+<ul>
+<li>&#x5C06;&#x77FF;&#x5DE5;&#x533A;&#x5757;&#x5956;&#x52B1;&#x6BD4;&#x4F8B;&#x6539;&#x4E3A;<code>666&#x2030;</code></li>
+</ul>
+<pre><code class="lang-bash">&gt; eth.sendTransaction({from:<span class="hljs-string">&quot;&lt;&#x63D0;&#x6848;&#x5730;&#x5740;&gt;&quot;</span>,to:<span class="hljs-string">&quot;&lt;&#x63D0;&#x6848;&#x5730;&#x5740;&gt;&quot;</span>,value:0,data:web3.toHex(<span class="hljs-string">&quot;dpos:1:event:proposal:proposal_type:3:mrpt:666&quot;</span>)})
+</code></pre>
+<h4 id="44-&#x53D1;&#x8D77;&#x66F4;&#x6539;&#x6700;&#x5C0F;&#x5141;&#x8BB8;&#x6295;&#x7968;&#x989D;&#x5EA6;&#x7684;&#x63D0;&#x6848;"><a name="44-&#x53D1;&#x8D77;&#x66F4;&#x6539;&#x6700;&#x5C0F;&#x5141;&#x8BB8;&#x6295;&#x7968;&#x989D;&#x5EA6;&#x7684;&#x63D0;&#x6848;" class="plugin-anchor" href="#44-&#x53D1;&#x8D77;&#x66F4;&#x6539;&#x6700;&#x5C0F;&#x5141;&#x8BB8;&#x6295;&#x7968;&#x989D;&#x5EA6;&#x7684;&#x63D0;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>4.4 &#x53D1;&#x8D77;&#x66F4;&#x6539;&#x6700;&#x5C0F;&#x5141;&#x8BB8;&#x6295;&#x7968;&#x989D;&#x5EA6;&#x7684;&#x63D0;&#x6848;</h4>
+<ul>
+<li>&#x5C06;&#x6700;&#x5C0F;&#x5141;&#x8BB8;&#x6295;&#x7968;&#x989D;&#x5EA6;&#x6539;&#x4E3A;<code>10</code> ether</li>
+</ul>
+<pre><code class="lang-bash">&gt; eth.sendTransaction({from:<span class="hljs-string">&quot;&lt;&#x63D0;&#x6848;&#x5730;&#x5740;&gt;&quot;</span>,to:<span class="hljs-string">&quot;&lt;&#x63D0;&#x6848;&#x5730;&#x5740;&gt;&quot;</span>,value:0,data:web3.toHex(<span class="hljs-string">&quot;dpos:1:event:proposal:proposal_type:6:mvb:10&quot;</span>)})
+</code></pre>
+<h4 id="45-&#x901A;&#x8FC7;&#x6216;&#x53CD;&#x5BF9;&#x63D0;&#x6848;"><a name="45-&#x901A;&#x8FC7;&#x6216;&#x53CD;&#x5BF9;&#x63D0;&#x6848;" class="plugin-anchor" href="#45-&#x901A;&#x8FC7;&#x6216;&#x53CD;&#x5BF9;&#x63D0;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>4.5 &#x901A;&#x8FC7;&#x6216;&#x53CD;&#x5BF9;&#x63D0;&#x6848;</h4>
+<ul>
+<li><code>yes</code>&#x901A;&#x8FC7;&#x63D0;&#x6848;&#xFF0C;<code>no</code>&#x53CD;&#x5BF9;&#x63D0;&#x6848;</li>
+</ul>
+<pre><code class="lang-bash">&gt; eth.sendTransaction({from:<span class="hljs-string">&quot;&lt;&#x6295;&#x7968;&#x5730;&#x5740;&gt;&quot;</span>,to:<span class="hljs-string">&quot;&lt;&#x6295;&#x7968;&#x5730;&#x5740;&gt;&quot;</span>,value:0,data:web3.toHex(<span class="hljs-string">&quot;dpos:1:event:declare:hash:&lt;&#x63D0;&#x6848;hash&#x503C;&gt;:decision:yes&quot;</span>)})
+</code></pre>
+<h3 id="5-&#x67E5;&#x770B;&#x5171;&#x8BC6;&#x72B6;&#x6001;"><a name="5-&#x67E5;&#x770B;&#x5171;&#x8BC6;&#x72B6;&#x6001;" class="plugin-anchor" href="#5-&#x67E5;&#x770B;&#x5171;&#x8BC6;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x67E5;&#x770B;&#x5171;&#x8BC6;&#x72B6;&#x6001;</h3>
+<pre><code class="lang-bash">&gt; dpos.getSnapshot()
+</code></pre>
+<ul>
+<li><code>candidates</code> &#x77FF;&#x5DE5;&#x5019;&#x9009;&#x8005;&#x540D;&#x5355;</li>
+<li><code>confirmedNumber</code> &#x786E;&#x8BA4;&#x7684;&#x533A;&#x5757;&#x9AD8;&#x5EA6;</li>
+<li><code>historyHash</code> &#x6700;&#x8FD1;&#x4E24;&#x8F6E;&#x51FA;&#x5757;&#x7684;&#x5757;hash&#xFF0C;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x65B0;&#x4E00;&#x8F6E;&#x7684;&#x751F;&#x4EA7;&#x8005;&#x51FA;&#x5757;&#x987A;&#x5E8F;</li>
+<li><code>minerReward</code> &#x6BCF;&#x4E2A;&#x5757;&#x751F;&#x4EA7;&#x8005;&#x83B7;&#x5F97;&#x7684;&#x5956;&#x52B1;&#x5343;&#x5206;&#x6BD4;&#xFF0C;&#x82E5;&#x5F00;&#x542F;<code>voterReward</code>&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x4E3A;&#x6295;&#x7968;&#x8005;&#x7684;&#x5956;&#x52B1;</li>
+<li><code>signers</code> &#x5217;&#x4E3E;&#x751F;&#x4EA7;&#x8005;&#x540D;&#x5355;&#x4E0E;&#x51FA;&#x5757;&#x987A;&#x5E8F;</li>
+<li><code>punished</code> &#x5217;&#x4E3E;&#x6BCF;&#x4E2A;&#x751F;&#x4EA7;&#x8005;&#x56E0;&#x672A;&#x6309;&#x65F6;&#x51FA;&#x5757;&#x53D7;&#x5230;&#x7684;&#x60E9;&#x7F5A;&#x4FE1;&#x606F;</li>
+<li><code>tally</code> &#x5217;&#x4E3E;&#x6BCF;&#x4E2A;&#x5019;&#x9009;&#x4EBA;&#x7684;&#x603B;&#x5F97;&#x7968;&#x6570;</li>
+<li><code>votes</code> &#x5217;&#x4E3E;&#x6295;&#x7968;&#x4FE1;&#x606F;</li>
+<li><code>voters</code> &#x6295;&#x7968;&#x4EBA;&#x53D1;&#x8D77;&#x6295;&#x7968;&#x7684;&#x533A;&#x5757;&#x9AD8;&#x5EA6;</li>
+<li><code>proposals</code> &#x63D0;&#x6848;&#x5217;&#x8868;</li>
+</ul>
+<h2 id="&#x90E8;&#x7F72;pbft&#x5171;&#x8BC6;&#x5B50;&#x94FE;&#x7F51;&#x7EDC;"><a name="&#x90E8;&#x7F72;pbft&#x5171;&#x8BC6;&#x5B50;&#x94FE;&#x7F51;&#x7EDC;" class="plugin-anchor" href="#&#x90E8;&#x7F72;pbft&#x5171;&#x8BC6;&#x5B50;&#x94FE;&#x7F51;&#x7EDC;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x7F72;PBFT&#x5171;&#x8BC6;&#x5B50;&#x94FE;&#x7F51;&#x7EDC;</h2>
+<h3 id="1-&#x521B;&#x4E16;&#x533A;&#x5757;"><a name="1-&#x521B;&#x4E16;&#x533A;&#x5757;" class="plugin-anchor" href="#1-&#x521B;&#x4E16;&#x533A;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x521B;&#x4E16;&#x533A;&#x5757;</h3>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;config&quot;</span>: {
+    <span class="hljs-string">&quot;chainId&quot;</span>: <span class="hljs-number">10388</span>,
+    <span class="hljs-string">&quot;istanbul&quot;</span>: {
+      <span class="hljs-string">&quot;epoch&quot;</span>: <span class="hljs-number">30000</span>,
+      <span class="hljs-string">&quot;policy&quot;</span>: <span class="hljs-number">0</span>
+    }
+  },
+  <span class="hljs-string">&quot;nonce&quot;</span>: <span class="hljs-string">&quot;0x0&quot;</span>,
+  <span class="hljs-string">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;0x0&quot;</span>,
+  <span class="hljs-string">&quot;extraData&quot;</span>: <span class="hljs-string">&quot;0x0000000000000000000000000000000000000000000000000000000000000000f843f83f941c46d10e91eafaac430718df3658b1a496b827bd94b67ee9395542b227c99941eb4168e3f3c6502dd8949d6510b637970085962c908c69e63e9d36a36cb480c0&quot;</span>,
+  <span class="hljs-string">&quot;gasLimit&quot;</span>: <span class="hljs-string">&quot;0xe0000000&quot;</span>,
+  <span class="hljs-string">&quot;difficulty&quot;</span>: <span class="hljs-string">&quot;0x1&quot;</span>,
+  <span class="hljs-string">&quot;mixHash&quot;</span>: <span class="hljs-string">&quot;0x63746963616c2062797a616e74696e65206661756c7420746f6c6572616e6365&quot;</span>,
+  <span class="hljs-string">&quot;coinbase&quot;</span>: <span class="hljs-string">&quot;0x0000000000000000000000000000000000000000&quot;</span>,
+  <span class="hljs-string">&quot;alloc&quot;</span>: {},
+  <span class="hljs-string">&quot;number&quot;</span>: <span class="hljs-string">&quot;0x0&quot;</span>,
+  <span class="hljs-string">&quot;gasUsed&quot;</span>: <span class="hljs-string">&quot;0x0&quot;</span>,
+  <span class="hljs-string">&quot;parentHash&quot;</span>: <span class="hljs-string">&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;</span>
+}
+</code></pre>
+<ul>
+<li><code>epoch</code> pbft&#x95F4;&#x9694;&#x591A;&#x5C11;&#x4E2A;&#x5757;&#x5B9A;&#x671F;&#x6E05;&#x9664;&#x6295;&#x7968;</li>
+<li><code>policy</code> pbft&#x63D0;&#x8BAE;&#x8005;&#x8F6E;&#x8BE2;&#x65B9;&#x5F0F;&#xFF0C;0&#x4E3A;roundRobin&#xFF08;&#x6309;&#x987A;&#x5E8F;&#x66F4;&#x6362;&#xFF09;&#xFF0C;1&#x4E3A;sticky&#xFF08;&#x63D0;&#x8BAE;&#x8005;&#x672A;&#x51FA;&#x9519;&#x65F6;&#x4E0D;&#x66F4;&#x6362;&#x63D0;&#x8BAE;&#x8005;&#xFF09;</li>
+<li><code>mixHash</code> pbft&#x533A;&#x5757;&#x987B;&#x5C06;mixHash&#x6307;&#x5B9A;&#x4E3A;0x63746963616c2062797a616e74696e65206661756c7420746f6c6572616e6365</li>
+<li><code>extraData</code> pbft&#x521D;&#x59CB;&#x751F;&#x4EA7;&#x8005;&#x8BA1;&#x7B97;&#x540E;&#x5F97;&#x5230;&#x7684;header.extra</li>
+<li><code>alloc</code> pbft&#x6682;&#x65E0;&#x533A;&#x5757;&#x5956;&#x52B1;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x63D0;&#x524D;&#x5206;&#x914D;&#x4EE3;&#x5E01;</li>
+</ul>
+<h3 id="2-&#x5B50;&#x94FE;&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;"><a name="2-&#x5B50;&#x94FE;&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#2-&#x5B50;&#x94FE;&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5B50;&#x94FE;&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;</h3>
+<h4 id="&#x65B9;&#x5F0F;&#x4E00;-&#x4F7F;&#x7528;sipe&#x521D;&#x59CB;&#x5316;"><a name="&#x65B9;&#x5F0F;&#x4E00;-&#x4F7F;&#x7528;sipe&#x521D;&#x59CB;&#x5316;" class="plugin-anchor" href="#&#x65B9;&#x5F0F;&#x4E00;-&#x4F7F;&#x7528;sipe&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x5F0F;&#x4E00;. &#x4F7F;&#x7528;sipe&#x521D;&#x59CB;&#x5316;</h4>
+<p>1.&#x521B;&#x5EFA;&#x6216;&#x5BFC;&#x5165;&#x751F;&#x4EA7;&#x8005;&#x8D26;&#x6237;</p>
+<p>```shell script
+sipe --datadir=pbftdata account new </p>
+<pre><code>
+2.&#x4F7F;&#x7528;consensus&#x5DE5;&#x5177;&#x751F;&#x6210;extraData&#xFF0C;&#x5199;&#x5165;&#x5230;genesis.json&#x4E2D;&#xFF08;&#x53C2;&#x8003;1.&#x521B;&#x4E16;&#x533A;&#x5757;&#xFF09;
+
+```shell script
+cd cmd/consensus
+./init_pbft.sh --numNodes 1 --validator &lt;&#x751F;&#x4EA7;&#x8005;&#x5730;&#x5740;&gt;
+</code></pre><p>3.&#x521D;&#x59CB;&#x5316;&#x5B50;&#x94FE;&#x8282;&#x70B9;</p>
+<p>```shell script
+sipe --datadir=pbftdata --role=subchain init genesis.json</p>
+<pre><code>
+4. &#x5C06;&#x8282;&#x70B9;&#x7684;nodekey&#x5199;&#x5165;&#x5230;pbftdata/static-nodes.json&#x4E2D;&#xFF08;nodekey&#x516C;&#x94A5;&#x4E3A;&#x751F;&#x4EA7;&#x8005;&#x516C;&#x94A5;&#xFF09;
+
+#### &#x65B9;&#x5F0F;&#x4E8C;. &#x4F7F;&#x7528;consensus&#x5DE5;&#x5177;&#x4E00;&#x952E;&#x521D;&#x59CB;&#x5316;&#x96C6;&#x7FA4;
+
+&#x5728;cmd/consensus&#x76EE;&#x5F55;&#x4E0B;&#x8FD0;&#x884C;init_pbft.sh
+
+```bash
+ cd cmd/consensus
+ ./init_pbft.sh --numNodes 3 --ip 127.0.0.1 127.0.0.2 127.0.0.3 --port 21001 21002 21003
+</code></pre><ul>
+<li><code>numNodes</code> &#x751F;&#x6210;&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#x6570;&#x91CF;</li>
+<li><code>ip</code> &#x6307;&#x5B9A;&#x8282;&#x70B9;&#x7684;ip&#x5217;&#x8868;&#xFF08;&#x9ED8;&#x8BA4;ip&#x4E3A;127.0.0.1&#xFF09;</li>
+<li><code>port</code> &#x6307;&#x5B9A;&#x8282;&#x70B9;&#x7684;&#x7AEF;&#x53E3;&#x5217;&#x8868;&#xFF08;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x4E3A;21001~2100x&#xFF0C;x&#x4E3A;numNodes&#xFF09;</li>
+</ul>
+<p>&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x4F1A;&#x5728;<code>cmd/consensus/pbftdata</code>&#x76EE;&#x5F55;&#x4E0B;&#x5EFA;&#x7ACB;&#x5BF9;&#x5E94;&#x8282;&#x70B9;&#x6587;&#x4EF6;</p>
+<h3 id="3-&#x5B50;&#x94FE;&#x542F;&#x52A8;&#x6D41;&#x7A0B;"><a name="3-&#x5B50;&#x94FE;&#x542F;&#x52A8;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#3-&#x5B50;&#x94FE;&#x542F;&#x52A8;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x5B50;&#x94FE;&#x542F;&#x52A8;&#x6D41;&#x7A0B;</h3>
+<pre><code class="lang-bash">sipe --datadir=pbftdata --istanbul.requesttimeout=10000 --istanbul.blockperiod=5 --syncmode=full --mine --minerthreads=1 --port=21001 --role=subchain
+</code></pre>
+<ul>
+<li><code>port</code> &#x9700;&#x8981;&#x548C;static-nodes.json&#x4E2D;&#x914D;&#x7F6E;&#x7684;enode&#x4FDD;&#x6301;&#x4E00;&#x81F4;</li>
+<li><code>istanbul.requesttimeout</code> pbft&#x6BCF;&#x4E2A;view&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;10000</li>
+<li><code>istanbul.blockperiod</code> pbft&#x51FA;&#x5757;&#x95F4;&#x9694;&#xFF0C;&#x5355;&#x4F4D;&#x79D2;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;1</li>
+</ul>
+<h3 id="4&#x67E5;&#x770B;&#x5171;&#x8BC6;&#x72B6;&#x6001;"><a name="4&#x67E5;&#x770B;&#x5171;&#x8BC6;&#x72B6;&#x6001;" class="plugin-anchor" href="#4&#x67E5;&#x770B;&#x5171;&#x8BC6;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>4.&#x67E5;&#x770B;&#x5171;&#x8BC6;&#x72B6;&#x6001;</h3>
+<p>```shell script</p>
+<blockquote>
+<p>istanbul.getSnapshot()
+```</p>
+<ul>
+<li><code>validators</code> pbft&#x533A;&#x5757;&#x751F;&#x4EA7;&#x8005;&#x540D;&#x5355;</li>
+<li><code>votes</code> &#x65B0;&#x589E;validator&#x6216;&#x79FB;&#x9664;validator&#x7684;&#x6295;&#x7968;</li>
+<li><code>tally</code> &#x603B;&#x6295;&#x7968;&#x60C5;&#x51B5;</li>
+</ul>
+</blockquote>
+<h2 id="&#x90E8;&#x7F72;raft&#x5171;&#x8BC6;&#x5B50;&#x94FE;&#x7F51;&#x7EDC;"><a name="&#x90E8;&#x7F72;raft&#x5171;&#x8BC6;&#x5B50;&#x94FE;&#x7F51;&#x7EDC;" class="plugin-anchor" href="#&#x90E8;&#x7F72;raft&#x5171;&#x8BC6;&#x5B50;&#x94FE;&#x7F51;&#x7EDC;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x7F72;RAFT&#x5171;&#x8BC6;&#x5B50;&#x94FE;&#x7F51;&#x7EDC;</h2>
+<h3 id="1-&#x521B;&#x4E16;&#x533A;&#x5757;"><a name="1-&#x521B;&#x4E16;&#x533A;&#x5757;" class="plugin-anchor" href="#1-&#x521B;&#x4E16;&#x533A;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x521B;&#x4E16;&#x533A;&#x5757;</h3>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;config&quot;</span>: {
+    <span class="hljs-string">&quot;chainId&quot;</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-string">&quot;raft&quot;</span>: <span class="hljs-literal">true</span>
+  },
+  <span class="hljs-string">&quot;nonce&quot;</span>: <span class="hljs-string">&quot;0x0&quot;</span>,
+  <span class="hljs-string">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;0x0&quot;</span>,
+  <span class="hljs-string">&quot;extraData&quot;</span>: <span class="hljs-string">&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;</span>,
+  <span class="hljs-string">&quot;gasLimit&quot;</span>: <span class="hljs-string">&quot;0xe0000000&quot;</span>,
+  <span class="hljs-string">&quot;difficulty&quot;</span>: <span class="hljs-string">&quot;0x0&quot;</span>,
+  <span class="hljs-string">&quot;mixHash&quot;</span>: <span class="hljs-string">&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;</span>,
+  <span class="hljs-string">&quot;coinbase&quot;</span>: <span class="hljs-string">&quot;0x0000000000000000000000000000000000000000&quot;</span>,
+  <span class="hljs-string">&quot;alloc&quot;</span>: {
+    <span class="hljs-string">&quot;1e69ebb349e802e25c7eb3b41adb6d18a4ae8591&quot;</span>: {
+      <span class="hljs-string">&quot;balance&quot;</span>: <span class="hljs-string">&quot;0x21e19e0c9bab2400000&quot;</span>
+    },
+    <span class="hljs-string">&quot;73ce1d55593827ab5a680e750e347bf57485a511&quot;</span>: {
+      <span class="hljs-string">&quot;balance&quot;</span>: <span class="hljs-string">&quot;0x21e19e0c9bab2400000&quot;</span>
+    },
+    <span class="hljs-string">&quot;b8564a5657fa7dc51605b58f271b5bafad93b984&quot;</span>: {
+      <span class="hljs-string">&quot;balance&quot;</span>: <span class="hljs-string">&quot;0x21e19e0c9bab2400000&quot;</span>
+    }
+  },
+  <span class="hljs-string">&quot;number&quot;</span>: <span class="hljs-string">&quot;0x0&quot;</span>,
+  <span class="hljs-string">&quot;gasUsed&quot;</span>: <span class="hljs-string">&quot;0x0&quot;</span>,
+  <span class="hljs-string">&quot;parentHash&quot;</span>: <span class="hljs-string">&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;</span>
+}
+</code></pre>
+<ul>
+<li><code>raft</code> true&#x4E3A;&#x4F7F;&#x7528;raft&#x5171;&#x8BC6;</li>
+<li><code>alloc</code> raft&#x5171;&#x8BC6;&#x53EA;&#x6709;&#x5B58;&#x5728;&#x4EA4;&#x6613;&#x7684;&#x65F6;&#x5019;&#x624D;&#x6253;&#x5305;&#x533A;&#x5757;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x63D0;&#x524D;&#x5206;&#x914D;&#x4EE3;&#x5E01;</li>
+</ul>
+<h3 id="2-&#x5B50;&#x94FE;&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;"><a name="2-&#x5B50;&#x94FE;&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#2-&#x5B50;&#x94FE;&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5B50;&#x94FE;&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;</h3>
+<h4 id="&#x65B9;&#x5F0F;&#x4E00;-&#x4F7F;&#x7528;sipe&#x521D;&#x59CB;&#x5316;"><a name="&#x65B9;&#x5F0F;&#x4E00;-&#x4F7F;&#x7528;sipe&#x521D;&#x59CB;&#x5316;" class="plugin-anchor" href="#&#x65B9;&#x5F0F;&#x4E00;-&#x4F7F;&#x7528;sipe&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x5F0F;&#x4E00;. &#x4F7F;&#x7528;sipe&#x521D;&#x59CB;&#x5316;</h4>
+<p>1.&#x521B;&#x5EFA;&#x6216;&#x5BFC;&#x5165;&#x751F;&#x4EA7;&#x8005;&#x8D26;&#x6237;</p>
+<pre><code class="lang-bash">sipe --datadir=raftdata account new
+</code></pre>
+<p>2.&#x521D;&#x59CB;&#x5316;&#x5B50;&#x94FE;&#x8282;&#x70B9;</p>
+<pre><code class="lang-bash">sipe --datadir=raftdata --role=subchain init genesis.json
+</code></pre>
+<p>4.&#x5C06;&#x8282;&#x70B9;&#x7684;<code>nodekey</code>&#x5199;&#x5165;<code>raftdata/static-nodes.json</code>&#x4E2D;&#xFF08;nodekey&#x516C;&#x94A5;&#x4E3A;&#x751F;&#x4EA7;&#x8005;&#x516C;&#x94A5;&#xFF09;</p>
+<h4 id="&#x65B9;&#x5F0F;&#x4E8C;-&#x4F7F;&#x7528;consensus&#x5DE5;&#x5177;&#x4E00;&#x952E;&#x521D;&#x59CB;&#x5316;&#x96C6;&#x7FA4;"><a name="&#x65B9;&#x5F0F;&#x4E8C;-&#x4F7F;&#x7528;consensus&#x5DE5;&#x5177;&#x4E00;&#x952E;&#x521D;&#x59CB;&#x5316;&#x96C6;&#x7FA4;" class="plugin-anchor" href="#&#x65B9;&#x5F0F;&#x4E8C;-&#x4F7F;&#x7528;consensus&#x5DE5;&#x5177;&#x4E00;&#x952E;&#x521D;&#x59CB;&#x5316;&#x96C6;&#x7FA4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x5F0F;&#x4E8C;. &#x4F7F;&#x7528;consensus&#x5DE5;&#x5177;&#x4E00;&#x952E;&#x521D;&#x59CB;&#x5316;&#x96C6;&#x7FA4;</h4>
+<p>&#x5728;<code>cmd/consensu</code>s&#x76EE;&#x5F55;&#x4E0B;&#x8FD0;&#x884C;<code>init_pbft.sh</code></p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> cmd/consensus
+./init_raft.sh --numNodes 3 --ip 127.0.0.1 127.0.0.2 127.0.0.3 --port 21001 21002 21003 --raftport 50401 50402 50403
+</code></pre>
+<ul>
+<li><code>numNodes</code> &#x751F;&#x6210;&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#x6570;&#x91CF;</li>
+<li><code>ip</code> &#x6307;&#x5B9A;&#x8282;&#x70B9;&#x7684;ip&#x5217;&#x8868;&#xFF08;&#x9ED8;&#x8BA4;ip&#x4E3A;127.0.0.1&#xFF09;</li>
+<li><code>port</code> &#x6307;&#x5B9A;&#x8282;&#x70B9;&#x7684;&#x7AEF;&#x53E3;&#x5217;&#x8868;&#xFF08;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x4E3A;21001~2100x&#xFF0C;x&#x4E3A;numNodes&#xFF09;</li>
+<li><code>raftport</code> &#x6307;&#x5B9A;&#x8282;&#x70B9;&#x7684;raft&#x901A;&#x4FE1;&#x7AEF;&#x53E3;&#x5217;&#x8868;&#xFF08;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x4E3A;50401~5040x&#xFF0C;x&#x4E3A;numNodes&#xFF09;
+&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x4F1A;&#x5728;cmd/consensus/raftdata&#x76EE;&#x5F55;&#x4E0B;&#x5EFA;&#x7ACB;&#x5BF9;&#x5E94;&#x8282;&#x70B9;&#x6587;&#x4EF6;</li>
+</ul>
+<h3 id="3-&#x5B50;&#x94FE;&#x542F;&#x52A8;&#x6D41;&#x7A0B;"><a name="3-&#x5B50;&#x94FE;&#x542F;&#x52A8;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#3-&#x5B50;&#x94FE;&#x542F;&#x52A8;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x5B50;&#x94FE;&#x542F;&#x52A8;&#x6D41;&#x7A0B;</h3>
+<pre><code class="lang-bash">sipe --datadir=raftdata --raft --port=21001 --raftport=50401 --role=subchain
+</code></pre>
+<ul>
+<li><code>port</code> &#x9700;&#x8981;&#x548C;static-nodes.json&#x4E2D;&#x914D;&#x7F6E;&#x7684;enode&#x4FDD;&#x6301;&#x4E00;&#x81F4;</li>
+<li><code>raft</code> &#x4F7F;&#x7528;raft&#x6A21;&#x5F0F;</li>
+<li><code>raftport</code> raft&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x9700;&#x8981;&#x548C;static-nodes.json&#x4E2D;&#x914D;&#x7F6E;&#x7684;enode&#x4FDD;&#x6301;&#x4E00;&#x81F4;</li>
+</ul>
+<h3 id="4&#x67E5;&#x770B;&#x5171;&#x8BC6;&#x72B6;&#x6001;"><a name="4&#x67E5;&#x770B;&#x5171;&#x8BC6;&#x72B6;&#x6001;" class="plugin-anchor" href="#4&#x67E5;&#x770B;&#x5171;&#x8BC6;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>4.&#x67E5;&#x770B;&#x5171;&#x8BC6;&#x72B6;&#x6001;</h3>
+<pre><code class="lang-bash">&gt; istanbul.getSnapshot()
+</code></pre>
+<ul>
+<li><code>validators</code> pbft&#x533A;&#x5757;&#x751F;&#x4EA7;&#x8005;&#x540D;&#x5355;</li>
+<li><code>votes</code> &#x65B0;&#x589E;validator&#x6216;&#x79FB;&#x9664;validator&#x7684;&#x6295;&#x7968;</li>
+<li><code>tally</code> &#x603B;&#x6295;&#x7968;&#x60C5;&#x51B5;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="48_crossChain/" class="navigation navigation-prev " aria-label="Previous page: 跨链方案">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="49_crossChainOrder/" class="navigation navigation-next " aria-label="Next page: 跨链流程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"子链模版","level":"9.2","depth":1,"next":{"title":"跨链流程","level":"9.3","depth":1,"path":"49_crossChainOrder/README.md","ref":"49_crossChainOrder/README.md","articles":[]},"previous":{"title":"跨链方案","level":"9.1","depth":1,"path":"48_crossChain/README.md","ref":"48_crossChain/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"zh","gitbook":"*"},"file":{"path":"26_smallChain.md","mtime":"2020-06-10T12:14:33.814Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-22T06:43:46.458Z"},"basePath":".","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

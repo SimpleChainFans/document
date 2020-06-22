@@ -1,0 +1,1046 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>前端实现 · Simplechain Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../31_mining.html" />
+    
+    
+    <link rel="prev" href="../29_writeContract/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">快速了解</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1_quickStart.html">
+            
+                <a href="../1_quickStart.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../2_BuildNode/">
+            
+                <a href="../2_BuildNode/">
+            
+                    
+                    搭建节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">sipc代币协议</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../47_techniqueLanguage.html">
+            
+                <a href="../47_techniqueLanguage.html">
+            
+                    
+                    技术术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../3_sipcCoin.html">
+            
+                <a href="../3_sipcCoin.html">
+            
+                    
+                    sipc代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../4_PublishCoin/">
+            
+                <a href="../4_PublishCoin/">
+            
+                    
+                    发行代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../5_concoct.html">
+            
+                <a href="../5_concoct.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../7_account.html">
+            
+                <a href="../7_account.html">
+            
+                    
+                    账户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../8_transaction/">
+            
+                <a href="../8_transaction/">
+            
+                    
+                    交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../9_block/">
+            
+                <a href="../9_block/">
+            
+                    
+                    区块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../6_genesis/">
+            
+                <a href="../6_genesis/">
+            
+                    
+                    创世块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../10_transactionReceipt/">
+            
+                <a href="../10_transactionReceipt/">
+            
+                    
+                    交易回执
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">架构</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../11_constructDesign/">
+            
+                <a href="../11_constructDesign/">
+            
+                    
+                    架构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../12_structAndStore/">
+            
+                <a href="../12_structAndStore/">
+            
+                    
+                    数据结构和存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../50_togetherStep.html">
+            
+                <a href="../50_togetherStep.html">
+            
+                    
+                    数据同步优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">底层核心技术</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../13_p2pNetwork.html">
+            
+                <a href="../13_p2pNetwork.html">
+            
+                    
+                    p2p网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../14_consensus/">
+            
+                <a href="../14_consensus/">
+            
+                    
+                    共识机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../15_virtualMache/">
+            
+                <a href="../15_virtualMache/">
+            
+                    
+                    虚拟机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../16_runMechanism/">
+            
+                <a href="../16_runMechanism/">
+            
+                    
+                    运行机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../17_unusual.html">
+            
+                <a href="../17_unusual.html">
+            
+                    
+                    处理异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">智能合约</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../18_contract/">
+            
+                <a href="../18_contract/">
+            
+                    
+                    智能合约
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../19_understandSolidity/">
+            
+                <a href="../19_understandSolidity/">
+            
+                    
+                    深入理解Solidity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../20_contractPattern.html">
+            
+                <a href="../20_contractPattern.html">
+            
+                    
+                    合约模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开发者工具</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../21_buildTest.html">
+            
+                <a href="../21_buildTest.html">
+            
+                    
+                    搭建测试链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../22_sipcApi.html">
+            
+                <a href="../22_sipcApi.html">
+            
+                    
+                    Sip API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../23_crossChainApi.html">
+            
+                <a href="../23_crossChainApi.html">
+            
+                    
+                    跨链API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../24_chromeWallet/">
+            
+                <a href="../24_chromeWallet/">
+            
+                    
+                    SimPlug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../25_sdk/">
+            
+                <a href="../25_sdk/">
+            
+                    
+                    SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">跨链</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../48_crossChain/">
+            
+                <a href="../48_crossChain/">
+            
+                    
+                    跨链方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../26_smallChain.html">
+            
+                <a href="../26_smallChain.html">
+            
+                    
+                    子链模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../49_crossChainOrder/">
+            
+                <a href="../49_crossChainOrder/">
+            
+                    
+                    跨链流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp开发</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../27_dappFlow/">
+            
+                <a href="../27_dappFlow/">
+            
+                    
+                    Dapp流程梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../28_editor.html">
+            
+                <a href="../28_editor.html">
+            
+                    
+                    编译器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../29_writeContract/">
+            
+                <a href="../29_writeContract/">
+            
+                    
+                    编写合约
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="10.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    前端实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">挖矿</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../31_mining.html">
+            
+                <a href="../31_mining.html">
+            
+                    
+                    sipc挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../32_miningPool/">
+            
+                <a href="../32_miningPool/">
+            
+                    
+                    矿池接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../33_gpuMining/">
+            
+                <a href="../33_gpuMining/">
+            
+                    
+                    GPU挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="../34_SimPool/">
+            
+                <a href="../34_SimPool/">
+            
+                    
+                    Simpool挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="../35_SimpleNode_x1/">
+            
+                <a href="../35_SimpleNode_x1/">
+            
+                    
+                    SimpleNode x1挖矿教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">客户端</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../36_SIPC.html">
+            
+                <a href="../36_SIPC.html">
+            
+                    
+                    SIPC.VIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="../37_wallet/">
+            
+                <a href="../37_wallet/">
+            
+                    
+                    sipc全节点钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="../38_ChainBox/">
+            
+                <a href="../38_ChainBox/">
+            
+                    
+                    ChainBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="../39_bolckBrowser/">
+            
+                <a href="../39_bolckBrowser/">
+            
+                    
+                    区块链浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">生态</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../40_tradePlateform.html">
+            
+                <a href="../40_tradePlateform.html">
+            
+                    
+                    交易所对接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../41_commityProduct.html">
+            
+                <a href="../41_commityProduct.html">
+            
+                    
+                    社区项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="../42_commityActity.html">
+            
+                <a href="../42_commityActity.html">
+            
+                    
+                    社区活动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="../43_commityEnters/">
+            
+                <a href="../43_commityEnters/">
+            
+                    
+                    社区入口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">落地方案</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../44_case.html">
+            
+                <a href="../44_case.html">
+            
+                    
+                    落地案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其它</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../45_faq.html">
+            
+                <a href="../45_faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="../46_supportOnline/">
+            
+                <a href="../46_supportOnline/">
+            
+                    
+                    在线技术支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >前端实现</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x521D;&#x59CB;&#x5316;react&#x9879;&#x76EE;"><a name="&#x521D;&#x59CB;&#x5316;react&#x9879;&#x76EE;" class="plugin-anchor" href="#&#x521D;&#x59CB;&#x5316;react&#x9879;&#x76EE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;&#x5316;React&#x9879;&#x76EE;</h2>
+<p>&#x524D;&#x7AEF;&#x662F;&#x57FA;&#x4E8E;React&#x6846;&#x67B6;&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x8FDB;&#x884C;&#x9879;&#x76EE;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;&#x3002;</p>
+<h3 id="&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;"><a name="&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;" class="plugin-anchor" href="#&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;</h3>
+<pre><code class="lang-bash">create-react-app funding-eth-react
+</code></pre>
+<h3 id="&#x7CBE;&#x7B80;&#x9879;&#x76EE;"><a name="&#x7CBE;&#x7B80;&#x9879;&#x76EE;" class="plugin-anchor" href="#&#x7CBE;&#x7B80;&#x9879;&#x76EE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7CBE;&#x7B80;&#x9879;&#x76EE;</h3>
+<p>&#x901A;lottery&#x9879;&#x76EE;&#xFF0C;src&#x4E0B;&#x4EC5;&#x7559;App.js&#x548C;index.js&#xFF0C;&#x8C03;&#x6574;&#x5BF9;&#x5E94;&#x4EE3;&#x7801;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Hello World<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    ); 
+  }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;
+</code></pre>
+<p>&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<p>npm start</p>
+<p><img src="https://i.loli.net/2020/06/09/sdz7lgaxYRE5LS1.png" alt="34.11.png"></p>
+<h3 id="&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E93;"><a name="&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E93;" class="plugin-anchor" href="#&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E93;</h3>
+<pre><code class="lang-bash">npm install --save web3
+npm install --save semantic-ui-react
+npm install --save semantic-ui-css
+</code></pre>
+<h2 id="&#x5F15;&#x7528;web3js"><a name="&#x5F15;&#x7528;web3js" class="plugin-anchor" href="#&#x5F15;&#x7528;web3js"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F15;&#x7528;web3.js</h2>
+<h3 id="&#x5B9E;&#x73B0;"><a name="&#x5B9E;&#x73B0;" class="plugin-anchor" href="#&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x73B0;</h3>
+<p>&#x5728;src&#x4E0B;&#x521B;&#x5EFA;&#x540D;&#x4E3A;utils&#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5E76;&#x5728;&#x5185;&#x90E8;&#x521B;&#x5EFA;&#x6587;&#x4EF6;getWeb3.js</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> Web3 <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;web3&apos;</span>;
+<span class="hljs-keyword">let</span> web3;
+<span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span>  <span class="hljs-built_in">window</span>.web3 !== <span class="hljs-string">&apos;undefined&apos;</span>) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;found injected web3&apos;</span>);
+    web3 = <span class="hljs-keyword">new</span> Web3(<span class="hljs-built_in">window</span>.web3.currentProvider);
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;found local web3&apos;</span>);
+    web3 = <span class="hljs-keyword">new</span> Web3(<span class="hljs-string">&apos;http://localhost:7545&apos;</span>);
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> web3;
+</code></pre>
+<h2 id="&#x8C03;&#x7528;&#x4F17;&#x7B79;&#x5408;&#x7EA6;"><a name="&#x8C03;&#x7528;&#x4F17;&#x7B79;&#x5408;&#x7EA6;" class="plugin-anchor" href="#&#x8C03;&#x7528;&#x4F17;&#x7B79;&#x5408;&#x7EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8C03;&#x7528;&#x4F17;&#x7B79;&#x5408;&#x7EA6;</h2>
+<h3 id="&#x90E8;&#x7F72;funding&#x81F3;simplechain&#x6D4B;&#x8BD5;&#x7F51;&#x7EDC;"><a name="&#x90E8;&#x7F72;funding&#x81F3;simplechain&#x6D4B;&#x8BD5;&#x7F51;&#x7EDC;" class="plugin-anchor" href="#&#x90E8;&#x7F72;funding&#x81F3;simplechain&#x6D4B;&#x8BD5;&#x7F51;&#x7EDC;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x7F72;Funding&#x81F3;Simplechain&#x6D4B;&#x8BD5;&#x7F51;&#x7EDC;</h3>
+<p>&#x83B7;&#x53D6;&#x5408;&#x7EA6;&#x5730;&#x5740;&#xFF1A;</p>
+<pre><code>0x8ff3a13157f1a0aa99beb84d393f1aac4dd470e3 
+</code></pre><h3 id="&#x8C03;&#x7528;funding&#x5408;&#x7EA6;abi"><a name="&#x8C03;&#x7528;funding&#x5408;&#x7EA6;abi" class="plugin-anchor" href="#&#x8C03;&#x7528;funding&#x5408;&#x7EA6;abi"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8C03;&#x7528;Funding&#x5408;&#x7EA6;ABI</h3>
+<p><img src="https://i.loli.net/2020/06/09/NEoMHG3DQtzlBrF.png" alt="34.12.png"></p>
+<h3 id="&#x83B7;&#x53D6;&#x5408;&#x7EA6;&#x5B9E;&#x4F8B;"><a name="&#x83B7;&#x53D6;&#x5408;&#x7EA6;&#x5B9E;&#x4F8B;" class="plugin-anchor" href="#&#x83B7;&#x53D6;&#x5408;&#x7EA6;&#x5B9E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x5408;&#x7EA6;&#x5B9E;&#x4F8B;</h3>
+<p>&#x9996;&#x5148;&#x5728;src&#x4E0B;&#x521B;&#x5EFA;&#x76EE;&#x5F55;sipc,&#x5E76;&#x521B;&#x5EFA;&#x6587;&#x4EF6;contracts.js&#x3002;</p>
+<p>ABI&#x683C;&#x5F0F;&#x4E3A;json&#x683C;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;ABI&#x62F7;&#x8D1D;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5730;&#x5740;&#x680F;&#x4E2D;&#x683C;&#x5F0F;&#x5316;&#x4E3A;&#x4E00;&#x884C;&#x518D;&#x590D;&#x5236;&#x56DE;&#x6765;&#xFF0C;&#x8FD9;&#x6837;&#x7701;&#x7A7A;&#x95F4;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> web3 <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../utils/getWeb3&apos;</span>;
+<span class="hljs-comment">//&#x5C06;ABI&#x6DFB;&#x52A0;&#x5230;&#x8FD9;&#x91CC;</span>
+<span class="hljs-keyword">const</span> fundingFactoryABI = [ { <span class="hljs-string">&quot;constant&quot;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&quot;inputs&quot;</span>: [], <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;platformProv ider&quot;</span>, <span class="hljs-string">&quot;outputs&quot;</span>: [ { <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;address&quot;</span> } ], <span class="hljs-string">&quot;payable&quot;</span>: <span class="hljs-literal">false</span>, <span class="hljs-string">&quot;stateMu tability&quot;</span>: <span class="hljs-string">&quot;view&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;function&quot;</span> }, { <span class="hljs-string">&quot;constant&quot;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&quot;inputs&quot;</span>: [], <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;getInvestorFunding&quot;</span>, <span class="hljs-string">&quot;outputs&quot;</span>: [ { <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;address[]&quot;</span> } ], <span class="hljs-string">&quot;payable&quot;</span> : <span class="hljs-literal">false</span>, <span class="hljs-string">&quot;stateMutability&quot;</span>: <span class="hljs-string">&quot;view&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;function&quot;</span> }, { <span class="hljs-string">&quot;constant&quot;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&quot;inpu ts&quot;</span>: [], <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;getCreatorFunding&quot;</span>, <span class="hljs-string">&quot;outputs&quot;</span>: [ { <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;address[]&quot;</span>
+} ], <span class="hljs-string">&quot;payable&quot;</span>: <span class="hljs-literal">false</span>, <span class="hljs-string">&quot;stateMutability&quot;</span>: <span class="hljs-string">&quot;view&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;function&quot;</span> }, { <span class="hljs-string">&quot;constan t&quot;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&quot;inputs&quot;</span>: [], <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;getAllFunding&quot;</span>, <span class="hljs-string">&quot;outputs&quot;</span>: [ { <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;address[]&quot;</span> } ], <span class="hljs-string">&quot;payable&quot;</span>: <span class="hljs-literal">false</span>, <span class="hljs-string">&quot;stateMutability&quot;</span>: <span class="hljs-string">&quot;view&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;function&quot;</span> },
+{ <span class="hljs-string">&quot;constant&quot;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&quot;inputs&quot;</span>: [ { <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;uint256&quot;</span> } ], <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;crow FundingArray&quot;</span>, <span class="hljs-string">&quot;outputs&quot;</span>: [ { <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;address&quot;</span> } ], <span class="hljs-string">&quot;payable&quot;</span>: <span class="hljs-literal">false</span>, <span class="hljs-string">&quot;stateMutability&quot;</span>: <span class="hljs-string">&quot;view&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;function&quot;</span> }, { <span class="hljs-string">&quot;constant&quot;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&quot;inputs&quot;</span>: [ { <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;address&quot;</span> }, { <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;uint256&quot;</span> } ], <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;crea torFundingMap&quot;</span>, <span class="hljs-string">&quot;outputs&quot;</span>: [ { <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;address&quot;</span> } ], <span class="hljs-string">&quot;payable&quot;</span>: <span class="hljs-literal">false</span>, <span class="hljs-string">&quot;stateMutability&quot;</span>: <span class="hljs-string">&quot;view&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;function&quot;</span> }, { <span class="hljs-string">&quot;constant&quot;</span>: <span class="hljs-literal">false</span>, <span class="hljs-string">&quot;inputs&quot;</span>: [ { <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;_projectName&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span> }, { <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;_supportMoney&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;uin t256&quot;</span> }, { <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;_goalMoney&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;uint256&quot;</span> }, { <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;_duration&quot;</span>, <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;uint256&quot;</span> } ], <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;createFunding&quot;</span>, <span class="hljs-string">&quot;outputs&quot;</span>: [], <span class="hljs-string">&quot;payable&quot;</span>: <span class="hljs-literal">false</span>, <span class="hljs-string">&quot;stateMu tability&quot;</span>: <span class="hljs-string">&quot;nonpayable&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;function&quot;</span> }, { <span class="hljs-string">&quot;inputs&quot;</span>: [], <span class="hljs-string">&quot;payable&quot;</span>: <span class="hljs-literal">false</span>, <span class="hljs-string">&quot;s tateMutability&quot;</span>: <span class="hljs-string">&quot;nonpayable&quot;</span>, <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;constructor&quot;</span> } ];
+
+<span class="hljs-keyword">const</span> fundingFactoryAddress = <span class="hljs-string">&apos;0x8ff3a13157f1a0aa99beb84d393f1aac4dd470e3&apos;</span>;
+<span class="hljs-comment">//&#x521B;&#x5EFA;fundingFactory&#x5408;&#x7EA6;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">let</span> fundingFactoryContract = <span class="hljs-keyword">new</span> web3.eth.Contract(fundingFactoryABI, fundingFactor yAddress);
+<span class="hljs-keyword">let</span> contracts  = {
+    fundingFactoryContract,
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> contracts;
+</code></pre>
+<p>&#x6574;&#x4E2A;&#x524D;&#x7AEF;&#x7684;&#x5F00;&#x53D1;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x6A21;&#x5757;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x754C;&#x9762;&#x5F00;&#x53D1;&#x6B65;&#x9AA4;&#x56FE;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6574;&#x4E2A;&#x754C;&#x9762;&#x5305;&#x62EC;&#x6211;&#x53D1;&#x8D77;&#x7684;&#x4F17;&#x7B79;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x4F17;&#x7B79;&#xFF0C;&#x4EE5;&#x53CA;&#x6211;&#x53C2;&#x4E0E;&#x7684;&#x4F17;&#x7B79;&#x7B49;&#x6A21;&#x5757;&#x3002;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="https://i.loli.net/2020/06/09/iyPXc7O4nRQY1hW.png" alt="34.10.png"></p>
+<p>&#x4E0A;&#x9762;&#x7684;&#x6B65;&#x9AA4;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x4E86;&#x6574;&#x4E2A;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x7684;&#x57FA;&#x7840;&#x6846;&#x67B6;&#xFF0C;&#x4EE5;&#x53CA;&#x5408;&#x7EA6;&#x8C03;&#x7528;&#x6848;&#x4F8B;&#x3002;&#x5176;&#x5B83;&#x6A21;&#x5757;&#x7684;&#x5F00;&#x53D1;&#x548C;&#x4E0A;&#x9762;&#x7684;&#x6B65;&#x9AA4;&#x7C7B;&#x4F3C;&#x3002;&#x5C31;&#x4E0D;&#x518D;&#x505A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x67E5;&#x770B;&#x6E90;&#x7801;&#x5B66;&#x4E60;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../29_writeContract/" class="navigation navigation-prev " aria-label="Previous page: 编写合约">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../31_mining.html" class="navigation navigation-next " aria-label="Next page: sipc挖矿">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"前端实现","level":"10.4","depth":1,"next":{"title":"sipc挖矿","level":"11.1","depth":1,"path":"31_mining.md","ref":"31_mining.md","articles":[]},"previous":{"title":"编写合约","level":"10.3","depth":1,"path":"29_writeContract/README.md","ref":"29_writeContract/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"zh","gitbook":"*"},"file":{"path":"30_frontRealize/README.md","mtime":"2020-06-10T12:14:33.829Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-22T07:11:59.717Z"},"basePath":"..","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

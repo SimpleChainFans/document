@@ -4,96 +4,94 @@
 
 ## Quick Start
 
-* [Quick Start](Simplechain-Wallet-Tutorial/README.md)
-* [Build Node](Simplechain-wallet-usage-best-practices/README.md)
+* [Quick Start](1_quickStart.md)
+* [Build Node](2_BuildNode/README.md)
 
 ##  Sipc Coin Negotiate
 
-* [Technical Manual](updateSimplechain/README.md)
-* [Sipc Coin](Simplechain0182overview/README.md)
-* [Publish Coin](commands/README.md)
+* [Technical Manual](47_techniqueLanguage.md)
+* [Sipc Coin](3_sipcCoin.md)
+* [Publish Coin](4_PublishCoin/README.md)
 
 ## Basic Data Struct
 
-+ [Deploy](How-to-Stake-with-Simplechain/README.md)
-+ [Genesis Block](How-to-Stake-with-Simplechain/README.md)
-+ [Account](How-to-Stake-with-Simplechain/README.md)
-+ [Transaction](How-to-Stake-with-Simplechain/README.md)
-+ [Block](How-to-Stake-with-Simplechain/README.md)
-+ [Transaction Receipt](How-to-Stake-with-Simplechain/README.md)
++ [Deploy](5_concoct.md)
++ [Genesis Block](6_genesis/README.md)
++ [Account](7_account.md)
++ [Transaction](8_transaction/README.md)
++ [Block](9_block/README.md)
++ [Transaction Receipt](10_transactionReceipt/README.md)
 
 ## Construct
 
-+ [Structure Design](Simplechain-Contract-Usage.md)
-+ [Data Struct and ](QRC20-Token-Introduce.md)
-+ [Data Synchronize](QRC20集成文档.md)
++ [Structure Design](11_constructDesign/README.md)
++ [Data Struct and ](12_structAndStore/README.md)
++ [Data Synchronize](50_togetherStep.md)
 
 ## Underlying Core Technology
 
-+ [P2p Network](Simplechain-Blockchain-Guide.md)
-+ [共识机制](Build-Simplechain-on-CentOS.md)
-+ [Virtual Machine](Simplechain-Eclair-Guide.md)
-+ [运行机制](Upgrade-Tutorial/README.md)
-+ [处理异常](Upgrade-Tutorial/README.md)
++ [p2p network](13_p2pNetwork.md)
++ [Consensus mechanism](14_consensus/README.md)
++ [virtual machine](15_virtualMache/README.md)
++ [Operating mechanism](16_runMechanism/README.md)
++ [Handle exceptions](17_unusual.md)
 
 ## Smart contract
 
-+ [智能合约](Technical-White-Paper-for-SimplechainX/README.md)
-+ [深入理解Solidity](SimplechainX-Tutorial.md)
-+ [合约模版](One-Click-Launch-Chain/README.md)
-+ [合约开发和部署](SimplechainX-Smart-Contract/README.md)
++ [Smart contract](18_contract/README.md)
++ [understand Solidity](19_understandSolidity/README.md)
++ [Contract template](20_contractPattern.md)
 
 ### Developer tools
 
-+ [搭建测试链](Confidential-Assets.md)
-+ [Sip API](Data-Analytics.md)
-+ [跨链API](Data-Analytics.md)
-+ [SimPlug](Data-Analytics.md)
-+ [SDK](Data-Analytics.md)
++ [Build Test network](21_buildTest.md)
++ [Sip API](22_sipcApi.md)
++ [Cross-chain API](23_crossChainApi.md)
++ [SimPlug](24_chromeWallet/README.md)
++ [SDK](25_sdk/README.md)
 
 
 ### Cross-chain
 
-+ [跨链方案](Confidential-Assets.md)
-+ [子链模版](Confidential-Assets.md)
-+ [跨链流程](Data-Analytics.md)
++ [Cross-chain solution](48_crossChain/README.md)
++ [Subchain template](26_smallChain.md)
++ [Cross-chain process](49_crossChainOrder/README.md)
 
 ### Dapp develop
 
-+ [合约编译器](Confidential-Assets.md)
-+ [编写合约](Data-Analytics.md)
-+ [发布合约](Data-Analytics.md)
-+ [开发流程](Data-Analytics.md)
++ [Dapp process carding](27_dappFlow/README.md)
++ [translater](28_editor.md)
++ [Write contract](29_writeContract/README.md)
++ [Front-end development](30_frontRealize/README.md)
 
 ### Mining
 
-+ [sipc挖矿](Confidential-Assets.md)
-+ [矿池接入](Data-Analytics.md)
-+ [GPU挖矿](Confidential-Assets.md)
-+ [Simpool挖矿](Data-Analytics.md)
-+ [SimpleNode x1挖矿教程](Confidential-Assets.md)
++ [sipc mining](31_mining.md)
++ [MinePool access](32_miningPool/README.md)
++ [GPU Mining](33_gpuMining/README.md)
++ [Simpool Mining](34_SimPool/README.md)
++ [SimpleNode x1 Mining](35_SimpleNode_x1/README.md)
 
 ### Client
 
-+ [SIPC.VIP](Confidential-Assets.md)
-+ [sipc全节点钱包](Confidential-Assets.md)
-+ [ChainBox](Data-Analytics.md)
-+ [区块链浏览器](Data-Analytics.md)
++ [SIPC.VIP](36_SIPC.md)
++ [Sipc](37_wallet/README.md)
++ [ChainBox](38_ChainBox/README.md)
++ [Explore](39_blockBrowser/README.md)
 
 ### Ecology
 
-+ [Exchange docking](Confidential-Assets.md)
-+ [Community Project](Confidential-Assets.md)
-+ [Community Activity](Data-Analytics.md)
-+ [Community Entrance](Data-Analytics.md)
++ [Exchange docking](40_tradePlateform.md))
++ [Community Project](41_commityProduct.md)
++ [Community Activity](42_commityActity.md)
++ [Community Entrance](43_commityEnters/README.md)
 
 
 ### Landing scheme
 
-+ [Landing case](Confidential-Assets.md)
-+ [Build application](Data-Analytics.md)
++ [Landing case](44_case.md)
 
 ### Other
 
-+ [FAQ](Confidential-Assets.md)
-+ [Online technical support](Data-Analytics.md)
++ [FAQ](45_faq.md)
++ [Online technical support](46_supportOnline/README.md)
