@@ -10,13 +10,13 @@
 
 以下是SimpleChain跨链方案结构示意图：
 
-![53.1.png](https://i.loli.net/2020/05/26/WyPkGhKd3OTI6ax.png)
+![53.1.png](1.png)
 
 该跨链结构包含公证人机制，主子链实现高效通信，通过公证人机制实现资产跨链。比如可以将SimpleChain主链的区块头部信息写入SimpleChain子链的区块里，SimpleChain主链与SimpleChain子链使用相同的共识验证方法，实现两条链之间的通信。通过公证人机制，使用受信任的分布式节点(公证人/node1或公证人/node2)向SimpleChain子链记录证明SimpleChain主链链上发生的交易，通信实现资产跨链交互。简单理解就是SimpleChain主链和SimpleChain子链使用共同信任的分布式节点(node1或者node2)充当公证人，SimpleChain主链和SimpleChain子链就可以间接信任，完成资产交换。
 
 下图是SimpleChain跨链交易的流程图：
 
-![53.2.png](https://i.loli.net/2020/05/26/yTgWlpuxz84nr9s.png)
+![53.2.png](2.png)
 
 跨链交易流程如下：
 

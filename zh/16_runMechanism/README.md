@@ -2,15 +2,15 @@
  
 Simplechain的本质就是一个基于交易的状态机(transaction-based state machine)。在计算机科学中，一个状态机是指可以读取一系列的输入，然后根据这些输入，会转换成一个新的状态出来的东西。
 
-![18.1.png](https://i.loli.net/2020/05/27/usmOjFxSitVPlkf.png)
+![18.1.png](1.png)
 
 根据Simplechain的状态机，我们从创世纪状态(genesis state)开始。在网络中还没有任何交易的产生状态。当交易被执行后，这个创世纪状态就会转变成最终状态。在任何时刻，这个最终状态都代表着Simplechain当前的状态。
 
-![18.2.png](https://i.loli.net/2020/05/27/m7EG46heCawcWMV.png)
+![18.2.png](2.png)
 
 Simplechain的状态有百万个交易。这些交易都被“组团”到一个区块中。一个区块包含了一系列的交易，每个区块都与它的前一个区块链接起来。
 
-![18.3.png](https://i.loli.net/2020/05/27/jGzNRKD4SxkgtTW.png)
+![18.3.png](3.png)
 
 为了让一个状态转换成下一个状态，交易必须是有效的。为了让一个交易被认为是有效的，它必须要经过一个验证过程，此过程也就是挖矿。挖矿就是一组节点（即电脑）用它们的计算资源来创建一个包含有效交易的区块出来。
 
@@ -20,7 +20,7 @@ Simplechain的状态有百万个交易。这些交易都被“组团”到一个
 
 不论什么时候只要多个路径产生了，一个”分叉“就会出现。我们通常都想避免分叉，因为它们会破坏系统，强制人们去选择哪条链是他们相信的链。
 
-![18.4.png](https://i.loli.net/2020/05/27/lKJ1nqIPxmhHSWB.png)
+![18.4.png](4.png)
 
 为了确定哪个路径才是最有效的以及防止多条链的产生，Simplechain使用了一个叫做“GHOST协议(GHOST protocol.)”的数学机制。
 

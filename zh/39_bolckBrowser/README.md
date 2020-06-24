@@ -2,37 +2,37 @@
 
 > 打开区块链浏览器，根据自己的需要切换 Main NetWork(主网) 或者 Test NetWork(测试网)。如下图：
 
-![1.png](https://i.loli.net/2020/04/23/eI1r49TdX7oxK5p.png)
+![1.png](1.png)
 
 **区块搜索**
 
 > 有关所有块的信息 - 从创世块到所有当前块 - 可以在此页面上找到，包括块高度，其前一个块以及相应的字节大小。 
 
-![2.png](https://i.loli.net/2020/04/23/O64uwKCDyv3c5Fm.png)
+![2.png](2.png)
 
 **交易搜索**
 
 > 您可以在此页面上搜索交易记录。 可以找到有发送交易地址和接收地址的信息，传输的SIPC数量，交易记录的块高度，相应的哈希和生产时间。 您还可以使用搜索栏查找哈希的特定交易。
 
-![3.png](https://i.loli.net/2020/04/23/xFf3HNpQUwMJInA.png)
+![3.png](3.png)
 
 **查看叔块**
 
 > 再此页面上，可以查看每一个区块高度，以及其叔块对应的区块高度，出块时间，以及打包矿工和矿工获得奖励。如下图：
 
-![4.png](https://i.loli.net/2020/04/23/dID7LgewEN4rbji.png)
+![4.png](4.png)
 
 **验证合约**
 
 > 如果想验证合约，输入要验证的合约地址，选择合约编译器类型和编译器版本，就可以验证合约。如下图：
 
-![5.png](https://i.loli.net/2020/04/23/sVdGBAJitkgFMHu.png)
+![5.png](5.png)
 
 **验证后的合约列表**
 
 > 点击验证合约列表，可以查看到20条验证的合约信息。信息展示着合约地址，合约名称，编译器，版本，账户余额，验证时间等！
 
-![6.png](https://i.loli.net/2020/04/23/GrTd2XzARLUEhJm.png)
+![6.png](6.png)
 
 合约验证一共有三种验证方式：
 
@@ -57,15 +57,15 @@ contract PayALL{
     }
 }
 ```
-![29.1.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfawz7lnj30n20ikjt4.jpg)
+![29.1.png](7.png)
 
 粘贴源码：
 
-![29.2.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfax1kskj30n20eo0ua.jpg)
+![29.2.png](8.jpg)
 
 验证通过后；
  
-![29.3.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfawysn9j30n20c2mxz.jpg)
+![29.3.png](9.png)
 
 ## 多文件验证
 
@@ -96,19 +96,19 @@ contract Test2 is Hello {
     }
 }
 ```
-![29.4.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfawzq5aj30n208g75s.jpg)
+![29.4.png](10.png)
  
 执行结果：
 	
-![29.5.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfawzd71j30n20b80ut.jpg)
+![29.5.png](11.png)
 
 此类验证使用，多文件验证。验证方式如下，获取已部署的合约地址：
 
 `0x6e1ace6e6cf09a4ab096f272cfc029c0a1d883ac`
  
-![29.6.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfax04r3j30n20a074z.jpg)
+![29.6.png](12.png)
 
-![29.7.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfax43ypj30n20g4taz.jpg)
+![29.7.png](13.png)
  
 `Optimization`指的是合约编译的次数，如何合约的部署是选择了优化次数，那么在验证时，也需要选择相应的次数，默认不优化。
 
@@ -118,11 +118,11 @@ contract Test2 is Hello {
 
 **查看验证成功**
 
-![29.8.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfax3k8oj30n20aaq4l.jpg) 
+![29.8.png](14.png) 
 
 当前验证后的多文件合约源码
 
-![29.9.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfax7p9fj30n2092myv.jpg)
+![29.9.png](15.png)
 
 源码通过json 格式展示，分别包含两个文件源码。
 
@@ -156,9 +156,9 @@ Json文件：
   }
 }
 ```
-![29.10.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfax4eahj30n20hataf.jpg)
+![29.10.png](16.png)
 
-![29.11.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfax8g49j30n20f0dj1.jpg)
+![29.11.png](17.png)
 
 ## Library 的合约验证
 
@@ -197,7 +197,7 @@ library SetHFG {
 ```
 如下是部署记录：
 
-![29.12.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfaxgzfkj30n20e0q6j.jpg)
+![29.12.png](18.png)
 
 CHU 为主合约: `0x1c622ed2035acc8514259788caafb3cf69d9bbe3`
 
@@ -212,14 +212,14 @@ SetHFG: `0x5386710eb4d02b41e7a253d3ebb00ca8795c930f`
 
 验证方式与单文件相同, 如下图：
 
-![29.13.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfax8jotj30n20j0myv.jpg)
+![29.13.png](19.png)
 
-![29.14.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfaxbe2uj30n20cw0ue.jpg)
+![29.14.png](20.png)
 
 **验证通过**
 
-![29.15.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfaxa38zj30n20bemyy.jpg)
+![29.15.png](21.png)
 
-![29.16.png](http://ww1.sinaimg.cn/large/007csy4ply1gfhfaxbyvaj30n20beaaz.jpg)
+![29.16.png](22.png)
 
 

@@ -1,6 +1,6 @@
 Simplechain's smart contract is not a common contract in reality, but a piece of program code that exists on the blockchain and can be triggered to execute. These codes implement some predetermined rules, is an "autonomous proxy" that exists in the Simplechain execution environment ". Simplechain's account and contract are shown in Figure 1.
 
-![](img/20.1.png)
+![](1.png)
 
 **The intelligent contract design of Simplechain is concise**
 

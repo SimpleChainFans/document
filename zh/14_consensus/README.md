@@ -323,4 +323,4 @@ func writeBlockHeader(w io.Writer, pver uint32, bh *BlockHeader) error {
 
 下载完成以后，通过命令执行`生成创世区块`的文件,在生成创世区块文件的过程中，可以选择自己想要的共识算法。如下图：
 
-![W4f.png](https://i.loli.net/2020/05/26/4sPyNkCZMXIbl1L.png)
+![W4f.png](1.png)

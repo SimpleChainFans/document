@@ -323,4 +323,5 @@ Download and generate a new genesis block file, [Download Address](https://githu
 
 After the download is complete, run the command `Generate genesis block` In the process of generating the creation block file, you can choose the consensus algorithm you want. As shown below:
 
-![W4f.png](https://i.loli.net/2020/05/26/4sPyNkCZMXIbl1L.png)
+
+![W4f.png](1.png)

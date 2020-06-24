@@ -34,20 +34,20 @@ Mining method
 
 The address is here：https://github.com/simplechain-org/gpuminer/releases （Be sure to download the latest version, the latest version is more efficient! The latest version is 1.0.4）
 
-![36.1.png](http://ww1.sinaimg.cn/large/007csy4ply1gf7zsocou8j31m40ow0yq.jpg)
+![36.1.png](36.1.png)
 
 ### Decompress the modified file
 
 After downloading the compressed file, decompress it into a folder, as shown in the following figure:
 
-![36.2.png](http://ww1.sinaimg.cn/large/007csy4ply1gf8094hn9pj305o04w74z.jpg)
+![36.2.png](36.2.png)
 
 Click in, find the file start.bat, and edit it with Notepad:
 
-![36.3.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80yshq7kj30nm04q3zo.jpg)
+![36.3.png](36.3.png)
 
 
-![36.4.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysj67wj31ik0skdk3.jpg)
+![36.4.png](36.4.png)
 
 1. —— gpuplatform 1 choose card A for mining;
 2. —— gpuplatform 2 choose N card for mining;
@@ -55,7 +55,7 @@ Click in, find the file start.bat, and edit it with Notepad:
 
 After modification, save it and turn it off. Double-click start.bat to link the mine pool. Screenshot after success:
 
-![36.5.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysnmxbj31hg0nidip.jpg)
+![36.5.png](36.5.png)
 
 After accessing the mine pool, you can log on to your mine pool account on the mine pool official website to view your income.
 
@@ -63,16 +63,16 @@ After accessing the mine pool, you can log on to your mine pool account on the m
 
 SimpleNode download address: https://www.simplechain.com/ , select the corresponding version to install according to your system, and start the application after the installation is successful
 
-![36.6.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysjeq9j312o0n4gol.jpg)
+![36.6.png](36.6.png)
 
 **Specific mining steps:**
 
 1. Start SimpleNode, click the "start mining" button in the upper right corner, and the mining method pop-up window app.
 
-![36.7.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysll41j31ig0vwqd6.jpg)
+![36.7.png](36.7.png)
 
 
-![36.8.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysj4e5j312s0rsjtt.jpg)
+![36.8.png](36.8.png)
 
 2. Mining method: Select "mining pool mining" in the popup window of mining method ";
 3. Miner name: if you have not registered a Simpool account, you need to click the "Click register" button on the right side of the miner name to go to the Simpool registration page. After the registration is successful, return to the previous SimpleNode mining page; if you have registered a Simpool account, enter the miner name directly in the miner name editing box (Miner name does not contain Chinese)
@@ -85,7 +85,7 @@ SimpleNode download address: https://www.simplechain.com/ , select the correspon
 3. It is very important which account the miner belongs to, and the income is distributed according to the payment address under the corresponding account name.
 5. Click the OK button to mine. You can click view revenue in the upper right corner to view your revenue.
 
-![36.9.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysn0ckj31420sqgs3.jpg)
+![36.9.png](36.9.png)
 
 
 

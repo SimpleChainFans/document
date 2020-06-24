@@ -30,7 +30,7 @@ Dapp开发案例是基于Simplechain开发一个公益众筹项目，下面是�
 
 搭建界面，调用web3,以及与区块链进行数据交互都需要js方法去实现，所以这一步需要创建多个js文件。具体需要创建的js文件如下图：
 
-![31.1.png](https://i.loli.net/2020/06/09/9KU2YTZQ5PDS1GB.png)
+![1.png](1.png)
 
 ### 发起合约功能
 
@@ -48,7 +48,7 @@ Dapp开发案例是基于Simplechain开发一个公益众筹项目，下面是�
 
 第二个是在interaction中写具体方法，最后一个是在CreatorFundingTab中完成调用。图如下：
 
-![31.2.png](https://i.loli.net/2020/06/09/J7ZKT6YdCp15aVO.png)
+![2.png](2.png)
 
 
 

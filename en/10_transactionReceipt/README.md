@@ -1,11 +1,11 @@
 Unlike bitcoin, Simplechain serves as an intelligent contract platform. When each transaction is executed as a message in the Simplechain virtual machine, a transaction Receipt is obtained. This transaction receipt records the processing result information about this transaction:
 
 ![21.png](https://i.loli.net/2020/04/27/wlzWLg9Us7i5o3m.png)
-
+![1.png](1.png)
 The receipt information is divided into three parts: consensus information, transaction information, and block information. The following describes all kinds of information.
 
 ![22.png](https://i.loli.net/2020/04/27/sAWCrbGlmoEV6p8.png)
-
+![2.png](2.png)
 ## Introduction to transaction receipt
 
 **Transaction receipt consensus information**
@@ -194,4 +194,4 @@ func (r *ReceiptForStorage) EncodeRLP(w io.Writer) error {
 ```
 According to the EncodeRLP method, it can be concluded that only part of the content is stored during storage, and the Logs are also specially processed. LogForStorage
 
-![23.png](https://i.loli.net/2020/04/27/CmHSaJXIyLcYfbV.png)
+![3.png](3.png)

@@ -3,7 +3,7 @@
 The following figure shows the structure and relationship of Simplechain block data. When explaining the block data structure, other data must be presented together. Only by mastering the data sources in the block can you truly understand the block chain data.
 
 ![19.png](https://i.loli.net/2020/04/27/C1eqRNahAynJMuv.png)
-
+![1.png](1.png)
 The block is divided into two parts: the block Header and the block Body. The block header is rich in information. It not only establishes contact with the previous unit, but also records some transaction execution information and miner work information. The above figure involves a very important concept Trie, whose full name is Merkel compressed prefix tree.
 
 ## Block header data interpretation
@@ -15,6 +15,7 @@ The block is divided into two parts: the block Header and the block Body. The bl
 Is a hash value that records the hash value of the parent block directly referenced by this block. Only through this record can the blocks be organized in an orderly manner to form a blockchain. In addition, the content of the parent block can be prevented from being modified. Because of data modification, the block hash is bound to change. Therefore, a block directly or indirectly strengthens all parent blocks, the encryption algorithm ensures that historical blocks cannot be modified.
 
 ![13.png](https://i.loli.net/2020/04/27/Y5LpelbgwrKmyQj.png)
+![2.png](2.png)
 
 **sha3Uncles**
 

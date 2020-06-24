@@ -117,28 +117,30 @@ Preparations for implementing publish coin on the chain include:
 4. Click Start to compile.
 
 ![6.1.png](https://i.loli.net/2020/05/07/DbgwWI8Yztu7Unx.png)
-
+![6.1.png](1.png)
 **Contract deployment**
 
 1. Select the Run option and select the Web3 Provider in the Environment. In the dialog box that appears, enter the port of the currently enabled sipe node.
 
 ![6.2.png](https://i.loli.net/2020/05/07/umSzyZqigevbMxY.png)
-
+![6.2.png](2.png)
 2. Select an unlocked Account with a token.
 3. Select the MyToken contract, enter the initialization parameters in the Deploy field: total number of tokens, token name, token identifier, and click Deploy.
 4. Wait about one minute until the contract deployment is completed. If the contract appears in the Deployed Contracts column, the deployment is completed. So far, the Fa Bi completed.
 
 ![6.3.png](https://i.loli.net/2020/05/07/sJiXawq9SDo7Gl6.png)
+![6.3.png](3.png)
     
 **Contract Verification**
 
 1. Execute the decimals,name,symbol,totalSupply methods of the contract to check whether the token is successfully created.
 
 ![6.4.png](https://i.loli.net/2020/05/07/ltjSce5JfPLDqxI.png)
-
+![6.4.png](4.png)
 2. Execute the transfer method, expand the transfer method to transfer money to other accounts, and use balanceOf to check whether the transfer is successful.
 
 ![6.5.png](https://i.loli.net/2020/05/07/NblfOHyevhS3kDr.png)
+![6.5.png](5.png)
 
 
 

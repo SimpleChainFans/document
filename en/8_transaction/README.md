@@ -22,7 +22,7 @@ The design requirements for transactions involve all aspects of the software sys
 The following figure is [SimpleChain](https://www.simplechain.com/)transaction data structure is divided into four parts according to the purpose.
 
 ![transactionData.png](https://i.loli.net/2020/05/09/LtvZ9Q5MrPbH4zG.png)
-
+![交易数据结构.png](1.png)
 The beginning is a number of uint64 type, which is called a random number. Used to cancel transactions, prevent double flowers and modify [SimpleChain](https://www.simplechain.com/) Nonce value of the account (account data structure).
 
 The second part is about the setting of transaction execution restrictions, `gas` for willing to offer[SimpleChain](https://www.simplechain.com/)maximum fuel limit for virtual machine operation.
@@ -133,8 +133,8 @@ A special point is needed `Signer` Unsign and pass `Signer` Obtains the Sender. 
 
 Note that the above three cache usage have a precondition: Once a transaction object is created, the transaction content cannot be modified. This is also one of the reasons why the Transaction object is defined separately in the private txdata rather than directly defined in the Transaction. As shown in the following figure, only the transaction object method can be called to obtain the transaction content, and there is no way to modify the content of an existing transaction object.
 
-![transaction list](https://img.learnblockchain.cn/2019/04/27_Transaction-method.png!de)
 
+![交易对象方法列表](2.png)
 
 ## Transaction object method introduction
 

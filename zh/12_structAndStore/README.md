@@ -12,9 +12,9 @@ MPT(Merkle Patricia Trie)，是一种用hash索引数据的前缀树。
 
 当MPT树上某个叶子节点的数据更新后，此叶子节点的hash也会更新，随之而来的，是这个叶子节点回溯到根节点的所有中间节点的hash都会更新。最终，MPT根节点的hash也会更新。当要索引这个新的数据时，用MPT新的根节点hash，从底层数据库查出新的根节点，再往后一层层遍历，最终找到新的数据。而如果要查询历史数据，则可用老的树根hash，从底层数据库取出老的根节点，再往下遍历，就可查询到历史的数据。
 
-MPT树的实现图（图片来自以太坊黄皮书）
+MPT树的实现图:
 
-![图片](https://uploader.shimo.im/f/Jl1M7q2iSum6C2Kx.png!thumbnail)
+![图片](1.png)
 
 ### 账户State
 
@@ -24,9 +24,9 @@ MPT树的实现图（图片来自以太坊黄皮书）
 
 state root是区块中的一个字段，每个区块对应着不同的“状态”。区块中的交易会对account进行操作，进而改变account中的数据。不同的区块下，account的数据有所不同，即此区块的状态有所不同，具体的，是state root不同。从某个区块中取出这个区块的state root，查询到MPT的根节点，就能索引到这个区块当时account的数据历史。
 
-(图片来自以太坊白皮书)
 
-![图片](https://uploader.shimo.im/f/bIPmpZI7n84LluPT.png!thumbnail)
+
+![图片](2.png)
 
 ## 二、索引存储StormDB
 

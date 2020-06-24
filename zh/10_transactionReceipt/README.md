@@ -1,10 +1,10 @@
 不同于比特币，Simplechain作为智能合约平台。每一笔交易作为消息在Simplechain虚拟机中执行时，均会获得一个交易回执信息(Receipt)。这份交易回执记录了关于此笔交易的处理结果信息：
 
-![21.png](https://i.loli.net/2020/04/27/wlzWLg9Us7i5o3m.png)
+![1.png](1.png)
 
 回执信息分为三部分：共识信息、交易信息、区块信息。下面分别介绍各类信息。
 
-![22.png](https://i.loli.net/2020/04/27/sAWCrbGlmoEV6p8.png)
+![2.png](2.png)
 
 ## 交易回执内容介绍
 
@@ -194,4 +194,4 @@ func (r *ReceiptForStorage) EncodeRLP(w io.Writer) error {
 ```
 根据EncodeRLP方法实现，可以得出在存储时仅仅存储了部分内容，且 Logs 内容同样进行了特殊处理LogForStorage
 
-![23.png](https://i.loli.net/2020/04/27/CmHSaJXIyLcYfbV.png)
+![3.png](3.png)

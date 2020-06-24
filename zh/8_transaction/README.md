@@ -21,7 +21,7 @@
 
 下图是[SimpleChain](https://www.simplechain.com/)交易数据结构，根据用途，我将其划分为四部分。
 
-![交易数据结构.png](https://i.loli.net/2020/05/09/LtvZ9Q5MrPbH4zG.png)
+![交易数据结构.png](1.png)
 
 开头是一个 uint64 类型的数字，称之为随机数。用于撤销交易、防止双花和修改[SimpleChain](https://www.simplechain.com/)账户(账户数据结构)的 Nonce值。
 
@@ -133,7 +133,7 @@ func Sender(signer Signer, tx *Transaction) (common.Address, error) {
 
 需要注意，上面三个缓存使用都在有一个前提条件：交易对象一旦创建，交易内容不得修改。这也是为何交易对象中单独定义在私有的txdata中，而非直接定义在 Transaction中的原因之一。如下图所示，只能通过调用交易对象方法获取交易内容，无任何途径修改一个现有交易对象内容。
 
-![交易对象方法列表](https://img.learnblockchain.cn/2019/04/27_Transaction-method.png!de)
+![交易对象方法列表](2.png)
 
 
 ## 交易对象方法介绍

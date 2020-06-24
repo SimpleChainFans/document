@@ -34,21 +34,21 @@ Sipc目前支持3个矿池进行挖矿，分别是:
 
 地址在这里：https://github.com/simplechain-org/gpuminer/releases （一定要下载最新版，最新版效率更高哦！当前最新版本是1.0.4）
 
-![36.1.png](http://ww1.sinaimg.cn/large/007csy4ply1gf7zsocou8j31m40ow0yq.jpg)
+![36.1.png](36.1.png)
 
 ### 解压修改文件
 
 把压缩文件下载下来之后，解压成文件夹，如下图：
 
-![36.2.png](http://ww1.sinaimg.cn/large/007csy4ply1gf8094hn9pj305o04w74z.jpg)
+![36.2.png](36.2.png)
 
 
 点进去，找到文件start.bat文件，用记事本编辑它：
 
-![36.3.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80yshq7kj30nm04q3zo.jpg)
+![36.3.png](36.3.png)
 
 
-![36.4.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysj67wj31ik0skdk3.jpg)
+![36.4.png](36.4.png)
 
 1. —— gpuplatform 1选择A卡进行挖矿；
 2. —— gpuplatform 2选择N卡进行挖矿；
@@ -56,7 +56,7 @@ Sipc目前支持3个矿池进行挖矿，分别是:
 
 修改之后保存并关掉，双击start.bat即可链接矿池，成功后的截图：
 
-![36.5.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysnmxbj31hg0nidip.jpg)
+![36.5.png](36.5.png)
 
 接入矿池后即可在矿池官网登录自己的矿池账户查看自己收益。
 
@@ -64,16 +64,16 @@ Sipc目前支持3个矿池进行挖矿，分别是:
 
 SimpleNode下载地址：https://www.simplechain.com/，根据自己系统选择对应的版本安装，安装成功后启动应用
 
-![36.6.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysjeq9j312o0n4gol.jpg)
+![36.6.png](36.6.png)
 
 **具体挖矿步骤：**
 
 1. 启动SimpleNode，点击右上角“开始挖矿”按钮，出现挖矿方式弹窗
 
-![36.7.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysll41j31ig0vwqd6.jpg)
+![36.7.png](36.7.png)
 
 
-![36.8.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysj4e5j312s0rsjtt.jpg)
+![36.8.png](36.8.png)
 
 2. 挖矿方式：在挖矿方式弹窗中选择“矿池挖矿”；
 3. 矿工名：若未注册过Simpool矿池账户，需要在矿工名右侧点击“点击注册”按钮跳转到Simpool矿池注册页面，注册成功后返回之前SimpleNode挖矿页面；若已注册过Simpool矿池账户，直接在矿工名编辑框处输入矿工名称（矿工名中不要有中文）
@@ -86,7 +86,7 @@ SimpleNode下载地址：https://www.simplechain.com/，根据自己系统选择
 3. 挖矿的矿工属于哪个账户很重要，收益是根据所对应的账户名下的收款地址去进行分配
 5. 点击确定按钮，就可以进行挖矿了，可以在右上角中点击查看收益进行查看自己的收益情况
 
-![36.9.png](http://ww1.sinaimg.cn/large/007csy4ply1gf80ysn0ckj31420sqgs3.jpg)
+![36.9.png](36.9.png)
 
 
 

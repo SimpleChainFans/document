@@ -7,29 +7,29 @@
 **Decompression**
 
 ![1.png](https://i.loli.net/2020/05/22/AwoW8bx14XLiaG6.png)
-
+![1.png](1.png)
 ## Install wallet
 
 1.Open google browser, open the extension program
 
 ![2.png](https://i.loli.net/2020/05/22/PIyhRv5gmNYjkbt.png)
-
+![2.png](2.png)
 2.Install the installation package into the extension program
 
 ![3.png](https://i.loli.net/2020/05/22/8yDVqKY4CnTQ17h.png)
-
+![3.png](3.png)
 3.Open the wallet after installation
 
 ![4.png](https://i.loli.net/2020/05/22/XitTxs2q4Y8jgRN.png)
-
+![4.png](4.png)
 4.Open the wallet and select the main network or test network. If there is already a wallet, import it directly. If there is no account, create an account directly.
 
 ![5.png](https://i.loli.net/2020/05/22/2HeTk8tlCLifVAD.png)
-
+![5.png](5.png)
 5.Create an account and back up the private key to enter your plug-in wallet.
 
 ![6.png](https://i.loli.net/2020/05/22/Rdfl56UkZq2x1gu.png)
-
+![6.png](6.png)
 ## Wallet call method
 
 **Preconditions**

@@ -14,7 +14,8 @@ When the data of a leaf node on the Modbus tree is updated, the hash of the leaf
 
 The implementation diagram of triggtree (the picture is from the Yellow Book of Ethereum)
 
-![picture](https://uploader.shimo.im/f/Jl1M7q2iSum6C2Kx.png!thumbnail)
+![图片](1.png)
+
 
 ### Account State
 
@@ -24,13 +25,13 @@ As the account data changes, the hash of the account also changes. At the same t
 
 state root is a field in a block, and each block corresponds to a different "state". Transactions in the block operate on the account to change the data in the account. account data varies in different blocks, that is, the state of this block is different, specifically, the state root is different. Take the state root of the block from a certain block and query the root node of the profiler, then the data History of the account in the block can be indexed.
 
-![picture](https://uploader.shimo.im/f/bIPmpZI7n84LluPT.png!thumbnail)
+![图片](2.png)
 
-## 二、Index storage StormDB
+## 二、索引存储StormDB
 
-StormDB(a simple and powerful toolkit for [BoltDB](https://github.com/coreos/bbolt))is a boltDB-based database that supports indexing and search queries. Compared with traditional relational databases such as MySQL and Oracle, StormDB uses a single file storage without a separate service, SImplechain uses it to store cross-chain transactions for easier system migration.
+StormDB(a simple and powerful toolkit for [BoltDB](https://github.com/coreos/bbolt))是一种基于boltDB实现的数据库，它支持索引与搜索查询，相对于传统关系数据库MySQL、Oracle等，StormDB使用单一文件存储，没有单独的服务，更加轻量便于系统移植，SImplechain使用它来存储跨链交易。
 
-### Noun explanation
+### 名词解释
 
 **Bucket**
 

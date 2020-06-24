@@ -116,29 +116,29 @@
 3. 在网页右侧框选中 Compile 选项，选择合约编译器的版本(本文选择 0.4.26)。
 4. 点击 Start to compile 进行编译。
 
-![6.1.png](https://i.loli.net/2020/05/07/DbgwWI8Yztu7Unx.png)
+![6.1.png](1.png)
 
 **合约部署**
 
 1. 选中 Run 选项，在 Environment 中选择 Web3 Provider。在弹出的选框中输入当前启 动的sipe节点端口。
 
-![6.2.png](https://i.loli.net/2020/05/07/umSzyZqigevbMxY.png)
+![6.2.png](2.png)
 
 2. 选择已解锁且有 token 的 Account 地址。
 3. 选择 MyToken 合约，在 Deploy 栏中输入初始化参数:token 总量，token 名，token标识，点击Deploy。
 4. 等待一分钟左右至合约部署完成，在 Deployed Contracts 栏出现合约则说明部署完成。至此发币完成。
 
-![6.3.png](https://i.loli.net/2020/05/07/sJiXawq9SDo7Gl6.png)
+![6.3.png](3.png)
     
 **合约验证**
 
 1. 执行合约的decimals，name，symbol，totalSupply方法查看代币是否创建成功。
 
-![6.4.png](https://i.loli.net/2020/05/07/ltjSce5JfPLDqxI.png)
+![6.4.png](4.png)
 
 2. 执行transfer方法，展开transfer方法向其他账户进行转账并使用balanceOf查询是 否转账成功。
 
-![6.5.png](https://i.loli.net/2020/05/07/NblfOHyevhS3kDr.png)
+![6.5.png](5.png)
 
 
 

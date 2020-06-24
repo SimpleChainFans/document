@@ -30,7 +30,7 @@ After solc is installed, you can call solc.com pile(sourceCode,1) to compile the
 
 To build an interface, call web3, and interact with the blockchain, you need to use the js method. Therefore, you need to create multiple js files in this step. The following figure shows the specific js file to be created:
 
-![31.1.png](https://i.loli.net/2020/06/09/9KU2YTZQ5PDS1GB.png)
+![1.png](1.png)
 
 ### Initiate contract function
 
@@ -47,8 +47,7 @@ There are three main implementation functions of initiating and participating in
 The address of the contract and the supported amount can be obtained through the above three-step method.
 
 The second is to write specific methods in interaction, and the last is to complete the call in CreatorFundingTab. The figure is as follows:
-
-![31.2.png](https://i.loli.net/2020/06/09/J7ZKT6YdCp15aVO.png)
+![2.png](2.png)
 
 
 

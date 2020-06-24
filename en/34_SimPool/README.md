@@ -39,7 +39,7 @@ After modification, save it and turn it off. Double-click start.bat to link the 
 
 SimpleNode download address：https://www.simplechain.com/，select the corresponding version to install according to your system, and start the application after the installation is successful.
 
-![8.7.png](https://i.loli.net/2020/05/08/eFHYhwvdqI4AKUE.png)
+![1.png](1.png)
 
 **Specific mining steps:**
 

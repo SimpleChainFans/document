@@ -1,7 +1,5 @@
 The following figure shows the overall architecture of Simplechain:
-
-![7.png](https://i.loli.net/2020/05/25/3XEihbdzNgR6kCG.png)
-
+![1.png](1.png)
 ## Top-level architecture design
 
 The blockchain can be simply divided into three layers: protocol layer, extension layer, and application layer. The protocol layer can be divided into storage layer and network layer, which are independent but inseparable.
@@ -34,11 +32,13 @@ The protocol layer is the underlying technology. This layer is usually a complet
 
 SimpleChain designs an aggregate chain structure of a main chain and multiple sub-chains, which supports blockchain deployment and expansion in various business scenarios. The SimpleChain main chain adopts the mature PoW mechanism, while the sub-chain can set consensus algorithms suitable for its own scenarios according to business requirements, and form a two-way anchoring method with the main chain through atomic exchange or cross-chain nodes, cross-chain transactions with other sub-chains. This main chain mechanism can help the sub-chain obtain the final consistency guarantee provided by the SimpleChain main chain on the premise of meeting thousands of levels of performance per second.
 
-![ac.png](http://ww1.sinaimg.cn/large/007csy4ply1gfgaa34lckj30jf08y423.jpg)
+
+![3.png](3.png)
 																						
 The Simplechain sub-chain can be either a public chain or a consortium chain. Its chain structure is similar to that of the main chain (see blockchain architecture design). However, due to different business requirements, different consensus algorithms can be used to achieve thousands of TPS performance, or other custom development functions.
 
 The main chain and sub-chain achieve mutual anchoring, information exchange and capital flow through cross-chain protocols. The cross-chain protocol (see cross-chain protocol) adopts the free notary mechanism. All users in the whole network ecosystem can participate in and supervise it. The community's self-care ability can be effectively utilized to effectively ensure the reliability of cross-chain information, the transaction is safe and orderly. At the same time, Simplechain Foundation has carried out the research on the economic model of the main chain and established a set of incentive mechanism for the sustainable and healthy development of Simplechain ecosystem. Under the effect of this mechanism, the main chain ecosystem will integrate and promote each other, common development.
 
-![2f.png](http://ww1.sinaimg.cn/large/007csy4ply1gfgablfoohj33701uokhy.jpg)
+!
+![4.png](4.png)
 

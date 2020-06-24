@@ -39,7 +39,7 @@ Simpool矿池挖矿教程
 
 SimpleNode下载地址：https://www.simplechain.com/，根据自己系统选择对应的版本安装，安装成功后启动应用。
 
-![8.7.png](https://i.loli.net/2020/05/08/eFHYhwvdqI4AKUE.png)
+![1.png](1.png)
 
 **具体挖矿步骤：**
 

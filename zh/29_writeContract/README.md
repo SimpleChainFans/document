@@ -8,7 +8,7 @@
 
 进⼊到项⽬⽬录，创建⽂件`basicFunding.sol`
 
-![33.1.png](https://i.loli.net/2020/06/09/nWhL2mjlqwIEa4t.png)
+![1.png](1.png)
 
 并添加如下代码：
 ```go
@@ -52,7 +52,7 @@ constructor(string _projectName, uint _supportBalance, uint _targetBalance, uin 
 ```
 **测试**
 
-![](https://i.loli.net/2020/06/09/qWgeNnbSyvUOo3P.png)
+![](2.png)
 
 ### 4.参与众筹
 
@@ -81,7 +81,7 @@ function invest() public payable {
 
 测试，请部署后按照数字顺序操作
 
-![33.6.png](https://i.loli.net/2020/06/09/2iB5fNXOwYkcFlM.png)
+![3.png](3.png)
 
 ### 众筹失败退款（实现）
 
@@ -103,7 +103,7 @@ function getInvestors() public view returns(address[]) {
 ```
 **测试**
 
-![33.7.png](https://i.loli.net/2020/06/09/tpwDoV3yMWrjxN4.png)
+![4.png](4.png)
 
 ### 花费请求(实现)
 - 定义结构
@@ -159,7 +159,7 @@ function createRequest(string _purpose, uint _cost, address _shopAddress) public
 ```
 在request中搜索第0个请求，图示如下：
 
-![33.9.png](https://i.loli.net/2020/06/09/Nyg2HJB6Q1DtUiq.png)
+![5.png](5.png)
 
 ### 批准支付申请
 
@@ -202,7 +202,7 @@ function approveRequest(uint256 index) public {
 
 批准侯查看该请求，voteCount变为1
 
-![33.11.png](https://i.loli.net/2020/06/09/5GvWw7rMt1H4RZU.png)
+![6.png](6.png)
 
 ### 完成花费请求
 
@@ -240,10 +240,10 @@ function finalizeRequest(uint256 index) public onlyManager{
 
 三个人投资，一个人赞成，两个人反对，执行支付失败。
 
-![33.12.png](https://i.loli.net/2020/06/09/XLOFqN3Bs6gHSxh.png)
+![7.png](7.png)
 
 两个人赞成，执行支付成功
 
-![33.13.png](https://i.loli.net/2020/06/09/Bo82mNzg4kSIldP.png)
+![8.png](8.png)
 
 智能合约全部实现还需要实现几个方法，以及合约方法的互相调用。这些都可以直接在看源码学习。但是合约的编写，以及测试都在上面的几个基础方法中现在。
