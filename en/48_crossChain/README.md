@@ -10,13 +10,13 @@ If the main target of the early cross-chain solution was asset transfer, the cro
 
 The following is the structure diagram of SimpleChain cross-chain solution:
 
-![53.1.png](https://i.loli.net/2020/05/26/WyPkGhKd3OTI6ax.png)
+![53.1.png](1.png)
 
 The cross-chain structure includes a notary mechanism. The Master and sub-chains realize efficient communication and cross-chain assets through the notary mechanism. For example, you can write the block header information of the SimpleChain main chain into the block of the SimpleChain sub-chain. The SimpleChain main chain and the SimpleChain sub-chain use the same consensus verification method to achieve communication between the two chains. Through the notary mechanism, a trusted distributed node (notary/node1 or notary/node2) is used to record transactions on the SimpleChain sub-chain to prove that transactions have occurred on the SimpleChain main chain. Cross-chain interaction of assets is realized through communication. Simply speaking, the SimpleChain main chain and the SimpleChain sub-chain use shared-trusted distributed nodes (node1 or node2) as notaries. The SimpleChain main chain and the SimpleChain sub-chain can be trusted indirectly to complete asset exchange.
 
 The following figure shows the flow chart of SimpleChain cross-chain transactions:
 
-![53.2.png](https://i.loli.net/2020/05/26/yTgWlpuxz84nr9s.png)
+![53.2.png](2.png)
 
 The cross-chain transaction process is as follows:
 

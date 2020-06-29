@@ -16,12 +16,12 @@ SimpleChain is a community-led and open-source public underlying blockchain plat
 
 
 ## Join the Simlechain community
+![47.2.png](1.png)
 
-![47.2.png](https://i.loli.net/2020/05/14/akWxgyB5f6qJrYc.png)
+![47.3.png](2.png)
 
-![47.3.png](https://i.loli.net/2020/05/14/gm6dXxSJBuaNi5v.png)
+![47.4.png](3.png)
 
-![47.4.png](https://i.loli.net/2020/05/14/4OsT5ekgqxIGQrY.png)
 
 
 
