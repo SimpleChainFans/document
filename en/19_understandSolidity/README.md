@@ -1090,54 +1090,53 @@ Some special variables and functions already exist (by default) in the global na
 - ``tx.origin`` (``address``): transaction initiator (full call chain)
 
 
->  对于每一个**外部函数**调用，包括 ``msg.sender`` 和 ``msg.value`` 在内所有 ``msg`` 成员的值都会变化。这里包括对库函数的调用。
+>  For each `External function` call, including `msg.sender` and `msg.value` all included `msg` The value of the member changes. This includes calls to library functions.
 
->  不要依赖 ``block.timestamp``、 ``now`` 和 ``blockhash`` 产生随机数，除非你知道自己在做什么。 时间戳和区块哈希在一定程度上都可能受到挖矿矿工影响。例如，挖矿社区中的恶意矿工可以用某个给定的哈希来运行赌场合约的 payout 函数，而如果他们没收到钱，还可以用一个不同的哈希重新尝试。当前区块的时间戳必须严格大于最后一个区块的时间戳，但这里唯一能确保的只是它会是在权威链上的两个连续区块的时间戳之间的数值。
+>  Do not rely on ``block.timestamp``、 ``now`` and ``blockhash`` generate random numbers unless you know what you are doing. The timestamp and block Hash may be affected by miners to some extent. For example, malicious miners in the mining community can use a given hash to run the payout function of casino contracts, and if they do not receive money, they can also try again with a different hash. The timestamp of the current block must be strictly greater than that of the last block. However, the only thing that can be ensured here is the value between the timestamps of the two consecutive blocks on the authoritative chain.
     
->  基于可扩展因素，区块哈希不是对所有区块都有效。你仅仅可以访问最近 256 个区块的哈希，其余的哈希均为零。
+>  Based on the scalability factor, the block hash is not valid for all blocks. You can only access the hashes of the last 256 blocks, and the remaining hashes are zero.
 
-### ABI 编码函数
+### ABI coding function
 
-- ``abi.encode(...) returns (bytes)``：`ABI`对给定参数进行编码
-- ``abi.encodePacked(...) returns (bytes)``：对给定参数执行`紧打包编码`
-- ``abi.encodeWithSelector(bytes4 selector, ...) returns (bytes)``：`ABI`对给定参数进行编码，并以给定的函数选择器作为起始的 4 字节数据一起返回
-- ``abi.encodeWithSignature(string signature, ...) returns (bytes)``：等价于 ``abi.encodeWithSelector(bytes4(keccak256(signature), ...)``
+- ``abi.encode(...) returns (bytes)``：`ABI`encode the given parameters
+- ``abi.encodePacked(...) returns (bytes)``：execute the given parameter`紧打包编码`
+- ``abi.encodeWithSelector(bytes4 selector, ...) returns (bytes)``：`ABI` encode the given parameter and return the 4-byte data starting with the given function selector.
+- ``abi.encodeWithSignature(string signature, ...) returns (bytes)``:equivalent ``abi.encodeWithSelector(bytes4(keccak256(signature), ...)``
 
-> 这些编码函数可以用来构造函数调用数据，而不用实际进行调用。此外，``keccak256(abi.encodePacked(a, b))`` 是更准确的方法来计算在未来版本不推荐使用的 ``keccak256(a, b)``。
+> These encoding functions can be used to construct function call data without actually calling. In addition, ``keccak256(abi.encodePacked(a, b))`` is a more accurate method to calculate what is not recommended in future versions``keccak256(a, b)``。
 
-更多详情请参考`ABI`和 `紧打包编码`。
+For more details, see `ABI` and `紧打包编码`。
 
 
-#### 错误处理
+#### Error handling
 
-``assert(bool condition)``:
-    如果条件不满足，则使当前交易没有效果 — 用于检查内部错误。
-``require(bool condition)``:
-    如果条件不满足则撤销状态更改 - 用于检查由输入或者外部组件引起的错误。 
-``require(bool condition, string message)``:
-    如果条件不满足则撤销状态更改 - 用于检查由输入或者外部组件引起的错误，可以同时提供一个错误消息。
-``revert()``:
-    终止运行并撤销状态更改。
-``revert(string reason)``:
-    终止运行并撤销状态更改，可以同时提供一个解释性的字符串。
+``assert(bool condition)``: If the conditions are not met, the current transaction is ineffective-used to check for internal errors.
+    
+``require(bool condition)``: Revoke state changes if conditions are not met-used to check for errors caused by input or external components.
 
-#### 数学和密码学函数
+``require(bool condition, string message)``: Revoke state changes if conditions are not met-used to check for errors caused by input or external components, an error message can be provided at the same time.
 
-``addmod(uint x, uint y, uint k) returns (uint)``:计算 ``(x + y) % k``，加法会在任意精度下执行，并且加法的结果即使超过 ``2**256`` 也不会被截取。从 0.5.0 版本的编译器开始会加入对 ``k != 0`` 的校验（assert）。
+``revert()``: Terminate the operation and cancel the status change.
 
-``mulmod(uint x, uint y, uint k) returns (uint)``:计算 ``(x * y) % k``，乘法会在任意精度下执行，并且乘法的结果即使超过 ``2**256`` 也不会被截取。从 0.5.0 版本的编译器开始会加入对 ``k != 0`` 的校验（assert）。
+``revert(string reason)``: Terminating the operation and canceling state changes can provide an explanatory string at the same time.
 
-``keccak256(...) returns (bytes32)``: 计算 :ref:`(tightly packed) arguments <abi_packed_mode>` 的 Ethereum-SHA-3 （Keccak-256）哈希。
+#### Mathematical and cryptographic functions
 
-``sha256(...) returns (bytes32)``:计算 :ref:`(tightly packed) arguments <abi_packed_mode>` 的 SHA-256 哈希。
+``addmod(uint x, uint y, uint k) returns (uint)``:calculation ``(x + y) % k``，addition will be executed at any precision, and even if the result of addition exceeds ``2**256`` it will not be intercepted. Starting from the compiler version 0.5.0 ``k != 0`` verify（assert）。
 
-``sha3(...) returns (bytes32)``:等价于 keccak256。
+``mulmod(uint x, uint y, uint k) returns (uint)``:calculation ``(x * y) % k``，multiplication is executed at any precision, and even if the result of multiplication exceeds ``2**256`` it will not be intercepted. Starting from the compiler version 0.5.0 ``k != 0`` verify（assert）。
 
-``ripemd160(...) returns (bytes20)``:计算 :ref:`(tightly packed) arguments <abi_packed_mode>` 的 RIPEMD-160 哈希。
+``keccak256(...) returns (bytes32)``: calculation :ref:`(tightly packed) arguments <abi_packed_mode>`  Ethereum-SHA-3 （Keccak-256）hash。
 
-``ecrecover(bytes32 hash, uint8 v, bytes32 r, bytes32 s) returns (address)`` ：利用椭圆曲线签名恢复与公钥相关的地址，错误返回零值。[example usage](https://ethereum.stackexchange.com/q/1777/222)
+``sha256(...) returns (bytes32)``:calculation :ref:`(tightly packed) arguments <abi_packed_mode>`  SHA-256 hash。
 
-上文中的`tightly packed`是指不会对参数值进行 `padding` 处理（就是说所有参数值的字节码是连续存放的，译者注），这意味着下边这些调用都是等价的：
+``sha3(...) returns (bytes32)``:equivalent to keccak256。
+
+``ripemd160(...) returns (bytes20)``:calculation :ref:`(tightly packed) arguments <abi_packed_mode>`  RIPEMD-160 hash。
+
+``ecrecover(bytes32 hash, uint8 v, bytes32 r, bytes32 s) returns (address)`` Use the elliptic curve signature to restore the address related to the public key. An error returns a zero value. [example usage](https://ethereum.stackexchange.com/q/1777/222)
+
+Above `tightly packed` does not perform parameter values `padding` processing (that is, the bytecode of all parameter values is stored continuously, translator's note), which means that the following calls are equivalent:
 
     keccak256("ab", "c")
     keccak256("abc")
@@ -1145,56 +1144,54 @@ Some special variables and functions already exist (by default) in the global na
     keccak256(6382179)
     keccak256(97, 98, 99)
 
-如果需要 padding，可以使用显式类型转换：``keccak256("\x00\x12")`` 和 ``keccak256(uint16(0x12))`` 是一样的。
+If padding is required, you can use explicit type conversion: ``keccak256("\x00\x12")`` and ``keccak256(uint16(0x12))`` it's the same.
 
-请注意，常量值会使用存储它们所需要的最少字节数进行打包。例如：``keccak256(0) == keccak256(uint8(0))``，``keccak256(0x12345678) == keccak256(uint32(0x12345678))``。
+Note that constant values are packaged using the minimum number of bytes required to store them. For example：``keccak256(0) == keccak256(uint8(0))``，``keccak256(0x12345678) == keccak256(uint32(0x12345678))``。
 
-在一个私链上，你很有可能碰到由于 ``sha256``、``ripemd160`` 或者 ``ecrecover`` 引起的 Out-of-Gas。原因是因为这些密码学函数在Simplechain虚拟机中以“预编译合约”形式存在的，且在第一次收到消息后才被真正存在（尽管合约代码是EVM中已存在的硬编码）。因此发送到不存在的合约的消息非常昂贵，所以实际的执行会导致 Out-of-Gas 错误。在你实际使用你的合约之前，给每个合约发送一点儿Sipc，比如 1 Wei。这在官方网络或测试网络上不是问题。
+On a private chain, you are likely to encounter ``sha256``、``ripemd160`` or ``ecrecover`` caused by Out-of-Gas. The reason is that these cryptographic functions exist in the form of "precompiled contracts" in Simplechain virtual machines, and it does not really exist until the first time you receive the message (although the contract code is a hard code already existing in EVM). Therefore, messages sent to non-existent contracts are very expensive, so actual execution will lead to Out-of-Gas errors. Before you actually use your contract, send a little Sipc to each contract, such as 1 Wei. This is not a problem on the official network or test network.
 
-#### 地址相关
+#### Address-related
 
-``<address>.balance`` (``uint256``):以 Wei 为单位的 :ref:`address` 的余额。
+``<address>.balance`` (``uint256``):in Wei :ref:`address` balance
 
-``<address>.transfer(uint256 amount)``:向 :ref:`address` 发送数量为 amount 的 Wei，失败时抛出异常，发送 2300 gas 的矿工费，不可调节。
+``<address>.transfer(uint256 amount)``:to :ref:`address` if the number of Wei sent is the amount, an exception is thrown when the error occurs. The miner fee for sending 2300 gas cannot be adjusted.
 
-``<address>.send(uint256 amount) returns (bool)``:向 :ref:`address` 发送数量为 amount 的 Wei，失败时返回 ``false``，发送 2300 gas 的矿工费用，不可调节。
+``<address>.send(uint256 amount) returns (bool)``:to :ref:`address` the number of Wei sent is amount. If the number fails, the system returns ``false``，miner's fee for sending 2300 gas cannot be adjusted.
 
-``<address>.call(...) returns (bool)``:发出低级函数 ``CALL``，失败时返回 ``false``，发送所有可用 gas，可调节。
+``<address>.call(...) returns (bool)``:issue low-level functions ``CALL``，if it fails, return ``false``，send all available gas, adjustable.
 
-``<address>.callcode(...) returns (bool)``：发出低级函数 ``CALLCODE``，失败时返回 ``false``，发送所有可用 gas，可调节。
+``<address>.callcode(...) returns (bool)``：issue low-level functions ``CALLCODE``，if it fails, return `false` , send all available gas, adjustable.
 
-``<address>.delegatecall(...) returns (bool)``:发出低级函数 ``DELEGATECALL``，失败时返回 ``false``，发送所有可用 gas，可调节。
+``<address>.delegatecall(...) returns (bool)``:issue low-level functions ``DELEGATECALL``，if it fails, return ``false``，send all available gas,adjustable.
 
-更多信息，参考 :ref:`address` 部分：
+> There are many dangers when using send: if the call stack depth has reached 1024 (which can always be forcibly specified by the caller), the transfer will fail; And if the receiver uses up the gas, the transfer will also fail. In order to ensure the security of Ethernet currency transfer, always check `send` The return value of, using `transfer` Or the following is a better way: use this mode of receiving money back.
 
->   使用 send 有很多危险：如果调用栈深度已经达到 1024（这总是可以由调用者所强制指定），转账会失败；并且如果接收者用光了 gas，转账同样会失败。为了保证以太币转账安全，总是检查 ``send`` 的返回值，利用 ``transfer`` 或者下面更好的方式： 用这种接收者取回钱的模式。
+>  If you need to access the variables in the storage when you use the low-level function delegatecall to initiate a call, the variables in the storage of the two contracts must be defined in the same order, so that the called contract code can correctly access the contract's storage variables through the variable name. Of course, this does not refer to the situation like the stored variable pointer passed when an advanced library function is called.
 
->  如果在通过低级函数 delegatecall 发起调用时需要访问存储中的变量，那么这两个合约的存储中的变量定义顺序需要一致，以便被调用的合约代码可以正确地通过变量名访问合约的存储变量。这当然不是指像在高级的库函数调用时所传递的存储变量指针那样的情况。
+>  Use is not encouraged `callcode` , and it will be removed in the future.
 
->  不鼓励使用 ``callcode``，并且将来它会被移除。
-
-合约相关
+Contract-related
 
 
-``this`` (current contract's type):当前合约，可以明确转换为 :ref:`address`。
+``this`` (current contract's type):current contract, which can be explicitly converted to `address`。
 
-``selfdestruct(address recipient)``:销毁合约，并把余额发送到指定 :ref:`address`。
+``selfdestruct(address recipient)``:destroy the contract and send the balance to the specified `address`。
 
-``suicide(address recipient)``:与 selfdestruct 等价，但已不推荐使用。
+``suicide(address recipient)``:equivalent to selfdestruct, but not recommended.
 
-此外，当前合约内的所有函数都可以被直接调用，包括当前函数。
+In addition, all functions in the current contract can be called directly, including the current function.
 
 
-## 表达式和控制结构
+## Expression and control structure
 
-### 输入参数和输出参数
+### Input and output parameters
 
-与 Javascript 一样，函数可能需要参数作为输入;而与 Javascript 和 C 不同的是，它们可能返回任意数量的参数作为输出。
+Like Javascript, functions may require parameters as input; Unlike Javascript and C, they may return any number of parameters as output.
 
-#### 输入参数
+#### Input parameters
 
-输入参数的声明方式与变量相同。但是有一个例外，未使用的参数可以省略参数名。
-例如，如果我们希望合约接受有两个整数形参的函数的外部调用，我们会像下面这样写
+Input parameters are declared in the same way as variables. However, one exception is that unused parameters can omit parameter names.
+For example, if we want the contract to accept external calls to functions with two integer parameters, we will write as follows
 
 ```bash
     pragma solidity ^0.4.16;
@@ -1206,11 +1203,10 @@ Some special variables and functions already exist (by default) in the global na
     }
 ```
 
-#### 输出参数
+#### Output parameters
 
-
-输出参数的声明方式在关键词 ``returns`` 之后，与输入参数的声明方式相同。
-例如，如果我们需要返回两个结果：两个给定整数的和与积，我们应该写作
+The declaration method of the output parameter is in the keyword returns After that, the declaration method is the same as that of the input parameters.
+For example, if we need to return two results: the sum and product of two given integers, we should write
 
 ```bash
     pragma solidity ^0.4.16;
@@ -1227,27 +1223,26 @@ Some special variables and functions already exist (by default) in the global na
     }
 ```
 
-输出参数名可以被省略。输出值也可以使用 ``return`` 语句指定。
-``return`` 语句也可以返回多值，参阅：ref:`multi-return`。
-返回的输出参数被初始化为 0；如果它们没有被显式赋值，它们就会一直为 0。
+The output parameter name can be omitted. The output value can also be used `return` Statement specifies.
+return Statement can also return multiple values, The returned output parameters are initialized to 0; If they are not explicitly assigned, they are always 0.
 
-输入参数和输出参数可以在函数体中用作表达式。因此，它们也可用在等号左边被赋值。
+Input and output parameters can be used as expressions in function bodies. Therefore, they can also be assigned to the left of the equal sign.
 
-### 控制结构
+### Control Structure
 
-JavaScript 中的大部分控制结构在 Solidity 中都是可用的，除了 ``switch`` 和 ``goto``。因此 Solidity 中有 ``if``，``else``，``while``，``do``，``for``，``break``，``continue``，``return``，``? :`` 这些与在 C 或者 JavaScript 中表达相同语义的关键词。
+Most control structures in JavaScript are available in Solidity, `switch` And `goto` . Therefore, there are ``if``，``else``，``while``，``do``，``for``，``break``，``continue``，``return``，``? :`` these keywords express the same semantics as in C or JavaScript.
 
-用于表示条件的括号 *不可以* 被省略，单语句体两边的花括号可以被省略。注意，与 C 和 JavaScript 不同， Solidity 中非布尔类型数值不能转换为布尔类型，因此 ``if (1) { ... }`` 的写法在 Solidity 中 *无效* 。
+Brackets used to represent conditions No. If it is omitted, the braces on both sides of the single statement body can be omitted. Note that unlike C and JavaScript, non-Boolean values in Solidity cannot be converted to Boolean types, so ``if (1) { ... }`` write in Solidity in Invalid .
 
-### 返回多个值
+### Returns multiple values
 
-当一个函数有多个输出参数时， ``return (v0, v1, ...,vn)`` 写法可以返回多个值。不过元素的个数必须与输出参数的个数相同。
+When a function has multiple output parameters, ``return (v0, v1, ...,vn)`` you can return multiple values. However, the number of elements must be the same as the number of output parameters.
 
-### 函数调用
+### Function call
 
-#### 内部函数调用
+#### Internal function call
 
-当前合约中的函数可以直接（“从内部”）调用，也可以递归调用，就像下边这个荒谬的例子一样
+The functions in the current contract can be called directly ("from inside") or recursively, just like the ridiculous example below.
 
 ```bash
 
@@ -1259,16 +1254,15 @@ JavaScript 中的大部分控制结构在 Solidity 中都是可用的，除了 `
     }
 ```
 
-这些函数调用在 EVM 中被解释为简单的跳转。这样做的效果就是当前内存不会被清除，也就是说，通过内部调用在函数之间传递内存引用是非常有效的。
+These function calls are interpreted as simple redirection in EVM. The effect of this is that the current memory will not be cleared, that is, passing memory references between functions through internal calls is very effective.
 
-#### 外部函数调用
+#### External function call
 
-表达式 ``this.g(8);`` 和 ``c.g(2);`` （其中 ``c`` 是合约实例）也是有效的函数调用，但是这种情况下，函数将会通过一个消息调用来被“外部调用”，而不是直接的跳转。
-请注意，不可以在构造函数中通过 this 来调用函数，因为此时真实的合约实例还没有被创建。
+Expression ``this.g(8);`` and ``c.g(2);`` （among them ``c`` is a contract instance）is also a valid function call, but in this case, the function will be "called externally" through a message call, rather than directly jump. Note that this function cannot be called in the constructor because the real contract instance has not been created yet.
 
-如果想要调用其他合约的函数，需要外部调用。对于一个外部调用，所有的函数参数都需要被复制到内存。
+If you want to call functions of other contracts, you need to call them externally. For an external call, all function parameters need to be copied to memory.
 
-当调用其他合约的函数时，随函数调用发送的 Wei 和 gas 的数量可以分别由特定选项 ``.value()`` 和 ``.gas()`` 指定::
+When calling functions of other contracts, the number of Wei and gas sent along with the function call can be determined by specific options respectively .value() And .gas() Specify:
 
 ```bash
     pragma solidity ^0.4.0;
@@ -1284,28 +1278,25 @@ JavaScript 中的大部分控制结构在 Solidity 中都是可用的，除了 `
     }
 ```
 
-``payable`` 修饰符要用于修饰 ``info``，否则，`.value()` 选项将不可用。
+``payable`` modifiers should be used for Modifiers ``info``，otherwise，`.value()` options will not be available.
 
-注意，表达式 ``InfoFeed(addr)`` 进行了一个的显式类型转换，说明”我们知道给定地址的合约类型是 ``InfoFeed`` “并且这不会执行构造函数。
-显式类型转换需要谨慎处理。绝对不要在一个你不清楚类型的合约上执行函数调用。
+Note, expression ``InfoFeed(addr)`` an explicit type conversion was performed, indicating that "we know that the contract type for a given address is ``InfoFeed`` “and this will not execute the constructor. Explicit type conversion requires caution. Never execute a function call on a contract that you do not know the type.
 
-我们也可以直接使用 ``function setFeed(InfoFeed _feed) { feed = _feed; }`` 。
-注意一个事实，``feed.info.value(10).gas(800)`` 只（局部地）设置了与函数调用一起发送的 Wei 值和 gas 的数量，只有最后的圆括号执行了真正的调用。
-
-如果被调函数所在合约不存在（也就是账户中不包含代码）或者被调用合约本身抛出异常或者 gas 用完等，函数调用会抛出异常。
+We can also use it directly ``function setFeed(InfoFeed _feed) { feed = _feed; }`` 。
+pay attention to a fact，``feed.info.value(10).gas(800)`` only (partially) the number of Wei values and gas values sent together with the function call is set, and only the final parentheses execute the real call. if the contract where the function is called does not exist (that is, the account does not contain code) or the called contract itself throws an exception or gas runs out, the function call throws an exception.
 
 
->	任何与其他合约的交互都会强加潜在危险，尤其是在不能预先知道合约代码的情况下。
-	当前合约将控制权移交给被调用合约，而被调用合约可能做任何事。即使被调用合约从一个已知父合约继承，继承的合约也只需要有一个正确的接口就可以了。
-	被调用合约的实现可以完全任意，因此会带来危险。此外，请小心万一它再调用你系统中的其他合约，或者甚至在第一次调用返回之前返回到你的调用合约。
-	这意味着被调用合约可以通过它自己的函数改变调用合约的状态变量。。一个建议的函数写法是，例如，在你合约中状态变量进行各种变化后再调用外部函数，这样，你的合约就不会轻易被滥用的重入 (reentrancy) 所影响
+>	Any interaction with other contracts will impose potential dangers, especially when the contract code cannot be known in advance.
+The current contract transfers control to the invoked contract, and the invoked contract may do anything. Even if the called contract is inherited from a known parent contract, the inherited contract only needs to have a correct interface.
+The implementation of the called contract can be completely arbitrary, thus bringing danger. In addition, be careful in case it calls other contracts in your system again, or even returns your call contract before the first call returns.
+This means that the called contract can change the state variables of the called contract through its own functions.. A suggested function writing method is, for example, calling external functions after various changes have been made to the state variables in your contract, so that your contract will not be easily abused reentrancy (reentrancy) affected
 
 
-### 具名调用和匿名函数参数
+### Named calls and anonymous function parameters
 
 
-如果它们被包含在 ``{}`` 中，函数调用参数也可以按照任意顺序由名称给出，
-如以下示例中所示。参数列表必须按名称与函数声明中的参数列表相符，但可以按任意顺序排列。
+If they are included in `{}` Function call parameters can also be given by name in any order,
+As shown in the following example. The parameter list must match the parameter list in the function declaration by name, but can be arranged in any order.
 
 ```bash
     pragma solidity ^0.4.0;
@@ -1322,9 +1313,9 @@ JavaScript 中的大部分控制结构在 Solidity 中都是可用的，除了 `
     }
 ```
 
-### 省略函数参数名称
+### Omit the function parameter name
 
-未使用参数的名称（特别是返回参数）可以省略。这些参数仍然存在于堆栈中，但它们无法访问。
+Names of unused parameters (especially returned parameters) can be omitted. These parameters still exist in the stack, but they cannot be accessed.
 
 ```bash
     pragma solidity ^0.4.16;
@@ -1337,9 +1328,9 @@ JavaScript 中的大部分控制结构在 Solidity 中都是可用的，除了 `
     }
 ```
 
-### 通过 ``new`` 创建合约
+### 通Pass `new` Create a contract
 
-使用关键字 ``new`` 可以创建一个新合约。待创建合约的完整代码必须事先知道，因此递归的创建依赖是不可能的。
+Use keywords new You can create a new contract. The complete code of the contract to be created must be known in advance, so recursive dependency creation is impossible.
 
 ```bash
     pragma solidity ^0.4.0;
@@ -1365,18 +1356,17 @@ JavaScript 中的大部分控制结构在 Solidity 中都是可用的，除了 `
     }
 ```
 
-如示例中所示，使用 ``.value（）`` 选项创建 ``D`` 的实例时可以转发 Ether，但是不可能限制 gas 的数量。如果创建失败（可能因为栈溢出，或没有足够的余额或其他问题），会引发异常。
+如As shown in the example, use `.value（）` Option creation `D` The Ether can be forwarded to the instance, but it is impossible to limit the amount of gas. If the creation fails (possibly because of Stack Overflow, or insufficient balance or other problems), an exception is thrown.
 
-### 表达式计算顺序
+### Expression Calculation order
 
-表达式的计算顺序不是特定的（更准确地说，表达式树中某节点的字节点间的计算顺序不是特定的，但它们的结算肯定会在节点自己的结算之前）。该规则只能保证语句按顺序执行，布尔表达式的短路执行。更多相关信息，请参阅：:ref:`order`。
+The order of expression calculation is not specific (more precisely, the order of calculation between byte points of a node in the expression tree is not specific, but their settlement will certainly be before the node's own settlement). This rule can only ensure that the statements are executed in sequence and the short circuit of Boolean expressions is executed. For more information。
 
-### 赋值
+### Assignment
 
-#### 解构赋值和返回多值
+#### Deconstruct assignment and return multiple values
 
-
-Solidity 内部允许元组 (tuple) 类��，也就是一个在编译时元素数量固定的对象列表，列表中的元素可以是不同类型的对象。这些元组可以用来同时返回多个数值，也可以用它们来同时给多个新声明的变量或者既存的变量（或通常的 LValues）：
+Solidity internally allows tuple class，which is a list of objects with a fixed number of elements at compile time. The elements in the list can be different types of objects. These tuples can be used to return multiple values at the same time, or they can be used to simultaneously give multiple newly declared variables or existing variables (or common LValues):
 
 ```bash
 
@@ -1404,23 +1394,23 @@ Solidity 内部允许元组 (tuple) 类��，也就是一个在编译时元�
     }
 ```
 
-> 直到 0.4.24 版本，给具有更少的元素数的元组赋值都可以可能的，无论是在左边还是右边（比如在最后空出若干元素）。现在，这已经不推荐了，赋值操作的两边应该具有相同个数的组成元素。
+> Until version 0.4.24, it is possible to assign values to tuples with fewer elements, whether on the left or on the right (for example, several elements are left at the end). Now, this is not recommended. Both sides of the assignment operation should have the same number of constituent elements.
 
-### 数组和结构体的复杂性
+### Complexity of arrays and structures
 
-赋值语义对于像数组和结构体这样的非值类型来说会有些复杂。
-为状态变量 *赋值* 经常会创建一个独立副本。另一方面，对局部变量的赋值只会为基本类型（即 32 字节以内的静态类型）创建独立的副本。如果结构体或数组（包括 ``bytes`` 和 ``string``）被从状态变量分配给局部变量，局部变量将保留对原始状态变量的引用。对局部变量的第二次赋值不会修改状态变量，只会改变引用。赋值给局部变量的成员（或元素）则 *改变* 状态变量。
+Assignment semantics is somewhat complicated for non-value types such as arrays and structures.
+Is a state variable Assignment A standalone copy is often created. On the other hand, the assignment of local variables only creates an independent copy for the basic type (that is, the static type within 32 bytes). If a structure or array (including `bytes` And `string` ) is assigned from the state variable to the local variable, the local variable will retain the reference to the original state variable. The second assignment to a local variable does not modify the state variable, but only changes the reference. If a member or element is assigned to a local variable Change State variables.
 
-### 作用域和声明
+### Scope and declaration
 
-变量声明后将有默认初始值，其初始值字节表示全部为零。任何类型变量的“默认值”是其对应类型的典型“零状态”。例如， ``bool`` 类型的默认值是 ``false`` 。 ``uint`` 或 ``int`` 类型的默认值是 ``0`` 。对于静态大小的数组和 ``bytes1`` 到 ``bytes32`` ，每个单独的元素将被初始化为与其类型相对应的默认值。
-最后，对于动态大小的数组， ``bytes`` 和 ``string`` 类型，其默认缺省值是一个空数组或字符串。
+A variable is declared with a default initial value, whose initial value bytes indicate all zero. The default value of any type variable is the typical zero state of its corresponding type ". For example, ``bool`` default value of the type is ``false`` . ``uint`` or ``int`` default value of the type is ``0``. For static size arrays and ``bytes1``  to ``bytes32`` ，each individual element will be initialized to the default value corresponding to its type.
+Finally, for an array of dynamic size. ``bytes`` and ``string`` type，default default value is an empty array or string.
 
-Solidity 中的作用域规则遵循了 C99（与其他很多语言一样）：变量将会从它们被声明之后可见，直到一对 ``{ }`` 块的结束。作为一个例外，在 for 循环语句中初始化的变量，其可见性仅维持到 for 循环的结束。
+Scope rules in Solidity follow C99 (like many other languages): variables will be visible after they are declared until a pair `{ }` The end of the block. As an exception, the visibility of variables initialized in the for loop statement is maintained only until the end of the for loop.
 
-那些定义在代码块之外的变量，比如函数、合约、自定义类型等等，并不会影响它们的作用域特性。这意味着你可以在实际声明状态变量的语句之前就使用它们，并且递归地调用函数。
+Variables defined outside code blocks, such as functions, contracts, and custom types, do not affect their scope properties. This means that you can use state variables before actually declaring statements and call functions recursively.
 
-基于以上的规则，下边的例子不会出现编译警告，因为那两个变量虽然名字一样，但却在不同的作用域里。
+Based on the above rules, compilation warnings will not appear in the following example, because the two variables have the same name but are in different scopes.
 
 ```bash
 
@@ -1438,7 +1428,7 @@ Solidity 中的作用域规则遵循了 C99（与其他很多语言一样）：�
     }
 ```
 
-作为 C99 作用域规则的特例，请注意在下边的例子里，第一次对 ``x`` 的赋值会改变上一层中声明的变量值。如果外层声明的变量被“影子化”（就是说被在内部作用域中由一个同名变量所替代）你会得到一个警告。
+As a special case of a C99 scope rule, note that in the following example, for the first time `x` assignment of changes the variable values declared in the previous layer. If the variables declared outside are "shadowed" (that is, replaced by a variable with the same name in the internal scope), you will receive a warning.
 
 ```bash
     pragma solidity >0.4.24;
@@ -1455,7 +1445,7 @@ Solidity 中的作用域规则遵循了 C99（与其他很多语言一样）：�
 ```
 
 
->  在 Solidity 0.5.0 之前的版本，作用域规则都沿用了 Javascript 的规则，即一个变量可以声明在函数的任意位置，都可以使他在整个函数范围内可见。而这种规则会从 0.5.0 版本起被打破。从 0.5.0 版本开始，下面例子中的代码段会导致编译错误。
+>  Earlier than Solidity 0.5.0, Javascript rules were used for scope rules. That is, a variable can be declared anywhere in the function and can be visible throughout the function. This rule will be broken from version 0.5.0. Starting with version 0.5.0, the code segment in the following example will cause compilation errors.
 
 
 ```bash
@@ -1472,25 +1462,22 @@ Solidity 中的作用域规则遵循了 C99（与其他很多语言一样）：�
     }
 ```
 
-### 错误处理：Assert, Require, Revert and Exceptions
+### Error handling：Assert, Require, Revert and Exceptions
 
-Solidity 使用状态恢复异常来处理错误。这种异常将撤消对当前调用（及其所有子调用）中的状态所做的所有更改，并且还向调用者标记错误。
-便利函数 ``assert`` 和 ``require`` 可用于检查条件并在条件不满足时抛出异常。``assert`` 函数只能用于测试内部错误，并检查非变量。
-``require`` 函数用于确认条件有效性，例如输入变量，或合约状态变量是否满足条件，或验证外部合约调用返回的值。
-如果使用得当，分析工具可以评估你的合约，并标示出那些会使 ``assert`` 失败的条件和函数调用。
-正常工作的代码不会导致一个 assert 语句的失败；如果这发生了，那就说明出现了一个需要你修复的 bug。
+Solidity uses status recovery exceptions to handle errors. This exception cancels all changes made to the status of the current call and all its sub-calls and marks the caller with an error. Convenience function ``assert`` and ``require`` can be used to check conditions and throw exceptions when conditions are not met. ``assert`` functions can only be used to test internal errors and check non-variables.
 
+``require`` function is used to confirm condition validity, such as input variable, or contract status variable meets the condition, or to verify the value returned by external contract call. If used properly, the analysis tool can evaluate your contract and mark those that will `assert` Failed conditions and function calls. Normal code does not cause an assert statement to fail. If this happens, a bug that you need to fix appears.
 
-还有另外两种触发异常的方法：``revert`` 函数可以用来标记错误并恢复当前的调用。
-``revert`` 调用中包含有关错误的详细信息是可能的，这个消息会被返回给调用者。已经不推荐的关键字 ``throw`` 也可以用来替代 ``revert()`` （但无法返回错误消息）。
+There are two other ways to trigger an exception: ``revert`` functions can be used to mark errors and restore the current call.
+``revert`` It is possible that the call contains detailed information about the error, and this message is returned to the caller. Keywords that are not recommended ``throw`` can also be used to replace ``revert()`` （but unable to return an error message.）.
 
-> 从 0.4.13 版本开始，``throw`` 这个关键字被弃用，并且将来会被逐渐淘汰。
+> Starting from version `0.4.13`, throw this keyword has been abandoned and will be gradually eliminated in the future.
 
-当子调用发生异常时，它们会自动“冒泡”（即重新抛出异常）。这个规则的例外是 ``send`` 和低级函数 ``call`` ， ``delegatecall`` 和 ``callcode`` --如果这些函数发生异常，将返回 false ，而不是“冒泡”。
+When a sub-call exception occurs, they automatically "bubble" (that is, throw an exception again). The exception to this rule is ``send`` and low-level functions ``call`` ， ``delegatecall`` and ``callcode`` -- If these functions are abnormal, false is returned instead of bubbling ".
 
->    作为 EVM 设计的一部分，如果被调用合约帐户不存在，则低级函数 ``call`` ，``delegatecall`` 和 ``callcode`` 将返回 success。因此如果需要使用低级函数时，必须在调用之前检查被调用合约是否存在。异常捕获还未实现
+>  As part of the EVM design, if the called contract account does not exist, the low-level function `call` , `delegatecall` And `callcode` success is returned. Therefore, if you need to use low-level functions, you must check whether the called contract exists before calling. Exception capture has not been implemented
 
-在下例中，你可以看到如何轻松使用``require``检查输入条件以及如何使用``assert``检查内部错误，注意，你可以给 ``require`` 提供一个消息字符串，而 ``assert`` 不行。
+In the following example, you can see how to use it easily `require` Check input conditions and how to use them `assert` Check for internal errors. Note that you can give `require` Provides a message string, and `assert` No.
 
 ```bash
 
@@ -1508,31 +1495,31 @@ Solidity 使用状态恢复异常来处理错误。这种异常将撤消对当�
     }
 ```
 
-下列情况将会产生一个 ``assert`` 式异常：
+One of the following situations will be generated `assert` Type exception:
 
-- 如果你访问数组的索引太大或为负数（例如 ``x[i]`` 其中 ``i >= x.length`` 或 ``i < 0``）。
-- 如果你访问固定长度 ``bytesN`` 的索引太大或为负数。
-- 如果你用零当除数做除法或模运算（例如 ``5 / 0`` 或 ``23 % 0`` ）。
-- 如果你移位负数位。
-- 如果你将一个太大或负数值转换为一个枚举类型。
-- 如果你调用内部函数类型的零初始化变量。
-- 如果你调用 ``assert`` 的参数（表达式）最终结算为 false。
+- If the index of the array you access is too large or negative（for example ``x[i]`` of which ``i >= x.length`` or ``i < 0``）。
+- If you access a fixed length ``bytesN`` index of is too large or negative.
+- If you use zero as a divisor for division or modulo（for example ``5 / 0`` or ``23 % 0`` ）。
+- If you shift negative digits.
+- If you convert a too large or negative value to an enumeration type.
+- If you call a zero-initialization variable of the internal function type.
+- If you call `assert` final settlement of the parameter (expression) is false.
 
-下列情况将会产生一个 ``require`` 式异常：
+One of the following situations will be generated `require` type exception:
 
-- 调用 ``throw`` 。
-- 如果你调用 ``require`` 的参数（表达式）最终结算为 ``false`` 。
-- 如果你通过消息调用调用某个函数，但该函数没有正确结束（它耗尽了 gas，没有匹配函数，或者本身抛出一个异常），上述函数不包括低级别的操作 ``call`` ， ``send`` ， ``delegatecall`` 或者 ``callcode`` 。低级操作不会抛出异常，而通过返回 ``false`` 来指示失败。
-- 如果你使用 ``new`` 关键字创建合约，但合约没有正确创建（请参阅上条有关”未正确完成“的定义）。
-- 如果你对不包含代码的合约执行外部函数调用。
-- 如果你的合约通过一个没有 ``payable`` 修饰符的公有函数（包括构造函数和 fallback 函数）接收 Ether。
-- 如果你的合约通过公有 getter 函数接收 Ether 。
-- 如果 ``.transfer()`` 失败。
+- call ``throw`` 。
+- If you call ``require`` final settlement of the parameter (expression) is ``false`` 。
+- If you call a function through a message, but the function does not end correctly (it runs out of gas, does not match the function, or throws an exception itself), the above function does not include low-level operations. ``call`` ， ``send`` ， ``delegatecall`` or ``callcode`` . A low-level operation does not throw an exception but returns false To indicate `failure`.
+- If you use `new` Keyword creates a contract, but the contract was not created correctly (see the definition of "not completed correctly" in the above article).
+- If you execute an external function call on a contract that does not contain code.
+- If your contract passes one payable Public functions of modifiers (including constructors and fallback functions) receive Ether.
+- If your contract receives Ether through the public getter function.
+- If .transfer() Failed.
 
 
-在内部， Solidity 对一个 ``require`` 式的异常执行回退操作（指令 ``0xfd`` ）并执行一个无效操作（指令 ``0xfe`` ）来引发 ``assert`` 式异常。在这两种情况下，都会导致 EVM 回退对状态所做的所有更改。回退的原因是不能继续安全地执行，因为没有实现预期的效果。因为我们想保留交易的原子性，所以最安全的做法是回退所有更改并使整个交易（或至少是调用）不产生效果。请注意， ``assert`` 式异常消耗了所有可用的调用 gas ，而从 Metropolis 版本起 ``require`` 式的异常不会消耗任何 gas。
+Internally, Solidity for a ``require`` abnormal execution rollback operation (instruction `0xfd` ) and execute an invalid operation (instruction `0xfe` ) to trigger assert Abnormal formula. In both cases, EVM will roll back all changes made to the state. The reason for the rollback is that it cannot continue to be safely executed because the expected effect has not been achieved. Because we want to retain the atomicity of the transaction, the safest way is to roll back all changes and make the entire transaction (or at least called) ineffective. Please note, assert The type exception consumes all available call gas, and from the Metropolis version require The abnormality of the formula will not consume any gas.
 
-下边的例子展示了如何在 revert 和 require 中使用错误字符串：
+The following example shows how to use error strings in Invocation and require:
 
 ```bash
 
@@ -1552,31 +1539,30 @@ Solidity 使用状态恢复异常来处理错误。这种异常将撤消对当�
     }
 ```
 
-这里提供的字符串应该是经过 :ref:`ABI 编码 <ABI>` 之后的，因为它实际上是调用了 ``Error(string)`` 函数。在上边的例子里，``revert("Not enough Ether provided.");`` 会产生如下的十六进制错误返回值： 
+The string provided here should go through:`ABI 编码 ` later, because it is actually called ``Error(string)`` function. In the above example,``revert("Not enough Ether provided.");`` following hexadecimal error return value is generated:
 
-- 0x08c379a0                                                         // Error(string) 的函数选择器
-- 0x0000000000000000000000000000000000000000000000000000000000000020 // 数据的偏移量（32）
-- 0x000000000000000000000000000000000000000000000000000000000000001a // 字符串长度（26）
-- 0x4e6f7420656e6f7567682045746865722070726f76696465642e000000000000 // 字符串数据（"Not enough Ether provided." 的 ASCII 编码，26字节）
+- 0x08c379a0                                                         // Error(string) function selector
+- 0x0000000000000000000000000000000000000000000000000000000000000020 // data offset（32）
+- 0x000000000000000000000000000000000000000000000000000000000000001a // string length（26）
+- 0x4e6f7420656e6f7567682045746865722070726f76696465642e000000000000 // string data（ASCII encoding of "Not enough Ether provided.", 26 bytes）
 
 
-## 合约
+## Contract
 
-`Solidity` 合约类似于面向对象语言中的类。合约中有用于数据持久化的状态变量，和可以修改状态变量的函数。
-调用另一个合约实例的函数时，会执行一个 EVM 函数调用，这个操作会切换执行时的上下文，这样，前一个合约的状态变量就不能访问了。
+`Solidity` Contracts are similar to classes in object-oriented languages. The contract contains state variables for data persistence and functions that can modify state variables. When a function of another contract instance is called, an EVM function is called. This operation switches the context of the execution, so that the status variable of the previous contract cannot be accessed.
 
-### 创建合约
+### Create a contract
 
-可以通过Simplechain交易“从外部”或从 Solidity 合约内部创建合约。
+You can create contracts "from outside" through Simplechain transactions or from inside Solidity contracts.
 
-一些集成开发环境，例如 [Remix](https://remix.ethereum.org/), 通过使用一些用户界面元素使创建过程更加流畅。在Simplechain上编程创建合约最好使用 JavaScript API [web3.j](https://github.com/ethereum/web3.js)。现在，我们已经有了一个叫做 [web3.eth.Contract](https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html#new-contract) 的方法能够更容易的创建合约。
+Some integrated development environments, such [Remix](https://remix.ethereum.org/), through the use of some user interface elements to make the creation process more smooth. You 'd better use JavaScript API to create a contract by programming on Simplechain [web3.j](https://github.com/ethereum/web3.js). Now, we already have one called [web3.eth.Contract](https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html#new-contract) method can make it easier to create a contract.
 
-创建合约时，会执行一次构造函数（与合约同名的函数）。构造函数是可选的。只允许有一个构造函数，这意味着不支持重载。
+When a contract is created, the constructor (a function with the same name as the contract) is executed once. The constructor is optional. Only one constructor is allowed, which means overloading is not supported.
 
-在内部，构造函数参数在合约代码之后通`ABI 编码`传递，但是如果你使用 ``web3.js``则不必关心这个问题。
+Internally, the constructor parameters are passed after the contract code `ABI code` pass, but if you use``web3.js``there is no need to care about this problem.
 
-如果一个合约想要创建另一个合约，那么创建者必须知晓被创建合约的源代码(和二进制代码)。
-这意味着不可能循环创建依赖项。
+If a contract wants to create another contract, the creator must know the source code (and binary code) of the contract to be created.
+This means that it is impossible to create dependencies cyclically.
 
 ```bash
     pragma solidity ^0.4.16;
@@ -1646,21 +1632,20 @@ Solidity 使用状态恢复异常来处理错误。这种异常将撤消对当�
     }
 ```
 
-### 可见性和 getter 函数
+### Visibility and getter functions
 
-由于 Solidity 有两种函数调用（内部调用不会产生实际的 EVM 调用或称为“消息调用”，而外部调用则会产生一个 EVM 调用），函数和状态变量有四种可见性类型。函数可以指定为 ``external`` ，``public`` ，``internal`` 或者 ``private``，默认情况下函数类型为 ``public``。
-对于状态变量，不能设置为 ``external`` ，默认是 ``internal`` 。
+Because Solidity has two kinds of function calls (internal calls do not generate actual EVM calls or "message calls", while external calls generate an EVM call), functions and state variables have four visibility types. Function can be specified ``external`` ，``public`` ，``internal`` or ``private``，by default , function type is ``public``。
+For state variables, cannot be set ``external`` ，default is ``internal`` 。
 
-- ``external`` ：外部函数作为合约接口的一部分，意味着我们可以从其他合约和交易中调用。
-    一个外部函数 ``f`` 不能从内部调用（即 ``f`` 不起作用，但 ``this.f()`` 可以）。
-    当收到大量数据的时候，外部函数有时候会更有效率。
-- ``public`` ：public 函数是合约接口的一部分，可以在内部或通过消息调用。对于公共状态变量，会自动生成一个 getter 函数（见下面）。
-- ``internal`` ：这些函数和状态变量只能是内部访问（即从当前合约内部或从它派生的合约访问），不使用 ``this`` 调用。
-``private`` ：private 函数和状态变量仅在当前定义它们的合约中使用，并且不能被派生合约使用。
+- ``external`` ：As part of the contract interface, the external function means that we can call it from other contracts and transactions.
+    An external function ``f`` cannot be called from inside (that is f It doesn't work, this.f() Yes). When a large amount of data is received, external functions are sometimes more efficient.
+- ``public`` ：The public function is part of the contract interface and can be called internally or through messages. For common state variables, a getter function is automatically generated (see below).
+- ``internal`` ：these functions and state variables can only be internal access (I .e. access from inside the current contract or from contracts derived from it), and are not used `this` Call.
+``private`` ：private functions and state variables are only used in contracts that currently define them and cannot be used by derived contracts.
 
-> 合约中的所有内容对外部观察者都是可见的。设置一些 ``private`` 类型只能阻止其他合约访问和修改这些信息，但是对于区块链外的整个世界它仍然是可见的。
+> All content in the contract is visible to external observers. Set some `private` The type can only prevent other contracts from accessing and modifying this information, but it is still visible for the whole world outside the blockchain.
 
-可见性标识符的定义位置，对于状态变量来说是在类型后面，对于函数是在参数列表和返回关键字中间。
+The definition position of the visibility identifier. For a state variable, it is after the type. For a function, it is between the parameter list and the returned keyword.
 
 ```bash
 pragma solidity ^0.4.16;
@@ -1672,8 +1657,8 @@ contract C {
 }
 ```
 
-在下面的例子中，``D`` 可以调用 ``c.getData（）`` 来获取状态存储中 ``data`` 的值，但不能调用 ``f`` 。
-合约 ``E`` 继承自 ``C`` ，因此可以调用 ``compute``。
+In the following example, `D` Can be called `c.getData（）` to obtain status storage data But cannot call `f` .
+Contract `E` Inherited from `C` , so it can be called compute .
 
 ```bash
     // 下面代码编译错误
@@ -1707,10 +1692,9 @@ contract C {
     }
 ```
 
-#### Getter 函数
+#### Getter function
 
-编译器自动为所有 **public** 状态变量创建 getter 函数。对于下面给出的合约，编译器会生成一个名为 ``data`` 的函数，
-该函数不会接收任何参数并返回一个 ``uint`` ，即状态变量 ``data`` 的值。可以在声明时完成状态变量的初始化。
+The compiler automatically for all Public State variables create getter functions. For the contract given below, the compiler generates a contract named data The function, This function does not receive any parameters and returns a uint , that is, the state variable data The value. You can complete the initialization of the state variable at the time of declaration.
 
 ```bash
     pragma solidity ^0.4.0;
@@ -1727,8 +1711,8 @@ contract C {
     }
 ```
 
-getter 函数具有外部可见性。如果在内部访问 getter（即没有 ``this.`` ），它被认为一个状态变量。
-如果它是外部访问的（即用 ``this.`` ），它被认为为一个函数。
+The getter function has external visibility. If getter is accessed internally (that is, none this. ), it is considered a state variable.
+If it is externally accessed (that is, use this. ), it is considered as a function.
 
 ```bash
 
@@ -1743,7 +1727,7 @@ getter 函数具有外部可见性。如果在内部访问 getter（即没有 ``
     }
 ```
 
-下一个例子稍微复杂一些：
+The next example is slightly more complicated:
 
 ```bash
 
@@ -1759,7 +1743,7 @@ getter 函数具有外部可见性。如果在内部访问 getter（即没有 ``
     }
 ```
 
-这将会生成以下形式的函数 ::
+This generates a function in the following form:
 
 ```bash
 function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b) {
@@ -1768,13 +1752,13 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
 }
 ```
 
-请注意，因为没有好的方法来提供映射的键，所以结构中的映射被省略。
+Note that because there is no good method to provide the keys for mapping, the mapping in the structure is omitted.
 
-#### 函数 |modifier|
+#### Function |modifier|
 
-使用 |modifier| 可以轻松改变函数的行为。 例如，它们可以在执行函数之前自动检查某个条件。
-|modifier| 是合约的可继承属性，
-并可能被派生合约覆盖。
+Use | modifier | To easily change the behavior of the function. For example, they can automatically check a condition before executing a function.
+| modifier | Is an inheritable property of the contract,
+And may be overwritten by derived contracts.
 
 ```bash
 
@@ -1844,21 +1828,20 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
     }
 ```
 
-如果同一个函数有多个 `modifier`，它们之间以空格隔开，`modifier`会依次检查执行。
+If the same function has multiple `modifier` , they are separated by spaces, `modifier` Checks the execution in sequence.
 
-> 在早期的 Solidity 版本中，有 |modifier| 的函数，``return`` 语句的行为表现不同。
+> In earlier versions of Solidity, there were functions of | modifier |, `return` behavior of the statement is different.
 
-`modifier` 或函数体中显式的 return 语句仅仅跳出当前的 `modifier` 和函数体。
-返回变量会被赋值，但整个执行逻辑会从前一个 |modifier| 中的定义的 “_” 之后继续执行。
+`modifier` or the explicit return statement in the function body only jumps out of the current `modifier` and fucntion bodies. returned variable is assigned a value, but the entire execution logic continues after the "_" defined in the previous | modifier |.
 
-`modifier`的参数可以是任意表达式，在此上下文中，所有在函数中可见的符号，在 `modifier` 中均可见。在 `modifier` 中引入的符号在函数中不可见（可能被重载改变）。
+`modifier`parameter of can be any expression, in this context, all symbols visible in the function，in `modifier` all visible. in `modifier` symbols introduced in are invisible in the function (may be overloaded).
 
-### Constant 状态变量
+### Constant state variable
 
-状态变量可以被声明为 ``constant``。在这种情况下，只能使用那些在编译时有确定值的表达式来给它们赋值。任何通过访问 storage，区块链数据（例如 ``now``, ``this.balance`` 或者 ``block.number``）或执行数据（ ``msg.gas`` ）或对外部合约的调用来给它们赋值都是不允许的。在内存分配上有边界效应（`side-effect`）的表达式是允许的，但对其他内存对象产生边界效应的表达式则不行。内建（built-in）函数 ``keccak256``，``sha256``，``ripemd160``，``ecrecover``，``addmod`` 和 ``mulmod`` 是允许的（即使他们确实会调用外部合约）。
+Status variables can be declared `constant` . In this case, only expressions that determine values at compile time can be used to assign values to them. Any blockchain data (such `now` , `this.balance` Or `block.number` ) or execution data ( `msg.gas` ) or calls to external contracts to assign values to them are not allowed. There is a boundary effect on memory allocation ( `side-effect` ) expressions are allowed, but expressions that produce boundary effects on other memory objects are not allowed. built-in function `keccak256` , `sha256` , `ripemd160` , `ecrecover` , `addmod` and `mulmod` is allowed (even if they do invoke external contracts).
 
-允许带有边界效应的内存分配器的原因是这将允许构建复杂的对象，比如查找表（lookup-table）。
-此功能尚未完全可用。编译器不会为这些变量预留存储，它们的每次出现都会被替换为相应的常量表达式（这将可能被优化器计算为实际的某个值）。不是所有类型的状态变量都支持用 constant 来修饰，当前支持的仅有值类型和字符串。
+The reason why memory allocators with boundary effects are allowed is that this will allow the construction of complex objects, such as lookup-table.
+This feature is not fully available. The compiler does not reserve storage for these variables, and each time they appear, they are replaced with the corresponding constant expression (which may be calculated by the optimizer as an actual value). Not all types of state variables support constant modification. Currently, only value types and strings are supported.
 
 ```bash
     pragma solidity ^0.4.0;
@@ -1870,22 +1853,22 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
     }
 ```
 
-### 函数
+### Function
 
-#### View 函数
+#### View function
 
-可以将函数声明为 ``view`` 类型，这种情况下要保证不修改状态。
+You can declare a function `view` type, in this case, make sure that the state is not modified.
 
-下面的语句被认为是修改状态：
+The following statement is considered to modify the state:
 
-- 修改状态变量。
-- `产生事件`。
-- `创建其它合约`。
-- 使用`selfdestruct`。
-- 通过调用发送以太币。
-- 调用任何没有标记为 ``view`` 或者 ``pure`` 的函数。
-- 使用低级调用。
-- 使用包含特定操作码的内联汇编。
+- Modify the status variable.
+- `generate an event`。
+- `create smart contract`。
+- use `selfdestruct`。
+- send Sipc coins by calling。
+- Call any that is not marked `view` Or `pure` The function.
+- Use low-level calls.
+- Use an inline assembly that contains specific opcodes.
 
 ```bash
     pragma solidity ^0.4.16;
@@ -1897,21 +1880,21 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
     }
 ```
 
->  ``constant`` 是 ``view`` 的别名。
+>  ``constant`` is ``view`` alias。
 
->  Getter 方法被标记为 ``view``。
+>  The Getter method is marked ``view``。
 
->  编译器没有强制 ``view`` 方法不能修改状态。
+>  The compiler does not force ``view`` method cannot modify the status.
 
-#### Pure 函数
+#### Pure function
 
-函数可以声明为 ``pure`` ，在这种情况下，承诺不读取或修改状态。除了上面解释的状态修改语句列表之外，以下被认为是从状态中读取：
+Functions can be declared `pure` , in this case, promise not to read or modify the status. In addition to the list of state modification statements explained above, the following is considered to be read from the state:
 
-- 读取状态变量。
-- 访问 ``this.balance`` 或者 ``<address>.balance``。
-- 访问 ``block``，``tx``， ``msg`` 中任意成员 （除 ``msg.sig`` 和 ``msg.data`` 之外）。
-- 调用任何未标记为 ``pure`` 的函数。
-- 使用包含某些操作码的内联汇编。
+- Read status variables.
+- Access ``this.balance`` or ``<address>.balance``。
+- Access ``block``，``tx``， ``msg`` any member in （beside ``msg.sig`` and ``msg.data`` outside).
+- Call any not marked `pure` function.
+- Use an inline assembly that contains certain opcodes.
 
 ```bash
     pragma solidity ^0.4.16;
@@ -1923,34 +1906,34 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
     }
 ```
 
->  编译器没有强制 ``pure`` 方法不能读取状态。
+>  The compiler does not force pure method cannot read the status.
 
-#### Fallback 函数
+#### Fallback function
 
-合约可以有一个未命名的函数。这个函数不能有参数也不能有返回值。如果在一个到合约的调用中，没有其他函数与给定的函数标识符匹配（或没有提供调用数据），那么这个函数（fallback 函数）会被执行。
+A contract can have an unnamed function. This function cannot have parameters or return values. If no other function matches the given function identifier (or no call data is provided) in a contract call, the function (fallback function) will be executed.
 
-除此之外，每当合约收到以太币（没有任何数据），这个函数就会执行。此外，为了接收以太币，fallback 函数必须标记为 ``payable``。如果不存在这样的函数，则合约不能通过常规交易接收以太币。
+In addition, this function will be executed every time the contract receives Sipc coins (without any data). In addition, the fallback function must be marked payable . If such a function does not exist, the contract cannot receive Sipc coins through regular transactions.
 
-在这样的上下文中，通常只有很少的 gas 可以用来完成这个函数调用（准确地说，是 2300 gas），所以使 fallback 函数的调用尽量廉价很重要。请注意，调用 fallback 函数的交易（而不是内部调用）所需的 gas 要高得多，因为每次交易都会额外收取 21000 gas 或更多的费用，用于签名检查等操作。
+In this context, usually only a few gas can be used to complete this function call (to be exact, 2300 gas), so it is important to make the call of fallback function as cheap as possible. Note that the gas required for transactions calling the fallback function (rather than internal calls) is much higher, because an additional 21000 gas or more is charged for each transaction for signature check and other operations.
 
-具体来说，以下操作会消耗比 fallback 函数更多的 gas：
+Specifically, the following operations consume more gas than the fallback function:
 
-- 写入存储
-- 创建合约
-- 调用消耗大量 gas 的外部函数
-- 发送以太币
+- Write storage
+- Create a contract
+- Call external functions that consume a lot of gas
+- Send Sipc coins
 
-请确保您在部署合约之前彻底测试您的 fallback 函数，以确保执行成本低于 2300 个 gas。
+Make sure that you thoroughly test your fallback function before deploying the contract to ensure that the execution cost is less than 2300 gas.
 
->  即使 fallback 函数不能有参数，仍然可以使用 ``msg.data`` 来获取随调用提供的任何有效数据。
+>  Even if the fallback function cannot have parameters, it can still be used `msg.data` to obtain any valid data provided with the call.
 
->  一个没有定义 fallback 函数的合约，直接接收以太币（没有函数调用，即使用 ``send`` 或 ``transfer``）会抛出一个异常，并返还以太币（在 Solidity v0.4.0 之前行为会有所不同）。所以如果你想让你的合约接收以太币，必须实现 fallback 函数。
+>  A contract that does not define a fallback function directly receives ether coins (no function call, that is, use `send` Or `transfer` ) throws an exception and returns the ether coin (the behavior will be different before Solidity v0.4.0). Therefore, if you want your contract to receive Ether coins, you must implement the fallback function.
 
->  一个没有 payable fallback 函数的合约，可以作为 `coinbase transaction` （又名 `miner block reward` ）的接收者或者作为 ``selfdestruct`` 的目标来接收以太币。
+>  A contract without the payable fallback function can be used coinbase transaction (Also known miner block reward ) the recipient or selfdestruct The target to receive sipc coins.
 
->  一个合约不能对这种以太币转移做出反应，因此也不能拒绝它们。这是 EVM 在设计时就决定好的，而且 Solidity 无法绕过这个问题。
+>  A contract cannot respond to this ether transfer, so it cannot refuse them either. This is determined by EVM when designing, and Solidity cannot bypass this problem.
 
->  这也意味着 ``this.balance`` 可以高于合约中实现的一些手工记帐的总和（即在 fallback 函数中更新的累加器）。
+>  This also means `this.balance` can be higher than the sum of some manual accounting implemented in the contract (that is, the accumulator updated in the fallback function).
 
 ```bash
 
@@ -1976,9 +1959,9 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
     }
 ```
 
-#### 函数重载
+#### Function overload
 
-合约可以具有多个不同参数的同名函数。这也适用于继承函数。以下示例展示了合约 ``A`` 中的重载函数 ``f``。
+A contract can have functions with the same name with multiple different parameters. This also applies to inheritance functions. The following example shows the contract `A` Overloaded functions in `f` .
 
 ```bash
 
@@ -1994,7 +1977,7 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
         }
     }
 
-重载函数也存在于外部接口中。如果两个外部可见函数仅区别于 Solidity 内的类型而不是它们的外部类型则会导致错误。
+The above two `f` Function overloads accept ABI address types, although they are considered different in Solidity.
 
 ```bash
     // 以下代码无法编译
@@ -2014,14 +1997,14 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
     }
 ```
 
-以上两个 ``f`` 函数重载都接受了 ABI 的地址类型，虽然它们在 Solidity 中被认为是不同的。
+The above two `f` Function overloads accept ABI address types, although they are considered different in Solidity.
 
-#### 重载解析和参数匹配
+#### Overloaded parsing and parameter matching
 
-通过将当前范围内的函数声明与函数调用中提供的参数相匹配，可以选择重载函数。
-如果所有参数都可以隐式地转换为预期类型，则选择函数作为重载候选项。如果一个候选都没有，解析失败。
+You can choose to reload the function by matching the function declarations in the current range with the parameters provided in the function call.
+If all parameters can be implicitly converted to the expected type, the function is selected as the overload candidate. If none of the candidates exist, the parsing fails.
 
->  返回参数不作为重载解析的依据。
+>  The returned parameter is not used as the basis for overload resolution.
 
 ```bash
     pragma solidity ^0.4.16;
@@ -2037,22 +2020,22 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
     }
 ```
 
-调用  ``f(50)`` 会导致类型错误，因为 ``50`` 既可以被隐式转换为 ``uint8`` 也可以被隐式转换为 ``uint256``。另一方面，调用 ``f(256)`` 则会解析为 ``f(uint256)`` 重载，因为 ``256`` 不能隐式转换为 ``uint8``。
+Call ``f(50)`` causes type errors because ``50`` can be implicitly converted ``uint8`` can also be implicitly converted ``uint256`` on the other hand, call``f(256)`` parses ``f(uint256)`` overload，because ``256`` cannot be implicitly converted ``uint8``。
 
-### 事件
+### Event
 
-事件允许我们方便地使用 EVM 的日志基础设施。我们可以在 dapp 的用户界面中监听事件，EVM 的日志机制可以反过来“调用”用来监听事件的 Javascript 回调函数。
+Events allow us to easily use the log infrastructure of EVM. We can listen to events in the user interface of dapp, and the log mechanism of EVM can in turn "call" the Javascript callback function used to listen to events.
 
-事件在合约中可被继承。当他们被调用时，会使参数被存储到交易的日志中 —— 一种区块链中的特殊数据结构。这些日志与地址相关联，被并入区块链中，只要区块可以访问就一直存在（在 Frontier 和 Homestead 版本中会被永久保存，在 Serenity 版本中可能会改动)。日志和事件在合约内不可直接被访问（甚至是创建日志的合约也不能访问）。
+Events can be inherited in the contract. When they are called, parameters are stored in transaction logs-a special data structure in the blockchain. These logs are associated with the address and incorporated into the blockchain. They exist as long as the block is accessible (they are permanently saved in Frontier and Homestead versions and may be changed in Serenity versions). Logs and events cannot be directly accessed within the contract (even the contract for creating logs cannot be accessed).
 
-对日志的 SPV（Simplified Payment Verification）证明是可能的，如果一个外部实体提供了一个带有这种证明的合约，它可以检查日志是否真实存在于区块链中。但需要留意的是，由于合约中仅能访问最近的 256 个区块哈希，所以还需要提供区块头信息。
+The Simplified Payment Verification of logs is possible. If an external entity provides a contract with this proof, it can check whether the logs actually exist in the blockchain. However, it should be noted that only the latest 256 block hashes can be accessed in the contract, so the block header information needs to be provided.
 
-最多三个参数可以接收 ``indexed`` 属性，从而使它们可以被搜索：在用户界面上可以使用 indexed 参数的特定值来进行过滤。
+A maximum of three parameters can be received `indexed` Property so that they can be searched: specific values of indexed parameters can be used for filtering on the user interface.
 
-如果数组（包括 ``string`` 和 ``bytes``）类型被标记为索引项，则它们的 keccak-256 哈希值会被作为 topic 保存。除非你用 ``anonymous`` 说明符声明事件，否则事件签名的哈希值是 topic 之一。同时也意味着对于匿名事件无法通过名字来过滤。所有非索引参数都将存储在日志的数据部分中。
+If the array (including `string` And `bytes` ) type is marked as index item, their keccak-256 hash values are saved as topic. Unless you use anonymous The descriptor declares an event. Otherwise, the hash value of the event signature is one of the topics. It also means that `anonymous` events cannot be filtered by names. All non-index parameters are stored in the data section of the log.
 
 
->  索引参数本身不会被保存。你只能搜索它们的值（来确定相应的日志数据是否存在），而不能获取它们的值本身。
+>  The index parameters themselves are not saved. You can only search for their values (to determine whether the corresponding log data exists), not their values themselves.
 
 ```bash
 
@@ -2072,7 +2055,7 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
     }
 ```
 
-使用 JavaScript API 调用事件的用法如下：
+Use JavaScript APIs to call events as follows:
 
 ```bash
 
@@ -2095,9 +2078,9 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
             console.log(result);
     });
 ```
-#### 日志的底层接口
+#### The underlying interface of the log
 
-通过函数 ``log0``，``log1``， ``log2``， ``log3`` 和 ``log4`` 可以访问日志机制的底层接口。``logi``  接受 ``i + 1`` 个 ``bytes32`` 类型的参数。其中第一个参数会被用来做为日志的数据部分，其它的会做为 topic。上面的事件调用可以以相同的方式执行。
+through function ``log0``，``log1``， ``log2``， ``log3`` and ``log4`` you can access the underlying interface of the log mechanism. ``logi``  accept ``i + 1`` a ``bytes32`` parameter of the type. The first parameter is used as the data part of the log, and the others are used as the topic. The preceding event calls can be executed in the same way.
 
 ```bash
     pragma solidity ^0.4.10;
@@ -2115,21 +2098,21 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
     }
 ```
 
-其中的长十六进制数的计算方法是 ``keccak256("Deposit(address,hash256,uint256)")``，即事件的签名。
+The calculation method of the long hexadecimal number is ``keccak256("Deposit(address,hash256,uint256)")``，that is, the signature of the event.
 
-#### 其它学习事件机制的资源
+#### Resources for other learning event mechanisms
  
-- [Javascript 文档](https://github.com/ethereum/wiki/wiki/JavaScript-API#contract-events)
-- [事件使用例程](https://github.com/debris/smart-exchange/blob/master/lib/contracts/SmartExchange.sol)
-- [如何在 js 中访问它们](https://github.com/debris/smart-exchange/blob/master/lib/exchange_transactions.js)
+- [Javascript documentation](https://github.com/ethereum/wiki/wiki/JavaScript-API#contract-events)
+- [event usage routine](https://github.com/debris/smart-exchange/blob/master/lib/contracts/SmartExchange.sol)
+- [How to access them in js](https://github.com/debris/smart-exchange/blob/master/lib/exchange_transactions.js)
 
-### 继承
+### Inheritance
 
-通过复制包括多态的代码，Solidity 支持多重继承。所有的函数调用都是虚拟的，这意味着最远的派生函数会被调用，除非明确给出合约名称。当一个合约从多个合约继承时，在区块链上只有一个合约被创建，所有基类合约的代码被复制到创建的合约中。
+Solidity supports multiple inheritance by copying code that includes polymorphism. All function calls are virtual, which means that the farthest derived function will be called unless the contract name is explicitly given. When a contract is inherited from multiple contracts, only one contract is created on the blockchain, and the code of all base-class contracts is copied to the created contract.
 
-总的来说，Solidity 的继承系统与 [Python的继承系统](https://docs.python.org/3/tutorial/classes.html#inheritance)，非常相似，特别是多重继承方面。
+In general, Solidity's inheritance system and [Python inherutance system](https://docs.python.org/3/tutorial/classes.html#inheritance)，very similar, especially in terms of multiple inheritance.
 
-下面的例子进行了详细的说明。
+The following example is described in detail.
 
 ```bash
     pragma solidity ^0.4.16;
@@ -2194,7 +2177,7 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
     }
 ```
 
-注意，在上边的代码中，我们调用 ``mortal.kill()`` 来“转发”销毁请求。这样做法是有问题的，在下面的例子中可以看到::
+Note that in the above code, we call `mortal.kill()` To "forward" the destruction request. This approach is problematic, as shown in the following example:
 
 ```bash
     pragma solidity ^0.4.0;
@@ -2222,7 +2205,7 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
     }
 ```
 
-调用 ``Final.kill()`` 时会调用最远的派生重载函数 ``Base2.kill``，但是会绕过 ``Base1.kill``，主要是因为它甚至都不知道 ``Base1`` 的存在。解决这个问题的方法是使用 ``super``:
+Call ``Final.kill()`` farthest derived overloaded function is called ``Base2.kill``，but it will bypass ``Base1.kill``，mainly because it doesn't even know ``Base1`` existence. the way to solve this problem is to use ``super``:
 
 ```bash
     pragma solidity ^0.4.0;
@@ -2251,13 +2234,13 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
     }
 ```
 
-如果 ``Base2`` 调用 ``super`` 的函数，它不会简单在其基类合约上调用该函数。
-相反，它在最终的继承关系图谱的下一个基类合约中调用这个函数，所以它会调用 ``Base1.kill()``（注意最终的继承序列是——从最远派生合约开始：Final, Base2, Base1, mortal, ownerd）。在类中使用 super 调用的实际函数在当前类的上下文中是未知的，尽管它的类型是已知的。
-这与普通的虚拟方法查找类似。
+If `Base2` call `super` it does not simply call the function on its base class contract.
+On the contrary, it calls this function in the next base class contract of the final inheritance relation graph, so it calls `Base1.kill()` (Note that the Final inheritance sequence is -- starting from the farthest derived contract: Final, Base2, Base1, epoch, ownerd). The actual function called using super in the class is unknown in the context of the current class although its type is known.
+This is similar to a common virtual method to find.
 
-### 基类构造函数的参数
+### Parameters of the base class constructor
 
-派生合约需要提供基类构造函数需要的所有参数。这可以通过两种方式来完成::
+The derived contract needs to provide all the parameters required by the base class constructor. this can be done in two ways:
 
 ```bash
     pragma solidity ^0.4.0;
@@ -2273,14 +2256,13 @@ function data(uint arg1, bool arg2, uint arg3) public returns (uint a, bytes3 b)
     }
 ```
 
-一种方法直接在继承列表中调用基类构造函数（``is Base(7)``）。另一种方法是像 |modifier| 使用方法一样，作为派生合约构造函数定义头的一部分，（``Base(_y * _y)``)。如果构造函数参数是常量并且定义或描述了合约的行为，使用第一种方法比较方便。如果基类构造函数的参数依赖于派生合约，那么必须使用第二种方法。如果像这个简单的例子一样，两个地方都用到了，优先使用 |modifier| 风格的参数。
+One method directly calls the base class constructor in the inheritance list（``is Base(7)``）another method is like the | modifier | Usage method, as part of the derived contract constructor definition header（``Base(_y * _y)``). If the constructor parameter is a constant and defines or describes the behavior of the contract, it is more convenient to use the first method. If the parameters of the base class constructor depend on the derived contract, the second method must be used. If, like this simple example, both parts are used, the | modifier | Style parameter is preferred.
 
-### 多重继承与线性化
+### Multiple inheritance and linearization
 
-编程语言实现多重继承需要解决几个问题。
-一个问题是[钻石问题](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem)
-Solidity 借鉴了 Python 的方式并且使用 [C3 线性化](https://en.wikipedia.org/wiki/C3_linearization) 强制一个由基类构成的 DAG（有向无环图）保持一个特定的顺序。
-这最终反映为我们所希望的唯一化的结果，但也使某些继承方式变为无效。尤其是，基类在 ``is`` 后面的顺序很重要。在下面的代码中，Solidity 会给出“ Linearization of inheritance graph impossible ”这样的错误。
+Several problems need to be solved for programming languages to implement multiple inheritance.
+One problem is[Diamond problem](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem)
+Solidity uses Python as a reference and uses [C3 线性化](https://en.wikipedia.org/wiki/C3_linearization) forces a DAG (directed acyclic graph) composed of the base class to maintain a specific order. This is finally reflected as the unique result we hope, but it also makes some inheritance methods invalid. In particular, the base class in is The following order is very important. In the following code, Solidity gives an error such as "Linearization of inheritance graph impossible.
 
 ```bash
 
@@ -2293,20 +2275,20 @@ Solidity 借鉴了 Python 的方式并且使用 [C3 线性化](https://en.wikipe
     contract C is A, X {}
 ```
 
-代码编译出错的原因是 ``C`` 要求 ``X`` 重写 ``A`` （因为定义的顺序是 ``A, X`` ），
-但是 ``A`` 本身要求重写 ``X``，无法解决这种冲突。
+The cause of code compilation error is ``C`` requirement ``X`` override ``A`` （because the order of definition is ``A, X`` ），
+but ``A`` it self requires rewriting ``X``，this conflict cannot be resolved.
 
-可以通过一个简单的规则来记忆：以从“最接近的基类”（most base-like）到“最远的继承”（most derived）的顺序来指定所有的基类。
+You can remember it through a simple rule: from "most base-like" to "most derived" to specify all base classes.
 
-#### 继承有相同名字的不同类型成员
+#### Inheriting different types of members with the same name
 
-当继承导致一个合约具有相同名字的函数和 |modifier| 时，这会被认为是一个错误。
-当事件和 |modifier| 同名，或者函数和事件同名时，同样会被认为是一个错误。
-有一种例外情况，状态变量的 getter 可以覆盖一个 public 函数。
+This is considered an error when inheritance causes a contract to have functions and | modifier | With the same name.
+If an event has the same name as | modifier | Or a function has the same name as an event, it is also considered an error.
+An exception is that the getter of a state variable can overwrite a public function.
 
-### 抽象合约
+### Abstract contract
 
-合约函数可以缺少实现，如下例所示（请注意函数声明头由 ``;`` 结尾）:
+The contract function can be missing implementation, as shown in the following example (note that the function declaration header is `;` end):
 
 ```
     pragma solidity ^0.4.0;
@@ -2316,7 +2298,7 @@ Solidity 借鉴了 Python 的方式并且使用 [C3 线性化](https://en.wikipe
     }
 ```
 
-这些合约无法成功编译（即使它们除了未实现的函数还包含其他已经实现了的函数），但他们可以用作基类合约::
+These contracts cannot be compiled successfully (even if they contain other implemented functions besides unimplemented functions), they can be used as base class contracts:
 
 ```bash
     pragma solidity ^0.4.0;
@@ -2330,24 +2312,23 @@ Solidity 借鉴了 Python 的方式并且使用 [C3 线性化](https://en.wikipe
     }
 ```
 
-如果合约继承自抽象合约，并且没有通过重写来实现所有未实现的函数，那么它本身就是抽象的。
+If a contract inherits from an abstract contract and does not implement all unimplemented functions by rewriting, it is abstract in itself.
 
-### 接口
+### interface
 
+Interfaces are similar to abstract contracts, but they cannot implement any functions. There are further restrictions:
 
-接口类似于抽象合约，但是它们不能实现任何函数。还有进一步的限制：
+- Unable to inherit other contracts or interfaces.
+- The constructor cannot be defined.
+- Variables cannot be defined.
+- Unable to define structure
+- Unable to define enumeration.
 
-- 无法继承其他合约或接口。
-- 无法定义构造函数。
-- 无法定义变量。
-- 无法定义结构体
-- 无法定义枚举。
+Some restrictions here may be lifted in the future.
 
-将来可能会解除这里的某些限制。
+Interfaces are basically limited to what the contract ABI can represent, and the conversion between ABI and interfaces should not lose any information.
 
-接口基本上仅限于合约 ABI 可以表示的内容，并且 ABI 和接口之间的转换应该不会丢失任何信息。
-
-接口由它们自己的关键字表示：
+Interfaces are represented by their own keywords:
 
 ```bash
 
@@ -2358,16 +2339,16 @@ Solidity 借鉴了 Python 的方式并且使用 [C3 线性化](https://en.wikipe
     }
 ```
 
-就像继承其他合约一样，合约可以继承接口。
+Just like inheriting other contracts, contracts can inherit interfaces.
 
-### 库
+### Library
 
-库与合约类似，它们只需要在特定的地址部署一次，并且它们的代码可以通过 EVM 的 ``DELEGATECALL``(Homestead 之前使用 ``CALLCODE`` 关键字)特性进行重用。这意味着如果库函数被调用，它的代码在调用合约的上下文中执行，即 ``this`` 指向调用合约，特别是可以访问调用合约的存储。因为每个库都是一段独立的代码，所以它仅能访问调用合约明确提供的状态变量（否则它就无法通过名字访问这些变量）。因为我们假定库是无状态的，所以如果它们不修改状态（也就是说，如果它们是 ``view`` 或者 ``pure`` 函数），库函数仅可以通过直接调用来使用（即不使用 ``DELEGATECALL`` 关键字），特别是，除非能规避 Solidity 的类型系统，否则是不可能销毁任何库的。
+Libraries are similar to contracts, they only need to be deployed at a specific address once, and their code can be passed through EVM's DELEGATECALL (Previously used Homestead CALLCODE Keyword) features for reuse. This means that if the library function is called, its code is executed in the context of the call contract, that is this Points to the call contract, especially the storage that can access the call contract. Because each library is a piece of independent code, it can only access the state variables explicitly provided by the call contract (otherwise it cannot access these variables by name). Because we assume that libraries are stateless, so if they do not modify the state (that is, if they are view Or pure Function), library functions can only be used by direct calls (that is, do not use DELEGATECALL Key words), in particular, it is impossible to destroy any library unless Solidity type systems can be avoided.
 
-库可以看作是使用他们的合约的隐式的基类合约。虽然它们在继承关系中不会显式可见，但调用库函数与调用显式的基类合约十分类似（如果 ``L`` 是库的话，可以使用 ``L.f()`` 调用库函数）。此外，就像库是基类合约一样，对所有使用库的合约，库的 ``internal`` 函数都是可见的。
-当然，需要使用内部调用约定来调用内部函数，这意味着所有内部类型，内存类型都是通过引用而不是复制来传递。为了在 EVM 中实现这些，内部库函数的代码和从其中调用的所有函数都在编译阶段被拉取到调用合约中，然后使用一个 ``JUMP`` 调用来代替 ``DELEGATECALL``。
+Libraries can be seen as implicit base class contracts that use their contracts. Although they are not explicitly visible in inheritance relationships, calling library functions is very similar to calling explicit base class contracts (if L If it is a library, it can be used L.f() Call the library function). In addition, just as the library is a base class contract, for all contracts that use the library, internal Functions are visible.
+Of course, internal calling conventions must be used to call internal functions, which means that all internal types and memory types are passed by reference rather than replication. To implement these in EVM, the code of the internal library function and all the functions called from it are pulled into the call contract at the compilation stage, and then use one JUMP Call to replace DELEGATECALL .
 
-下面的示例说明如何使用库（但也请务必看看 :ref:`using for <using-for>` 有一个实现 set 更好的例子）。
+The following example shows how to use the library（a better example of the implementation set）:
 
 ```bash
     pragma solidity ^0.4.16;
@@ -2419,11 +2400,11 @@ Solidity 借鉴了 Python 的方式并且使用 [C3 线性化](https://en.wikipe
     }
 ```
 
-当然，你不必按照这种方式去使用库：它们也可以在不定义结构数据类型的情况下使用。函数也不需要任何存储引用参数，库可以出现在任何位置并且可以有多个存储引用参数。
+Of course, you don't have to use libraries in this way: They can also be used without defining structural data types. Functions also do not require any storage reference parameters. Libraries can appear anywhere and have multiple storage reference parameters.
 
-调用 ``Set.contains``，``Set.insert`` 和 ``Set.remove`` 都被编译为外部调用（ ``DELEGATECALL`` ）。如果使用库，请注意实际执行的是外部函数调用。``msg.sender``， ``msg.value`` 和 ``this`` 在调用中将保留它们的值，（在 Homestead 之前，因为使用了 ``CALLCODE``，改变了 ``msg.sender`` 和 ``msg.value``)。
+call ``Set.contains``，``Set.insert`` and ``Set.remove`` all are compiled as external calls（ ``DELEGATECALL`` ). If you use libraries, note that external function calls are actually executed. ``msg.sender``， ``msg.value`` and ``this`` values will be retained in the call (before Homestead, because ``CALLCODE``，changed ``msg.sender`` and ``msg.value``)。
 
-以下示例展示了如何在库中使用内存类型和内部函数来实现自定义类型，而无需支付外部函数调用的开销：
+The following example shows how to use memory types and internal functions in a library to implement custom types without paying for the overhead of external function calls:
 
 ```bash
 
@@ -2481,34 +2462,31 @@ Solidity 借鉴了 Python 的方式并且使用 [C3 线性化](https://en.wikipe
     }
 ```
 
-由于编译器无法知道库的部署位置，我们需要通过链接器将这些地址填入最终的字节码中
-（请参阅 :ref:`commandline-compiler` 以了解如何使用命令行编译器来链接字节码）。
-如果这些地址没有作为参数传递给编译器，编译后的十六进制代码将包含 ``__Set______`` 形式的占位符（其中 ``Set`` 是库的名称）。可以手动填写地址来将那 40 个字符替换为库合约地址的十六进制编码。
+Since the compiler cannot know the deployment location of the library, we need to fill these addresses in the final bytecode through the linker.
+If these addresses are not passed to the compiler as parameters, the compiled hexadecimal code will contain __Set______ Placeholder of the form (where Set Is the name of the library). You can manually fill in the address to replace the 40 characters with the hexadecimal code of the library contract address.
 
-与合约相比，库的限制：
+Compared with contracts, library restrictions:
 
-- 没有状态变量
-- 不能够继承或被继承
-- 不能接收以太币
+- No state variables
+- Unable to inherit or be inherited
+- Unable to receive Sipc coins
 
-（将来有可能会解除这些限制）
+（These restrictions may be lifted in the future）
 
-#### 库的调用保护
+#### Library call protection
 
-如果库的代码是通过 ``CALL`` 来执行，而不是 ``DELEGATECALL`` 或者 ``CALLCODE`` 那么执行的结果会被回退，除非是对 ``view`` 或者 ``pure`` 函数的调用。EVM 没有为合约提供检测是否使用 ``CALL`` 的直接方式，但是合约可以使用 ``ADDRESS`` 操作码找出正在运行的“位置”。生成的代码通过比较这个地址和构造时的地址来确定调用模式。
+If the library code is passed `CALL` To execute, not `DELEGATECALL` Or `CALLCODE` Then the execution result will be rolled back unless it is right `view` Or `pure` The call of the function. EVM does not provide a check for the contract whether to use `CALL` But the contract can use `ADDRESS` The operation code finds the running location ". The generated code determines the call mode by comparing this address with the constructed address.
 
-更具体地说，库的运行时代码总是从一个 push 指令开始，它在编译时是 20 字节的零。当部署代码运行时，这个常数
-被内存中的当前地址替换，修改后的代码存储在合约中。在运行时，这导致部署时地址是第一个被 push 到堆栈上的常数，
-对于任何 non-view 和 non-pure 函数，调度器代码都将对比当前地址与这个常数是否一致。
+More specifically, the runtime code of the library always starts with a push instruction, which is zero of 20 bytes at compile time. When the deployment code runs, this constant replaced by the current address in memory, the modified code is stored in the contract. At runtime, this causes the deployment address to be the first constant pushed to the stack, For any non-view and non-pure functions, the scheduler code compares whether the current address is consistent with this constant.
 
 ### Using For
 
-指令 ``using A for B;`` 可用于附加库函数（从库 ``A``）到任何类型（``B``）。
-这些函数将接收到调用它们的对象作为它们的第一个参数（像 Python 的 ``self`` 变量）。
-``using A for *;`` 的效果是，库 ``A`` 中的函数被附加在任意的类型上。在这两种情况下，所有函数都会被附加一个参数，即使它们的第一个参数类型与对象的类型不匹配。
-函数调用和重载解析时才会做类型检查。``using A for B;`` 指令仅在当前作用域有效，目前仅限于在当前合约中，后续可能提升到全局范围。通过引入一个模块，不需要再添加代码就可以使用包括库函数在内的数据类型。
+Command ``using A for B;`` can be used to attach library functions (from library `A` ) to any type ( `B` ).
+These functions will receive the object that calls them as their first parameter (like Python's self Variable).
+``using A for *;`` the effect of IS, library `A` The function in is attached to any type. In both cases, all functions are appended with a parameter even if their first parameter type does not match the type of the object.
+Type check is performed only when function calls and overload parsing are performed. `using A for B`; The directive is only valid in the current scope and only in the current contract. It may be upgraded to the global scope in the future. By introducing a module, you can use data types including library functions without adding code.
 
-让我们用这种方式将`libraries`中的 set 例子重写::
+Let's use this way `libraries` Rewrite the set example in:
 
 ```bash
     pragma solidity ^0.4.16;
@@ -2562,7 +2540,7 @@ Solidity 借鉴了 Python 的方式并且使用 [C3 线性化](https://en.wikipe
     }
 ```
 
-也可以像这样扩展基本类型:
+You can also extend basic types like this:
 
 ```bash
 
@@ -2600,39 +2578,38 @@ Solidity 借鉴了 Python 的方式并且使用 [C3 线性化](https://en.wikipe
 
 ```
 
-注意，所有库调用都是实际的 EVM 函数调用。这意味着如果传递内存或值类型，都将产生一个副本，即使是 ``self`` 变量。]使用存储引用变量是唯一不会发生拷贝的情况。 
+Note that all library calls are actual EVM function calls. This means that if the memory or value type is passed, a copy will be generated, even if self Variables.] Using a storage reference variable is the only case where copying does not occur.
 
-## Solidity汇编
+## Solidity Assembly
 
-Solidity 定义了一种汇编语言，在没有 Solidity 的情况下也可以使用。这种汇编语言也可以嵌入到 Solidity 源代码中当作“内联汇编”使用。
-我们从如何使用内联汇编开始，介绍它如何区别于独立汇编语言，然后详细讲述这种汇编语言。
+Solidity defines an assembly language that can be used without Solidity. This assembly language can also be embedded into Solidity source code as "inline assembly. We begin with how to use inline assembly, introduce how it differs from independent assembly language, and then describe this assembly language in detail.
 
-### 内联汇编
+### Inline assembly
 
-为了实现更细粒度的控制，尤其是为了通过编写库来增强语言，可以利用接近虚拟机的语言将内联汇编与 Solidity 语句结合在一起使用。
-由于 EVM 是基于栈的虚拟机，因此通常很难准确地定位栈内插槽（存储位置）的地址，并为操作码提供正确的栈内位置来获取参数。
-Solidity 的内联汇编试图通过提供以下特性来解决这个问题以及手工编写汇编代码时可能出现的问题：
+In order to achieve finer-grained control, especially to enhance the language by writing libraries, you can use a language close to the virtual machine to combine inline assembly with Solidity statements.
+Since EVM is a stack-based virtual machine, it is usually difficult to accurately locate the address of the slot (storage location) in the stack and provide the correct stack location for the operation code to obtain parameters.
+Solidity's inline assembly attempts to solve this problem and possible problems when writing assembly code manually by providing the following features:
 
-* 函数风格操作码： ``mul(1, add(2, 3))`` 而不是 ``push1 3 push1 2 add push1 1 mul``
-* 汇编局部变量： ``let x := add(2, 3)  let y := mload(0x40)  x := add(x, y)``
-* 可以访问外部变量： ``function f(uint x) public { assembly { x := sub(x, 1) } }``
-* 标签： ``let x := 10  repeat: x := sub(x, 1) jumpi(repeat, eq(x, 0))``
-* 循环： ``for { let i := 0 } lt(i, x) { i := add(i, 1) } { y := mul(2, y) }``
-* if 语句： ``if slt(x, 0) { x := sub(0, x) }``
-* switch 语句： ``switch x case 0 { y := mul(x, 2) } default { y := 0 }``
-* 函数调用： ``function f(x) -> y { switch x case 0 { y := 1 } default { y := mul(x, f(sub(x, 1))) }   }``
+* Function style operation code： ``mul(1, add(2, 3))`` rather ``push1 3 push1 2 add push1 1 mul``
+* Assemble local variables： ``let x := add(2, 3)  let y := mload(0x40)  x := add(x, y)``
+* External variables can be accessed： ``function f(uint x) public { assembly { x := sub(x, 1) } }``
+* Label： ``let x := 10  repeat: x := sub(x, 1) jumpi(repeat, eq(x, 0))``
+* Circulation： ``for { let i := 0 } lt(i, x) { i := add(i, 1) } { y := mul(2, y) }``
+* if statement: ``if slt(x, 0) { x := sub(0, x) }``
+* switch statent： ``switch x case 0 { y := mul(x, 2) } default { y := 0 }``
+* Function call： ``function f(x) -> y { switch x case 0 { y := 1 } default { y := mul(x, f(sub(x, 1))) }   }``
 
-现在我们详细讲解内联汇编语言。
+Now let's explain the inline assembly language in detail.
 
-> 内联汇编是一种在底层访问Simplechain虚拟机的语言。这抛弃了很多 Solidity 提供的重要安全特性。
+> Inline assembly is a language that accesses Simplechain virtual machines at the underlying layer. This abandons many important security features provided by Solidity.
 
-> TODO：写出在内联汇编中作用域规则的细微差别，以及在使用库合约的内部函数时产生的复杂性。此外，还要编写有关编译器定义的符号。
+> TODO：describes the nuances of scope rules in an inline assembly and the complexity of using internal functions of library contracts. In addition, symbols about compiler definitions are also written.
 
-例子
+Example
 -------
 
-下面例子展示了一个库合约的代码，它可以取得另一个合约的代码，并将其加载到一个 ``bytes`` 变量中。
-这对于“常规 Solidity”来说是根本不可能的，汇编库合约则可以通过这种方式来增强语言特性。
+The following example shows the code of a library contract, which can get the code of another contract and load it into a `bytes` Variable.
+This is impossible for "conventional Solidity", and Assembly Library contracts can enhance language characteristics in this way.
 
 ```bash
 
@@ -2657,8 +2634,7 @@ Solidity 的内联汇编试图通过提供以下特性来解决这个问题以�
     }
 ```
 
-在优化器无法生成高效代码的情况下，内联汇编也可能更有好处。请注意，由于编译器无法对汇编语句进行相关的检查，所以编写汇编代码肯定更加困难；
-因此只有在处理一些相对复杂的问题时才需要使用它，并且你需要明确知道自己要做什么。
+When the optimizer cannot generate efficient code, inline assembly may also be more beneficial. Note that it is definitely more difficult to write assembly code because the compiler cannot check assembly statements; Therefore, you need to use it only when dealing with some relatively complex problems, and you need to know clearly what you want to do.
 
 ```bash
 
@@ -2711,30 +2687,30 @@ Solidity 的内联汇编试图通过提供以下特性来解决这个问题以�
 ```
 
 
-#### 语法
+#### Syntax
 
-和 Solidity 一样，Assembly 也会解析注释、文字和标识符，所以你可以使用通常的 ``//`` 和 ``/* */`` 来进行注释。
-内联汇编程序由 ``assembly { ... }`` 来标记，在这些大括号内可以使用以下内容（更多详细信息请参阅后面部分）。
+Like Solidity, Assembly also parses comments, text, and identifiers, so you can use the usual ``//`` and ``/* */`` to comment.
+The inline assembler is composed ``assembly { ... }`` to mark, the following can be used in these braces (see later for more details).
 
- - 字面常数，也就是 ``0x123``、``42`` 或 ``"abc"`` （不超过 32 个字符的字符串）
- - 操作码（在“instruction style”内），比如 ``mload sload dup1 sstore``，操作码列表请看后面
- - 函数风格操作码，比如 ``add(1，mlod(0))``
- - 标签，比如 ``name:``
- - 变量声明，比如 ``let x := 7``、``let x := add(y, 3)`` 或者 ``let x`` （初始值将被置为 empty(0)）
- - 标识符（标签或者汇编局部变量以及用作内联汇编时的外部变量），比如 ``jump(name)``、``3 x add``
- - 赋值（在“instruction style”内），比如 ``3 =: x``
- - 函数风格赋值，比如 ``x := add(y，3)``
- - 一些控制局部变量作用域的语句块，比如 ``{let x := 3 { let y := add(x，1) }}``
+ - Literal constant, that is ``0x123``、``42`` or ``"abc"`` （a string not exceeding 32 characters）
+ - Operation code（within “instruction style”），such ``mload sload dup1 sstore``，please see the following operation code list
+ - Function-style opcodes, such ``add(1，mlod(0))``
+ - Tags, such``name:``
+ - Variable declaration, such ``let x := 7``、``let x := add(y, 3)`` or ``let x`` （the initial value will be set to empty(0))）
+ - Identifiers (tags or assembly local variables and external variables used as inline assemblies), such `jump(name)` , `3 x add`
+ - Assignment (within "instruction style"), such 3 =: x
+ - Function style assignment, such x := add(y，3)
+ - Some statement blocks that control the scope of local variables, such {let x := 3 { let y := add(x，1) }}
 
-#### 操作码
+#### Opcode
 
-参考操作码：
+Reference operation code:
 
-如果一个操作码需要参数（总是来自堆栈顶部），它们会在括号中给出。请注意：参数顺序可以看作是在非函数风格中逆序（下面会解释）。标有 ``-`` 的操作码不会向栈中压入（push）数据，标有 ``*`` 的操作码有特殊操作，而所有其他操作码都只会将一个数据压入（push）栈中。
-用 ``F``、``H``、``B`` 或 ``C`` 标记的操作码代表它们从 Frontier、Homestead、Byzantium 或 Constantinople 开始被引入。Constantinople 目前仍在计划中，所以标记为 ``C`` 的指令目前都会导致一个非法指令异常。在下表中，``mem[a...b)`` 表示从位置 ``a`` 开始至（不包括）位置 ``b`` 的内存字节数，``storage[p]`` 表示位置 ``p`` 处的存储内容。
-``pushi`` 和 ``jumpdest`` 这两个操作码不能直接用。
+If an opcode requires parameters (always from the top of the stack), they are given in parentheses. Note: the order of parameters can be considered as a reverse order in a non-functional style (explained below). Marked - The operation code of does not push data into the stack, marked * The operation code of has special operations, while all other operations will only push one data into the push stack.
+For ``F``、``H``、``B`` or ``C`` marked opcodes represent that they are introduced from Frontier, Homestead, Byzantium, or Constantinople. Constantinople is still planned, so it is marked C Currently, an invalid instruction is abnormal. In the following table, ``mem[a...b)`` indicates from position ``a`` start to（excluding）position ``b`` number of memory bytes,``storage[p]`` indicates the position ``p`` storage content.
+``pushi`` and ``jumpdest`` these two operation codes cannot be used directly.
 
-在语法表中，操作码是作为预定义标识符提供的。
+In the syntax table, the opcode is provided as a predefined identifier.
 
 Instruction | symbol |Bool | Explanation  
 -|-|-|-
@@ -2816,48 +2792,48 @@ Instruction | symbol |Bool | Explanation
 | gaslimit                |     | F | 当前区块的 gas 上限                                             |
 | |  |
 
-#### 字面常量
+#### Literal constant
 
-你可以直接键入十进制或十六进制符号来作为整型常量使用，这会自动生成相应的 ``PUSHi`` 指令。
-下面的代码将计算 2 加 3（等于 5），然后计算其与字符串 “abc” 的按位与。字符串在存储时为左对齐，且长度不能超过 32 字节。
+You can directly type decimal or hexadecimal symbols to use as integer constants, which automatically generates the corresponding `PUSHi` Instruction.
+The following code calculates 2 plus 3 (equal to 5), and then calculates its bitwise sum with the string "abc. The string is left aligned when stored and cannot exceed 32 bytes in length.
 
 ```bash
 assembly { 2 3 add "abc" and }
 ```
 
-#### 函数风格
+#### Function style
 
-你可以像使用字节码那样在操作码之后键入操作码。例如，把 ``3`` 与内存位置 ``0x80`` 处的数据相加就是
+You can type an opcode after the opcode just like using a bytecode. For example, put `3` And memory location `0x80` Add the data
 
 ```bash
 3 0x80 mload add 0x80 mstore
 ```
 
-由于通常很难看到某些操作码的实际参数是什么，所以 Solidity 内联汇编还提供了一种“函数风格”表示法，同样功能的代码可以写做
+Because it is usually difficult to see the actual parameters of Some opcodes, Solidity inline assembly also provides a "function style" representation, code with the same function can be written
 
 ```bash
 mstore(0x80, add(mload(0x80), 3))
 ```
 
-函数风格表达式内不能使用指令风格的写法，即 ``1 2 mstore(0x80, add)`` 是无效汇编语句，
-它必须写成 ``mstore(0x80, add(2, 1))`` 这种形式。对于不带参数的操作码，括号可以省略。
+Instruction style cannot be used in function style expressions, that is ``1 2 mstore(0x80, add)`` is an invalid assembly statement,
+It must be written ``mstore(0x80, add(2, 1))`` this form. For opcodes without parameters, brackets can be omitted.
 
-注意，在函数风格写法中参数的顺序与指令风格相反。如果使用函数风格写法，第一个参数将会位于栈顶。
+Note that in function style writing, the order of parameters is opposite to the instruction style. If you use function style, the first parameter is at the top of the stack.
 
-#### 访问外部变量和函数
+#### Access external variables and functions
 
-通过简单使用它们名称就可以访问 Solidity 变量和其他标识符。对于内存变量，这会将地址而不是值压入栈中。
-存储变量是不同的，因为存储变量的值可能不占用完整的存储槽，因此其“地址”由存储槽和槽内的字节偏移量组成。
-为了获取变量 ``x`` 所使用的存储槽，你可以使用 ``x_slot``，并用的 ``x_offset`` 获取其字节偏移量。
+Solidity variables and other identifiers can be accessed by simply using their names. For memory variables, this pushes the address instead of the value into the stack.
+Storage variables are different because the value of the storage variable may not occupy the complete storage slot, so its "address" consists of the byte offset in the storage slot and the slot.
+To obtain variables `x` The storage slot used, you can use `x_slot` , and `x_offset` Gets its byte offset.
 
-在赋值语句中（见下文），我们甚至可以使用 Solidity 局部变量来赋值。
+In assignment statements (see below), we can even use Solidity local variables to assign values.
 
-对于内联汇编而言的外部函数也可以被访问：汇编会将它们的入口标签（带有虚拟函数解析）压入栈中。Solidity 中的调用语义为：
+External functions can also be accessed for inline assemblies: the Assembly pushes their entry tags (with virtual function parsing) into the stack. The call semantics in Solidity are:
 
- - 调用者压入 ``return label``、``arg1``、``arg2``、...、``argn``
- - 被调用方返回 ``ret1``、``ret2``、...、``retm``
+ - Caller press in ``return label``、``arg1``、``arg2``、...、``argn``
+ - The caller returns``ret1``、``ret2``、...、``retm``
 
-这个特性使用起来还是有点麻烦，因为在调用过程中堆栈偏移量发生了根本变化，因此对局部变量的引用将会出错。
+This feature is still a little troublesome to use, because the stack offset has changed fundamentally during the call, so the reference to local variables will go wrong.
 
 ```bash
 
@@ -2874,15 +2850,13 @@ mstore(0x80, add(mload(0x80), 3))
 ```
 
 
-> 如果你访问一个实际数据位数小于 256 位的数据类型（比如 ``uint64``、``address``、``bytes16`` 或 ``byte``），不要对这种类型经过编码后未使用的数据位上的数值做任何假设。尤其是不要假设它们肯定为 0。安全起见，在某个上下文中使用这种数据之前，请一定先将其数据清空为 0，这非常重要：``uint32 x = f(); assembly { x := and(x, 0xffffffff) /* now use x */ }``要清空有符号类型，你可以使用 ``signextend`` 操作码。
+> If you access a data type with actual data digits less than 256 bits（such ``uint64``、``address``、``bytes16`` or ``byte``），do not make any assumptions about the values on the unused data bits of this type after encoding. In particular, do not assume that they must be 0. For security reasons, before using this data in a context, you must clear the data to 0, which is very important: ``uint32 x = f(); assembly { x := and(x, 0xffffffff) /* now use x */ }``To clear the symbolic type, you can use `signextend` operation code.
 
-#### 标签
+#### Label
 
->    标签已经不推荐使用。请使用函数、循环、if 或 switch 语句。
+> Tags are not recommended. Use functions, loops, if, or switch statements.
 
-EVM 汇编的另一个问题是 jump 和 jumpi 函数使用绝对地址，这些绝对地址很容易改变。
-Solidity 内联汇编提供了标签，以便更容易地使用 jump。注意，标签具有底层特征，使用循环、if 和 switch 指令（参见下文）而不使用标签也能写出高效汇编代码。
-以下代码用来计算斐波那契数列中的一个元素。
+Another problem with EVM assembly is that jump and jumpi functions use absolute addresses, which are easy to change. Solidity inline assembly provides tags for easier use of jump. Note that tags have underlying characteristics, and efficient assembly code can be written using loop, if, and switch commands (see below) without tags. The following code is used to calculate an element in the Fibonacci sequence.
 
 ```bash
 
@@ -2901,10 +2875,9 @@ Solidity 内联汇编提供了标签，以便更容易地使用 jump。注意，
     }
 ```
 
-请注意：只有汇编程序知道当前栈高度时，才能自动访问堆栈变量。如果 jump 源和目标的栈高度不同，访问将失败。
-虽然我们可以这么使用 jump，但在这种情况下，你不应该去访问任何栈里的变量（即使是汇编变量）。
+Note: stack variables can be automatically accessed only when the assembler knows the current stack height. If the stack heights of the jump source and the target are different, the access fails. Although we can use jump in this way, in this case, you should not access variables in any stack (even assembly variables).
 
-此外，栈高度分析器还可以通过操作码（而不是根据控制流）检查代码操作码，因此在下面的情况下，汇编程序对标签 ``two`` 处的堆栈高度会产生错误的印象：
+In addition, the stack height analyzer can also check the code opcode through the opcode (rather than according to the control flow), so in the following cases, the assembler `two` The stack height at will generate the wrong impression:
 
 ```bash
 
@@ -2925,12 +2898,11 @@ Solidity 内联汇编提供了标签，以便更容易地使用 jump。注意，
     }
 ```
 
-#### 汇编局部变量声明
+#### Assembly local variable declaration
 
-你可以使用 ``let`` 关键字来声明只在内联汇编中可见的变量，实际上只在当前的 ``{...}`` 块中可见。
-下面发生的事情应该是：``let`` 指令将创建一个为变量保留的新数据槽，并在到达块末尾时自动删除。
-你需要为变量提供一个初始值，它可以只是 ``0``，但它也可以是一个复杂的函数风格表达式。
-
+You can use let Keywords to declare variables that are visible only in the inline assembly, actually only in the current `{...}` Visible in the block.
+The following things should be: `let` The command creates a new data slot reserved for the variable and automatically deletes it when it reaches the end of the block.
+You need to provide an initial value for the variable, which can only `0` But it can also be a complex function style expression.
 ```bash
 
     pragma solidity ^0.4.16;
@@ -2950,13 +2922,12 @@ Solidity 内联汇编提供了标签，以便更容易地使用 jump。注意，
     }
 ```
 
-#### 赋值
+#### Assignment
 
+You can assign values to Assembly local variables and function local variables. Note: When assigning values to variables pointing to memory or storage, you just change the pointer instead of the data.
 
-可以给汇编局部变量和函数局部变量赋值。请注意：当给指向内存或存储的变量赋值时，你只是更改指针而不是数据。
-
-有两种赋值方式：函数风格和指令风格。对于函数风格赋值（``变量 := 值``），你需要在函数风格表达式中提供一个值，它恰好可以产生一个栈里的值；
-对于指令风格赋值（``=: 变量``），则仅从栈顶部获取数据。对于这两种方式，冒号均指向变量名称。赋值则是通过用新值替换栈中的变量值来实现的。
+There are two assignment methods: Function style and instruction style. For function style assignment ( variable := value ), you need to provide a value in a function style expression, which can exactly generate a value in a stack;
+For Instruction style assignment ( =: variable ), the data is only obtained from the top of the stack. For both methods, colons point to variable names. Assignment is achieved by replacing the variable values in the stack with new values.
 
 ```bash
 
@@ -2968,12 +2939,12 @@ Solidity 内联汇编提供了标签，以便更容易地使用 jump。注意，
     }
 ```
 
-> 指令风格的赋值已经不推荐。
+> Assignment of instruction style is not recommended.
 
 #### If
 
 
-if 语句可以用于有条件地执行代码，且没有“else”部分；如果需要多种选择，你可以考虑使用“switch”（见下文）。
+if if statements can be used to conditionally execute code and do not have the "else" section; 
 
 ```bash
 
@@ -2982,13 +2953,12 @@ if 语句可以用于有条件地执行代码，且没有“else”部分；如�
     }
 ```
 
-代码主体的花括号是必需的。
+Braces for the code body are required.
 
 #### Switch
 
-
-作为“if/else”的非常初级的版本，你可以使用 switch 语句。它计算表达式的值并与几个常量进行比较。选出与匹配常数对应的分支。
-与某些编程语言容易出错的情况不同，控制流不会从一种情形继续执行到下一种情形。我们可以设定一个 fallback 或称为 ``default`` 的默认情况。
+As a very preliminary version of "if/else", you can use the switch statement. It calculates the value of the expression and compares it with several constants. Select the branch corresponding to the matching constant.
+Unlike some programming languages that are prone to errors, the control flow will not continue to be executed from one situation to the next. We can set a fallback or called default The default.
 
 ```bash
 
@@ -3005,14 +2975,14 @@ if 语句可以用于有条件地执行代码，且没有“else”部分；如�
     }
 ```
 
-Case 列表里面不需要大括号，但 case 主体需要。
+The Case list does not need braces, but the case body needs braces.
 
-#### 循环
+#### Circulating
 
-汇编语言支持一个简单的 for-style 循环。For-style 循环有一个头，它包含初始化部分、条件和迭代后处理部分。
-条件必须是函数风格表达式，而另外两个部分都是语句块。如果起始部分声明了某个变量，这些变量的作用域将扩展到循环体中（包括条件和迭代后处理部分）。
+Assembly language supports a simple for-style loop. The For-style loop has a header that contains the initialization part, conditions, and iteration post-processing parts.
+The condition must be a function-style expression, while the other two parts are statement blocks. If the start part declares a variable, the scope of these variables will be extended to the loop body (including conditions and post-iteration parts).
 
-下面例子是计算某个内存区域中的数值总和。
+The following example calculates the sum of values in a memory area.
 
 ```bash
 
@@ -3024,7 +2994,7 @@ Case 列表里面不需要大括号，但 case 主体需要。
     }
 ```
 
-For 循环也可以写成像 while 循环一样：只需将初始化部分和迭代后处理两部分留空。
+The For loop can also be written as the while loop: only the initialization part and the iteration post-processing part are left blank.
 
 ```bash
 
@@ -3038,11 +3008,11 @@ For 循环也可以写成像 while 循环一样：只需将初始化部分和迭
     }
 ```
 
-#### 函数
+#### Function
 
-汇编语言允许定义底层函数。底层函数需要从栈中取得它们的参数（和返回 PC），并将结果放入栈中。调用函数的方式与执行函数风格操作码相同。函数可以在任何地方定义，并且在声明它们的语句块中可见。函数内部不能访问在函数之外定义的局部变量。这里没有严格的 ``return`` 语句。如果调用会返回多个值的函数，则必须使用 ``a，b：= f(x)`` 或 ``let a，b：= f(x)`` 的方式把它们赋值到一个元组。
+Assembly language allows you to define underlying functions. The underlying function needs to obtain their parameters (and return PC) from the stack and put the results into the stack. The method of calling a function is the same as that of executing a function-style opcode. Functions can be defined anywhere and visible in the statement blocks that declare them. Local variables defined outside the function cannot be accessed within the function. There is no strict here return Statement. If you call a function that returns multiple values, you must use `a，b：= f(x)` Or let `a，b：= f(x)` Assign them to a tuple.
 
-下面例子通过平方和乘法实现了幂运算函数。
+The following example implements the power operation function by square multiplication.
 
 ```bash
 {
