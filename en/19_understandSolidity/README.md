@@ -3029,51 +3029,46 @@ The following example implements the power operation function by square multipli
 }
 ```
 
-#### 注意事项
+#### Precautions
 
-内联汇编语言可能具有相当高级的外观，但实际上它是非常低级的编程语言。函数调用、循环、if 语句和 switch 语句通过简单的重写规则进行转换，
-然后，汇编程序为你做的唯一事情就是重新组织函数风格操作码、管理 jump 标签、计算访问变量的栈高度，还有在到达语句块末尾时删除局部汇编变量的栈数据。
-特别是对于最后两种情况，汇编程序仅会按照代码的顺序计算栈的高度，而不一定遵循控制流程；了解这一点非常重要。此外，swap 等操作只会交换栈内的数据，而不是变量位置。
+Inline assembly language may have a fairly high-level appearance, but in fact it is a very low-level programming language. Function calls, loops, if statements, and switch statements are converted through simple rewrite rules, Then, the only thing the assembler does for you is to reorganize function-style opcodes, manage jump tags, and calculate the stack height of access variables, in addition, the stack data of partial assembly variables is deleted when the end of the statement block is reached. Especially for the last two cases, the assembler will only calculate the height of the stack in the order of the code, not necessarily following the control process; Understanding this is very important. In addition, operations such as swap only exchange the data in the stack, not the variable position.
 
-#### Solidity 惯例
+#### Solidity convention
 
-与 EVM 汇编语言相比，Solidity 能够识别小于 256 位的类型，例如 ``uint24``。为了提高效率，大多数算术运算只将它们视为 256 位数字，仅在必要时才清除未使用的数据位，即在将它们写入内存或执行比较之前才会这么做。这意味着，如果从内联汇编中访问这样的变量，你必须先手工清除那些未使用的数据位。
+Compared with EVM assembly language, Solidity can identify types less than 256 bits, such `uint24` . In order to improve efficiency, most arithmetic operations only regard them as 256 digits and clear unused data bits only when necessary, this is done only before they are written to memory or compared. This means that if you access such variables from an inline assembly you must first manually clear those unused data bits.
 
-Solidity 以一种非常简单的方式管理内存：在 ``0x40`` 的位置有一个“空闲内存指针”。如果你打算分配内存，只需从此处开始使用内存，然后相应地更新指针即可。内存的开头 64 字节可以用来作为临时分配的“暂存空间”。“空闲内存指针”之后的 32 字节位置（即从 ``0x60`` 开始的位置）将永远为 0，可以用来初始化空的动态内存数组。
+Solidity manages memory in a very simple way: in ``0x40`` location of has a "idle memory pointer". If you plan to allocate memory, just start using memory from here and update the pointer accordingly. The first 64 bytes of memory can be used as temporary storage space for temporary allocation ". The 32-byte position after the "free memory pointer" (that is, from `0x60` Start position) will always be 0, which can be used to initialize an empty dynamic memory array.
 
-在 Solidity 中，内存数组的元素总是占用 32 个字节的倍数（是的，甚至对于 ``byte[]`` 都是这样，只有 ``bytes`` 和 ``string`` 不是这样）。多维内存数组就是指向内存数组的指针。动态数组的长度存储在数组的第一个槽中，其后才是数组元素。
+In Solidity, elements in memory arrays always occupy a multiple of 32 bytes (yes, even `byte[]` It's all like this, only `bytes` and `string` Not like this). A multi-dimensional memory array is a pointer to a memory array. The length of a dynamic array is stored in the first slot of the array, followed by array elements.
 
->   静态内存数组没有长度字段，但很快就会增加，这是为了可以更好地进行静态数组和动态数组之间的转换，所以请不要依赖这点。
+> Static memory arrays do not have length fields, but will soon increase. This is to better convert between static arrays and dynamic arrays, so do not rely on this.
 
-### 独立汇编
+### Independent Assembly
 
-以上内联汇编描述的汇编语言也可以单独使用，实际上，计划是将其用作 Solidity 编译器的中间语言。在这种意义下，它试图实现以下几个目标：
+The assembly language described in the preceding inline assembly can also be used alone. In fact, the plan is to use it as an intermediate language for the Solidity compiler. In this sense, it tries to achieve the following goals:
 
-1、即使代码是由 Solidity 的编译器生成的，用它编写的程序应该也是可读的。
-2、从汇编到字节码的翻译应该尽可能少地包含“意外”。
-3、控制流应该易于检测，以帮助进行形式化验证和优化。
+1、Even if the code is generated by Solidity's compiler, the program written with it should also be readable.
+2、From assembly to bytecode translation, "accidents" should be included as little as possible ".
+3、The control flow should be easy to detect to help carry out formal test and optimization.
 
-为了实现第一个和最后一个目标，汇编提供了高级结构：如 ``for`` 循环、``if`` 语句、``switch`` 语句和函数调用。
-应该可以编写不使用明确的 ``SWAP``、``DUP``、``JUMP`` 和 ``JUMPI`` 语句的汇编程序，因为前两个混淆了数据流，而最后两个混淆了控制流。
-此外，形式为 ``mul(add(x, y), 7)`` 的函数风格语句优于如 ``7 y x add mul`` 的指令风格语句，因为在第一种形式中更容易查看哪个操作数用于哪个操作码。
+To achieve the first and last goals, the Assembly provides an advanced structure: such `for` Circulation, `if` Statement, `switch` Statements and function calls. Should be able to write without using explicit `SWAP` , `DUP` , `JUMP` And `JUMPI` Statement assembler,because the first two confuse the data stream, while the last two confuse the control flow. In addition, the form is `mul(add(x, y), 7)` The function style statement of is better `7 y x add` mul Because it is easier to see which operation is used for which operation code in the first form.
 
-第二个目标是通过采用一种非常规则的方式来将高级高级指令结构便以为字节码。
-汇编程序执行的唯一非局部操作是用户自定义标识符（函数、变量、...）的名称查找，它遵循非常简单和固定的作用域规则并从栈中清除局部变量。
+The second goal is to use a very regular way to treat the advanced instruction structure as a bytecode.
+The only non-local operation performed by the assembler is the name search of the user-defined identifier (function, variable, azone), it follows very simple and fixed scope rules and clears local variables from the stack.
 
-作用域：在其中声明的标识符（标签、变量、函数、汇编）仅在声明的语句块中可见（包括当前语句块中的嵌套语句块）。
-即使它们在作用范围内，越过函数边界访问局部变量也是非法的。阴影化是禁止的。在声明之前不能访问局部变量，但标签、函数和汇编是可以的。
-汇编是特殊的语句块，例如用于返回运行时代码或创建合约等。在子汇编外部的汇编语句块中声明的标示符在子汇编中全都不可见。
+Scope: Identifiers (tags, variables, functions, assemblies) declared in it are only visible in declared statement blocks (including nested statement blocks in the current statement block). Even if they are within the scope of action, it is illegal to cross the function boundary to access local variables. Shadowing is prohibited. Local variables cannot be accessed before declaration, but tags, functions, and assemblies are possible.
+Assembly is a special statement block, for example, used to return runtime codes or create contracts. Identifiers declared in Assembly statement blocks outside the subassembly are all invisible in the subassembly.
 
-如果控制流经过块尾部，则会插入与在当前语句块中声明的局部变量数量相匹配的 pop 指令。无论何时引用局部变量，代码生成器都需要知道在当前栈的相对位置，
-因此，需要跟踪当前所谓的栈高度。由于所有在语句块内声明的局部变量都会在语句块结束时被清楚，所以语句块前后的栈高度应该相同。如果情况并非如此，则会发出警告。
+If the control flow passes through the end of the block, pop instructions matching the number of local variables declared in the current statement block are inserted. Whenever a local variable is referenced, the code generator needs to know the relative position in the current stack,
+Therefore, it is necessary to track the current so-called stack height. Because all local variables declared in the statement block are clear at the end of the statement block, the stack height before and after the statement block should be the same. If this is not the case a warning will be issued.
 
-使用 ``switch``、``for`` 和函数应该可以编写复杂的代码，而无需手工调用 ``jump`` 或 ``jumpi``。这将允许改进的形式化验证和优化更简单地分析控制流程。
+Use `switch` , `for` And functions should be able to write complex code without manual calls `jump` Or `jumpi` . This will allow improved forms of laboratory certificates and optimization to analyze the control process more simply.
 
-此外，如果允许手动跳转，计算栈高度将会更加复杂。栈中所有局部变量的位置都需要明确知晓，否则在语句块结束时就无法自动获得局部变量的引用从而正确地清除它们。
+In addition, if manual redirection is allowed, the calculation stack height will be more complicated. The positions of all local variables in the stack need to be clearly known, otherwise, references to local variables cannot be automatically obtained at the end of the statement block, thus clearing them correctly.
 
-例子：
+Example:
 
-我们将参考一个从 Solidity 到汇编指令的实例。考虑以下 Solidity 程序的运行时字节码::
+We will refer to an instance from Solidity to assembly instructions. Consider the runtime bytecode of the following Solidity program:
 
     pragma solidity ^0.4.16;
 
@@ -3085,7 +3080,7 @@ Solidity 以一种非常简单的方式管理内存：在 ``0x40`` 的位置有�
       }
     }
 
-将会生成如下汇编指令::
+The following assembly instructions will be generated:
 
     {
       mstore(0x40, 0x60) // 保存“空闲内存指针”
@@ -3112,18 +3107,18 @@ Solidity 以一种非常简单的方式管理内存：在 ``0x40`` 的位置有�
       }
     }
 
-汇编语法
+Assembly syntax
 -----------------
 
-解析器任务如下：
+Parser tasks are as follows:
 
-- 将字节流转换为符号流，丢弃 C ++ 风格的注释（对源代码引用存在特殊注释，我们这里不解释它）。
-- 根据下面的语法，将符号流转换为 AST。
-- 注册语句块中定义的标识符（注释到 AST 节点），并注明变量从哪个地方开始可以访问。
+- Convert the byte stream into a symbolic stream, and discard the comments in the C++ style (there is a special comment on the source code reference, and we will not explain it here).
+- According to the following syntax, convert the symbol flow to AST.
+- Register the identifier defined in the statement Block (annotated to the AST node) and indicate where the variable can be accessed from.
 
-汇编词法分析器遵循由 Solidity 自己定义的规则。
+The Assembly lexical analyzer follows the rules defined by Solidity itself.
 
-空格用于分隔所有符号，它由空格字符、制表符和换行符组成。注释格式是常规的 JavaScript/C++ 风格，并被解释为空格。
+A space is used to separate all symbols. It consists of space characters, tabs, and line breaks. The annotation format is regular JavaScript/C envoy style and is interpreted as a space.
 
 Grammar::
 
