@@ -1,0 +1,989 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>落地案例 · Simplechain Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="45_faq.html" />
+    
+    
+    <link rel="prev" href="43_commityEnters/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">快速了解</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="1_quickStart.html">
+            
+                <a href="1_quickStart.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="2_BuildNode/">
+            
+                <a href="2_BuildNode/">
+            
+                    
+                    搭建节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">sipc代币协议</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="47_techniqueLanguage.html">
+            
+                <a href="47_techniqueLanguage.html">
+            
+                    
+                    技术术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="3_sipcCoin.html">
+            
+                <a href="3_sipcCoin.html">
+            
+                    
+                    sipc代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="4_PublishCoin/">
+            
+                <a href="4_PublishCoin/">
+            
+                    
+                    发行代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="5_concoct.html">
+            
+                <a href="5_concoct.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="7_account.html">
+            
+                <a href="7_account.html">
+            
+                    
+                    账户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="8_transaction/">
+            
+                <a href="8_transaction/">
+            
+                    
+                    交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="9_block/">
+            
+                <a href="9_block/">
+            
+                    
+                    区块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="6_genesis/">
+            
+                <a href="6_genesis/">
+            
+                    
+                    创世块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="10_transactionReceipt/">
+            
+                <a href="10_transactionReceipt/">
+            
+                    
+                    交易回执
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">架构</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="11_constructDesign/">
+            
+                <a href="11_constructDesign/">
+            
+                    
+                    架构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="12_structAndStore/">
+            
+                <a href="12_structAndStore/">
+            
+                    
+                    数据结构和存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="50_togetherStep.html">
+            
+                <a href="50_togetherStep.html">
+            
+                    
+                    数据同步优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">底层核心技术</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="13_p2pNetwork.html">
+            
+                <a href="13_p2pNetwork.html">
+            
+                    
+                    p2p网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="14_consensus/">
+            
+                <a href="14_consensus/">
+            
+                    
+                    共识机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="15_virtualMache/">
+            
+                <a href="15_virtualMache/">
+            
+                    
+                    虚拟机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="16_runMechanism/">
+            
+                <a href="16_runMechanism/">
+            
+                    
+                    运行机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="17_unusual.html">
+            
+                <a href="17_unusual.html">
+            
+                    
+                    处理异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">智能合约</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="18_contract/">
+            
+                <a href="18_contract/">
+            
+                    
+                    智能合约
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="19_understandSolidity/">
+            
+                <a href="19_understandSolidity/">
+            
+                    
+                    深入理解Solidity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="20_contractPattern.html">
+            
+                <a href="20_contractPattern.html">
+            
+                    
+                    合约模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开发者工具</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="21_buildTest.html">
+            
+                <a href="21_buildTest.html">
+            
+                    
+                    搭建测试链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="22_sipcApi.html">
+            
+                <a href="22_sipcApi.html">
+            
+                    
+                    Sip API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="23_crossChainApi.html">
+            
+                <a href="23_crossChainApi.html">
+            
+                    
+                    跨链API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="24_chromeWallet/">
+            
+                <a href="24_chromeWallet/">
+            
+                    
+                    SimPlug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="25_sdk/">
+            
+                <a href="25_sdk/">
+            
+                    
+                    SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">跨链</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="48_crossChain/">
+            
+                <a href="48_crossChain/">
+            
+                    
+                    跨链方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="26_smallChain.html">
+            
+                <a href="26_smallChain.html">
+            
+                    
+                    子链模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="49_crossChainOrder/">
+            
+                <a href="49_crossChainOrder/">
+            
+                    
+                    跨链流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp开发</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="27_dappFlow/">
+            
+                <a href="27_dappFlow/">
+            
+                    
+                    Dapp流程梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="28_editor.html">
+            
+                <a href="28_editor.html">
+            
+                    
+                    编译器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="29_writeContract/">
+            
+                <a href="29_writeContract/">
+            
+                    
+                    编写合约
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="30_frontRealize/">
+            
+                <a href="30_frontRealize/">
+            
+                    
+                    前端实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">挖矿</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="31_mining.html">
+            
+                <a href="31_mining.html">
+            
+                    
+                    sipc挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="32_miningPool/">
+            
+                <a href="32_miningPool/">
+            
+                    
+                    矿池接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="33_gpuMining/">
+            
+                <a href="33_gpuMining/">
+            
+                    
+                    GPU挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="34_SimPool/">
+            
+                <a href="34_SimPool/">
+            
+                    
+                    Simpool挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="35_SimpleNode_x1/">
+            
+                <a href="35_SimpleNode_x1/">
+            
+                    
+                    SimpleNode x1挖矿教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">客户端</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="36_SIPC.html">
+            
+                <a href="36_SIPC.html">
+            
+                    
+                    SIPC.VIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="37_wallet/">
+            
+                <a href="37_wallet/">
+            
+                    
+                    sipc全节点钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="38_ChainBox/">
+            
+                <a href="38_ChainBox/">
+            
+                    
+                    ChainBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="39_bolckBrowser/">
+            
+                <a href="39_bolckBrowser/">
+            
+                    
+                    区块链浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">生态</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="40_tradePlateform.html">
+            
+                <a href="40_tradePlateform.html">
+            
+                    
+                    交易所对接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="41_commityProduct.html">
+            
+                <a href="41_commityProduct.html">
+            
+                    
+                    社区项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="42_commityActity.html">
+            
+                <a href="42_commityActity.html">
+            
+                    
+                    社区活动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="43_commityEnters/">
+            
+                <a href="43_commityEnters/">
+            
+                    
+                    社区入口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">落地方案</li>
+        
+        
+    
+        <li class="chapter active" data-level="14.1" data-path="44_case.html">
+            
+                <a href="44_case.html">
+            
+                    
+                    落地案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其它</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="45_faq.html">
+            
+                <a href="45_faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="46_supportOnline/">
+            
+                <a href="46_supportOnline/">
+            
+                    
+                    在线技术支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >落地案例</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>SimpleChain&#xFF08;SIPC&#xFF09;&#x662F;&#x4E00;&#x6B3E;&#x4EE5;&#x201C;&#x7B80;&#x5355;&#x4E0A;&#x94FE;&#x3001;&#x5171;&#x4FC3;&#x5171;&#x8D62;&#x201D;&#x4E3A;&#x8BBE;&#x8BA1;&#x7406;&#x5FF5;&#x7684;&#x516C;&#x6709;&#x94FE;&#x3002;&#x4F5C;&#x4E3A;&#x4E00;&#x9879;&#x9769;&#x547D;&#x6027;&#x7684;&#x533A;&#x5757;&#x94FE;&#x5E94;&#x7528;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x8BBE;&#x8BA1;&#xFF0C;&#x4E0A;&#x94FE;&#x652F;&#x6301;&#x4E3B;&#x94FE;&#x5E95;&#x5C42;&#x5171;&#x8BC6;&#x2014;POW&#x7B97;&#x6CD5;&#xFF0C;&#x5B50;&#x94FE;&#x901A;&#x8FC7;&#x652F;&#x6301;&#x591A;&#x5143;&#x5171;&#x8BC6;&#x548C;&#x6027;&#x80FD;&#x8981;&#x6C42;&#x6765;&#x4FDD;&#x969C;&#x5E73;&#x7A33;&#x5B89;&#x5168;&#x8FD0;&#x884C;&#xFF0C;&#x4ECE;&#x800C;&#x6EE1;&#x8DB3;&#x4E30;&#x5BCC;&#x7684;&#x5546;&#x4E1A;&#x5E94;&#x7528;&#x573A;&#x666F;&#x3002;&#x901A;&#x8FC7;&#x4F53;&#x7CFB;&#x5316;&#x5DE5;&#x5177;&#x6A21;&#x7EC4;&#x4E3A;&#x5404;&#x7C7B;&#x5E94;&#x7528;&#x573A;&#x666F;&#x63D0;&#x4F9B;&#x7B80;&#x4FBF;&#x7684;&#x914D;&#x7F6E;&#x3001;&#x90E8;&#x7F72;&#x4E0E;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF0C;&#x5B9E;&#x73B0;&#x7B80;&#x5355;&#x4E0A;&#x94FE;&#x3002;&#x5728;&#x533A;&#x5757;&#x94FE;&#x5E94;&#x7528;&#x7684;&#x9053;&#x8DEF;&#x4E0A;SimpleChain&#x6B63;&#x5728;&#x63A2;&#x7D22;&#x66F4;&#x5E7F;&#x9614;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x5E76;&#x5728;&#x53F8;&#x6CD5;&#x5B58;&#x8BC1;&#x3001;&#x6587;&#x5316;&#x7248;&#x6743;&#x3001;&#x6E38;&#x620F;&#x5A31;&#x4E50;&#x3001;&#x573A;&#x666F;&#x652F;&#x4ED8;&#x7B49;&#x591A;&#x91CD;&#x9886;&#x57DF;&#x6210;&#x7EE9;&#x6590;&#x7136;&#x3002;&#x4ECE;Simplechain&#x4E3B;&#x7F51;&#x4E0A;&#x7EBF;&#x4EE5;&#x6765;&#xFF0C;&#x7ECF;&#x8FC7;&#x793E;&#x533A;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x5171;&#x540C;&#x52AA;&#x529B;&#x3002;&#x57FA;&#x4E8E;Simplechain&#x5F00;&#x53D1;&#x7684;&#x5E94;&#x7528;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E9B;&#x8BE6;&#x7EC6;&#x7684;&#x843D;&#x5730;&#x6848;&#x4F8B;&#x3002;</p>
+<p><strong>&#x53F8;&#x6CD5;&#x5B58;&#x8BC1;&#xFF1A;</strong> &#x201C;&#x5168;&#x56FD;&#x9996;&#x4F8B;&#x533A;&#x5757;&#x94FE;&#x5B58;&#x8BC1;&#x6848;&#x4F8B;&#x201D;&#x7684;&#x72EC;&#x5BB6;&#x6280;&#x672F;&#x652F;&#x6301;&#x65B9;&#x4FDD;&#x5168;&#x7F51;&#x4F5C;&#x4E3A;&#x57FA;&#x4E8E;SimpleChain&#x5E95;&#x5C42;&#x6280;&#x672F;&#x7684;&#x9996;&#x6761;&#x53F8;&#x6CD5;&#x9886;&#x57DF;&#x5B50;&#x94FE;&#x2014;&#x2014;&#x4FDD;&#x5168;&#x94FE;&#xFF0C;&#x4E0E;&#x6570;&#x5BB6;&#x5F8B;&#x6240;&#x548C;&#x53F8;&#x6CD5;&#x9274;&#x5B9A;&#x673A;&#x6784;&#x8FBE;&#x6210;&#x5408;&#x4F5C;&#x5916;&#xFF0C;&#x66F4;&#x4E0E;&#x56FD;&#x5185;&#x4E09;&#x5927;&#x4E92;&#x8054;&#x7F51;&#x6CD5;&#x9662;&#x53CA;&#x5168;&#x56FD;&#x9996;&#x5BB6;&#x4E92;&#x8054;&#x7F51;&#x516C;&#x8BC1;&#x5904;&#x5EFA;&#x7ACB;&#x7D27;&#x5BC6;&#x8054;&#x7CFB;&#xFF0C;&#x5176;5.0&#x7248;&#x672C;&#x7684;&#x4E2D;&#x56FD;&#x6807;&#x51C6;&#x9662;&#x6D4B;&#x8BC4;&#x62A5;&#x544A;&#x4E5F;&#x5373;&#x5C06;&#x53D1;&#x5E03;&#xFF1B;</p>
+<p><strong>&#x6587;&#x5316;&#x7248;&#x6743;&#xFF1A;</strong> &#x9664;&#x5B50;&#x94FE;&#x4FDD;&#x5168;&#x7F51;&#xFF08;&#x4FDD;&#x5168;&#x94FE;&#xFF09;&#x4E3A;&#x56FD;&#x5185;&#x8BF8;&#x5982;&#x7EF4;&#x6743;&#x9A91;&#x58EB;&#x3001;&#x597D;&#x5267;&#x90A6;&#x3001;&#x5DF4;&#x6BD4;&#x7279;&#x7B49;&#x6587;&#x5316;&#x4F20;&#x5A92;&#x516C;&#x53F8;&#x63D0;&#x4F9B;&#x201C;&#x533A;&#x5757;&#x94FE;+&#x201D;&#x5B58;&#x8BC1;&#x670D;&#x52A1;&#x5916;&#xFF0C;&#x4E5F;&#x4E0E;&#x4E00;&#x7AD9;&#x5F0F;&#x5C0F;&#x8BF4;&#x9605;&#x8BFB;&#x548C;&#x7248;&#x6743;&#x6295;&#x8D44;&#x5E73;&#x53F0;&#x7248;&#x8DA3;&#x8FBE;&#x6210;&#x6DF1;&#x5EA6;&#x5408;&#x4F5C;&#xFF1B;</p>
+<p><strong>&#x6E38;&#x620F;&#x5A31;&#x4E50;&#xFF1A;</strong> &#x6D77;&#x5916;&#x6E38;&#x620F;&#x5E73;&#x53F0;GWC&#x5728;SimpleChain&#x4E0A;&#x505A;&#x4E86;&#x4E00;&#x5957;&#x57FA;&#x4E8E;&#x6E38;&#x620F;&#x884C;&#x4E1A;&#x4FE1;&#x7528;&#x8BC4;&#x7EA7;&#x3001;&#x8D28;&#x91CF;&#x8BC4;&#x5206;&#x7684;&#x4F53;&#x7CFB;&#xFF0C;&#x53C2;&#x4E0E;&#x8005;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5BF9;&#x6E38;&#x620F;&#x53CA;&#x5176;&#x5236;&#x4F5C;&#x56E2;&#x961F;&#x6253;&#x5206;&#xFF0C;&#x83B7;&#x5F97;&#x76F8;&#x5E94;&#x7684;&#x6E38;&#x620F;&#x8FD0;&#x8425;&#x5206;&#x7EA2;&#xFF1B;</p>
+<p><strong>&#x573A;&#x666F;&#x652F;&#x4ED8;&#xFF1A;</strong> SimpleChain&#x56E2;&#x961F;&#x4E0E;&#x6D59;&#x5927;&#x521B;&#x4E1A;&#x56E2;&#x961F;&#x5171;&#x540C;&#x6253;&#x9020;&#x4E86;&#x5168;&#x7403;&#x9996;&#x6B3E;&#x533A;&#x5757;&#x94FE;&#x667A;&#x80FD;&#x5496;&#x5561;&#x673A;&#xFF0C;&#x5176;&#x5496;&#x5561;&#x673A;&#x5DF2;&#x88AB;&#x9646;&#x7EED;&#x6295;&#x653E;&#x5728;&#x5171;&#x4EAB;&#x529E;&#x516C;&#x7A7A;&#x95F4;&#x3001;&#x72EC;&#x7ACB;&#x521B;&#x4E1A;&#x516C;&#x53F8;&#x7B49;&#x573A;&#x6240;&#xFF0C;&#x5176;&#x7CFB;&#x7EDF;&#x652F;&#x6301;SIPC&#x652F;&#x4ED8;&#xFF0C;&#x65E0;&#x9700;&#x62E5;&#x6709;&#x5FAE;&#x4FE1;&#x3001;&#x652F;&#x4ED8;&#x5B9D;&#x7B49;&#x4E2D;&#x5FC3;&#x5316;&#x652F;&#x4ED8;&#x5DE5;&#x5177;&#xFF0C;&#x5373;&#x53EF;&#x4EAB;&#x53D7;&#x6700;&#x4FBF;&#x6377;&#x7684;&#x533A;&#x5757;&#x94FE;&#x652F;&#x4ED8;&#x65B9;&#x5F0F;&#x3002;</p>
+<p><strong>&#x516C;&#x76CA;&#x6148;&#x5584;&#xFF1A;</strong> SimplecChain&#x7EE7;&#x643A;&#x624B;&#x6570;&#x79E6;&#x79D1;&#x6280;&#x4FDD;&#x5168;&#x7F51;&#x6350;&#x8D60;&#x6EAF;&#x6E90;&#x5E73;&#x53F0;&#xFF0C;&#x5411;&#x6B66;&#x6C49;&#x4E5D;&#x5DDE;&#x901A;&#x4EBA;&#x5BFF;&#x5802;&#x517B;&#x8001;&#x9662;&#x3001;&#x6D59;&#x6C5F;&#x5927;&#x5B66;&#x533B;&#x5B66;&#x9662;&#x9644;&#x5C5E;&#x7B2C;&#x4E8C;&#x533B;&#x9662;&#x7B49;&#x673A;&#x6784;&#x6350;&#x8D60;&#x4E07;&#x4F59;&#x4EF6;&#x9632;&#x62A4;&#x670D;&#xFF0C;&#x4EE5;&#x652F;&#x63F4;&#x4E00;&#x7EBF;&#x533B;&#x62A4;&#x4EBA;&#x5458;&#x3002;&#x901A;&#x8FC7;&#x533A;&#x5757;&#x94FE;&#x6280;&#x672F;&#x5B9E;&#x73B0;&#x4E86;&#x6350;&#x8D60;&#x7269;&#x8D44;&#x6D41;&#x8F6C;&#x8FC7;&#x7A0B;&#x3001;&#x65F6;&#x95F4;&#x8282;&#x70B9;&#x7684;&#x5168;&#x6D41;&#x7A0B;&#x5B58;&#x8BC1;&#x3001;&#x8BB0;&#x5F55;&#x4E0E;&#x8DDF;&#x8E2A;&#xFF0C;&#x4E3A;&#x75AB;&#x60C5;&#x4E2D;&#x6148;&#x5584;&#x6350;&#x8D60;&#x63D0;&#x4F9B;&#x5168;&#x6D41;&#x7A0B;&#x4E0A;&#x94FE;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x8FD8;&#x4E0E;&#x4E0E;Bithelp&#x5168;&#x7403;&#x6027;&#x7684;&#x6570;&#x5B57;&#x516C;&#x76CA;&#x5E73;&#x53F0;&#x8FBE;&#x6210;&#x6218;&#x7565;&#x5408;&#x4F5C;&#x534F;&#x8BAE;&#xFF0C;&#x5171;&#x540C;&#x53D1;&#x8D77;&#x4E86;&#x516C;&#x76CA;&#x52DF;&#x6350;&#x6D3B;&#x52A8;&#x3002;</p>
+<p><strong>&#x793E;&#x4EA4;&#x7535;&#x5546;&#xFF1A;</strong> SimpleChain&#x5E2E;&#x52A9;&#x7CBE;&#x54C1;&#x793E;&#x4EA4;&#x7535;&#x5546;&#x5E73;&#x53F0;&#x5168;&#x7403;&#x65F6;&#x523B;&#x6253;&#x9020;&#x201C;&#x533A;&#x5757;&#x94FE;+&#x793E;&#x4EA4;&#x7535;&#x5546;&#x201D;&#x6A21;&#x5F0F;&#xFF0C;&#x5C06;&#x5E73;&#x53F0;&#x5546;&#x6237;&#x3001;&#x7535;&#x5546;&#x5E73;&#x53F0;&#x3001;&#x793E;&#x7FA4;&#x7528;&#x6237;&#x4E09;&#x8005;&#x751F;&#x6001;&#x5173;&#x7CFB;&#x6253;&#x901A;&#xFF0C;&#x6539;&#x53D8;&#x4E86;&#x4EE5;&#x5F80;&#x5E73;&#x53F0;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x4E09;&#x65B9;&#x5229;&#x76CA;&#x751F;&#x6001;&#x5C06;&#x4F1A;&#x88AB;&#x91CD;&#x65B0;&#x6574;&#x5408;&#xFF0C;&#x4ED6;&#x4EEC;&#x5C06;&#x5171;&#x540C;&#x53C2;&#x4E0E;&#x6574;&#x4E2A;&#x5229;&#x76CA;&#x94FE;&#x6761;&#xFF0C;&#x800C;&#x4E14;&#x662F;&#x4F5C;&#x4E3A;&#x5E73;&#x7B49;&#x7684;&#x5173;&#x7CFB;&#x5B58;&#x5728;&#x3002;</p>
+<p><strong>&#x8D44;&#x4EA7;&#x52A0;&#x5BC6;&#xFF1A;</strong> SimpleChain&#x4E0E;Keystore &#x5408;&#x4F5C;&#xFF0C;&#x5171;&#x540C;&#x63A8;&#x8FDB;&#x533A;&#x5757;&#x94FE;&#x6280;&#x672F;&#x548C;&#x5E94;&#x7528;&#x7684;&#x53D1;&#x5C55;&#x3002;&#x53CC;&#x65B9;&#x5728;&#x8D44;&#x4EA7;&#x6258;&#x7BA1;&#x3001;&#x8282;&#x70B9;&#x670D;&#x52A1;&#x3001;&#x5E02;&#x573A;&#x62D3;&#x5C55;&#x7B49;&#x9886;&#x57DF;&#x5C55;&#x5F00;&#x5408;&#x4F5C;&#xFF0C;&#x643A;&#x624B;&#x62D3;&#x5C55;&#x4F01;&#x4E1A;&#x7EA7;&#x52A0;&#x5BC6;&#x8D44;&#x4EA7;&#x670D;&#x52A1;&#x5E02;&#x573A;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="43_commityEnters/" class="navigation navigation-prev " aria-label="Previous page: 社区入口">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="45_faq.html" class="navigation navigation-next " aria-label="Next page: FAQ">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"id":"docs_48","title":"落地案例","sidebar_label":"落地案例","level":"14.1","depth":1,"next":{"title":"FAQ","level":"15.1","depth":1,"path":"45_faq.md","ref":"45_faq.md","articles":[]},"previous":{"title":"社区入口","level":"13.4","depth":1,"path":"43_commityEnters/README.md","ref":"43_commityEnters/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"zh","gitbook":"*"},"file":{"path":"44_case.md","mtime":"2020-06-23T01:47:29.698Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-02T02:38:08.915Z"},"basePath":".","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

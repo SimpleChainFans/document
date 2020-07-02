@@ -1,0 +1,1180 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>交易 · Simplechain Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../9_block/" />
+    
+    
+    <link rel="prev" href="../7_account.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">快速了解</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1_quickStart.html">
+            
+                <a href="../1_quickStart.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../2_BuildNode/">
+            
+                <a href="../2_BuildNode/">
+            
+                    
+                    搭建节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">sipc代币协议</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../47_techniqueLanguage.html">
+            
+                <a href="../47_techniqueLanguage.html">
+            
+                    
+                    技术术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../3_sipcCoin.html">
+            
+                <a href="../3_sipcCoin.html">
+            
+                    
+                    sipc代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../4_PublishCoin/">
+            
+                <a href="../4_PublishCoin/">
+            
+                    
+                    发行代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../5_concoct.html">
+            
+                <a href="../5_concoct.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../7_account.html">
+            
+                <a href="../7_account.html">
+            
+                    
+                    账户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../9_block/">
+            
+                <a href="../9_block/">
+            
+                    
+                    区块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../6_genesis/">
+            
+                <a href="../6_genesis/">
+            
+                    
+                    创世块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../10_transactionReceipt/">
+            
+                <a href="../10_transactionReceipt/">
+            
+                    
+                    交易回执
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">架构</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../11_constructDesign/">
+            
+                <a href="../11_constructDesign/">
+            
+                    
+                    架构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../12_structAndStore/">
+            
+                <a href="../12_structAndStore/">
+            
+                    
+                    数据结构和存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../50_togetherStep.html">
+            
+                <a href="../50_togetherStep.html">
+            
+                    
+                    数据同步优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">底层核心技术</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../13_p2pNetwork.html">
+            
+                <a href="../13_p2pNetwork.html">
+            
+                    
+                    p2p网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../14_consensus/">
+            
+                <a href="../14_consensus/">
+            
+                    
+                    共识机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../15_virtualMache/">
+            
+                <a href="../15_virtualMache/">
+            
+                    
+                    虚拟机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../16_runMechanism/">
+            
+                <a href="../16_runMechanism/">
+            
+                    
+                    运行机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../17_unusual.html">
+            
+                <a href="../17_unusual.html">
+            
+                    
+                    处理异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">智能合约</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../18_contract/">
+            
+                <a href="../18_contract/">
+            
+                    
+                    智能合约
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../19_understandSolidity/">
+            
+                <a href="../19_understandSolidity/">
+            
+                    
+                    深入理解Solidity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../20_contractPattern.html">
+            
+                <a href="../20_contractPattern.html">
+            
+                    
+                    合约模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开发者工具</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../21_buildTest.html">
+            
+                <a href="../21_buildTest.html">
+            
+                    
+                    搭建测试链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../22_sipcApi.html">
+            
+                <a href="../22_sipcApi.html">
+            
+                    
+                    Sip API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../23_crossChainApi.html">
+            
+                <a href="../23_crossChainApi.html">
+            
+                    
+                    跨链API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../24_chromeWallet/">
+            
+                <a href="../24_chromeWallet/">
+            
+                    
+                    SimPlug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../25_sdk/">
+            
+                <a href="../25_sdk/">
+            
+                    
+                    SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">跨链</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../48_crossChain/">
+            
+                <a href="../48_crossChain/">
+            
+                    
+                    跨链方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../26_smallChain.html">
+            
+                <a href="../26_smallChain.html">
+            
+                    
+                    子链模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../49_crossChainOrder/">
+            
+                <a href="../49_crossChainOrder/">
+            
+                    
+                    跨链流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp开发</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../27_dappFlow/">
+            
+                <a href="../27_dappFlow/">
+            
+                    
+                    Dapp流程梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../28_editor.html">
+            
+                <a href="../28_editor.html">
+            
+                    
+                    编译器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../29_writeContract/">
+            
+                <a href="../29_writeContract/">
+            
+                    
+                    编写合约
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../30_frontRealize/">
+            
+                <a href="../30_frontRealize/">
+            
+                    
+                    前端实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">挖矿</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../31_mining.html">
+            
+                <a href="../31_mining.html">
+            
+                    
+                    sipc挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../32_miningPool/">
+            
+                <a href="../32_miningPool/">
+            
+                    
+                    矿池接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../33_gpuMining/">
+            
+                <a href="../33_gpuMining/">
+            
+                    
+                    GPU挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="../34_SimPool/">
+            
+                <a href="../34_SimPool/">
+            
+                    
+                    Simpool挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="../35_SimpleNode_x1/">
+            
+                <a href="../35_SimpleNode_x1/">
+            
+                    
+                    SimpleNode x1挖矿教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">客户端</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../36_SIPC.html">
+            
+                <a href="../36_SIPC.html">
+            
+                    
+                    SIPC.VIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="../37_wallet/">
+            
+                <a href="../37_wallet/">
+            
+                    
+                    sipc全节点钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="../38_ChainBox/">
+            
+                <a href="../38_ChainBox/">
+            
+                    
+                    ChainBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="../39_bolckBrowser/">
+            
+                <a href="../39_bolckBrowser/">
+            
+                    
+                    区块链浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">生态</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../40_tradePlateform.html">
+            
+                <a href="../40_tradePlateform.html">
+            
+                    
+                    交易所对接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../41_commityProduct.html">
+            
+                <a href="../41_commityProduct.html">
+            
+                    
+                    社区项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="../42_commityActity.html">
+            
+                <a href="../42_commityActity.html">
+            
+                    
+                    社区活动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="../43_commityEnters/">
+            
+                <a href="../43_commityEnters/">
+            
+                    
+                    社区入口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">落地方案</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../44_case.html">
+            
+                <a href="../44_case.html">
+            
+                    
+                    落地案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其它</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../45_faq.html">
+            
+                <a href="../45_faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="../46_supportOnline/">
+            
+                <a href="../46_supportOnline/">
+            
+                    
+                    在线技术支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >交易</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x7684;&#x4EA4;&#x6613;(Transaction)&#x662F;&#x6307;&#x7531;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x8D26;&#x6237;&#x8F6C;&#x79FB;&#x4E00;&#x5B9A;&#x8D44;&#x4EA7;&#x7ED9;&#x67D0;&#x4E2A;&#x8D26;&#x6237;&#xFF0C;
+&#x6216;&#x8005;&#x53D1;&#x51FA;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#x6307;&#x4EE4;&#x5230;&#x67D0;&#x4E2A;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x3002;</p>
+<p>&#x5728;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x7F51;&#x7EDC;&#x4E2D;&#xFF0C;&#x4EA4;&#x6613;&#x6267;&#x884C;&#x5C5E;&#x4E8E;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x3002;&#x5177;&#x6709;&#x539F;&#x5B50;&#x6027;&#x3001;&#x4E00;&#x81F4;&#x6027;&#x3001;&#x9694;&#x79BB;&#x6027;&#x3001;&#x6301;&#x4E45;&#x6027;&#x7279;&#x70B9;&#x3002;</p>
+<ul>
+<li><code>&#x539F;&#x5B50;&#x6027;</code>&#xFF1A; &#x662F;&#x4E0D;&#x53EF;&#x5206;&#x5272;&#x7684;&#x6700;&#x5C0F;&#x6267;&#x884C;&#x5355;&#x4F4D;&#xFF0C;&#x8981;&#x4E48;&#x505A;&#xFF0C;&#x8981;&#x4E48;&#x4E0D;&#x505A;&#x3002;</li>
+<li><code>&#x4E00;&#x81F4;&#x6027;</code>&#xFF1A; &#x540C;&#x4E00;&#x7B14;&#x4EA4;&#x6613;&#x6267;&#x884C;&#xFF0C;&#x5FC5;&#x7136;&#x662F;&#x5C06;Simplechain&#x8D26;&#x672C;&#x4ECE;&#x4E00;&#x4E2A;&#x4E00;&#x81F4;&#x6027;&#x72B6;&#x6001;&#x53D8;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x4E00;&#x81F4;&#x6027;&#x72B6;&#x6001;&#x3002;</li>
+<li><code>&#x9694;&#x79BB;&#x6027;</code>&#xFF1A; &#x4EA4;&#x6613;&#x6267;&#x884C;&#x9014;&#x4E2D;&#x4E0D;&#x4F1A;&#x53D7;&#x5176;&#x4ED6;&#x4EA4;&#x6613;&#x5E72;&#x6270;&#x3002;</li>
+<li><code>&#x6301;&#x4E45;&#x6027;</code>&#xFF1A; &#x4E00;&#x65E6;&#x4EA4;&#x6613;&#x63D0;&#x4EA4;&#xFF0C;&#x5219;&#x5BF9;Simplechain&#x8D26;&#x672C;&#x7684;&#x6539;&#x53D8;&#x662F;&#x6C38;&#x4E45;&#x6027;&#x7684;&#x3002;&#x540E;&#x7EED;&#x7684;&#x64CD;&#x4F5C;&#x4E0D;&#x4F1A;&#x5BF9;&#x5176;&#x6709;&#x4EFB;&#x4F55;&#x5F71;&#x54CD;&#x3002;</li>
+</ul>
+<p>&#x56E0;&#x4E3A;&#x662F;&#x4E8B;&#x52A1;&#x578B;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x9700;&#x786E;&#x4FDD;&#x5728;&#x6267;&#x884C;&#x4E8B;&#x52A1;&#x524D;&#x8BA9;&#x4EA4;&#x6613;&#x7B26;&#x5408;&#x4E00;&#x4E9B;&#x8BBE;&#x8BA1;&#x8981;&#x6C42;&#x3002;</p>
+<ul>
+<li>&#x4EA4;&#x6613;&#x5FC5;&#x987B;&#x552F;&#x4E00;&#xFF0C;&#x80FD;&#x533A;&#x5206;&#x4E0D;&#x540C;&#x4EA4;&#x6613;&#x4E14;&#x540C;&#x4E00;&#x7B14;&#x4EA4;&#x6613;&#x4E0D;&#x80FD;&#x91CD;&#x590D;&#x63D0;&#x4EA4;&#x5230;&#x8D26;&#x672C;&#x4E2D;&#x3002;</li>
+<li>&#x4EA4;&#x6613;&#x5185;&#x5BB9;&#x4E0D;&#x5F97;&#x53D8;&#x5316;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x6536;&#x5230;&#x7684;&#x4EA4;&#x6613;&#x90FD;&#x5FC5;&#x987B;&#x4E00;&#x81F4;&#xFF0C;&#x4EA4;&#x6613;&#x6267;&#x884C;&#x65F6;&#x8D26;&#x672C;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x4E5F;&#x662F;&#x4E00;&#x81F4;&#x7684;&#x3002;</li>
+<li>&#x4EA4;&#x6613;&#x5FC5;&#x987B;&#x88AB;&#x5408;&#x6CD5;&#x7B7E;&#x540D;&#xFF0C;&#x53EA;&#x6709;&#x5DF2;&#x6B63;&#x786E;&#x7B7E;&#x540D;&#x7684;&#x4EA4;&#x6613;&#x624D;&#x80FD;&#x88AB;&#x6267;&#x884C;&#x3002;</li>
+<li>&#x4EA4;&#x6613;&#x4E0D;&#x80FD;&#x5360;&#x7528;&#x8FC7;&#x591A;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#xFF0C;&#x5F71;&#x54CD;&#x5176;&#x4ED6;&#x4EA4;&#x6613;&#x6267;&#x884C;&#x3002;</li>
+</ul>
+<p>&#x5BF9;&#x4EA4;&#x6613;&#x7684;&#x8BBE;&#x8BA1;&#x8981;&#x6C42;&#xFF0C;&#x6D89;&#x53CA;&#x8F6F;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x65B9;&#x65B9;&#x9762;&#x9762;&#xFF0C;&#x4F46;&#x6700;&#x57FA;&#x7840;&#x90E8;&#x5206;&#x8FD8;&#x662F;&#x4EA4;&#x6613;&#x6570;&#x636E;&#x672C;&#x8EAB;&#x3002;</p>
+<h2 id="&#x4EA4;&#x6613;&#x6570;&#x636E;&#x7ED3;&#x6784;"><a name="&#x4EA4;&#x6613;&#x6570;&#x636E;&#x7ED3;&#x6784;" class="plugin-anchor" href="#&#x4EA4;&#x6613;&#x6570;&#x636E;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EA4;&#x6613;&#x6570;&#x636E;&#x7ED3;&#x6784;</h2>
+<p>&#x4E0B;&#x56FE;&#x662F;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x4EA4;&#x6613;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x6839;&#x636E;&#x7528;&#x9014;&#xFF0C;&#x6211;&#x5C06;&#x5176;&#x5212;&#x5206;&#x4E3A;&#x56DB;&#x90E8;&#x5206;&#x3002;</p>
+<p><img src="1.png" alt="&#x4EA4;&#x6613;&#x6570;&#x636E;&#x7ED3;&#x6784;.png"></p>
+<p>&#x5F00;&#x5934;&#x662F;&#x4E00;&#x4E2A; uint64 &#x7C7B;&#x578B;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x79F0;&#x4E4B;&#x4E3A;&#x968F;&#x673A;&#x6570;&#x3002;&#x7528;&#x4E8E;&#x64A4;&#x9500;&#x4EA4;&#x6613;&#x3001;&#x9632;&#x6B62;&#x53CC;&#x82B1;&#x548C;&#x4FEE;&#x6539;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x8D26;&#x6237;(&#x8D26;&#x6237;&#x6570;&#x636E;&#x7ED3;&#x6784;)&#x7684; Nonce&#x503C;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x662F;&#x5173;&#x4E8E;&#x4EA4;&#x6613;&#x6267;&#x884C;&#x9650;&#x5236;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;<code>gas</code>&#x4E3A;&#x613F;&#x610F;&#x4F9B;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x865A;&#x62DF;&#x673A;&#x8FD0;&#x884C;&#x7684;&#x71C3;&#x6599;&#x4E0A;&#x9650;&#x3002;
+<code>gasPrice</code> &#x662F;&#x613F;&#x610F;&#x652F;&#x4ED8;&#x7684;&#x71C3;&#x6599;&#x5355;&#x4EF7;&#x3002;<code>gasPrcie * gas</code> &#x5219;&#x4E3A;&#x613F;&#x610F;&#x4E3A;&#x8FD9;&#x7B14;&#x4EA4;&#x6613;&#x652F;&#x4ED8;&#x7684;&#x6700;&#x9AD8;&#x624B;&#x7EED;&#x8D39;&#x3002;</p>
+<p>&#x7B2C;&#x4E09;&#x90E8;&#x5206;&#x662F;&#x4EA4;&#x6613;&#x53D1;&#x9001;&#x8005;&#x8F93;&#x5165;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x865A;&#x62DF;&#x673A;&#x6267;&#x884C;&#x6B64;&#x4EA4;&#x6613;&#x7684;&#x521D;&#x59CB;&#x4FE1;&#x606F;&#xFF1A; &#x865A;&#x62DF;&#x673A;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;&#xFF08;&#x63A5;&#x6536;&#x65B9; To&#xFF09;&#x3001;&#x4ECE;&#x4EA4;&#x6613;&#x53D1;&#x9001;&#x65B9;&#x8F6C;&#x79FB;&#x5230;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;&#x7684;&#x8D44;&#x4EA7;&#xFF08;Value&#xFF09;&#xFF0C;&#x4EE5;&#x53CA;&#x865A;&#x62DF;&#x673A;&#x8FD0;&#x884C;&#x65F6;&#x5165;&#x53C2;(input)&#x3002;&#x5176;&#x4E2D;To&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x865A;&#x62DF;&#x673A;&#x65E0;&#x53EF;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;&#xFF0C;&#x6B64;&#x65F6;&#x865A;&#x62DF;&#x673A;&#x5C06;&#x5229;&#x7528;input&#x5185;&#x5BB9;&#x90E8;&#x7F72;&#x4E00;&#x4E2A;&#x65B0;&#x5408;&#x7EA6;&#x3002;</p>
+<p>&#x7B2C;&#x56DB;&#x90E8;&#x5206;&#x662F;&#x4EA4;&#x6613;&#x53D1;&#x9001;&#x65B9;&#x5BF9;&#x4EA4;&#x6613;&#x7684;&#x7B7E;&#x540D;&#x7ED3;&#x679C;&#xFF0C;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x4EA4;&#x6613;&#x5185;&#x5BB9;&#x548C;&#x7B7E;&#x540D;&#x7ED3;&#x679C;&#x53CD;&#x5411;&#x63A8;&#x5BFC;&#x51FA;&#x7B7E;&#x540D;&#x8005;&#xFF0C;&#x5373;&#x4EA4;&#x6613;&#x53D1;&#x9001;&#x65B9;&#x5730;&#x5740;&#x3002;&#x56DB;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x89E3;&#x51B3;&#x4E86;&#x4EA4;&#x6613;&#x5B89;&#x5168;&#x95EE;&#x9898;&#x3001;&#x5B9E;&#x73B0;&#x4E86;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x4E92;&#x52A8;&#x65B9;&#x5F0F;&#x4EE5;&#x53CA;&#x63D0;&#x4F9B;&#x4E86;&#x7075;&#x6D3B;&#x53EF;&#x8C03;&#x6574;&#x7684;&#x4EA4;&#x6613;&#x624B;&#x7EED;&#x8D39;&#x3002;</p>
+<h2 id="&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x5B9A;&#x4E49;"><a name="&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x5B9A;&#x4E49;" class="plugin-anchor" href="#&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x5B9A;&#x4E49;</h2>
+<p>&#x5177;&#x4F53;&#x5230;&#x4EE3;&#x7801;&#x4E0A;&#xFF0C;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x5C06;&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x5B9A;&#x4E49;&#x4E3A;&#x4E00;&#x4E2A;&#x5BF9;&#x5916;&#x53EF;&#x8BBF;&#x95EE;&#x7684;<code>Transation</code>&#x5BF9;&#x8C61;&#x548C;&#x5185;&#x5D4C;&#x7684;&#x5BF9;&#x5916;&#x90E8;&#x5305;&#x4E0D;&#x53EF;&#x89C1;&#x7684;<code>txdata</code> &#x3002;</p>
+<blockquote>
+<p>&#x5C0F;&#x5199;&#x7684; <code>txdata</code> &#x662F;Go&#x8BED;&#x8A00;&#x7684;&#x7279;&#x6027;&#x3002;&#x9996;&#x5B57;&#x6BCD;&#x5C0F;&#x5199;&#xFF0C;&#x5219;&#x76F8;&#x5F53;&#x4E8E;&#x5176;&#x4ED6;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E2D;&#x7684;<code>private</code> &#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x8868;&#x660E;&#x8BE5;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5BF9;&#x5916;&#x90E8;&#x5305;&#x4E0D;&#x53EF;&#x89C1;&#x3002;&#x540C;&#x6837;&#x5C0F;&#x5199;&#x5F00;&#x5934;&#x7684;&#x5BF9;&#x8C61;&#x5B57;&#x6BB5;(&#x5982; Transaction&#x4E2D;&#x7684;hash)&#xFF0C;&#x4E5F;&#x8868;&#x793A;&#x5916;&#x90E8;&#x5305;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x6B64;&#x5B57;&#x6BB5;&#x3002;&#x53CD;&#x4E4B;&#xFF0C;&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;&#x7684;&#x7C7B;&#x578B;&#x3001;&#x5B57;&#x6BB5;&#x3001;&#x65B9;&#x6CD5;&#x7B49;&#x5B9A;&#x4E49;&#xFF0C;&#x89C6;&#x4E3A;<code>public</code>&#x3002;</p>
+</blockquote>
+<pre><code class="lang-go"><span class="hljs-comment">// core/types/transaction.go:38</span>
+<span class="hljs-keyword">type</span> Transaction <span class="hljs-keyword">struct</span> {
+    data txdata
+    <span class="hljs-comment">// caches</span>
+    hash atomic.Value
+    size atomic.Value
+    from atomic.Value
+}
+
+<span class="hljs-keyword">type</span> txdata <span class="hljs-keyword">struct</span> {
+    AccountNonce <span class="hljs-keyword">uint64</span>     
+    Price        *big.Int  
+    GasLimit     <span class="hljs-keyword">uint64</span>     
+    Recipient    *common.Address 
+    Amount       *big.Int
+    Payload      []<span class="hljs-keyword">byte</span>
+
+    <span class="hljs-comment">// Signature values</span>
+    V *big.Int
+    R *big.Int
+    S *big.Int
+
+    <span class="hljs-comment">// This is only used when marshaling to JSON.</span>
+    Hash *common.Hash <span class="hljs-string">`json:&quot;hash&quot; rlp:&quot;-&quot;`</span>
+}
+</code></pre>
+<p>&#x9996;&#x5148;&#x770B;&#x79C1;&#x6709;&#x7684;<code>txdata</code>&#x7ED3;&#x6784;&#x4F53;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x4EA4;&#x6613;&#x6D88;&#x606F;&#x4E2D;&#x6240;&#x6709;&#x5FC5;&#x8981;&#x5185;&#x5BB9;&#xFF0C;&#x4F9D;&#x6B21;&#x5BF9;&#x5E94;&#x524D;&#x9762;&#x6240;&#x8BF4;&#x7684;&#x4EA4;&#x6613;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;&#x6709;&#x4E09;&#x70B9;&#x9700;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x3002;</p>
+<ul>
+<li><p>&#x4E00;&#x662F;&#x56E0;&#x6D89;&#x53CA;&#x54C8;&#x5E0C;&#x8FD0;&#x7B97;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x80FD;&#x968F;&#x610F;&#x8C03;&#x6574;&#x5B57;&#x6BB5;&#x5B9A;&#x4E49;&#x987A;&#x5E8F;&#xFF0C;&#x975E;&#x7279;&#x6B8A;&#x5904;&#x7406;&#x60C5;&#x51B5;&#x4E0B;&#x5FC5;&#x987B;&#x6309;&#x8981;&#x6C42;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x3002;&#x6240;&#x4EE5;<code>txdata</code>&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x662F;&#x7B26;&#x5408;Simplechain&#x4EA4;&#x6613;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x987A;&#x5E8F;&#x7684;&#x3002;</p>
+</li>
+<li><p>&#x4E8C;&#x662F;&#x5728;&#x6D89;&#x53CA;&#x8D27;&#x5E01;&#x8BA1;&#x7B97;&#x65F6;&#xFF0C;&#x4E0D;&#x80FD;&#x56E0;&#x4E3A;&#x7CBE;&#x5EA6;&#x7F3A;&#x5931;&#x5F15;&#x8D77;&#x8BA1;&#x7B97;&#x4E0D;&#x51C6;&#x786E;&#x95EE;&#x9898;&#x3002;&#x56E0;&#x6B64;&#x5728;Simplechain&#x3001;&#x6BD4;&#x7279;&#x5E01;&#x7B49;&#x6240;&#x6709;&#x533A;&#x5757;&#x94FE;&#x8BBE;&#x8BA1;&#x4E2D;&#xFF0C;&#x8D27;&#x5E01;&#x7C7B;&#x578B;&#x5747;&#x662F;&#x6574;&#x6570;&#xFF0C;&#x4F46;&#x6700;&#x5C0F;&#x503C;<code>1</code>&#x6240;&#x4EE3;&#x8868;&#x7684;&#x5E01;&#x503C;&#x4E0D;&#x4E00;&#x6837;&#x3002;&#x5728;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x4E2D;&#x4E00;&#x4E2A;sipc&#x7B49;&#x4E8E;10&#x7684;18&#x6B21;&#x65B9;Amount&#xFF0C;&#x5F53;&#x8981;&#x8868;&#x793A;100&#x4EBF;sipc&#x65F6;&#xFF0C;Amount&#x7B49;&#x4E8E;10&#x7684;27&#x6B21;&#x65B9;&#x3002;&#x5DF2;&#x8FDC;&#x8FDC;&#x8D85;&#x8FC7;Uint64&#x6240;&#x80FD;&#x8868;&#x793A;&#x7684;&#x8303;&#x56F4;(0-18446744073709551615)&#x3002;&#x56E0;&#x6B64;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x4E00;&#x5F8B;&#x91C7;&#x7528;Go&#x6807;&#x51C6;&#x5305;&#x63D0;&#x4F9B;&#x7684;&#x5927;&#x6570; <code>big.Int</code> &#x8FDB;&#x884C;&#x8D27;&#x5E01;&#x8FD0;&#x7B97;&#x548C;&#x5B9A;&#x4E49;&#x8D27;&#x5E01;&#x3002;&#x8FD9;&#x91CC;&#x7684;<code>Price</code>&#x548C;<code>Amount</code>&#x5747;&#x662F; big.Int &#x6307;&#x9488;&#x7C7B;&#x578B;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x5173;&#x4E8E;&#x7B7E;&#x540D;&#x7684;&#x4E09;&#x4E2A;&#x503C;&#x4E5F;&#x662F;&#x56E0;&#x4E3A;&#x6570;&#x5B57;&#x592A;&#x5927;&#xFF0C;&#x800C;&#x91C7;&#x7528; big.Int &#x7C7B;&#x578B;&#x3002;</p>
+</li>
+<li><p>&#x4E09;&#x662F;&#x6700;&#x540E;&#x7684;<code>Hash</code>&#x5B57;&#x6BB5;&#xFF0C;&#x8FD9;&#x4E0D;&#x5C5E;&#x4E8E;&#x4EA4;&#x6613;&#x5185;&#x5BB9;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x53EA;&#x662F;&#x4E3A;&#x4E86;&#x5728;&#x4EA4;&#x6613;&#x7684;JSON&#x4E2D;&#x5305;&#x542B;&#x4EA4;&#x6613;&#x54C8;&#x5E0C;&#x3002;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x53C2;&#x4E0E;&#x54C8;&#x5E0C;&#x8FD0;&#x7B97;&#xFF0C;&#x8BE5;&#x5B57;&#x6BB5;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;<code>rlp:&quot;-&quot;</code>&#x3002;&#x5176;&#x6B21;&#xFF0C;Transaction &#x8FD8;&#x5B9A;&#x4E49;&#x4E86;&#x4E09;&#x4E2A;&#x7F13;&#x5B58;&#x9879;&#xFF1A;&#x4EA4;&#x6613;&#x54C8;&#x5E0C;&#x503C;(hash)&#x3001;&#x4EA4;&#x6613;&#x5927;&#x5C0F;(size)&#x548C;&#x4EA4;&#x6613;&#x53D1;&#x9001;&#x65B9;(from)&#x3002;&#x7F13;&#x5B58;&#x7684;&#x539F;&#x56E0;&#x662F;&#x4F7F;&#x7528;&#x9891;&#x6B21;&#x9AD8;&#x4E14;CPU&#x8BA1;&#x7B97;&#x91CF;&#x5927;&#x3002;</p>
+</li>
+</ul>
+<p>&#x5728;&#x533A;&#x5757;&#x94FE;&#x4E2D;&#x6700;&#x89C1;&#x7684;&#x662F;&#x54C8;&#x5E0C;&#x8FD0;&#x7B97;&#xFF0C;&#x6240;&#x6709;&#x94FE;&#x4E0A;&#x6570;&#x636E;&#x57FA;&#x672C;&#x90FD;&#x8981;&#x53C2;&#x4E0E;&#x54C8;&#x5E0C;&#x8FD0;&#x7B97;&#x3002;&#x800C;&#x54C8;&#x5E0C;&#x8FD0;&#x7B97;&#x662F;CPU&#x5BC6;&#x96C6;&#x578B;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x6709;&#x5FC5;&#x8981;&#x5BF9;&#x4E00;&#x4E9B;&#x54C8;&#x5E0C;&#x8FD0;&#x7B97;&#x7B49;&#x8FDB;&#x884C;&#x7F13;&#x5B58;&#xFF0C;&#x964D;&#x4F4E;CPU&#x8BA1;&#x7B97;&#x91CF;&#x3002;&#x9996;&#x6B21;&#x8BA1;&#x7B97;&#x5B8C;&#x4EA4;&#x6613;&#x54C8;&#x5E0C;&#x503C;&#x540E;&#xFF0C;&#x4FBF;&#x7F13;&#x5B58;&#x4EA4;&#x6613;&#x54C8;&#x5E0C;&#x5230;hash&#x5B57;&#x6BB5;&#x4E0A;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (tx *Transaction) Hash() common.Hash {
+   <span class="hljs-keyword">if</span> hash := tx.hash.Load(); hash != <span class="hljs-literal">nil</span> {
+      <span class="hljs-keyword">return</span> hash.(common.Hash)
+   }
+   v := rlpHash(tx)
+   tx.hash.Store(v)
+   <span class="hljs-keyword">return</span> v
+}
+</code></pre>
+<p>hash &#x662F;<code>atomic.Value</code>&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x662F;Go&#x6807;&#x51C6;&#x5305;&#x63D0;&#x4F9B;&#x7684;&#x539F;&#x5B50;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x6837;&#x53EF;&#x9632;&#x6B62;&#x5E76;&#x53D1;&#x5F15;&#x8D77;&#x591A;&#x6B21;&#x54C8;&#x5E0C;&#x8BA1;&#x7B97;&#x3002;&#x9996;&#x5148;&#x539F;&#x5B50;&#x52A0;&#x8F7D;&#x54C8;&#x5E0C;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#x5219;&#x8FD4;&#x56DE;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x5BF9;&#x4EA4;&#x6613;&#x8FDB;&#x884C;&#x54C8;&#x5E0C;&#x8BA1;&#x7B97;(rlpHash&#xFF0C;&#x662F;<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>&#x7684;&#x54C8;&#x5E0C;&#x7B97;&#x6CD5;)&#xFF0C;&#x5C06;&#x54C8;&#x5E0C;&#x7ED3;&#x679C;&#x4FDD;&#x5B58;&#x5E76;&#x8FD4;&#x56DE;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x4E2A;&#x7F13;&#x5B58;&#x662F;&#x4EA4;&#x6613;&#x5927;&#x5C0F;(size)&#x3002;&#x4EA4;&#x6613;&#x5927;&#x5C0F;&#x662F;&#x6307;&#x4EA4;&#x6613;&#x4FE1;&#x606F;&#x8FDB;&#x884C;RLP&#x7F16;&#x7801;&#x540E;&#x7684;&#x6570;&#x636E;&#x5927;&#x5C0F;&#x3002;&#x4EE3;&#x8868;&#x4EA4;&#x6613;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x5927;&#x5C0F;&#x3001;&#x4EE3;&#x8868;&#x4EA4;&#x6613;&#x5360;&#x533A;&#x5757;&#x5927;&#x5C0F;&#x3001;&#x4EE3;&#x8868;&#x4EA4;&#x6613;&#x5B58;&#x50A8;&#x5927;&#x5C0F;&#x3002; &#x6BCF;&#x7B14;&#x4EA4;&#x6613;&#x8FDB;&#x5165;&#x4EA4;&#x6613;&#x6C60;&#x90FD;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x4EA4;&#x6613;&#x5927;&#x5C0F;&#x662F;&#x5426;&#x8D85;&#x8FC7; <code>32KB</code>&#x3002;&#x63A8;&#x9001;&#x4EA4;&#x6613;&#x6570;&#x636E;&#x7ED9;&#x5176;&#x4ED6;&#x8282;&#x70B9;&#x65F6;&#x4E5F;&#x9700;&#x7ED3;&#x5408;&#x4EA4;&#x6613;&#x5927;&#x5C0F;&#xFF0C;&#x5728;&#x4E0D;&#x8D85;&#x8FC7;&#x7F51;&#x7EDC;&#x6D88;&#x606F;&#x6700;&#x5927;&#x9650;&#x5236;(&#x9ED8;&#x8BA4;10MB)&#x4E0B;&#x5206;&#x5305;&#x63A8;&#x9001;&#x6570;&#x636E;&#x3002;&#x4E3A;&#x907F;&#x514D;&#x91CD;&#x590D;&#x8BA1;&#x7B97;&#x5F00;&#x9500;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x8BA1;&#x7B97;&#x540E;&#x4FBF;&#x7F13;&#x5B58;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (tx *Transaction) Size() common.StorageSize {
+   <span class="hljs-keyword">if</span> size := tx.size.Load(); size != <span class="hljs-literal">nil</span> {
+      <span class="hljs-keyword">return</span> size.(common.StorageSize)
+   }
+   c := writeCounter(<span class="hljs-number">0</span>)
+   rlp.Encode(&amp;c, &amp;tx.data)
+   tx.size.Store(common.StorageSize(c))
+   <span class="hljs-keyword">return</span> common.StorageSize(c)
+}
+</code></pre>
+<p>&#x5982;&#x4E0A;&#xFF0C;&#x6267;&#x884C; <code>rlp.Encode</code>&#x83B7;&#x5F97;&#x53EF;&#x5F97;&#x5230;&#x6570;&#x636E;&#x5927;&#x5C0F;&#xFF0C;&#x7F13;&#x5B58;&#x7ED3;&#x679C;&#x5E76;&#x8FD4;&#x56DE;&#x3002;</p>
+<blockquote>
+<p>rlp &#x662F;Simplechain&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x5957;&#x533A;&#x5757;&#x94FE;&#x6570;&#x636E;&#x7F16;&#x7801;&#x89E3;&#x7801;&#x534F;&#x8BAE;&#xFF0C;&#x800C;&#x975E;&#x91C7;&#x7528;&#x5E38;&#x89C1;&#x7684; gzip&#x3001;json&#x3001;Protobuf &#x7F16;&#x7801;&#x683C;&#x5F0F;&#x3002;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x5C3D;&#x53EF;&#x80FD;&#x5730;&#x538B;&#x7F29;&#x6570;&#x636E;&#xFF0C;&#x6BD5;&#x7ADF;&#x533A;&#x5757;&#x94FE;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E2D;&#x53EA;&#x6709;&#x5E38;&#x89C1;&#x7684;&#x51E0;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x590D;&#x6742;&#x7684;&#x534F;&#x8BAE;&#x6D89;&#x53CA;&#xFF0C;&#x5373;&#x53EF;&#x6EE1;&#x8DB3;&#x8981;&#x6C42;&#x3002;</p>
+</blockquote>
+<p>&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7F13;&#x5B58;&#x9879;&#x662F;&#x4EA4;&#x6613;&#x53D1;&#x9001;&#x65B9;(from)&#x3002;&#x4EA4;&#x6613;&#x7684;&#x53D1;&#x9001;&#x65B9;&#xFF0C;&#x662F;&#x6839;&#x636E;&#x7B7E;&#x540D;&#x53CD;&#x5411;&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;&#xFF0C;&#x540C;&#x6837;&#x662F;CPU&#x5BC6;&#x96C6;&#x578B;&#x8FD0;&#x7B97;&#x3002;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x4EA4;&#x6613;&#x5408;&#x6CD5;&#x6027;&#xFF0C;&#x7A0B;&#x5E8F;&#x4E2D;&#x5230;&#x5904;&#x90FD;&#x6709;&#x6D89;&#x53CA;&#x53D6;&#x4EA4;&#x6613;&#x53D1;&#x9001;&#x65B9;&#x5730;&#x5740;&#x548C;&#x6821;&#x9A8C;&#x53D1;&#x9001;&#x65B9;&#x7684;&#x5408;&#x6CD5;&#x6027;&#x3002;&#x53EA;&#x6709;&#x6B63;&#x786E;&#x7684;&#x7B7E;&#x540D;&#x624D;&#x80FD;&#x5F97;&#x5230;&#x53D1;&#x9001;&#x65B9;&#x5730;&#x5740;&#x3002;&#x56E0;&#x6B64;&#x5BF9;&#x4EA4;&#x6613;&#x53D1;&#x9001;&#x65B9;&#x4E5F;&#x8FDB;&#x884C;&#x7F13;&#x5B58;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-comment">//core/types/transaction_signing.go:72</span>
+<span class="hljs-keyword">func</span> Sender(signer Signer, tx *Transaction) (common.Address, error) {
+   <span class="hljs-keyword">if</span> sc := tx.from.Load(); sc != <span class="hljs-literal">nil</span> {
+      sigCache := sc.(sigCache) 
+      <span class="hljs-keyword">if</span> sigCache.signer.Equal(signer) {
+         <span class="hljs-keyword">return</span> sigCache.from, <span class="hljs-literal">nil</span>
+      }
+   }
+
+   addr, err := signer.Sender(tx)
+   <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+      <span class="hljs-keyword">return</span> common.Address{}, err
+   }
+   tx.from.Store(sigCache{signer: signer, from: addr})
+   <span class="hljs-keyword">return</span> addr, <span class="hljs-literal">nil</span>
+}
+</code></pre>
+<p>&#x7279;&#x6B8A;&#x6307;&#x51FA;&#x662F;&#x9700;&#x8981;&#x4E00;&#x4E2A;<code>Signer</code>&#x8FDB;&#x884C;&#x89E3;&#x7B7E;&#x540D;&#xFF0C;&#x540C;&#x65F6;&#x901A;&#x8FC7;<code>Signer</code>&#x83B7;&#x53D6;Sender&#xFF0C;&#x5408;&#x6CD5;&#x65F6;&#x7F13;&#x5B58;&#x5E76;&#x8FD4;&#x56DE;&#x3002;&#x4F46;&#x5728;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x5185;&#x5BB9;&#x65F6;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x524D;&#x540E;&#x4E24;&#x4E2A;Signer&#x662F;&#x5426;&#x4E00;&#x81F4;&#xFF0C;&#x56E0;&#x4E3A;&#x4E0D;&#x4E00;&#x6837;&#x7684;Signer &#x7B97;&#x6CD5;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x83B7;&#x5F97;&#x7684;&#x4EA4;&#x6613;&#x7B7E;&#x540D;&#x8005;&#x4E5F;&#x4E0D;&#x76F8;&#x540C;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x4E0A;&#x9762;&#x4E09;&#x4E2A;&#x7F13;&#x5B58;&#x4F7F;&#x7528;&#x90FD;&#x5728;&#x6709;&#x4E00;&#x4E2A;&#x524D;&#x63D0;&#x6761;&#x4EF6;&#xFF1A;&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x4E00;&#x65E6;&#x521B;&#x5EFA;&#xFF0C;&#x4EA4;&#x6613;&#x5185;&#x5BB9;&#x4E0D;&#x5F97;&#x4FEE;&#x6539;&#x3002;&#x8FD9;&#x4E5F;&#x662F;&#x4E3A;&#x4F55;&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x4E2D;&#x5355;&#x72EC;&#x5B9A;&#x4E49;&#x5728;&#x79C1;&#x6709;&#x7684;txdata&#x4E2D;&#xFF0C;&#x800C;&#x975E;&#x76F4;&#x63A5;&#x5B9A;&#x4E49;&#x5728; Transaction&#x4E2D;&#x7684;&#x539F;&#x56E0;&#x4E4B;&#x4E00;&#x3002;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x4EA4;&#x6613;&#x5185;&#x5BB9;&#xFF0C;&#x65E0;&#x4EFB;&#x4F55;&#x9014;&#x5F84;&#x4FEE;&#x6539;&#x4E00;&#x4E2A;&#x73B0;&#x6709;&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x5185;&#x5BB9;&#x3002;</p>
+<p><img src="2.png" alt="&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x5217;&#x8868;"></p>
+<h2 id="&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x4ECB;&#x7ECD;"><a name="&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x4ECB;&#x7ECD;</h2>
+<p>&#x4EA4;&#x6613;&#x5BF9;&#x8C61; Transtion &#x9664;&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x4EA4;&#x6613;&#x5185;&#x5BB9;&#x8BBF;&#x95EE;&#x5916;&#xFF0C;&#x4E5F;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E9B;&#x8F85;&#x52A9;&#x65B9;&#x6CD5;&#x3002;&#x6211;&#x4EEC;&#x4F9D;&#x6B21;&#x4ECB;&#x7ECD;&#x4E0B;&#x5404;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</p>
+<ol>
+<li><p><code>ChainId()</code>&#x548C;<code>Protected()</code></p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (tx *Transaction) ChainId() *big.Int {
+ <span class="hljs-keyword">return</span> deriveChainId(tx.data.V)
+}
+<span class="hljs-keyword">func</span> (tx *Transaction) Protected() <span class="hljs-keyword">bool</span> {
+ <span class="hljs-keyword">return</span> isProtectedV(tx.data.V)
+}
+</code></pre>
+</li>
+</ol>
+<p>&#x4ECE;&#x4EA4;&#x6613;&#x7B7E;&#x540D;&#x5185;&#x5BB9;<code>V</code>&#x4E2D;&#x63D0;&#x53D6;<code>&#x94FE;ID</code>&#x3002;&#x7528;&#x4E8E;&#x5728;&#x83B7;&#x53D6;&#x4EA4;&#x6613;&#x7B7E;&#x540D;&#x8005;&#x65F6;&#x5224;&#x65AD;&#x7B7E;&#x540D;&#x5408;&#x6CD5;&#x6027;&#xFF0C;&#x4E00;&#x65E6;&#x5C5E;&#x4E8E;&#x53D7;&#x4FDD;&#x62A4;<code>Protected()</code>&#x7684;&#x4EA4;&#x6613;&#xFF0C;&#x5219;&#x7B7E;&#x540D;&#x4FE1;&#x606F;&#x4E2D;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x5F53;&#x524D;&#x94FE;ID&#xFF0C;&#x5426;&#x5219;&#x5C5E;&#x4E8E;&#x975E;&#x6CD5;&#x4EA4;&#x6613;&#x3002;</p>
+<ol>
+<li><p>RLP&#x63A5;&#x53E3;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (tx *Transaction) EncodeRLP(w io.Writer) error {
+   <span class="hljs-keyword">return</span> rlp.Encode(w, &amp;tx.data)
+}
+<span class="hljs-keyword">func</span> (tx *Transaction) DecodeRLP(s *rlp.Stream) error {
+   _, size, _ := s.Kind()
+   err := s.Decode(&amp;tx.data)
+   <span class="hljs-keyword">if</span> err == <span class="hljs-literal">nil</span> {
+      tx.size.Store(common.StorageSize(rlp.ListSize(size)))
+   }
+   <span class="hljs-keyword">return</span> err
+}
+</code></pre>
+<p>&#x548C;&#x5176;&#x4ED6;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BED;&#x8A00;&#x4E0D;&#x540C;&#xFF0C;Go&#x8BED;&#x8A00;&#x4E2D;&#x53EA;&#x8981;&#x5BF9;&#x8C61;&#x6709;&#x5B9E;&#x73B0;&#x67D0;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#xFF0C;&#x5219;&#x8BA4;&#x4E3A;&#x8BE5;&#x5BF9;&#x8C61;&#x5C5E;&#x4E8E;&#x67D0;&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x3002;&#x8FD9;&#x91CC;Transaction &#x5B9E;&#x73B0;&#x4E86;rlp&#x5305;&#x4E2D;&#x7684;<code>Encoder</code>&#x548C;<code>Decoder</code>&#x4E24;&#x4E2A;&#x63A5;&#x53E3;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-comment">//rlp/encode.go:36</span>
+<span class="hljs-keyword">type</span> Encoder <span class="hljs-keyword">interface</span> {
+  EncodeRLP(io.Writer) error
+}
+<span class="hljs-keyword">type</span> Decoder <span class="hljs-keyword">interface</span> {
+ DecodeRLP(*Stream) error
+}
+</code></pre>
+</li>
+</ol>
+<p>&#x610F;&#x5473;&#x5728;&#x8FDB;&#x884C;RLP&#x7F16;&#x7801;&#x89E3;&#x7801;&#x65F6;&#xFF0C;&#x5C06;&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49;&#x5B9E;&#x73B0;&#x7684;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x3002;RLP&#x7F16;&#x7801;&#x89E3;&#x7801;&#x4EA4;&#x6613;&#xFF0C;&#x5B9E;&#x9645;&#x662F;&#x5C06;&#x4EA4;&#x6613;&#x5185;&#x5BB9; txdata &#x8FDB;&#x884C;&#x7F16;&#x7801;&#x89E3;&#x7801;&#x3002;&#x540C;&#x65F6;&#x5728;&#x89E3;&#x7801;&#x4EA4;&#x6613;&#x65F6;&#xFF0C;&#x7F13;&#x5B58;&#x4EA4;&#x6613;&#x5927;&#x5C0F;&#x3002;</p>
+<ol>
+<li><p>JSON&#x63A5;&#x53E3;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (tx *Transaction) MarshalJSON() ([]<span class="hljs-keyword">byte</span>, error) {
+   hash := tx.Hash()
+   data := tx.data
+   data.Hash = &amp;hash
+   <span class="hljs-keyword">return</span> data.MarshalJSON()
+}
+<span class="hljs-keyword">func</span> (tx *Transaction) UnmarshalJSON(input []<span class="hljs-keyword">byte</span>) error {
+   <span class="hljs-keyword">var</span> dec txdata
+   <span class="hljs-keyword">if</span> err := dec.UnmarshalJSON(input); err != <span class="hljs-literal">nil</span> {
+      <span class="hljs-keyword">return</span> err
+   }
+   withSignature := dec.V.Sign() != <span class="hljs-number">0</span> || dec.R.Sign() != <span class="hljs-number">0</span> || dec.S.Sign() != <span class="hljs-number">0</span>
+   <span class="hljs-keyword">if</span> withSignature {
+      <span class="hljs-keyword">var</span> V <span class="hljs-keyword">byte</span>
+      <span class="hljs-keyword">if</span> isProtectedV(dec.V) {
+         chainID := deriveChainId(dec.V).Uint64()
+         V = <span class="hljs-keyword">byte</span>(dec.V.Uint64() - <span class="hljs-number">35</span> - <span class="hljs-number">2</span>*chainID)
+      } <span class="hljs-keyword">else</span> {
+         V = <span class="hljs-keyword">byte</span>(dec.V.Uint64() - <span class="hljs-number">27</span>)
+      }
+      <span class="hljs-keyword">if</span> !crypto.ValidateSignatureValues(V, dec.R, dec.S, <span class="hljs-literal">false</span>) {
+         <span class="hljs-keyword">return</span> ErrInvalidSig
+      }
+   }
+   *tx = Transaction{data: dec}
+   <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
+}
+</code></pre>
+</li>
+</ol>
+<p>&#x8FD9;&#x662F;&#x5B9E;&#x73B0;&#x4E86;json&#x6807;&#x51C6;&#x5305;&#x7684;&#x7F16;&#x7801;&#x89E3;&#x7801;&#x65B9;&#x6CD5;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x7ED9;web3 api &#x8C03;&#x7528;&#x65F6;&#x8FD4;&#x56DE;&#x7B26;&#x5408;&#x8981;&#x6C42;&#x7684;JSON&#x683C;&#x5F0F;&#x6570;&#x636E;&#x3002;&#x7F16;&#x7801;&#x65F6;&#x9644;&#x52A0;&#x4EA4;&#x6613;&#x54C8;&#x5E0C;&#xFF0C;&#x89E3;&#x7801;&#x65F6;&#x8FD8;&#x6821;&#x9A8C;&#x7B7E;&#x540D;&#x683C;&#x5F0F;&#x7684;&#x6B63;&#x786E;&#x6027;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x4EA4;&#x6613;JSON&#x683C;&#x5F0F;&#x6570;&#x636E;&#x793A;&#x4F8B;&#x3002;</p>
+<pre><code class="lang-json">   {
+       <span class="hljs-string">&quot;nonce&quot;</span>: <span class="hljs-string">&quot;0x16&quot;</span>,
+       <span class="hljs-string">&quot;gasPrice&quot;</span>: <span class="hljs-string">&quot;0x2&quot;</span>,
+       <span class="hljs-string">&quot;gas&quot;</span>: <span class="hljs-string">&quot;0x1&quot;</span>,
+       <span class="hljs-string">&quot;to&quot;</span>: <span class="hljs-string">&quot;0x0100000000000000000000000000000000000000&quot;</span>,
+       <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;0x0&quot;</span>,
+       <span class="hljs-string">&quot;input&quot;</span>: <span class="hljs-string">&quot;0x616263646566&quot;</span>,
+       <span class="hljs-string">&quot;v&quot;</span>: <span class="hljs-string">&quot;0x25&quot;</span>,
+       <span class="hljs-string">&quot;r&quot;</span>: <span class="hljs-string">&quot;0x3c46a1ff9d0dd2129a7f8fbc3e45256d85890d9d63919b42dac1eb8dfa443a32&quot;</span>,
+       <span class="hljs-string">&quot;s&quot;</span>: <span class="hljs-string">&quot;0x6b2be3f225ae31f7ca18efc08fa403eb73b848359a63cd9fdeb61e1b83407690&quot;</span>,
+       <span class="hljs-string">&quot;hash&quot;</span>: <span class="hljs-string">&quot;0xb848eb905affc383b4f431f8f9d3676733ea96bcae65638c0ada6e45038fb3a6&quot;</span>
+   }
+</code></pre>
+<p><code>json</code>&#x91CC;&#x9762;&#x6240;&#x6709;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x6BB5;&#x90FD;&#x662F;&#x7528;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#x8868;&#x793A;&#x3002;&#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x7EDF;&#x4E00;&#x6240;&#x6709;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF0C;&#x4E3A;&#x5927;&#x6570; big.Int &#x670D;&#x52A1;&#x3002;&#x5728;web3js&#x5E93;&#x4E2D;&#x4E13;&#x95E8;&#x5185;&#x7F6E;&#x4E86;bignumber&#x5E93;&#x5904;&#x7406;&#x5927;&#x6570;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../7_account.html" class="navigation navigation-prev " aria-label="Previous page: 账户">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../9_block/" class="navigation navigation-next " aria-label="Next page: 区块">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"交易","level":"4.3","depth":1,"next":{"title":"区块","level":"4.4","depth":1,"path":"9_block/README.md","ref":"9_block/README.md","articles":[]},"previous":{"title":"账户","level":"4.2","depth":1,"path":"7_account.md","ref":"7_account.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"zh","gitbook":"*"},"file":{"path":"8_transaction/README.md","mtime":"2020-06-24T02:40:51.322Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-02T02:38:08.915Z"},"basePath":"..","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

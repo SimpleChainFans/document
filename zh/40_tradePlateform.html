@@ -1,0 +1,1219 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>交易所对接 · Simplechain Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="41_commityProduct.html" />
+    
+    
+    <link rel="prev" href="39_bolckBrowser/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">快速了解</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="1_quickStart.html">
+            
+                <a href="1_quickStart.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="2_BuildNode/">
+            
+                <a href="2_BuildNode/">
+            
+                    
+                    搭建节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">sipc代币协议</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="47_techniqueLanguage.html">
+            
+                <a href="47_techniqueLanguage.html">
+            
+                    
+                    技术术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="3_sipcCoin.html">
+            
+                <a href="3_sipcCoin.html">
+            
+                    
+                    sipc代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="4_PublishCoin/">
+            
+                <a href="4_PublishCoin/">
+            
+                    
+                    发行代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="5_concoct.html">
+            
+                <a href="5_concoct.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="7_account.html">
+            
+                <a href="7_account.html">
+            
+                    
+                    账户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="8_transaction/">
+            
+                <a href="8_transaction/">
+            
+                    
+                    交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="9_block/">
+            
+                <a href="9_block/">
+            
+                    
+                    区块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="6_genesis/">
+            
+                <a href="6_genesis/">
+            
+                    
+                    创世块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="10_transactionReceipt/">
+            
+                <a href="10_transactionReceipt/">
+            
+                    
+                    交易回执
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">架构</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="11_constructDesign/">
+            
+                <a href="11_constructDesign/">
+            
+                    
+                    架构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="12_structAndStore/">
+            
+                <a href="12_structAndStore/">
+            
+                    
+                    数据结构和存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="50_togetherStep.html">
+            
+                <a href="50_togetherStep.html">
+            
+                    
+                    数据同步优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">底层核心技术</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="13_p2pNetwork.html">
+            
+                <a href="13_p2pNetwork.html">
+            
+                    
+                    p2p网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="14_consensus/">
+            
+                <a href="14_consensus/">
+            
+                    
+                    共识机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="15_virtualMache/">
+            
+                <a href="15_virtualMache/">
+            
+                    
+                    虚拟机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="16_runMechanism/">
+            
+                <a href="16_runMechanism/">
+            
+                    
+                    运行机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="17_unusual.html">
+            
+                <a href="17_unusual.html">
+            
+                    
+                    处理异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">智能合约</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="18_contract/">
+            
+                <a href="18_contract/">
+            
+                    
+                    智能合约
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="19_understandSolidity/">
+            
+                <a href="19_understandSolidity/">
+            
+                    
+                    深入理解Solidity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="20_contractPattern.html">
+            
+                <a href="20_contractPattern.html">
+            
+                    
+                    合约模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开发者工具</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="21_buildTest.html">
+            
+                <a href="21_buildTest.html">
+            
+                    
+                    搭建测试链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="22_sipcApi.html">
+            
+                <a href="22_sipcApi.html">
+            
+                    
+                    Sip API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="23_crossChainApi.html">
+            
+                <a href="23_crossChainApi.html">
+            
+                    
+                    跨链API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="24_chromeWallet/">
+            
+                <a href="24_chromeWallet/">
+            
+                    
+                    SimPlug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="25_sdk/">
+            
+                <a href="25_sdk/">
+            
+                    
+                    SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">跨链</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="48_crossChain/">
+            
+                <a href="48_crossChain/">
+            
+                    
+                    跨链方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="26_smallChain.html">
+            
+                <a href="26_smallChain.html">
+            
+                    
+                    子链模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="49_crossChainOrder/">
+            
+                <a href="49_crossChainOrder/">
+            
+                    
+                    跨链流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp开发</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="27_dappFlow/">
+            
+                <a href="27_dappFlow/">
+            
+                    
+                    Dapp流程梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="28_editor.html">
+            
+                <a href="28_editor.html">
+            
+                    
+                    编译器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="29_writeContract/">
+            
+                <a href="29_writeContract/">
+            
+                    
+                    编写合约
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="30_frontRealize/">
+            
+                <a href="30_frontRealize/">
+            
+                    
+                    前端实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">挖矿</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="31_mining.html">
+            
+                <a href="31_mining.html">
+            
+                    
+                    sipc挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="32_miningPool/">
+            
+                <a href="32_miningPool/">
+            
+                    
+                    矿池接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="33_gpuMining/">
+            
+                <a href="33_gpuMining/">
+            
+                    
+                    GPU挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="34_SimPool/">
+            
+                <a href="34_SimPool/">
+            
+                    
+                    Simpool挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="35_SimpleNode_x1/">
+            
+                <a href="35_SimpleNode_x1/">
+            
+                    
+                    SimpleNode x1挖矿教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">客户端</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="36_SIPC.html">
+            
+                <a href="36_SIPC.html">
+            
+                    
+                    SIPC.VIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="37_wallet/">
+            
+                <a href="37_wallet/">
+            
+                    
+                    sipc全节点钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="38_ChainBox/">
+            
+                <a href="38_ChainBox/">
+            
+                    
+                    ChainBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="39_bolckBrowser/">
+            
+                <a href="39_bolckBrowser/">
+            
+                    
+                    区块链浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">生态</li>
+        
+        
+    
+        <li class="chapter active" data-level="13.1" data-path="40_tradePlateform.html">
+            
+                <a href="40_tradePlateform.html">
+            
+                    
+                    交易所对接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="41_commityProduct.html">
+            
+                <a href="41_commityProduct.html">
+            
+                    
+                    社区项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="42_commityActity.html">
+            
+                <a href="42_commityActity.html">
+            
+                    
+                    社区活动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="43_commityEnters/">
+            
+                <a href="43_commityEnters/">
+            
+                    
+                    社区入口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">落地方案</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="44_case.html">
+            
+                <a href="44_case.html">
+            
+                    
+                    落地案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其它</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="45_faq.html">
+            
+                <a href="45_faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="46_supportOnline/">
+            
+                <a href="46_supportOnline/">
+            
+                    
+                    在线技术支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >交易所对接</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x642D;&#x5EFA;simplechain&#x8282;&#x70B9;"><a name="&#x642D;&#x5EFA;simplechain&#x8282;&#x70B9;" class="plugin-anchor" href="#&#x642D;&#x5EFA;simplechain&#x8282;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x642D;&#x5EFA;SimpleChain&#x8282;&#x70B9;</h2>
+<h3 id="docker-&#x642D;&#x5EFA;"><a name="docker-&#x642D;&#x5EFA;" class="plugin-anchor" href="#docker-&#x642D;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>docker &#x642D;&#x5EFA;</h3>
+<p><strong>&#x83B7;&#x53D6;&#x955C;&#x50CF;&#xFF1A;</strong></p>
+<pre><code class="lang-sh">docker pull simplechain/sipe:latest
+</code></pre>
+<p><strong>&#x5F00;&#x542F;RPC</strong></p>
+<pre><code class="lang-sh">docker run -it -p 8545:8545 -p 30312:30312 simplechain/sipe --rpc --rpcaddr <span class="hljs-string">&quot;0.0.0.0&quot;</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x81EA;&#x5DF1;&#x7684;&#x8282;&#x70B9;&#x662F;&#x5426;&#x542F;&#x52A8;&#x6210;&#x529F;&#xFF1A;</p>
+<pre><code class="lang-sh">curl -X POST localhost:8545  -H <span class="hljs-string">&quot;Content-Type:application/json&quot;</span> --data <span class="hljs-string">&apos;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;web3_clientVersion&quot;,&quot;params&quot;:[],&quot;id&quot;:68}&apos;</span>
+</code></pre>
+<h3 id="&#x6E90;&#x7801;&#x642D;&#x5EFA;"><a name="&#x6E90;&#x7801;&#x642D;&#x5EFA;" class="plugin-anchor" href="#&#x6E90;&#x7801;&#x642D;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6E90;&#x7801;&#x642D;&#x5EFA;</h3>
+<p><code>&#x524D;&#x671F;&#x51C6;&#x5907;:Go &#x8BED;&#x8A00;&#x73AF;&#x5883;(1.10 &#x6216;&#x4EE5;&#x4E0A;&#x7248;&#x672C;)&#x3001;C &#x8BED;&#x8A00;&#x7F16;&#x8BD1;&#x5668;</code></p>
+<p><strong>1.&#x4E0B;&#x8F7D; SimpleChain</strong></p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; git &#x5C06;&#x9879;&#x76EE; clone &#x5230;&#x672C;&#x5730;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728; <a href="https://github.com/simplechain-org/go-" target="_blank">https://github.com/simplechain-org/go-</a>
+simplechain &#x9875;&#x9762;&#x76F4;&#x63A5;&#x4E0B;&#x8F7D;&#x3002;</p>
+<pre><code>git clone https://github.com/simplechain-org/go-simplechain.git 
+</code></pre><p><strong>2.&#x5B89;&#x88C5; sipe</strong></p>
+<p>1.&#x8FDB;&#x5165; go-simplechain &#x6839;&#x76EE;&#x5F55;&#x3002;</p>
+<pre><code class="lang-javascript">cd go-simplechain
+</code></pre>
+<p>2.&#x4F7F;&#x7528; make &#x5DE5;&#x5177;&#x5B89;&#x88C5; sipe&#x3002;</p>
+<pre><code>make sipe
+&gt;&gt;&gt; /usr/local/go/bin/go install -ldflags -X main.gitCommit=9d73f67e1dc5587a95f52c13fee93be6434b42ac -s -v ./cmd/sipe github.com/simplechain-org/go-simplechain/core
+...
+github.com/simplechain-org/go-simplechain/cmd/sipe
+Done building.
+Run &quot;/Users/yuanchao/go/src/github.com/simplechain-org/go-simplechain/build/bin/sipe&quot; to launch sipe.
+</code></pre><p>&#x5F53;&#x7EC8;&#x7AEF;&#x51FA;&#x73B0;&#x4EE5;&#x4E0A;&#x8F93;&#x51FA;&#x65F6;&#xFF0C;&#x8868;&#x793A; make &#x6267;&#x884C;&#x6210;&#x529F;&#xFF0C;&#x6B64;&#x65F6;&#x5728; go-simplechain/build/bin &#x76EE;&#x5F55;&#x4E0B; &#x5C06;&#x4F1A;&#x751F;&#x6210; sipe &#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x79FB;&#x52A8;&#x5230;&#x4EFB;&#x4F55;&#x76EE;&#x5F55;&#x4E0B;&#x6216;&#x5C06;&#x5176;&#x52A0;&#x5165;&#x5230;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;&#xFF0C;&#x4EE5;&#x6B64; &#x6765;&#x4FBF;&#x5229;&#x5F97;&#x8FD0;&#x884C;sipe&#x7A0B;&#x5E8F;&#x3002;</p>
+<h2 id="&#x542F;&#x52A8;sipe"><a name="&#x542F;&#x52A8;sipe" class="plugin-anchor" href="#&#x542F;&#x52A8;sipe"><i class="fa fa-link" aria-hidden="true"></i></a>&#x542F;&#x52A8;sipe</h2>
+<p><strong>1.&#x521B;&#x5EFA;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x8282;&#x70B9;&#x6570;&#x636E;&#x7684;&#x6587;&#x4EF6;&#x5939;,&#x5982;&#x679C;&#x4E0D;</strong></p>
+<pre><code>mkdir chaindata
+</code></pre><p><strong>2.&#x542F;&#x52A8;sipe&#x4E3B;&#x7F51;&#x8282;&#x70B9;</strong></p>
+<p>&#x5F00;&#x542F; RPC &#x670D;&#x52A1;&#x5E76;&#x6307;&#x5B9A; RPC &#x76D1;&#x542C;&#x5730;&#x5740;&#x4E3A; 127.0.0.1&#xFF0C;&#x7AEF;&#x53E3; <code>8545</code>&#x3002;&#x8282;&#x70B9;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x76EE;&#x5F55;&#x4E3A; <code>chaindata</code></p>
+<pre><code class="lang-bash">./sipe --rpc --rpcaddr 127.0.0.1 --rpcport 8545 --datadir chaindata
+</code></pre>
+<p>&#x5F53;&#x51FA;&#x73B0;&#x7C7B;&#x4F3C;&#x4EE5;&#x4E0B;&#x8F93;&#x51FA;&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x542F;&#x52A8;&#x6210;&#x529F;&#xFF0C;&#x5E76;&#x5F00;&#x59CB;&#x540C;&#x6B65; SimpleChain &#x4E3B;&#x7F51;&#x533A;&#x5757;&#x3002;</p>
+<pre><code class="lang-bash">INFO [06-19|09:35:01.481] Maximum peer count               ETH=25 LES=0 total=25
+INFO [06-19|09:35:01.492] Starting peer-to-peer node       instance=Sipe/v1.0.2-stable-0cbf2a41/darwin-amd64/go1.12.1
+...
+INFO [06-19|09:35:33.700] Block synchronisation started
+INFO [06-19|09:35:36.756] Imported new block headers       count=192\
+elapsed=22.273ms number=192 <span class="hljs-built_in">hash</span>=bb758a...bea1b6 ignored=0
+</code></pre>
+<h2 id="&#x793E;&#x533A;&#x8282;&#x70B9;"><a name="&#x793E;&#x533A;&#x8282;&#x70B9;" class="plugin-anchor" href="#&#x793E;&#x533A;&#x8282;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793E;&#x533A;&#x8282;&#x70B9;</h2>
+<p><strong>rpc&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#x53F7;&#xFF1A;</strong></p>
+<pre><code class="lang-bash">47.110.48.207:8545
+</code></pre>
+<p><strong>&#x6D4B;&#x8BD5;&#xFF1A;</strong></p>
+<pre><code class="lang-json"><span class="hljs-comment">//Request</span>
+curl -X POST <span class="hljs-number">47.110</span><span class="hljs-number">.48</span><span class="hljs-number">.207</span>:<span class="hljs-number">8545</span>  -H <span class="hljs-string">&quot;Content-Type:application/json&quot;</span> --data <span class="hljs-string">&apos;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;web3_clientVersion&quot;,&quot;params&quot;:[],&quot;id&quot;:68}&apos;</span>
+<span class="hljs-comment">//Response</span>
+{
+    <span class="hljs-string">&quot;jsonrpc&quot;</span>: <span class="hljs-string">&quot;2.0&quot;</span>,
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">68</span>,
+    <span class="hljs-string">&quot;result&quot;</span>: <span class="hljs-string">&quot;Sipe/v1.1.0-stable-0800d402/linux-amd64/go1.14.1&quot;</span>
+}
+</code></pre>
+<h2 id="&#x8FDE;&#x63A5;simplechain&#x8282;&#x70B9;"><a name="&#x8FDE;&#x63A5;simplechain&#x8282;&#x70B9;" class="plugin-anchor" href="#&#x8FDE;&#x63A5;simplechain&#x8282;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FDE;&#x63A5;SimpleChain&#x8282;&#x70B9;</h2>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; sipc.js&#xFF0C;&#x7136;&#x540E;&#x7F16;&#x5199;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../../config&apos;</span>) <span class="hljs-comment">//&#x8282;&#x70B9;&#x670D;&#x52A1;&#x5668;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</span>
+<span class="hljs-keyword">const</span> Web3 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;web3&apos;</span>)
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-keyword">new</span> Web3(config.uri)
+</code></pre>
+<h2 id="&#x521B;&#x5EFA;simplechain&#x94B1;&#x5305;&#x670D;&#x52A1;"><a name="&#x521B;&#x5EFA;simplechain&#x94B1;&#x5305;&#x670D;&#x52A1;" class="plugin-anchor" href="#&#x521B;&#x5EFA;simplechain&#x94B1;&#x5305;&#x670D;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;SimpleChain&#x94B1;&#x5305;&#x670D;&#x52A1;</h2>
+<p>&#x73B0;&#x5728;&#x5F00;&#x59CB;&#x8FDB;&#x5165;Simplechain&#x94B1;&#x5305;&#x670D;&#x52A1;&#x7684;&#x6838;&#x5FC3;&#x7279;&#x6027;&#x5F00;&#x53D1;&#x9636;&#x6BB5;&#x3002;</p>
+<h3 id="&#x521B;&#x5EFA;&#x65B0;&#x7684;simplechain&#x8D26;&#x6237;"><a name="&#x521B;&#x5EFA;&#x65B0;&#x7684;simplechain&#x8D26;&#x6237;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x65B0;&#x7684;simplechain&#x8D26;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x65B0;&#x7684;Simplechain&#x8D26;&#x6237;</h3>
+<p>&#x4EA4;&#x6613;&#x6240;&#x548C;&#x652F;&#x4ED8;&#x7F51;&#x5173;&#x9700;&#x8981;&#x4E3A;&#x5BA2;&#x6237;&#x751F;&#x6210;&#x65B0;&#x5730;&#x5740;&#xFF0C;&#x4EE5;&#x4FBF;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5411;&#x670D;&#x52A1;&#x5145;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x4E3A;&#x4EA7;&#x54C1;&#x4ED8;&#x8D39;&#x3002;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x7528;&#x8FC7;&#x7684;<code>sipc</code>&#x5730;&#x5740;&#x662F;&#x4EFB;&#x4F55;&#x6570;&#x5B57;&#x8D44;&#x4EA7;&#x670D;&#x52A1;&#x7684;&#x57FA;&#x672C;&#x9700;&#x6C42;&#xFF0C;&#x56E0;&#x6B64;&#x770B;&#x4E00;&#x4E0B;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;commands.js&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x6211;&#x4EEC;&#x8BA2;&#x9605;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x6D88;&#x606F;&#x3002;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<p>&#x8FDE;&#x63A5;&#x5230;command&#x4E3B;&#x9898;&#xFF0C;&#x76D1;&#x542C;&#x65B0;&#x7684;create_account&#x547D;&#x4EE4;
+&#x5F53;&#x6536;&#x5230;&#x65B0;&#x7684;create_account&#x547D;&#x4EE4;&#x65F6;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5BC6;&#x94A5;&#x5BF9;&#x5E76;&#x5B58;&#x5165;&#x5BC6;&#x7801;&#x5E93;
+&#x751F;&#x6210;account_created&#x6D88;&#x606F;&#x5E76;&#x53D1;&#x9001;&#x5230;&#x961F;&#x5217;&#x7684;account_created&#x4E3B;&#x9898;
+&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> web3 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./ethereum&quot;</span>)
+<span class="hljs-comment">/**
+ * Create a new ethereum address and return the address 
+ */</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">create_account</span>(<span class="hljs-params">meta = {}</span>) </span>{
+  <span class="hljs-comment">// generate the address</span>
+  <span class="hljs-keyword">const</span> account = <span class="hljs-keyword">await</span> web3.eth.accounts.create()
+
+  <span class="hljs-comment">// disable checksum when storing the address</span>
+  <span class="hljs-keyword">const</span> address = account.address.toLowerCase()
+
+  <span class="hljs-comment">// save the public address in Redis without any transactions received yet</span>
+  <span class="hljs-keyword">await</span> redis.setAsync(<span class="hljs-string">`eth:address:public:<span class="hljs-subst">${address}</span>`</span>, <span class="hljs-built_in">JSON</span>.stringify({}))
+
+  <span class="hljs-comment">// Store the private key in a vault.</span>
+  <span class="hljs-comment">// For demo purposes we use the same Redis instance, but this should be changed in production</span>
+  <span class="hljs-keyword">await</span> redis.setAsync(<span class="hljs-string">`eth:address:private:<span class="hljs-subst">${address}</span>`</span>, account.privateKey)
+
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.assign({}, meta, {address: account.address})
+}
+
+<span class="hljs-built_in">module</span>.exports.listen_to_commands = listen_to_commands
+</code></pre>
+<h3 id="&#x5904;&#x7406;&#x65B0;&#x4EA4;&#x6613;"><a name="&#x5904;&#x7406;&#x65B0;&#x4EA4;&#x6613;" class="plugin-anchor" href="#&#x5904;&#x7406;&#x65B0;&#x4EA4;&#x6613;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5904;&#x7406;&#x65B0;&#x4EA4;&#x6613;</h3>
+<p>&#x6211;&#x4EEC;&#x7684;&#x94B1;&#x5305;&#x8FD8;&#x6CA1;&#x5199;&#x5B8C;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x7684;&#x5730;&#x5740;&#x6536;&#x5230;&#x7528;&#x6237;&#x5145;&#x503C;&#x65F6;&#x5E94;&#x5F53;&#x5F97;&#x5230;&#x901A;&#x77E5;&#x624D;&#x5BF9;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;Simplechain&#x7684;web3&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4F9B;&#x4E86;newBlockHeaders&#x8BA2;&#x9605;&#x673A;&#x5236;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x7684;&#x670D;&#x52A1;&#x5076;&#x7136;&#x5B95;&#x673A;&#xFF0C;&#x90A3;&#x4E48;&#x670D;&#x52A1;&#x5C31;&#x4F1A;&#x9519;&#x8FC7;&#x5728;&#x5B95;&#x673A;&#x671F;&#x95F4;&#x751F;&#x4EA7;&#x7684;&#x533A;&#x5757;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x94B1;&#x5305;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x540C;&#x6B65;&#x5230;&#x4E86;&#x7F51;&#x7EDC;&#x7684;&#x6700;&#x65B0;&#x533A;&#x5757;&#x3002;</p>
+<p>&#x521B;&#x5EFA; <code>sync_blocks.js</code> &#x6587;&#x4EF6;&#xFF0C;&#x7F16;&#x5199;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> web3 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./ethereum&apos;</span>)
+
+<span class="hljs-comment">/**
+ * Sync blocks and start listening for new blocks
+ * @param {Number} current_block_number - The last block processed
+ * @param {Object} opts - A list of options with callbacks for events
+ */</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sync_blocks</span>(<span class="hljs-params">current_block_number, opts</span>) </span>{
+  <span class="hljs-comment">// first sync the wallet to the latest block</span>
+  <span class="hljs-keyword">let</span> latest_block_number = <span class="hljs-keyword">await</span> web3.eth.getBlockNumber()
+  <span class="hljs-keyword">let</span> synced_block_number = <span class="hljs-keyword">await</span> sync_to_block(current_block_number, latest_block_number, opts)
+
+  <span class="hljs-comment">// subscribe to new blocks</span>
+  web3.eth.subscribe(<span class="hljs-string">&apos;newBlockHeaders&apos;</span>, (error, result) =&gt; error &amp;&amp; <span class="hljs-built_in">console</span>.log(error))
+  .on(<span class="hljs-string">&quot;data&quot;</span>, <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">blockHeader</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> process_block(blockHeader.number, opts)
+  })
+
+  <span class="hljs-keyword">return</span> synced_block_number
+}
+
+<span class="hljs-comment">// Load all data about the given block and call the callbacks if defined</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">process_block</span>(<span class="hljs-params">block_hash_or_id, opts</span>) </span>{
+  <span class="hljs-comment">// load block information by id or hash</span>
+  <span class="hljs-keyword">const</span> block = <span class="hljs-keyword">await</span> web3.eth.getBlock(block_hash_or_id, <span class="hljs-literal">true</span>)
+  <span class="hljs-comment">// call the onTransactions callback if defined</span>
+  opts.onTransactions ? opts.onTransactions(block.transactions) : <span class="hljs-literal">null</span>;
+  <span class="hljs-comment">// call the onBlock callback if defined</span>
+  opts.onBlock ? opts.onBlock(block_hash_or_id) : <span class="hljs-literal">null</span>;
+  <span class="hljs-keyword">return</span> block
+}
+
+<span class="hljs-comment">// Traverse all unprocessed blocks between the current index and the lastest block number</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sync_to_block</span>(<span class="hljs-params">index, latest, opts</span>) </span>{
+  <span class="hljs-keyword">if</span> (index &gt;= latest) {
+    <span class="hljs-keyword">return</span> index;
+  }
+  <span class="hljs-keyword">await</span> process_block(index + <span class="hljs-number">1</span>, opts)
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> sync_to_block(index + <span class="hljs-number">1</span>, latest, opts)
+}
+
+<span class="hljs-built_in">module</span>.exports = sync_blocks
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4ECE;&#x94B1;&#x5305;&#x670D;&#x52A1;&#x4E4B;&#x524D;&#x5904;&#x7406;&#x7684;&#x6700;&#x65B0;&#x533A;&#x5757;&#x5F00;&#x59CB;&#xFF0C;&#x4E00;&#x76F4;&#x540C;&#x6B65;&#x5230;&#x533A;&#x5757;&#x94FE;&#x7684;&#x5F53;&#x524D;&#x6700;&#x65B0;&#x533A;&#x5757;&#x3002;&#x4E00;&#x65E6;&#x6211;&#x4EEC;&#x540C;&#x6B65;&#x5230;&#x6700;&#x65B0;&#x533A;&#x5757;&#xFF0C;&#x5C31;&#x5F00;&#x59CB;&#x8BA2;&#x9605;&#x65B0;&#x533A;&#x5757;&#x4E8B;&#x4EF6;&#x3002;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E00;&#x4E2A;&#x533A;&#x5757;&#xFF0C;&#x6211;&#x4EEC;&#x90FD;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4EE5;&#x5904;&#x7406;&#x533A;&#x5757;&#x5934;&#x4EE5;&#x53CA;&#x533A;&#x5757;&#x4E2D;&#x7684;&#x4EA4;&#x6613;&#x5217;&#x8868;&#xFF1A;</p>
+<ul>
+<li><code>onTransactions</code></li>
+<li><code>onBlock</code></li>
+</ul>
+<p><strong>&#x901A;&#x5E38;&#x5305;&#x542B;&#x5982;&#x4E0B;&#x7684;&#x5904;&#x7406;&#x6B65;&#x9AA4;&#xFF1A;</strong></p>
+<ul>
+<li><code>&#x76D1;&#x542C;&#x65B0;&#x533A;&#x5757;&#xFF0C;&#x83B7;&#x53D6;&#x533A;&#x5757;&#x4E2D;&#x7684;&#x5168;&#x90E8;&#x4EA4;&#x6613;</code></li>
+<li><code>&#x8FC7;&#x6EE4;&#x6389;&#x4E0E;&#x94B1;&#x5305;&#x5730;&#x5740;&#x65E0;&#x5173;&#x7684;&#x4EA4;&#x6613;</code></li>
+<li><code>&#x5C06;&#x6BCF;&#x4E2A;&#x76F8;&#x5173;&#x7684;&#x4EA4;&#x6613;&#x90FD;&#x53D1;&#x5F80;&#x961F;&#x5217;</code></li>
+<li><code>&#x5C06;&#x5730;&#x5740;&#x4E0A;&#x7684;&#x8D44;&#x91D1;&#x5F52;&#x96C6;&#x5230;&#x5B89;&#x5168;&#x7684;&#x5B58;&#x50A8;</code></li>
+<li><code>&#x66F4;&#x65B0;&#x5DF2;&#x5904;&#x7406;&#x7684;&#x533A;&#x5757;&#x7F16;&#x53F7;</code></li>
+</ul>
+<p><strong>&#x6700;&#x7EC8;&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> web3 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;web3&quot;</span>) <span class="hljs-comment">//&#x8C03;&#x7528;web3</span>
+<span class="hljs-keyword">const</span> redis = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./redis&apos;</span>) <span class="hljs-comment">//&#x8C03;&#x7528;redis&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5C06;&#x533A;&#x5757;&#x6570;&#x636E;&#x83B7;&#x53D6;&#x4E0B;&#x6765;&#x5B58;&#x5165;redis&#x6570;&#x636E;&#x5E93;&#x4E2D;</span>
+<span class="hljs-keyword">const</span> queue = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./queue&apos;</span>) <span class="hljs-comment">//&#x8C03;&#x7528;&#x6D88;&#x606F;&#x961F;&#x5217;</span>
+<span class="hljs-keyword">const</span> sync_blocks = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./sync_blocks&apos;</span>)  <span class="hljs-comment">//&#x540C;&#x6B65;&#x533A;&#x5757;</span>
+
+<span class="hljs-comment">/**
+ * Start syncing blocks and listen for new transactions on the blockchain
+ */</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">start_syncing_blocks</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// start from the last block number processed or 0 (you can use the current block before deploying for the first time)</span>
+  <span class="hljs-keyword">let</span> last_block_number = <span class="hljs-keyword">await</span> redis.getAsync(<span class="hljs-string">&apos;eth:last-block&apos;</span>)
+  last_block_number = last_block_number || <span class="hljs-number">0</span>
+  <span class="hljs-comment">// start syncing blocks</span>
+  sync_blocks(last_block_number, {
+    <span class="hljs-comment">// for every new block update the latest block value in redis</span>
+    onBlock: update_block_head,
+    <span class="hljs-comment">// for new transactions check each transaction and see if it&apos;s new</span>
+    onTransactions: <span class="hljs-keyword">async</span> (transactions) =&gt; {
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i <span class="hljs-keyword">in</span> transactions) {
+        <span class="hljs-keyword">await</span> process_transaction(transactions[i])
+      }
+    }
+  })
+}
+
+<span class="hljs-comment">// save the lastest block on redis</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">update_block_head</span>(<span class="hljs-params">head</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> redis.setAsync(<span class="hljs-string">&apos;eth:last-block&apos;</span>, head)
+}
+
+<span class="hljs-comment">// process a new transaction</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">process_transaction</span>(<span class="hljs-params">transaction</span>) </span>{
+  <span class="hljs-keyword">const</span> address = transaction.to.toLowerCase()
+  <span class="hljs-keyword">const</span> amount_in_ether = web3.utils.fromWei(transaction.value)
+
+  <span class="hljs-comment">// check if the receiving address has been generated by our wallet</span>
+  <span class="hljs-keyword">const</span> watched_address = <span class="hljs-keyword">await</span> redis.existsAsync(<span class="hljs-string">`eth:address:public:<span class="hljs-subst">${address}</span>`</span>)
+  <span class="hljs-keyword">if</span> (watched_address !== <span class="hljs-number">1</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+  }
+
+  <span class="hljs-comment">// then check if it&apos;s a new transaction that should be taken into account</span>
+  <span class="hljs-keyword">const</span> transaction_exists = <span class="hljs-keyword">await</span> redis.existsAsync(<span class="hljs-string">`eth:address:public:<span class="hljs-subst">${address}</span>`</span>)
+  <span class="hljs-keyword">if</span> (transaction_exists === <span class="hljs-number">1</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+  }
+
+  <span class="hljs-comment">// update the list of transactions for that address</span>
+  <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> redis.getAsync(<span class="hljs-string">`eth:address:public:<span class="hljs-subst">${address}</span>`</span>)
+  <span class="hljs-keyword">let</span> addr_data = <span class="hljs-built_in">JSON</span>.parse(data)
+  addr_data[transaction.hash] = {
+    value: amount_in_ether
+  }
+
+  <span class="hljs-keyword">await</span> redis.setAsync(<span class="hljs-string">`eth:address:public:<span class="hljs-subst">${address}</span>`</span>, <span class="hljs-built_in">JSON</span>.stringify(addr_data))
+  <span class="hljs-keyword">await</span> redis.setAsync(<span class="hljs-string">`eth:transaction:<span class="hljs-subst">${transaction.hash}</span>`</span>, transaction)
+
+  <span class="hljs-comment">// move funds to the cold wallet address</span>
+  <span class="hljs-comment">// const cold_txid = await move_to_cold_storage(address, amount_in_ether)</span>
+
+  <span class="hljs-comment">// send notification to the kafka server</span>
+  <span class="hljs-keyword">await</span> queue_producer.send(<span class="hljs-string">&apos;transaction&apos;</span>, [{
+    txid: transaction.hash,
+    value: amount_in_ether,
+    to: transaction.to,
+    <span class="hljs-keyword">from</span>: transaction.from,
+    <span class="hljs-comment">//cold_txid: cold_txid,</span>
+  }])
+
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+}
+
+<span class="hljs-built_in">module</span>.exports = start_syncing_blocks
+</code></pre>
+<h1 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="plugin-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h1>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x4E86;&#x4EA4;&#x6613;&#x6240;Simplechain&#x94B1;&#x5305;&#x670D;&#x52A1;&#x7684;&#x8BBE;&#x8BA1;&#x4E0E;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD9;&#x4E2A;&#x670D;&#x52A1;&#x8FD8;&#x53EF;&#x4EE5;&#x4ECE;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x65B9;&#x9762;&#x52A0;&#x4EE5;&#x6539;&#x8FDB;&#xFF1A;</p>
+<ul>
+<li>&#x589E;&#x52A0;&#x9519;&#x8BEF;&#x5904;&#x7406;</li>
+<li>&#x589E;&#x52A0;&#x547D;&#x4EE4;&#x7C7B;&#x578B;</li>
+<li>&#x4EA4;&#x6613;&#x7B7E;&#x540D;&#x4E0E;&#x4EA4;&#x6613;&#x5E7F;&#x64AD;</li>
+<li>&#x90E8;&#x7F72;&#x5408;&#x7EA6;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="39_bolckBrowser/" class="navigation navigation-prev " aria-label="Previous page: 区块链浏览器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="41_commityProduct.html" class="navigation navigation-next " aria-label="Next page: 社区项目">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"id":"docs_44","title":"交易所对接","sidebar_label":"平台对接","level":"13.1","depth":1,"next":{"title":"社区项目","level":"13.2","depth":1,"path":"41_commityProduct.md","ref":"41_commityProduct.md","articles":[]},"previous":{"title":"区块链浏览器","level":"12.4","depth":1,"path":"39_bolckBrowser/README.md","ref":"39_bolckBrowser/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"zh","gitbook":"*"},"file":{"path":"40_tradePlateform.md","mtime":"2020-06-23T01:47:29.696Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-02T02:38:08.915Z"},"basePath":".","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1004 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Structure Design · Simplechain Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../12_structAndStore/" />
+    
+    
+    <link rel="prev" href="../10_transactionReceipt/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Quick Start</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1_quickStart.html">
+            
+                <a href="../1_quickStart.html">
+            
+                    
+                    Quick Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../2_BuildNode/">
+            
+                <a href="../2_BuildNode/">
+            
+                    
+                    Build Node
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Sipc Coin Negotiate</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../47_techniqueLanguage.html">
+            
+                <a href="../47_techniqueLanguage.html">
+            
+                    
+                    Technical Manual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../3_sipcCoin.html">
+            
+                <a href="../3_sipcCoin.html">
+            
+                    
+                    Sipc Coin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../4_PublishCoin/">
+            
+                <a href="../4_PublishCoin/">
+            
+                    
+                    Publish Coin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basic Data Struct</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../5_concoct.html">
+            
+                <a href="../5_concoct.html">
+            
+                    
+                    Deploy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../6_genesis/">
+            
+                <a href="../6_genesis/">
+            
+                    
+                    Genesis Block
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../7_account.html">
+            
+                <a href="../7_account.html">
+            
+                    
+                    Account
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../8_transaction/">
+            
+                <a href="../8_transaction/">
+            
+                    
+                    Transaction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../9_block/">
+            
+                <a href="../9_block/">
+            
+                    
+                    Block
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../10_transactionReceipt/">
+            
+                <a href="../10_transactionReceipt/">
+            
+                    
+                    Transaction Receipt
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Construct</li>
+        
+        
+    
+        <li class="chapter active" data-level="5.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Structure Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../12_structAndStore/">
+            
+                <a href="../12_structAndStore/">
+            
+                    
+                    Data Struct and 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../50_togetherStep.html">
+            
+                <a href="../50_togetherStep.html">
+            
+                    
+                    Data Synchronize
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Underlying Core Technology</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../13_p2pNetwork.html">
+            
+                <a href="../13_p2pNetwork.html">
+            
+                    
+                    p2p network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../14_consensus/">
+            
+                <a href="../14_consensus/">
+            
+                    
+                    Consensus mechanism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../15_virtualMache/">
+            
+                <a href="../15_virtualMache/">
+            
+                    
+                    virtual machine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../16_runMechanism/">
+            
+                <a href="../16_runMechanism/">
+            
+                    
+                    Operating mechanism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../17_unusual.html">
+            
+                <a href="../17_unusual.html">
+            
+                    
+                    Handle exceptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Smart contract</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../18_contract/">
+            
+                <a href="../18_contract/">
+            
+                    
+                    Smart contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../19_understandSolidity/">
+            
+                <a href="../19_understandSolidity/">
+            
+                    
+                    understand Solidity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../20_contractPattern.html">
+            
+                <a href="../20_contractPattern.html">
+            
+                    
+                    Contract template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Developer tools</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../21_buildTest.html">
+            
+                <a href="../21_buildTest.html">
+            
+                    
+                    Build Test network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../22_sipcApi.html">
+            
+                <a href="../22_sipcApi.html">
+            
+                    
+                    Sip API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../23_crossChainApi.html">
+            
+                <a href="../23_crossChainApi.html">
+            
+                    
+                    Cross-chain API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../24_chromeWallet/">
+            
+                <a href="../24_chromeWallet/">
+            
+                    
+                    SimPlug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../25_sdk/">
+            
+                <a href="../25_sdk/">
+            
+                    
+                    SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Cross-chain</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../48_crossChain/">
+            
+                <a href="../48_crossChain/">
+            
+                    
+                    Cross-chain solution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../26_smallChain.html">
+            
+                <a href="../26_smallChain.html">
+            
+                    
+                    Subchain template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../49_crossChainOrder/">
+            
+                <a href="../49_crossChainOrder/">
+            
+                    
+                    Cross-chain process
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp develop</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../27_dappFlow/">
+            
+                <a href="../27_dappFlow/">
+            
+                    
+                    Dapp process carding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../28_editor.html">
+            
+                <a href="../28_editor.html">
+            
+                    
+                    translater
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../29_writeContract/">
+            
+                <a href="../29_writeContract/">
+            
+                    
+                    Write contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../30_frontRealize/">
+            
+                <a href="../30_frontRealize/">
+            
+                    
+                    Front-end development
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Mining</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../31_mining.html">
+            
+                <a href="../31_mining.html">
+            
+                    
+                    sipc mining
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../32_miningPool/">
+            
+                <a href="../32_miningPool/">
+            
+                    
+                    MinePool access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../33_gpuMining/">
+            
+                <a href="../33_gpuMining/">
+            
+                    
+                    GPU Mining
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="../34_SimPool/">
+            
+                <a href="../34_SimPool/">
+            
+                    
+                    Simpool Mining
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="../35_SimpleNode_x1/">
+            
+                <a href="../35_SimpleNode_x1/">
+            
+                    
+                    SimpleNode x1 Mining
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Client</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../36_SIPC.html">
+            
+                <a href="../36_SIPC.html">
+            
+                    
+                    SIPC.VIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="../37_wallet/">
+            
+                <a href="../37_wallet/">
+            
+                    
+                    Sipc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="../38_ChainBox/">
+            
+                <a href="../38_ChainBox/">
+            
+                    
+                    ChainBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="../39_blockBrowser/README.md">
+            
+                <span>
+            
+                    
+                    Explore
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Ecology</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../40_tradePlateform.html">
+            
+                <a href="../40_tradePlateform.html">
+            
+                    
+                    Exchange docking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../41_commityProduct.html">
+            
+                <a href="../41_commityProduct.html">
+            
+                    
+                    Community Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="../42_commityActity.html">
+            
+                <a href="../42_commityActity.html">
+            
+                    
+                    Community Activity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="../43_commityEnters/">
+            
+                <a href="../43_commityEnters/">
+            
+                    
+                    Community Entrance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Landing scheme</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../44_case.html">
+            
+                <a href="../44_case.html">
+            
+                    
+                    Landing case
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Other</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../45_faq.html">
+            
+                <a href="../45_faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="../46_supportOnline/">
+            
+                <a href="../46_supportOnline/">
+            
+                    
+                    Online technical support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Structure Design</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>The following figure shows the overall architecture of Simplechain:
+<img src="1.png" alt="1.png"></p>
+<h2 id="top-level-architecture-design"><a name="top-level-architecture-design" class="plugin-anchor" href="#top-level-architecture-design"><i class="fa fa-link" aria-hidden="true"></i></a>Top-level architecture design</h2>
+<p>The blockchain can be simply divided into three layers: protocol layer, extension layer, and application layer. The protocol layer can be divided into storage layer and network layer, which are independent but inseparable.</p>
+<p>The top layer of Simplechain is DApp, which is the display layer of the entire blockchain. It exchanges with the intelligent contract layer through Web3.js. For example, Simplechain uses web3-js, the application layer of a blockchain can be a mobile terminal, a web terminal, or an existing server that is integrated into the application layer.</p>
+<p>All smart contracts run on EVM (virtual machines) and use RPC(Remote Procedure Call Protocol, which is A process method called by B through the network).</p>
+<p>Under EVM and RPC, there are four core contents of Simplechain, including blockChain, consensus algorithm, mining, and network layer. All parts except DApp are in the client sipe of Simplechain.</p>
+<p><img src="2.png" alt="3f.png"></p>
+<h2 id="from-the-perspective-of-data-structure"><a name="from-the-perspective-of-data-structure" class="plugin-anchor" href="#from-the-perspective-of-data-structure"><i class="fa fa-link" aria-hidden="true"></i></a>From the perspective of data structure</h2>
+<p>The protocol layer is the underlying technology. This layer is usually a complete blockchain product, similar to the operating system of our computer. It maintains network nodes and only provides APIs for calling. Network programming, distributed algorithm, encryption signature, data storage technology and other four aspects, distributed algorithm is basically a business logic implementation, can be achieved in any language, the encrypted signature technology is used directly and simply, and the database technology is also mainly used at the use level.</p>
+<p><code>Storage layer:</code>A Block + Lian Biao and blockchain data structure. The database used in Simplechain is levelDB.</p>
+<p><code>Network layer:</code>p2p network, the implementation of P2P network and concurrent processing are the difficulties in development, so for those languages with strong network programming ability and simple concurrent processing, block chain applications in Nodejs Development Zone, gradually becoming more and more popular, Go language began to be very popular.</p>
+<p><code>Consensus layer:</code>That is, the incentive layer, through the mining mechanism, formulates the way of obtaining currency through the blockchain. For example, Bitcoin uses POW(Proof of Work workload): The better the performance of a computer, the easier it is to obtain monetary rewards. And POS(Proof of Stake equity certification mechanism): similar to the concept of crowdfunding dividends, it will pay interest to holders according to the amount and time of currency you hold.</p>
+<p><code>Extension layer:</code>Similar to computer drivers, this part of Simplechain includes EVM (virtual machine) and intelligent contract. To make blockchain products more practical, such as Simplechain&apos;s &quot;smart contract&quot; concept, which is a typical application development at the expansion level.</p>
+<p><code>Contract layer:</code>Previous blockchains did not have this layer. Therefore, the original blockchain can only conduct transactions, but cannot be used in other fields or other logical processing. But the emergence of contract layer and intelligent contract is &quot;programmable contract&quot;, or &quot;contract intelligence&quot;, in which &quot;intelligence&quot; is the intelligence of execution, that is to say, to reach a certain condition, the automatic execution of contracts makes the use of blockchains in other fields a reality.</p>
+<p><code>Application layer:</code>Similar to various software programs in a computer, the display layer of the blockchain. DAPP is also an application at this level. It publishes smart contracts to the blockchain. People access this block through addresses and then interact with smart contracts. Simplechain uses web3-js. The application layer of a blockchain can be a mobile terminal, a web terminal, or an existing server that is integrated into the application layer. The DAPP developed based on this actually encapsulates a layer of Web applications on the basis of intelligent contracts. The issue of tokens and so on are all at this level, and interact with intelligent contracts through Web applications provided by DAPP.</p>
+<h2 id="aggregate-chain-architecture"><a name="aggregate-chain-architecture" class="plugin-anchor" href="#aggregate-chain-architecture"><i class="fa fa-link" aria-hidden="true"></i></a>Aggregate chain architecture</h2>
+<p>SimpleChain designs an aggregate chain structure of a main chain and multiple sub-chains, which supports blockchain deployment and expansion in various business scenarios. The SimpleChain main chain adopts the mature PoW mechanism, while the sub-chain can set consensus algorithms suitable for its own scenarios according to business requirements, and form a two-way anchoring method with the main chain through atomic exchange or cross-chain nodes, cross-chain transactions with other sub-chains. This main chain mechanism can help the sub-chain obtain the final consistency guarantee provided by the SimpleChain main chain on the premise of meeting thousands of levels of performance per second.</p>
+<p><img src="3.png" alt="3.png"></p>
+<p>The Simplechain sub-chain can be either a public chain or a consortium chain. Its chain structure is similar to that of the main chain (see blockchain architecture design). However, due to different business requirements, different consensus algorithms can be used to achieve thousands of TPS performance, or other custom development functions.</p>
+<p>The main chain and sub-chain achieve mutual anchoring, information exchange and capital flow through cross-chain protocols. The cross-chain protocol (see cross-chain protocol) adopts the free notary mechanism. All users in the whole network ecosystem can participate in and supervise it. The community&apos;s self-care ability can be effectively utilized to effectively ensure the reliability of cross-chain information, the transaction is safe and orderly. At the same time, Simplechain Foundation has carried out the research on the economic model of the main chain and established a set of incentive mechanism for the sustainable and healthy development of Simplechain ecosystem. Under the effect of this mechanism, the main chain ecosystem will integrate and promote each other, common development.</p>
+<p>!
+<img src="4.png" alt="4.png"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../10_transactionReceipt/" class="navigation navigation-prev " aria-label="Previous page: Transaction Receipt">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../12_structAndStore/" class="navigation navigation-next " aria-label="Next page: Data Struct and ">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Structure Design","level":"5.1","depth":1,"next":{"title":"Data Struct and ","level":"5.2","depth":1,"path":"12_structAndStore/README.md","ref":"12_structAndStore/README.md","articles":[]},"previous":{"title":"Transaction Receipt","level":"4.6","depth":1,"path":"10_transactionReceipt/README.md","ref":"10_transactionReceipt/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"en","gitbook":"*"},"file":{"path":"11_constructDesign/README.md","mtime":"2020-07-01T09:16:13.790Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-02T02:38:08.915Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
