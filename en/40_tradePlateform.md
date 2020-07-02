@@ -26,7 +26,7 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 
 ### Source code construction
 
-`前期准备:Go 语言环境(1.10 或以上版本)、C 语言编译器`
+`Preliminary preparations: Go language environment (1.10 or above), C language compiler`
 
 **1.Download SimpleChain**
 
@@ -102,7 +102,7 @@ curl -X POST 47.110.48.207:8545  -H "Content-Type:application/json" --data '{"js
 Create a sipc.js file and write the following code:
 
 ```javascript
-const config = require('../../config') //节点服务器的配置信息
+const config = require('../../config') //Node serve compile information
 const Web3 = require('web3')
 module.exports = new Web3(config.uri)
 ```
@@ -203,11 +203,11 @@ In the preceding code, we synchronize the latest block processed by the wallet s
 
 **Generally, the following processing steps are included:**
 
-- `监听新区块，获取区块中的全部交易`
-- `过滤掉与钱包地址无关的交易`
-- `将每个相关的交易都发往队列`
-- `将地址上的资金归集到安全的存储`
-- `更新已处理的区块编号`
+- `Monitor new blocks and get all transactions in the block`
+- `Filter out transactions that are not related to the wallet address`
+- `Send every related transaction to the queue`
+- `Gather funds on the address to secure storage`
+- `Update processed block number`
 
 **The final code is as follows:**
 

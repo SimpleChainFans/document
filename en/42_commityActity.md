@@ -11,14 +11,14 @@ Welcome to join the Simplechain open source community. You can join the communit
 - `Hack`，hacking code or documents (create a new branch to complete the update);
 - `Push`，push the committed branch to the remote Github account;
 - `PR`，create a new pull request to complete the contribution;
-- `文档`， • write a document library, organize basic tools to use related documents;
+- `Dcoument`， • write a document library, organize basic tools to use related documents;
 
 **Participate in technical community sermon**
 
-- `文稿征集:` Original articles related to Simplechain and successfully published the above in the Channel.
-- `技术短视频:` Clip short videos about Simplechain and publish them on relevant platforms.
-- `社区节点搭建:`Create a Simplechain node and expose the IP address and port number to the public for community developers to use directly.
-- `活跃技术社区:`Guide topics in the technology community and activate the atmosphere of the technology community (such as Weibo Super Talk)
+- `Article:` Original articles related to Simplechain and successfully published the above in the Channel.
+- `Technical video:` Clip short videos about Simplechain and publish them on relevant platforms.
+- `Community node building:`Create a Simplechain node and expose the IP address and port number to the public for community developers to use directly.
+- `Active technical community:`Guide topics in the technology community and activate the atmosphere of the technology community (such as Weibo Super Talk)
 
 **Community project contribution**
 
