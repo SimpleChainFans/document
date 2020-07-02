@@ -915,7 +915,7 @@
 <pre><code class="lang-sh">curl -X POST localhost:8545  -H <span class="hljs-string">&quot;Content-Type:application/json&quot;</span> --data <span class="hljs-string">&apos;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;web3_clientVersion&quot;,&quot;params&quot;:[],&quot;id&quot;:68}&apos;</span>
 </code></pre>
 <h3 id="source-code-construction"><a name="source-code-construction" class="plugin-anchor" href="#source-code-construction"><i class="fa fa-link" aria-hidden="true"></i></a>Source code construction</h3>
-<p><code>&#x524D;&#x671F;&#x51C6;&#x5907;:Go &#x8BED;&#x8A00;&#x73AF;&#x5883;(1.10 &#x6216;&#x4EE5;&#x4E0A;&#x7248;&#x672C;)&#x3001;C &#x8BED;&#x8A00;&#x7F16;&#x8BD1;&#x5668;</code></p>
+<p><code>Preliminary preparations: Go language environment (1.10 or above), C language compiler</code></p>
 <p><strong>1.Download SimpleChain</strong></p>
 <p>You can clone a project locally through git or download directly from the <a href="https://github.com/simplechain-org/go-" target="_blank">https://github.com/simplechain-org/go-</a>
 simplechain page.</p>
@@ -963,7 +963,7 @@ curl -X POST <span class="hljs-number">47.110</span><span class="hljs-number">.4
 </code></pre>
 <h2 id="connect-to-the-simplechain-node"><a name="connect-to-the-simplechain-node" class="plugin-anchor" href="#connect-to-the-simplechain-node"><i class="fa fa-link" aria-hidden="true"></i></a>Connect to the SimpleChain node</h2>
 <p>Create a sipc.js file and write the following code:</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../../config&apos;</span>) <span class="hljs-comment">//&#x8282;&#x70B9;&#x670D;&#x52A1;&#x5668;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</span>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../../config&apos;</span>) <span class="hljs-comment">//Node serve compile information</span>
 <span class="hljs-keyword">const</span> Web3 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;web3&apos;</span>)
 <span class="hljs-built_in">module</span>.exports = <span class="hljs-keyword">new</span> Web3(config.uri)
 </code></pre>
@@ -1051,11 +1051,11 @@ The code is as follows:</p>
 </ul>
 <p><strong>Generally, the following processing steps are included:</strong></p>
 <ul>
-<li><code>&#x76D1;&#x542C;&#x65B0;&#x533A;&#x5757;&#xFF0C;&#x83B7;&#x53D6;&#x533A;&#x5757;&#x4E2D;&#x7684;&#x5168;&#x90E8;&#x4EA4;&#x6613;</code></li>
-<li><code>&#x8FC7;&#x6EE4;&#x6389;&#x4E0E;&#x94B1;&#x5305;&#x5730;&#x5740;&#x65E0;&#x5173;&#x7684;&#x4EA4;&#x6613;</code></li>
-<li><code>&#x5C06;&#x6BCF;&#x4E2A;&#x76F8;&#x5173;&#x7684;&#x4EA4;&#x6613;&#x90FD;&#x53D1;&#x5F80;&#x961F;&#x5217;</code></li>
-<li><code>&#x5C06;&#x5730;&#x5740;&#x4E0A;&#x7684;&#x8D44;&#x91D1;&#x5F52;&#x96C6;&#x5230;&#x5B89;&#x5168;&#x7684;&#x5B58;&#x50A8;</code></li>
-<li><code>&#x66F4;&#x65B0;&#x5DF2;&#x5904;&#x7406;&#x7684;&#x533A;&#x5757;&#x7F16;&#x53F7;</code></li>
+<li><code>Monitor new blocks and get all transactions in the block</code></li>
+<li><code>Filter out transactions that are not related to the wallet address</code></li>
+<li><code>Send every related transaction to the queue</code></li>
+<li><code>Gather funds on the address to secure storage</code></li>
+<li><code>Update processed block number</code></li>
 </ul>
 <p><strong>The final code is as follows:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> web3 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;web3&quot;</span>) <span class="hljs-comment">//&#x8C03;&#x7528;web3</span>
@@ -1183,7 +1183,7 @@ The code is as follows:</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"id":"docs_44","title":"Exchange docking","sidebar_label":"平台对接","level":"13.1","depth":1,"next":{"title":"Community Project","level":"13.2","depth":1,"path":"41_commityProduct.md","ref":"41_commityProduct.md","articles":[]},"previous":{"title":"Explore","level":"12.4","depth":1,"path":"39_blockBrowser/README.md","ref":"39_blockBrowser/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"en","gitbook":"*"},"file":{"path":"40_tradePlateform.md","mtime":"2020-06-18T06:48:27.318Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-22T07:28:15.224Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"id":"docs_44","title":"Exchange docking","sidebar_label":"平台对接","level":"13.1","depth":1,"next":{"title":"Community Project","level":"13.2","depth":1,"path":"41_commityProduct.md","ref":"41_commityProduct.md","articles":[]},"previous":{"title":"Explore","level":"12.4","depth":1,"path":"39_blockBrowser/README.md","ref":"39_blockBrowser/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"en","gitbook":"*"},"file":{"path":"40_tradePlateform.md","mtime":"2020-07-02T06:06:47.046Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-02T07:07:21.322Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>
