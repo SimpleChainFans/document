@@ -10,7 +10,7 @@ All smart contracts run on EVM (virtual machines) and use RPC(Remote Procedure C
 
 Under EVM and RPC, there are four core contents of Simplechain, including blockChain, consensus algorithm, mining, and network layer. All parts except DApp are in the client sipe of Simplechain.
 
-![3f.png](https://i.loli.net/2020/05/25/74oNWqwi8GHEZOd.png)
+![3f.png](2.png)
 
 ## From the perspective of data structure
 

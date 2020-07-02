@@ -21,8 +21,8 @@ The design requirements for transactions involve all aspects of the software sys
 
 The following figure is [SimpleChain](https://www.simplechain.com/)transaction data structure is divided into four parts according to the purpose.
 
-![transactionData.png](https://i.loli.net/2020/05/09/LtvZ9Q5MrPbH4zG.png)
 ![交易数据结构.png](1.png)
+
 The beginning is a number of uint64 type, which is called a random number. Used to cancel transactions, prevent double flowers and modify [SimpleChain](https://www.simplechain.com/) Nonce value of the account (account data structure).
 
 The second part is about the setting of transaction execution restrictions, `gas` for willing to offer[SimpleChain](https://www.simplechain.com/)maximum fuel limit for virtual machine operation.

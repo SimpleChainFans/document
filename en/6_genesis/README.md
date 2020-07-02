@@ -54,16 +54,17 @@ This is very useful for development testing and private chains. You can directly
 
 When running Simplechain, you must load the creation configuration and the creation block according to the configuration file, and verify its validity.
 If the configuration information is changed at will, problems such as consensus verification failure may occur. The program can continue to run only when loading and checking pass.
+
 ![创世加载流程](1.png)
-![创世加载流程](https://i.loli.net/2020/05/09/XTOu5W4DsdNvoCU.png)
 
 The preceding figure shows a brief process. The following two sub-processes are "loading the creation configuration" and "installing the creation block.
 
 ## Load Genesis configuration
 
 Which Creation configuration should be used depends on when the user starts Sipe. The following figure shows the flow chart of creation configuration selection:
+
 ![f6.png](2.png)
-![f6.png](https://i.loli.net/2020/05/25/Is9vbBNohDe3GMf.png)
+
 
 You can use Sipe command parameters to select different network configurations `networkid` Select, you can also use the network name to enable.
 
