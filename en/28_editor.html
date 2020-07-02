@@ -733,9 +733,9 @@
             
         </li>
     
-        <li class="chapter " data-level="12.4" data-path="39_blockBrowser/README.md">
+        <li class="chapter " data-level="12.4" data-path="39_blockBrowser/">
             
-                <span>
+                <a href="39_blockBrowser/">
             
                     
                     Explore
@@ -904,123 +904,122 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="remix"><a name="remix" class="plugin-anchor" href="#remix"><i class="fa fa-link" aria-hidden="true"></i></a>Remix</h3>
-<p><em>&#x63A8;&#x8350;&#x4F7F;&#x7528; Remix &#x6765;&#x5F00;&#x53D1;&#x7B80;&#x5355;&#x5408;&#x7EA6;&#x548C;&#x5FEB;&#x901F;&#x5B66;&#x4E60; Solidity&#x3002;</em></p>
-<p><a href="https://remix.ethereum.org/" target="_blank">Remix</a> &#x53EF;&#x5728;&#x7EBF;&#x4F7F;&#x7528;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x5B89;&#x88C5;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x79BB;&#x7EBF;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x6309; <a href="https://github.com/ethereum/browser-solidity/tree/gh-pages" target="_blank">https://github.com/ethereum/browser-solidity/tree/gh-pages</a> &#x7684;&#x9875;&#x9762;&#x8BF4;&#x660E;&#x4E0B;&#x8F7D; zip &#x6587;&#x4EF6;&#x6765;&#x4F7F;&#x7528;&#x3002;
-&#x8BE5;&#x9875;&#x9762;&#x6709;&#x8FDB;&#x4E00;&#x6B65;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x5982;&#x4F55;&#x5B89;&#x88C5; Solidity &#x547D;&#x4EE4;&#x884C;&#x7F16;&#x8BD1;&#x5668;&#x5230;&#x4F60;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x3002;&#x5982;&#x679C;&#x4F60;&#x521A;&#x597D;&#x8981;&#x5904;&#x7406;&#x5927;&#x578B;&#x5408;&#x7EA6;&#xFF0C;&#x6216;&#x8005;&#x9700;&#x8981;&#x66F4;&#x591A;&#x7684;&#x7F16;&#x8BD1;&#x9009;&#x9879;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x5E94;&#x8BE5;&#x9009;&#x62E9;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x7F16;&#x8BD1;&#x5668; solc&#x3002;</p>
+<p><em>We recommend that you use Remix to develop simple contracts and quickly learn Solidity</em></p>
+<p><a href="https://remix.ethereum.org/" target="_blank">Remix</a> it can be used online without installing anything. If you want to use it offline, press <a href="https://github.com/ethereum/browser-solidity/tree/gh-pages" target="_blank">https://github.com/ethereum/browser-solidity/tree/gh-pages</a> download the zip file to use. This page provides further details on how to install the Solidity command line compiler on your computer. If you are just dealing with large contracts or need more compilation options, you should choose to use the command line compiler solc.</p>
 <h3 id="npm--nodejs"><a name="npm--nodejs" class="plugin-anchor" href="#npm--nodejs"><i class="fa fa-link" aria-hidden="true"></i></a>npm / Node.js</h3>
-<p>&#x4F7F;&#x7528; <code>npm</code> &#x53EF;&#x4EE5;&#x4FBF;&#x6377;&#x5730;&#x5B89;&#x88C5;Solidity&#x7F16;&#x8BD1;&#x5668;solcjs&#x3002;&#x4F46;&#x8BE5; <code>solcjs</code> &#x7A0B;&#x5E8F;&#x7684;&#x529F;&#x80FD;&#x76F8;&#x5BF9;&#x4E8E;&#x672C;&#x9875;&#x4E0B;&#x9762;&#x7684;&#x6240;&#x6709;&#x5176;&#x4ED6;&#x9009;&#x9879;&#x90FD;&#x8981;&#x5C11;&#x3002;&#x5728;<code>commandline-compiler</code> &#x4E00;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5047;&#x5B9A;&#x4F60;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x5B8C;&#x6574;&#x529F;&#x80FD;&#x7684;&#x7F16;&#x8BD1;&#x5668;&#x3002; &#x6240;&#x4EE5;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x662F;&#x4ECE; <code>npm</code> &#x5B89;&#x88C5; <code>solcjs</code> &#xFF0C;&#x5C31;&#x6B64;&#x6253;&#x4F4F;&#xFF0C;&#x76F4;&#x63A5;&#x8DF3;&#x5230; <a href="https://github.com/ethereum/solc-js" target="_blank">solc-js</a>&#x53BB;&#x4E86;&#x89E3;&#x3002;</p>
-<p>&#x6CE8;&#x610F;: solc-js &#x9879;&#x76EE;&#x662F;&#x5229;&#x7528; Emscripten &#x4ECE; C++ &#x7248;&#x7684; solc &#x8DE8;&#x5E73;&#x53F0;&#x7F16;&#x8BD1;&#x4E3A; JavaScript &#x7684;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x53EF;&#x5728; JavaScript &#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528; solcjs&#xFF08;&#x5982;&#x540C; Remix&#xFF09;&#x3002;
-&#x5177;&#x4F53;&#x4ECB;&#x7ECD;&#x8BF7;&#x53C2;&#x8003; solc-js &#x4EE3;&#x7801;&#x5E93;&#x3002;</p>
+<p>Use <code>npm</code> can easily install the Solidity compiler solcjs. But <code>solcjs</code> function of the program is less than all other options below this page. In <code>commandline-compiler</code> chapter, we assume that you are using a full-featured compiler. So if you are from <code>npm</code> 
+installation <code>solcjs</code> &#xFF0C;jump directly <a href="https://github.com/ethereum/solc-js" target="_blank">solc-js</a> understand .</p>
+<p>Note: The solc-js project uses Emscripten to compile from the solc version of the C version to JavaScript across platforms. Therefore, solcjs (like Remix) can be used in JavaScript projects.
+For more information, see the solc-js code library.</p>
 <pre><code class="lang-bash">npm install -g solc
 </code></pre>
 <blockquote>
-<p> &#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528; <code>solcjs</code> &#x800C;&#x975E; <code>solc</code> &#x3002;<code>solcjs</code> &#x7684;&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;&#x540C; <code>solc</code> &#x548C;&#x4E00;&#x4E9B;&#x5DE5;&#x5177;&#xFF08;&#x5982; <code>geth</code> )&#x662F;&#x4E0D;&#x517C;&#x5BB9;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x8981;&#x671F;&#x671B; <code>solcjs</code> &#x80FD;&#x50CF; <code>solc</code> &#x4E00;&#x6837;&#x5DE5;&#x4F5C;&#x3002;</p>
+<p> In the command, use <code>solcjs</code> not <code>solc</code> .<code>solcjs</code> command options are the same <code>solc</code> and some tools&#xFF08;such <code>geth</code> )is incompatible, so don&apos;t expect <code>solcjs</code> energy image<code>solc</code> work the same.</p>
 </blockquote>
 <h3 id="docker"><a name="docker" class="plugin-anchor" href="#docker"><i class="fa fa-link" aria-hidden="true"></i></a>Docker</h3>
-<p>&#x6211;&#x4EEC;&#x4E3A;&#x7F16;&#x8BD1;&#x5668;&#x63D0;&#x4F9B;&#x4E86;&#x6700;&#x65B0;&#x7684;docker&#x6784;&#x5EFA;&#x3002; <code>stable</code> &#x4ED3;&#x5E93;&#x91CC;&#x7684;&#x662F;&#x5DF2;&#x53D1;&#x5E03;&#x7684;&#x7248;&#x672C;&#xFF0C;<code>nightly</code>&#x4ED3;&#x5E93;&#x5219;&#x662F;&#x5728;&#x5F00;&#x53D1;&#x5206;&#x652F;&#x4E2D;&#x7684;&#x5E26;&#x6709;&#x4E0D;&#x7A33;&#x5B9A;&#x53D8;&#x66F4;&#x7684;&#x7248;&#x672C;&#x3002;</p>
+<p>We provide the latest docker build for the compiler.<code>stable</code> published version is in the warehouse, <code>nightly</code>repository is a version with unstable changes in the development branch.</p>
 <pre><code class="lang-bash">docker run ethereum/solc:stable solc --version
 </code></pre>
-<p>&#x76EE;&#x524D;&#xFF0C;docker &#x955C;&#x50CF;&#x53EA;&#x542B;&#x6709; solc &#x7684;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#xFF0C;&#x56E0;&#x6B64;&#x4F60;&#x9700;&#x8981;&#x989D;&#x5916;&#x7684;&#x5DE5;&#x4F5C;&#x53BB;&#x628A;&#x6E90;&#x4EE3;&#x7801;&#x548C;&#x8F93;&#x51FA;&#x76EE;&#x5F55;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x3002;</p>
-<h3 id="&#x4E8C;&#x8FDB;&#x5236;&#x5305;"><a name="&#x4E8C;&#x8FDB;&#x5236;&#x5305;" class="plugin-anchor" href="#&#x4E8C;&#x8FDB;&#x5236;&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x8FDB;&#x5236;&#x5305;</h3>
-<p>&#x53EF;&#x5728; <a href="https://github.com/ethereum/solidity/releases" target="_blank">solidity/releases</a> &#x4E0B;&#x8F7D; <code>Solidity</code> &#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5B89;&#x88C5;&#x5305;&#x3002;</p>
-<p>&#x5BF9;&#x4E8E; Ubuntu &#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x63D0;&#x4F9B; PPAs &#x3002;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x83B7;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x7A33;&#x5B9A;&#x7248;&#x672C;&#xFF1A;</p>
+<p>Currently, docker images only contain solc executable programs, so you need extra work to connect the source code with the output directory.</p>
+<h3 id="binary-package"><a name="binary-package" class="plugin-anchor" href="#binary-package"><i class="fa fa-link" aria-hidden="true"></i></a>Binary package</h3>
+<p>Can be in <a href="https://github.com/ethereum/solidity/releases" target="_blank">solidity/releases</a> download <code>Solidity</code> binary installation package.</p>
+<p>For Ubuntu, we also provide PPAs. You can obtain the latest stable version by using the following command:</p>
 <pre><code class="lang-bash">sudo add-apt-repository ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install solc
 </code></pre>
-<p>&#x5F53;&#x7136;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x5B89;&#x88C5;&#x5C1D;&#x9C9C;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x7248;&#x672C;&#xFF1A;</p>
+<p>Of course, you can also install an early version of the developer:</p>
 <pre><code class="lang-bash">sudo add-apt-repository ppa:ethereum/ethereum
 sudo add-apt-repository ppa:ethereum/ethereum-dev
 sudo apt-get update
 sudo apt-get install solc
 </code></pre>
-<p>&#x540C;&#x65F6;&#xFF0C;&#x4E5F;&#x63D0;&#x4F9B;&#x53EF;&#x5B89;&#x88C5; <a href="https://snapcraft.io/docs/core/install" target="_blank">&#x6240;&#x6709;&#x652F;&#x6301;&#x7684;Linux&#x7248;&#x672C;</a> &#x4E0B;&#x7684; <a href="https://snapcraft.io/" target="_blank">snap package</a> &#x3002;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x83B7;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x7A33;&#x5B9A;&#x7248;&#x672C;&#xFF1A;</p>
+<p>At the same time, it also provides installable <a href="https://snapcraft.io/docs/core/install" target="_blank">All supported Linux versions</a> downloaded <a href="https://snapcraft.io/" target="_blank">snap package</a> , You can obtain the latest stable version by using the following command:</p>
 <pre><code class="lang-bash">sudo snap install solc
 </code></pre>
-<p>&#x6216;&#x8005;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x6D4B;&#x8BD5; develop &#x5206;&#x652F;&#x4E0B;&#x7684;&#x6700;&#x65B0;&#x53D8;&#x66F4;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#x5B89;&#x88C5;&#x5F00;&#x53D1;&#x8005;&#x7248;&#x672C;&#xFF1A;</p>
+<p>Or, if you want to test the latest changes under the develop branch, you can install the developer version as follows:</p>
 <pre><code class="lang-bash">sudo snap install solc --edge
 </code></pre>
-<p>&#x540C;&#x6837;&#xFF0C;<code>Arch Linux</code> &#x4E5F;&#x6709;&#x63D0;&#x4F9B;&#x5B89;&#x88C5;&#x5305;&#xFF0C;&#x4F46;&#x4EC5;&#x9650;&#x4E8E;&#x6700;&#x65B0;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x7248;&#x672C;&#xFF1A;</p>
+<p>Similarly, <code>Arch Linux</code> Installation packages are also available, but only for the latest developer version:</p>
 <pre><code class="lang-bash">pacman -S solidity
 </code></pre>
-<p>&#x5728;&#x5199;&#x672C;&#x6587;&#x65F6;&#xFF0C;Homebrew &#x4E0A;&#x8FD8;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x9884;&#x6784;&#x5EFA;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5305;&#xFF08;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x4ECE; Jenkins &#x8FC1;&#x79FB;&#x5230;&#x4E86; TravisCI &#xFF09;&#x3002; &#x6211;&#x4EEC;&#x5C06;&#x5C3D;&#x5FEB;&#x63D0;&#x4F9B; homebrew &#x4E0B;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5B89;&#x88C5;&#x5305;&#xFF0C;&#x4F46;&#x81F3;&#x5C11;&#x4ECE;&#x6E90;&#x7801;&#x6784;&#x5EFA;&#x7684;&#x65B9;&#x5F0F;&#x8FD8;&#x662F;&#x884C;&#x5F97;&#x901A;&#x7684;&#xFF1A;</p>
+<p>At the time of writing this article, Homebrew did not provide a pre-built binary package (because we migrated from Jenkins to TravisCI). We will provide the binary installation package under homebrew as soon as possible, but at least it works from the source code:</p>
 <pre><code class="lang-bash">brew update
 brew upgrade
 brew tap ethereum/ethereum
 brew install solidity
 </code></pre>
-<p>&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x7279;&#x5B9A;&#x7248;&#x672C;&#x7684; <code>Solidity</code> &#xFF0C;&#x4F60;&#x9700;&#x8981;&#x4ECE; <code>Github</code> &#x4E0A;&#x5B89;&#x88C5;&#x4E00;&#x4E2A; <code>Homebrew formula</code>
-&#x4F60;&#x53EF;&#x67E5;&#x9605;
-<a href="https://github.com/ethereum/homebrew-ethereum/commits/master/solidity.rb" target="_blank">solidity.rb commits on Github</a> &#x7684;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;&#xFF0C;&#x53BB;&#x5BFB;&#x627E;&#x5305;&#x542B; <code>solidity.rb</code> &#x6587;&#x4EF6;&#x6539;&#x52A8;&#x7684;&#x7279;&#x6B8A;&#x63D0;&#x4EA4;&#x3002;&#x7136;&#x540E;&#x4F7F;&#x7528; <code>brew</code> &#x8FDB;&#x884C;&#x5B89;&#x88C5;&#xFF1A;</p>
+<p>If you need a specific version Solidity , you need to start from Github Install one on Homebrew formula, You can consult
+<a href="https://github.com/ethereum/homebrew-ethereum/commits/master/solidity.rb" target="_blank">solidity.rb commits on Github</a> submitted records, to find contains <code>solidity.rb</code> special submission of file changes. Then use <code>brew</code> install:</p>
 <pre><code class="lang-bash">brew unlink solidity
 <span class="hljs-comment"># Install 0.4.8</span>
 brew install https://raw.githubusercontent.com/ethereum/homebrew-ethereum/77cce03da9f289e5a3ffe579840d3c5dc0a62717/solidity.rb
 </code></pre>
-<p><code>Gentoo Linux</code> &#x4E0B;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x5B89;&#x88C5;&#x5305;&#xFF0C;&#x53EF;&#x4F7F;&#x7528; <code>emerge</code> &#x8FDB;&#x884C;&#x5B89;&#x88C5;&#xFF1A;</p>
+<p><code>Gentoo Linux</code> the installation package is also provided below, which can be used <code>emerge</code> Install:</p>
 <pre><code class="lang-bash">emerge dev-lang/solidity
 </code></pre>
-<h3 id="&#x4ECE;&#x6E90;&#x4EE3;&#x7801;&#x7F16;&#x8BD1;"><a name="&#x4ECE;&#x6E90;&#x4EE3;&#x7801;&#x7F16;&#x8BD1;" class="plugin-anchor" href="#&#x4ECE;&#x6E90;&#x4EE3;&#x7801;&#x7F16;&#x8BD1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4ECE;&#x6E90;&#x4EE3;&#x7801;&#x7F16;&#x8BD1;</h3>
-<h4 id="&#x514B;&#x9686;&#x4EE3;&#x7801;&#x5E93;"><a name="&#x514B;&#x9686;&#x4EE3;&#x7801;&#x5E93;" class="plugin-anchor" href="#&#x514B;&#x9686;&#x4EE3;&#x7801;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x514B;&#x9686;&#x4EE3;&#x7801;&#x5E93;</h4>
-<p>&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x514B;&#x9686;&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
+<h3 id="compile-from-source-code"><a name="compile-from-source-code" class="plugin-anchor" href="#compile-from-source-code"><i class="fa fa-link" aria-hidden="true"></i></a>Compile from source code</h3>
+<h4 id="clone-code-library"><a name="clone-code-library" class="plugin-anchor" href="#clone-code-library"><i class="fa fa-link" aria-hidden="true"></i></a>Clone code library</h4>
+<p>Run the following command to clone the source code:</p>
 <pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> --recursive https://github.com/ethereum/solidity.git
 <span class="hljs-built_in">cd</span> solidity
 </code></pre>
-<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x53C2;&#x4E0E; <code>Solidity</code> &#x7684;&#x5F00;&#x53D1;, &#x4F60;&#x53EF;&#x5206;&#x53C9; <code>Solidity</code> &#x6E90;&#x7801;&#x5E93;&#x540E;&#xFF0C;&#x7528;&#x4F60;&#x4E2A;&#x4EBA;&#x7684;&#x5206;&#x53C9;&#x5E93;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x8FDC;&#x7A0B;&#x6E90;&#xFF1A;</p>
+<p>If you want to participate Solidity Development of, you can fork Solidity After the source code library, use your personal Fork Library as the second remote source:</p>
 <pre><code class="lang-bash"><span class="hljs-built_in">cd</span> solidity
 git remote add personal git@github.com:[username]/solidity.git
 </code></pre>
-<p><code>Solidity</code> &#x6709; <code>Git</code> &#x5B50;&#x6A21;&#x5757;&#xFF0C;&#x9700;&#x786E;&#x4FDD;&#x5B8C;&#x5168;&#x52A0;&#x8F7D;&#x5B83;&#x4EEC;&#xFF1A;</p>
+<p><code>Solidity</code> With <code>Git</code> Sub-modules, make sure they are fully loaded:</p>
 <pre><code class="lang-bash">git submodule update --init --recursive
 </code></pre>
-<h4 id="&#x5148;&#x51B3;&#x6761;&#x4EF6;---macos"><a name="&#x5148;&#x51B3;&#x6761;&#x4EF6;---macos" class="plugin-anchor" href="#&#x5148;&#x51B3;&#x6761;&#x4EF6;---macos"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5148;&#x51B3;&#x6761;&#x4EF6; - macOS</h4>
-<p>&#x5728; macOS &#x4E2D;&#xFF0C;&#x9700;&#x786E;&#x4FDD;&#x6709;&#x5B89;&#x88C5;&#x6700;&#x65B0;&#x7248;&#x7684;
+<h4 id="prerequisite---macos"><a name="prerequisite---macos" class="plugin-anchor" href="#prerequisite---macos"><i class="fa fa-link" aria-hidden="true"></i></a>Prerequisite - macOS</h4>
+<p>In macOS, make sure that the latest version is installed
 <a href="https://developer.apple.com/xcode/download/" target="_blank">Xcode</a>&#xFF0C;
-Xcode &#x5305;&#x542B; <a href="https://en.wikipedia.org/wiki/Clang" target="_blank">Clang C++ &#x7F16;&#x8BD1;&#x5668;</a>&#xFF0C; &#x800C;
-<a href="https://en.wikipedia.org/wiki/Xcode" target="_blank">Xcode IDE</a> &#x548C;&#x5176;&#x4ED6;&#x82F9;&#x679C;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x662F; <code>OSX</code> &#x4E0B;&#x7F16;&#x8BD1; <code>C++</code> &#x5E94;&#x7528;&#x6240;&#x5FC5;&#x987B;&#x7684;&#x3002;&#x5982;&#x679C;&#x4F60;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x5B89;&#x88C5; Xcode &#x6216;&#x8005;&#x521A;&#x597D;&#x66F4;&#x65B0;&#x4E86; Xcode &#x65B0;&#x7248;&#x672C;&#xFF0C;&#x5219;&#x5728;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x6784;&#x5EFA;&#x524D;&#xFF0C;&#x9700;&#x540C;&#x610F; Xcode &#x7684;&#x4F7F;&#x7528;&#x534F;&#x8BAE;&#xFF1A;</p>
+Xcode contains <a href="https://en.wikipedia.org/wiki/Clang" target="_blank">Clang C++ compile</a>&#xFF0C; and
+<a href="https://en.wikipedia.org/wiki/Xcode" target="_blank">Xcode IDE</a> and other Apple development tools are <code>OSX</code> Compile <code>C++</code> required for the application. If you have installed Xcode for the first time or just updated the new version of Xcode, you must agree to the use protocol of Xcode before using the command line to build:</p>
 <pre><code class="lang-bash">sudo xcodebuild -license accept
 </code></pre>
-<p>Solidity &#x5728; OS X &#x4E0B;&#x6784;&#x5EFA;&#xFF0C;&#x5FC5;&#x987B; <a href="http://brew.sh" target="_blank">&#x5B89;&#x88C5;Homebrew</a>
-&#x5305;&#x7BA1;&#x7406;&#x5668;&#x6765;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x3002;
-&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4ECE;&#x5934;&#x5F00;&#x59CB;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;<a href="https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md#how-do-i-uninstall-homebrew" target="_blank">&#x5378;&#x8F7D;Homebrew&#x7684;&#x65B9;&#x6CD5;</a></p>
-<h4 id="&#x5148;&#x51B3;&#x6761;&#x4EF6;---windows"><a name="&#x5148;&#x51B3;&#x6761;&#x4EF6;---windows" class="plugin-anchor" href="#&#x5148;&#x51B3;&#x6761;&#x4EF6;---windows"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5148;&#x51B3;&#x6761;&#x4EF6; - Windows</h4>
-<p>&#x5728;<code>Windows</code>&#x4E0B;&#x6784;&#x5EFA;<code>Solidity</code>&#xFF0C;&#x9700;&#x4E0B;&#x8F7D;&#x7684;&#x4F9D;&#x8D56;&#x8F6F;&#x4EF6;&#x5305;&#xFF1A;</p>
+<p>Solidity is built under OS X. <a href="http://brew.sh" target="_blank">Install Homebrew</a>
+Package Manager to install dependencies.
+If you want to start from scratch, here is<a href="https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md#how-do-i-uninstall-homebrew" target="_blank">Method for uninstalling Homebrew</a></p>
+<h4 id="prerequisites---windows"><a name="prerequisites---windows" class="plugin-anchor" href="#prerequisites---windows"><i class="fa fa-link" aria-hidden="true"></i></a>Prerequisites - Windows</h4>
+<p>In <code>Windows</code> build under <code>Solidity</code> , the dependency software package to be downloaded:</p>
 <table>
 <thead>
 <tr>
-<th>&#x8F6F;&#x4EF6;</th>
-<th>&#x5907;&#x6CE8; </th>
+<th>Software</th>
+<th>Note</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td></td>
 <td><code>Git for Windows</code>_</td>
-<td>C&#x4ECE;Github&#x4E0A;&#x83B7;&#x53D6;&#x6E90;&#x7801;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</td>
+<td>C command line tool for obtaining source code from Github</td>
 <td></td>
 </tr>
 <tr>
 <td></td>
 <td><code>CMake</code>_</td>
-<td>&#x8DE8;&#x5E73;&#x53F0;&#x6784;&#x5EFA;&#x6587;&#x4EF6;&#x751F;&#x6210;&#x5668;</td>
+<td>Build a file generator across platforms</td>
 <td></td>
 </tr>
 <tr>
 <td></td>
 <td><code>Visual Studio 2017 Build Tools</code>_</td>
-<td>C++ &#x7F16;&#x8BD1;&#x5668;</td>
+<td>C compiler</td>
 <td></td>
 </tr>
 <tr>
 <td></td>
 <td><code>Visual Studio 2017</code>_  (Optional)</td>
-<td>C++ &#x7F16;&#x8BD1;&#x5668;&#x548C;&#x5F00;&#x53D1;&#x73AF;&#x5883;</td>
+<td>C++ Compiler and development environment</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p>&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x6709;&#x4E86; <code>IDE</code>&#xFF0C;&#x4EC5;&#x9700;&#x8981;&#x7F16;&#x8BD1;&#x5668;&#x548C;&#x76F8;&#x5173;&#x7684;&#x5E93;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5B89;&#x88C5; <code>Visual Studio 2017 Build Tools</code>&#x3002;</p>
-<p><code>Visual Studio 2017</code> &#x63D0;&#x4F9B;&#x4E86; <code>IDE</code> &#x4EE5;&#x53CA;&#x5FC5;&#x8981;&#x7684;&#x7F16;&#x8BD1;&#x5668;&#x548C;&#x5E93;&#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x4F60;&#x8FD8;&#x6CA1;&#x6709;&#x4E00;&#x4E2A; <code>IDE</code> &#x5E76;&#x4E14;&#x60F3;&#x8981;&#x5F00;&#x53D1; <code>Solidity</code>&#xFF0C;&#x90A3;&#x4E48; <code>Visual Studio 2017</code> &#x5C06;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x4F7F;&#x4F60;&#x83B7;&#x5F97;&#x6240;&#x6709;&#x5DE5;&#x5177;&#x7684;&#x7B80;&#x5355;&#x9009;&#x62E9;&#x3002;</p>
-<p>&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E2A;&#x5728; <code>Visual Studio 2017 Build Tools</code> &#x6216; <code>Visual Studio 2017</code> &#x4E2D;&#x5E94;&#x8BE5;&#x5B89;&#x88C5;&#x7684;&#x7EC4;&#x4EF6;&#x5217;&#x8868;&#xFF1A;</p>
+<p>If you already have <code>IDE</code>&#xFF0C;only the compiler and related libraries are required, you can install <code>Visual Studio 2017 Build Tools</code>&#x3002;</p>
+<p><code>Visual Studio 2017</code> provider <code>IDE</code> and necessary compilers and libraries. So if you don&apos;t have one <code>IDE</code> and want to develop <code>Solidity</code>&#xFF0C;then <code>Visual Studio 2017</code> it will be a simple choice that allows you to get all the tools.</p>
+<p>Here is one in <code>Visual Studio 2017 Build Tools</code> or <code>Visual Studio 2017</code> list of components to be installed in:</p>
 <ul>
 <li>Visual Studio C++ core features</li>
 <li>VC++ 2017 v141 toolset (x86,x64)</li>
@@ -1028,58 +1027,58 @@ Xcode &#x5305;&#x542B; <a href="https://en.wikipedia.org/wiki/Clang" target="_bl
 <li>Windows 8.1 SDK</li>
 <li>C++/CLI support</li>
 </ul>
-<h4 id="&#x5916;&#x90E8;&#x4F9D;&#x8D56;"><a name="&#x5916;&#x90E8;&#x4F9D;&#x8D56;" class="plugin-anchor" href="#&#x5916;&#x90E8;&#x4F9D;&#x8D56;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5916;&#x90E8;&#x4F9D;&#x8D56;</h4>
-<p>&#x5728; macOS&#x3001;Windows&#x548C;&#x5176;&#x4ED6; Linux &#x53D1;&#x884C;&#x7248;&#x4E0A;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x811A;&#x672C;&#x53EF;&#x4EE5;&#x201C;&#x4E00;&#x952E;&#x201D;&#x5B89;&#x88C5;&#x6240;&#x9700;&#x7684;&#x5916;&#x90E8;&#x4F9D;&#x8D56;&#x5E93;&#x3002;&#x672C;&#x6765;&#x662F;&#x9700;&#x8981;&#x4EBA;&#x5DE5;&#x53C2;&#x4E0E;&#x7684;&#x591A;&#x6B65;&#x64CD;&#x4F5C;&#xFF0C;&#x73B0;&#x5728;&#x53EA;&#x9700;&#x4E00;&#x884C;&#x547D;&#x4EE4;:</p>
+<h4 id="external-dependency"><a name="external-dependency" class="plugin-anchor" href="#external-dependency"><i class="fa fa-link" aria-hidden="true"></i></a>External dependency</h4>
+<p>On macOS, Windows, and other Linux distributions, there is a script that can install the required external dependencies with one click. It was originally a multi-step operation that requires manual participation, but now it only needs one line of command:</p>
 <pre><code class="lang-bash">./scripts/install_deps.sh
 </code></pre>
-<p><strong>Windows &#x4E0B;&#x6267;&#x884C;&#xFF1A;</strong></p>
+<p><strong>Run in Windows:</strong></p>
 <pre><code class="lang-bash">scripts\install_deps.bat
 </code></pre>
-<h4 id="&#x547D;&#x4EE4;&#x884C;&#x6784;&#x5EFA;"><a name="&#x547D;&#x4EE4;&#x884C;&#x6784;&#x5EFA;" class="plugin-anchor" href="#&#x547D;&#x4EE4;&#x884C;&#x6784;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x547D;&#x4EE4;&#x884C;&#x6784;&#x5EFA;</h4>
-<p><strong>&#x786E;&#x4FDD;&#x4F60;&#x5DF2;&#x5B89;&#x88C5;&#x5916;&#x90E8;&#x4F9D;&#x8D56;&#xFF08;&#x89C1;&#x4E0A;&#x9762;&#xFF09;</strong></p>
-<p>Solidity &#x4F7F;&#x7528; CMake &#x6765;&#x914D;&#x7F6E;&#x6784;&#x5EFA;&#x3002;Linux&#x3001;macOS &#x548C;&#x5176;&#x4ED6; Unix&#x7CFB;&#x7EDF;&#x4E0A;&#x7684;&#x6784;&#x5EFA;&#x65B9;&#x5F0F;&#x90FD;&#x5DEE;&#x4E0D;&#x591A;&#xFF1A;</p>
+<h4 id="command-line-construction"><a name="command-line-construction" class="plugin-anchor" href="#command-line-construction"><i class="fa fa-link" aria-hidden="true"></i></a>Command line construction</h4>
+<p><strong>Make sure you have installed external dependencies (see above)</strong></p>
+<p>Solidity uses CMake to configure the build. Linux, macOS, and other Unix systems are built in the same way:</p>
 <pre><code class="lang-bash">mkdir build
 <span class="hljs-built_in">cd</span> build
 cmake .. &amp;&amp; make
 </code></pre>
-<p>&#x4E5F;&#x6709;&#x66F4;&#x7B80;&#x5355;&#x7684;&#xFF1A;</p>
+<p>There are also simpler ones:</p>
 <pre><code class="lang-bash"><span class="hljs-comment">#note: &#x5C06;&#x5B89;&#x88C5; solc &#x548C; soltest &#x5230; usr/local/bin &#x76EE;&#x5F55;</span>
 ./scripts/build.sh
 </code></pre>
-<p>&#x5BF9;&#x4E8E; Windows &#x6267;&#x884C;&#xFF1A;</p>
+<p>For Windows:</p>
 <pre><code class="lang-bash">mkdir build
 <span class="hljs-built_in">cd</span> build
 cmake -G <span class="hljs-string">&quot;Visual Studio 15 2017 Win64&quot;</span> ..
 </code></pre>
-<p>&#x8FD9;&#x7EC4;&#x6307;&#x4EE4;&#x7684;&#x6700;&#x540E;&#x4E00;&#x53E5;&#xFF0C;&#x4F1A;&#x5728; build &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <strong>solidity.sln</strong> &#x6587;&#x4EF6;&#xFF0C;&#x53CC;&#x51FB;&#x540E;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F1A;&#x4F7F;&#x7528; Visual Studio &#x6253;&#x5F00;&#x3002;&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x5728;VS&#x4E0A;&#x521B;&#x5EFA; <strong>RelWithDebugInfo</strong> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;</p>
-<p>&#x6216;&#x8005;&#x7528;&#x547D;&#x4EE4;&#x521B;&#x5EFA;&#xFF1A;</p>
+<p>The last sentence of this set of instructions will create a <strong>solidity.sln</strong> file. After double-clicking, Visual Studio is opened by default. We recommend that you create on <strong>RelWithDebugInfo</strong> configuration file.</p>
+<p>Or use the command to create:</p>
 <pre><code class="lang-bash">cmake --build . --config RelWithDebInfo
 </code></pre>
-<h3 id="cmake&#x53C2;&#x6570;"><a name="cmake&#x53C2;&#x6570;" class="plugin-anchor" href="#cmake&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>CMake&#x53C2;&#x6570;</h3>
-<p>&#x5982;&#x679C;&#x4F60;&#x5BF9; CMake &#x547D;&#x4EE4;&#x9009;&#x9879;&#x6709;&#x5174;&#x8DA3;&#xFF0C;&#x53EF;&#x6267;&#x884C; <code>cmake .. -LH</code> &#x8FDB;&#x884C;&#x67E5;&#x770B;&#x3002;</p>
-<p>&#x7248;&#x672C;&#x53F7;&#x5B57;&#x7B26;&#x4E32;&#x8BE6;&#x89E3;</p>
-<p>Solidity &#x7248;&#x672C;&#x540D;&#x5305;&#x542B;&#x56DB;&#x90E8;&#x5206;&#xFF1A;</p>
+<h3 id="cmake-parameter"><a name="cmake-parameter" class="plugin-anchor" href="#cmake-parameter"><i class="fa fa-link" aria-hidden="true"></i></a>CMake parameter</h3>
+<p>If you are interested in the CMake command option, you can execute it <code>cmake .. -LH</code> view</p>
+<p>Detailed description of version number string</p>
+<p>The Solidity version name consists of four parts:</p>
 <ul>
-<li>&#x7248;&#x672C;&#x53F7;</li>
-<li>&#x9884;&#x53D1;&#x5E03;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x901A;&#x5E38;&#x4E3A; <code>develop.YYYY.MM.DD</code> &#x6216;&#x8005; <code>nightly.YYYY.MM.DD</code></li>
-<li>&#x4EE5; <code>commit.GITHASH</code> &#x683C;&#x5F0F;&#x5C55;&#x793A;&#x7684;&#x63D0;&#x4EA4;&#x53F7;</li>
-<li>&#x7531;&#x82E5;&#x5E72;&#x6761;&#x5E73;&#x53F0;&#x3001;&#x7F16;&#x8BD1;&#x5668;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x6784;&#x6210;&#x7684;&#x5E73;&#x53F0;&#x6807;&#x8BC6;</li>
+<li>Version number</li>
+<li>Pre-release version, usually<code>develop.YYYY.MM.DD</code> or <code>nightly.YYYY.MM.DD</code></li>
+<li>To <code>commit.GITHASH</code> submission number displayed in the format.</li>
+<li>Platform identification consisting of several platforms and compiler details</li>
 </ul>
-<p>&#x5982;&#x679C;&#x672C;&#x5730;&#x6709;&#x4FEE;&#x6539;&#xFF0C;&#x5219; commit &#x90E8;&#x5206;&#x6709;&#x540E;&#x7F00; <code>.mod</code>&#x3002;</p>
-<p>&#x8FD9;&#x4E9B;&#x90E8;&#x5206;&#x6309;&#x7167; Semver &#x7684;&#x8981;&#x6C42;&#x6765;&#x7EC4;&#x5408;&#xFF0C; Solidity &#x9884;&#x53D1;&#x5E03;&#x7248;&#x672C;&#x53F7;&#x7B49;&#x4EF7;&#x4E8E; Semver &#x9884;&#x53D1;&#x5E03;&#x7248;&#x672C;&#x53F7;&#xFF0C; Solidity &#x63D0;&#x4EA4;&#x53F7;&#x548C;&#x5E73;&#x53F0;&#x6807;&#x8BC6;&#x5219;&#x7EC4;&#x6210; Semver &#x7684;&#x6784;&#x5EFA;&#x5143;&#x6570;&#x636E;&#x3002;</p>
-<p>&#x53D1;&#x884C;&#x7248;&#x6837;&#x4F8B;&#xFF1A;<code>0.4.8+commit.60cc1668.Emscripten.clang</code>.</p>
-<p>&#x9884;&#x53D1;&#x5E03;&#x7248;&#x6837;&#x4F8B;&#xFF1A; <code>0.4.9-nightly.2017.1.17+commit.6ecb4aa3.Emscripten.clang</code></p>
-<h3 id="&#x7248;&#x672C;&#x4FE1;&#x606F;&#x8BE6;&#x60C5;"><a name="&#x7248;&#x672C;&#x4FE1;&#x606F;&#x8BE6;&#x60C5;" class="plugin-anchor" href="#&#x7248;&#x672C;&#x4FE1;&#x606F;&#x8BE6;&#x60C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7248;&#x672C;&#x4FE1;&#x606F;&#x8BE6;&#x60C5;</h3>
-<p>&#x5728;&#x7248;&#x672C;&#x53D1;&#x5E03;&#x4E4B;&#x540E;&#xFF0C;&#x8865;&#x4E01;&#x7248;&#x672C;&#x53F7;&#x4F1A;&#x589E;&#x52A0;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5047;&#x5B9A;&#x53EA;&#x6709;&#x8865;&#x4E01;&#x7EA7;&#x522B;&#x7684;&#x53D8;&#x66F4;&#x4F1A;&#x5728;&#x4E4B;&#x540E;&#x53D1;&#x751F;&#x3002;&#x5F53;&#x53D8;&#x66F4;&#x88AB;&#x5408;&#x5E76;&#x540E;&#xFF0C;&#x7248;&#x672C;&#x5E94;&#x8BE5;&#x6839;&#x636E;semver&#x548C;&#x53D8;&#x66F4;&#x7684;&#x5267;&#x70C8;&#x7A0B;&#x5EA6;&#x8FDB;&#x884C;&#x8C03;&#x6574;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x53D1;&#x884C;&#x7248;&#x672C;&#x603B;&#x662F;&#x4E0E;&#x5F53;&#x524D;&#x6BCF;&#x65E5;&#x6784;&#x5EFA;&#x7248;&#x672C;&#x7684;&#x7248;&#x672C;&#x53F7;&#x4E00;&#x81F4;&#xFF0C;&#x4F46;&#x6CA1;&#x6709; <code>prerelease</code> &#x6307;&#x793A;&#x7B26;&#x3002;</p>
-<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<p>If there is a local modification, the commit part has a suffix <code>.mod</code>&#x3002;</p>
+<p>These parts are combined according to the requirements of Semver. The pre-release version number of Solidity is equivalent to the pre-release version number of Semver. The Solidity submission number and platform identification form the build metadata of Semver.</p>
+<p>Release sample: <code>0.4.8+commit.60cc1668.Emscripten.clang</code>.</p>
+<p>Pre-release layout sample: <code>0.4.9-nightly.2017.1.17+commit.6ecb4aa3.Emscripten.clang</code></p>
+<h3 id="version-information-details"><a name="version-information-details" class="plugin-anchor" href="#version-information-details"><i class="fa fa-link" aria-hidden="true"></i></a>Version information details</h3>
+<p>After the version is released, the patch version will increase because we assume that only patch-level changes will occur later. When changes are merged, the version should be adjusted according to semver and the intensity of the changes. Finally, the release version is always consistent with the version number of the current daily build version, but does not <code>prerelease</code> Indicator.</p>
+<p>for example:</p>
 <ol>
-<li>0.4.0 &#x7248;&#x672C;&#x53D1;&#x5E03;</li>
-<li>&#x4ECE;&#x73B0;&#x5728;&#x5F00;&#x59CB;&#xFF0C;&#x6BCF;&#x665A;&#x6784;&#x5EFA;&#x4E3A; 0.4.1 &#x7248;&#x672C;</li>
-<li>&#x5F15;&#x5165;&#x975E;&#x7834;&#x574F;&#x6027;&#x53D8;&#x66F4; &#x2014;&#x2014; &#x4E0D;&#x6539;&#x53D8;&#x7248;&#x672C;&#x53F7;</li>
-<li>&#x5F15;&#x5165;&#x7834;&#x574F;&#x6027;&#x53D8;&#x66F4; &#x2014;&#x2014; &#x7248;&#x672C;&#x8DF3;&#x8DC3;&#x5230; 0.5.0</li>
-<li>0.5.0 &#x7248;&#x672C;&#x53D1;&#x5E03;</li>
+<li>0.4.0 release Version</li>
+<li>From now on, build version 0.4.1 every night</li>
+<li>Introduce non-destructive changes-do not change the version number</li>
+<li>Introduce disruptive changes-version jump to 0.5.0</li>
+<li>Version 0.5.0 released</li>
 </ol>
-<p>&#x8BE5;&#x65B9;&#x5F0F;&#x4E0E;<code>version pragma</code>&#x4E00;&#x8D77;&#x8FD0;&#x884C;&#x826F;&#x597D;&#x3002;</p>
+<p>This method and <code>version pragma</code> Run well together.</p>
 
                                 
                                 </section>
@@ -1123,7 +1122,7 @@ cmake -G <span class="hljs-string">&quot;Visual Studio 15 2017 Win64&quot;</span
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"translater","level":"10.2","depth":1,"next":{"title":"Write contract","level":"10.3","depth":1,"path":"29_writeContract/README.md","ref":"29_writeContract/README.md","articles":[]},"previous":{"title":"Dapp process carding","level":"10.1","depth":1,"path":"27_dappFlow/README.md","ref":"27_dappFlow/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"en","gitbook":"*"},"file":{"path":"28_editor.md","mtime":"2020-06-23T01:47:29.044Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-02T02:38:08.915Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"translater","level":"10.2","depth":1,"next":{"title":"Write contract","level":"10.3","depth":1,"path":"29_writeContract/README.md","ref":"29_writeContract/README.md","articles":[]},"previous":{"title":"Dapp process carding","level":"10.1","depth":1,"path":"27_dappFlow/README.md","ref":"27_dappFlow/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"en","gitbook":"*"},"file":{"path":"28_editor.md","mtime":"2020-07-02T06:59:46.593Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-02T07:06:24.192Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>
