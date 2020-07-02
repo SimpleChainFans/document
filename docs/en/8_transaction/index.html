@@ -733,9 +733,9 @@
             
         </li>
     
-        <li class="chapter " data-level="12.4" data-path="../39_blockBrowser/">
+        <li class="chapter " data-level="12.4" data-path="../39_blockBrowser/README.md">
             
-                <a href="../39_blockBrowser/">
+                <span>
             
                     
                     Explore
@@ -923,7 +923,7 @@ Or send a message to a smart contract.</p>
 <p>The design requirements for transactions involve all aspects of the software system, but the most basic part is the transaction data itself.</p>
 <h2 id="transaction-data-structure"><a name="transaction-data-structure" class="plugin-anchor" href="#transaction-data-structure"><i class="fa fa-link" aria-hidden="true"></i></a>Transaction data structure</h2>
 <p>The following figure is <a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>transaction data structure is divided into four parts according to the purpose.</p>
-<p><img src="https://i.loli.net/2020/05/09/LtvZ9Q5MrPbH4zG.png" alt="transactionData.png"></p>
+<p><img src="1.png" alt="&#x4EA4;&#x6613;&#x6570;&#x636E;&#x7ED3;&#x6784;.png"></p>
 <p>The beginning is a number of uint64 type, which is called a random number. Used to cancel transactions, prevent double flowers and modify <a href="https://www.simplechain.com/" target="_blank">SimpleChain</a> Nonce value of the account (account data structure).</p>
 <p>The second part is about the setting of transaction execution restrictions, <code>gas</code> for willing to offer<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>maximum fuel limit for virtual machine operation.</p>
 <p><code>gasPrice</code> is the unit price of fuel that is willing to pay. <code>gasPrcie * gas</code> it is the highest handling fee that is willing to pay for this transaction.</p>
@@ -1015,7 +1015,7 @@ Or send a message to a smart contract.</p>
 </code></pre>
 <p>A special point is needed <code>Signer</code> Unsign and pass <code>Signer</code> Obtains the Sender. If it is valid, it is cached and returned. However, when using the cached content, you also need to check whether the two signers are consistent, because different Signer algorithms are different, and the transaction signers obtained are also different.</p>
 <p>Note that the above three cache usage have a precondition: Once a transaction object is created, the transaction content cannot be modified. This is also one of the reasons why the Transaction object is defined separately in the private txdata rather than directly defined in the Transaction. As shown in the following figure, only the transaction object method can be called to obtain the transaction content, and there is no way to modify the content of an existing transaction object.</p>
-<p><img src="https://img.learnblockchain.cn/2019/04/27_Transaction-method.png!de" alt="transaction list"></p>
+<p><img src="2.png" alt="&#x4EA4;&#x6613;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x5217;&#x8868;"></p>
 <h2 id="transaction-object-method-introduction"><a name="transaction-object-method-introduction" class="plugin-anchor" href="#transaction-object-method-introduction"><i class="fa fa-link" aria-hidden="true"></i></a>Transaction object method introduction</h2>
 <p>In addition to providing external transaction content access, transaction object Transtion also defines some auxiliary methods. Let&apos;s introduce the methods in turn.</p>
 <ol>
@@ -1146,7 +1146,7 @@ Or send a message to a smart contract.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Transaction","level":"4.4","depth":1,"next":{"title":"Block","level":"4.5","depth":1,"path":"9_block/README.md","ref":"9_block/README.md","articles":[]},"previous":{"title":"Account","level":"4.3","depth":1,"path":"7_account.md","ref":"7_account.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"en","gitbook":"*"},"file":{"path":"8_transaction/README.md","mtime":"2020-06-16T08:16:33.847Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-22T07:28:15.224Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Transaction","level":"4.4","depth":1,"next":{"title":"Block","level":"4.5","depth":1,"path":"9_block/README.md","ref":"9_block/README.md","articles":[]},"previous":{"title":"Account","level":"4.3","depth":1,"path":"7_account.md","ref":"7_account.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Simplechain Documentation","language":"en","gitbook":"*"},"file":{"path":"8_transaction/README.md","mtime":"2020-07-02T02:50:45.225Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-02T02:50:52.954Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
