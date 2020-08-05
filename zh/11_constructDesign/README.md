@@ -12,7 +12,7 @@ Simplechain最上层的是DApp，它是整个区块链的展示层，通过Web3.
 
 在EVM和RPC下面是Simplechain的四大核心内容，包括：blockChain, 共识算法，挖矿以及网络层。除了DApp外，其他的所有部分都在Simplechain的客户端sipe里。
 
-![3f.png](https://i.loli.net/2020/05/25/74oNWqwi8GHEZOd.png)
+![2.png](2.png)
 
 ## 从数据结构来看
 
