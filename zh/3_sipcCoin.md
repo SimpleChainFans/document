@@ -5,6 +5,8 @@
 
 [ZT](https://www.ztb.com/exchange?coin=SIPC_CNT)
 
+[Coinex](https://www.coinex.co/exchange?currency=usdt&dest=simple)
+
 **支持钱包**
 
 [SIPC](https://simplechainfans.github.io/sipc-docs/docs/docs_40)

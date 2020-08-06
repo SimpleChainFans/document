@@ -8,7 +8,7 @@ Download the corresponding according to your mobile device system ChainBox Insta
 
 ### Get test assets
 
-Turn on the tap, tap address: [Test network faucet](http://47.110.48.207:8080/)
+Turn on the tap, tap address: [Test network faucet](http://slc-faucet.sipc.vip:9657/)
 
 Enter the wallet address copied in the previous step into the tap, and you can receive the test currency. As shown below:
 

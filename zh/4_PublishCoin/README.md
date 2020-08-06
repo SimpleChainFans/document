@@ -111,10 +111,10 @@
 
  **合约编译**
 
-1. 使用浏览器打开 Remix Solidity IDE。
-2. 将 ERC20Token.sol 和 MyToken.sol 添加到 browser 文件夹下。
-3. 在网页右侧框选中 Compile 选项，选择合约编译器的版本(本文选择 0.4.26)。
-4. 点击 Start to compile 进行编译。
+1. 使用浏览器打开 [Remix Solidity IDE](http://remix.sipc.vip/)。
+2. 将 `ERC20Token.sol` 和 `MyToken.sol` 添加到 `browser` 文件夹下。
+3. 在网页右侧框选中 `Compile` 选项，选择合约编译器的版本(本文选择 0.4.26)。
+4. 点击 `Start to compile` 进行编译。
 
 ![6.1.png](1.png)
 

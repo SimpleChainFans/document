@@ -1,77 +1,48 @@
-After getting the mining machine, you need to complete the following three steps to make the mining machine run and dig out the benefits!
+[SIPC.VIP](http://www.sipc.vip/) the digital resource application ecological platform is controlled by Hong Kong Hash Power `Calforce HoldingLimited` operation，Is serving[SimpleChain](https://www.simplechain.com/) and the important ecological platform of the subchain is an important entrance to the future "new infrastructure construction (new infrastructure)", providing users with safe, convenient, exclusive and standardized services. The platform mainly provides leading "new infrastructure" services for digital resources to global users. At present, the platform has completed the layout of Singapore, the United States, the United Kingdom, Japan, South Korea, Poland, Hong Kong and other countries and regions.
 
-- Prepare SimpleNode software
-- Install the miner driver (Windows system needs to be installed, MacOS and Linux do not need to be installed)
-- Join the official [Mine pool Simpool](https://simpool.sipc.vip),start mining!
+**SIPC Ecology**
 
-## Prepare SimpleNode software
+Integrate multiple `SIPC` tools to create a `SIPC` blockchain ecosystem with multiple business forms
 
-1. Go to the official website of SimpleChain (www.simplechain.com), find SimpleNode, and download the corresponding version of the installer according to your computer system.
+**Security and trust**
 
-![7.1.png](https://i.loli.net/2020/05/07/4QetymuJ3oNRGrc.png)
+Several years of experience in digital resource services, professional decentralized architecture and anti-DDOS attack system
 
-2. Open SimpleNode installer and follow the prompts to complete the installation.
+**Instant service**
 
-![7.2.png](https://i.loli.net/2020/05/07/8nXRDTQSgcz1Gdu.png)
+7×24 hours online customer service, providing users with instant, fast and efficient services, so that users can operate unimpeded
 
-![7.3.png](https://i.loli.net/2020/05/07/n7UPtIvEyApi6wr.png)
+**Risk prevention**
 
-![7.4.png](https://i.loli.net/2020/05/07/bxOR8uNdm6CKtMX.png)
+Bank-level user data encryption, dynamic identity verification, multi-level risk identification control to ensure operational safety
 
-3. After the installation, run SimpleNode
+#### Website and APP application
 
-![7.5.png](https://i.loli.net/2020/05/07/7I9ZVBuvWe3H8bY.png)
+**Multi-chain wallet**
 
-4. After data synchronization is complete, follow the prompts to create an account or import an existing account. After creating an account, please make a backup to ensure the security of your funds!
+Multiple security protections ensure the security of the main chain and the digital resources of each sub-chain in the [SimpleChain](https://www.simplechain.com/) ecosystem. Decentralized features, convenient operation, focus on user experience, multi-signature, safe and reliable
 
-## Install mining machine driver
+**Information community**
 
-**Windows system needs to be installed, MacOS and Linux do not need to be installed**
+Keep abreast of [SimpleChain](https://www.simplechain.com/) community development trends, cutting-edge information on the blockchain industry, and industry expert research reports. Set up a special fund for rewards, and sincerely invite independent media professionals to submit articles.
 
-1. After creating the account, select "Solo mining" or "mining pool mining" after "mining machine mining" in SimpleNode software, and a prompt box will pop up. Click the blue word "mining machine driver, automatically download the mining machine driver installation package.
+**Application ecology**
 
-![7.6.png](https://i.loli.net/2020/05/07/Qa5DJy8O4WbTMZK.png)
+It has covered all areas such as judicial security, traceability of deposit evidence, e-commerce, social networking, entertainment and games. Supports multiple types of applications such as DAPP, APP, H5 webpages, and sincerely invites like-minded companies that are committed to the industry to move from the virtual to the real.
 
-2. The miner driver installation package is a compressed file, please decompress the file. Decompress the file and click the "stmicroel_virtual_131_64" application to start installing the miner driver.
+### Download SIPC.VIP
 
-![7.7.png](https://i.loli.net/2020/05/07/UPF3A7tSoXduq5c.png)
 
-3. Complete the installation of the driver of the mining machine according to the instructions of the installation wizard.
+Open the download address： [http://www.sipc.vip/](http://www.sipc.vip/)，Follow the instructions on the page, scan the code to download and install the SIPC.VIP platform. As shown below:
 
-![7.8.png](https://i.loli.net/2020/05/07/dHWlUOakVusIS1A.png)
+![0.jpeg](https://i.loli.net/2020/08/04/b84R2NyYvhL9GHJ.jpg)
 
-![7.10.png](https://i.loli.net/2020/05/07/YaqL4f56FoKiZrX.png)
+If you are an Apple phone, you need to open: `Settings`——`General`—— `Device Management`——`Verify` to verify, I have verified it here. As shown below:
 
-## Start Mining!
+![1.png](https://i.loli.net/2020/08/04/g36a2xOswqCGfXQ.png)
 
-After the installation of the driver is completed, insert the mining machine, and choose "Solo mining" or "mining pool mining" after "mining machine mining" in SimpleNode software again, then you can start the mining machine mining and a journey full of money!
+Then we open the application, register and log in with our mobile phone number. Use after registration and login, as shown below:
 
-**We recommend that you use the "mining pool" method to add the official mining pool Simpool**，more benefits! To select this method, you need to register an account in the official mine pool Simpool.
+![2.jpeg](https://i.loli.net/2020/08/04/HetkLZE4fRK6qTs.jpg)
 
-1. Click "mining pool mining" behind "mining machine mining", click "blue", click "register" to enter the registration page of the official mining pool Simpool
 
-![7.11.png](https://i.loli.net/2020/05/07/w4VoHmzpABlsvJ3.png)
-
-2. Complete the Simpool account registration as prompted
-
-![7.12.png](https://i.loli.net/2020/05/07/EqcdHWhTF3xVwtL.png)
-
-3. After the registration is successful, find "account management" in the left-side navigation pane and click to enter
-
-![7.13.png](https://i.loli.net/2020/05/07/b96GIHtQYgOcahC.png)
-
-4. Click "Add mining account" in the upper right corner; You need to enter "account name" and "SIPC payment address"
-   Account name: English uppercase letters and numbers are supported (Chinese characters are not supported!)
-   SIPC payment address: This address is the receiving address of mining revenue. Please fill in your SIPC Wallet account address.
-
-  ![7.14.png](https://i.loli.net/2020/05/07/AcFJUp942Tm8dkN.png)
-
-  ![7.15.png](https://i.loli.net/2020/05/07/UbqBMPHOugZc6L8.png)
-
-5. Your Wallet account address can be viewed in SimpleNode; If you are using the official Chainbox wallet and sipc.vip digital resource platform, you can also fill in your address (note: Please fill in your own address that supports SIPC correctly, and the mining revenue will be transferred to this address!)
-
-![7.16.png](https://i.loli.net/2020/05/07/ki9Plv5fuCtZGSo.png)
-
-6. After completing the operation in Simpool, return to SimpleNode software and click "mining pool mining" after "mining machine mining" again ", fill in the miner name (the miner name is the" account name "you just filled in when adding a mining account in Simpool), click OK, click OK, mining begins (the blue light of the mining machine is flashing)!
-
-![7.17.png](https://i.loli.net/2020/05/07/Zqn1dl5PWVhrcRo.png)

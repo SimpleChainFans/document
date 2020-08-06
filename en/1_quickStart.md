@@ -21,20 +21,24 @@ You can use command line tools to operate [SimpleChain](https://www.simplechain.
 
 For smart contract developers, you can refer to the smart contract development section for more information.
 
-We also provide some examples for smart contract developers to describe how to write/deploy/run contracts.
+We also provide some examples for smart contract developers to describe how to write/deploy/run contracts. [Contract Build Tool](http://remix.sipc.vip/)
+
+#### Receive test tokens
+
+If you need to test the node during the development process, the RPC port is: [https://test.explorer.simplechain.com/rpc ](), If you need to receive test tokens, the tap address is: [faucet](https://faucet.sipc.vip/)
 
 #### Landing case
 
-This is used [SimpleChain](https://www.simplechain.com/)a landing case of development.
+This is used [SimpleChain](https://www.simplechain.com/) a landing case of development.
 
 #### SDK and API
 
 SDKs and APIs are also provided for developers:
 
-- [Javascript SDK]()
-- [Java SDK]()
-- [Python SDK]()
-- [JSON RPC API]()
+- [Javascript SDK](https://simplechainfans.github.io/document/en/25_sdk/)
+- [Java SDK](https://simplechainfans.github.io/document/en/25_sdk/)
+- [Python SDK](https://simplechainfans.github.io/document/en/25_sdk/)
+- [JSON RPC API](https://simplechainfans.github.io/document/en/22_sipcApi.html)
 
 #### If you are interested in technical details
 

@@ -19,20 +19,24 @@
 
 对于智能合约开发人员，您可以参考智能合约开发部分了解详细信息.
 
-我们还为智能合约开发人员提供了一些示例，介绍了如何编写/部署/运行合约。
+我们还为智能合约开发人员提供了一些示例，介绍了如何编写/部署/运行合约。[合约编译工具](http://remix.sipc.vip/)
+
+#### 领取测试代币
+
+如果你在开发过程中需要测试节点，RPC端口为：[https://test.explorer.simplechain.com/rpc ]()，如果你需要领取测试代币，水龙头地址为:[水龙头](https://faucet.sipc.vip/)
 
 #### 落地案例
 
-这是使用[SimpleChain](https://www.simplechain.com/)开发的一个落地案例
+这是使用[SimpleChain](https://www.simplechain.com/) 开发的一个落地案例
 
 #### SDK 和 API
 
 还为开发人员提供了 SDK 和 API：
 
-- [Javascript SDK]()
-- [Java SDK]()
-- [Python SDK]()
-- [JSON RPC API]()
+- [Javascript SDK](https://simplechainfans.github.io/document/zh/25_sdk/)
+- [Java SDK](https://simplechainfans.github.io/document/zh/25_sdk/)
+- [Python SDK](https://simplechainfans.github.io/document/zh/25_sdk/)
+- [JSON RPC API](https://simplechainfans.github.io/document/zh/22_sipcApi.html)
 
 #### 如果您对技术细节感兴趣
 

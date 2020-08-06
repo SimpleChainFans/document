@@ -1,77 +1,48 @@
-当拿到矿机之后，需要完成以下三步，就可以让矿机运转起来，挖出收益！
+[SIPC.VIP](http://www.sipc.vip/) 数字资源应用生态平台由香港算力控股 `Calforce HoldingLimited` 运营，是服务于[SimpleChain](https://www.simplechain.com/)及子链的重要生态平台，是面向于未来的“新型基础设施建设（新基建）”的重要入口，为用户提供安全、便捷、尊享及标准化的服务。平台主要面向全球用户提供数字资源领先“新基建”服务。目前，平台已完成对新加坡、美国、英国、日本、韩国、波兰、香港等多个国家及地区的布局。
 
-- 准备SimpleNode软件
-- 安装矿机驱动（Windows系统需要安装，MacOS和Linux无需安装）
-- 加入官方[矿池Simpool](https://simpool.sipc.vip),开始挖矿！
+**SIPC生态**
 
-## 准备SimpleNode软件
+融合多个 `SIPC` 工具打造多业务形态为一体的 `SIPC` 区块链生态圈
 
-1. 到SimpleChain官网（www.simplechain.com），找到SimpleNode，根据您的电脑系统下载相应版本的安装程序
+**安全信赖**
 
-![7.1.png](https://i.loli.net/2020/05/07/4QetymuJ3oNRGrc.png)
+数年数位资源服务经验，专业分散式架构和防DDOS攻击系统
 
-2. 打开SimpleNode安装程序，根据提示完成安装
+**即时服务**
 
-![7.2.png](https://i.loli.net/2020/05/07/8nXRDTQSgcz1Gdu.png)
+7×24小时线上客服服务，为使用者提供即时、快捷、高效的服务，使使用者操作畅无阻
 
-![7.3.png](https://i.loli.net/2020/05/07/n7UPtIvEyApi6wr.png)
+**风险防范**
 
-![7.4.png](https://i.loli.net/2020/05/07/bxOR8uNdm6CKtMX.png)
+银行级使用者资料加密、动态身份验证，多级风险识别控制，保障操作安全
 
-3. 完成安装后，运行SimpleNode
+#### 网站及APP应用
 
-![7.5.png](https://i.loli.net/2020/05/07/7I9ZVBuvWe3H8bY.png)
+**多链钱包**
 
-4. 数据同步完成后，请根据提示新建账户或者导入已有账户。创建账户之后请做好备份，保证您的资金安全！
+多重安全防护，保障 [SimpleChain](https://www.simplechain.com/) 生态内主链及各子链数字资源安全。去中心化的特性便捷操作，注重用户体验多重签名，安全可靠。
 
-## 安装矿机驱动
+**资讯社区**
 
-**Windows系统需要安装，MacOS和Linux无需安装**
+及时掌握 [SimpleChain](https://www.simplechain.com/) 社区发展动态，区块链行业前沿资讯以及行业专家研究报告。设立专项基金奖励，诚邀独立媒体人，投稿入驻。
 
-1. 创建好账户后，在SimpleNode软件中选择“矿机挖矿”后面的“Solo挖矿”或者“矿池挖矿”，弹出提示框，点击 “矿机驱动”蓝色字样，自动下载矿机驱动安装包。
+**应用生态**
 
-![7.6.png](https://i.loli.net/2020/05/07/Qa5DJy8O4WbTMZK.png)
+已涵盖司法保全、存证溯源、电商、社交、文娱以及游戏等全方面领域。支持DAPP、APP、H5网页等多类型应用，诚邀致力于行业脱虚向实，志同道合的企业合作共进。
 
-2. 矿机驱动安装包为压缩文件，请解压文件。解压文件后点击”stmicroel_virtual_131_64”应用程序开始安装矿机驱动。
+### 下载SIPC.VIP
 
-![7.7.png](https://i.loli.net/2020/05/07/UPF3A7tSoXduq5c.png)
+打开地址下载: [http://www.sipc.vip/](http://www.sipc.vip/)，根据页面提示,扫码下载安装SIPC.VIP平台。如下图：
 
-3. 根据安装向导提示，完成矿机驱动的安装。
+![0.jpeg](https://i.loli.net/2020/08/04/b84R2NyYvhL9GHJ.jpg)
 
-![7.8.png](https://i.loli.net/2020/05/07/dHWlUOakVusIS1A.png)
+如果你是苹果手机，需要打开：`设置`——`通用`—— `设备管理`——`验证` 进行验证，我这里是已经验证过的。如下图：
 
-![7.10.png](https://i.loli.net/2020/05/07/YaqL4f56FoKiZrX.png)
+![1.png](https://i.loli.net/2020/08/04/g36a2xOswqCGfXQ.png)
 
-## 开始挖矿！
+然后我们打开应用，用手机号码注册登陆。注册登陆后使用，如下图：
 
-驱动安装完成后，插入矿机，重新到SimpleNode软件中选择“矿机挖矿”后面的“Solo挖矿”或者“矿池挖矿”，即可开始矿机挖矿、盆满钵满之旅！
 
-**推荐使用“矿池挖矿”方式，加入官方矿池Simpool**，收益更多！选择这种方式需要到官方矿池Simpool注册账户。
+![2.jpeg](https://i.loli.net/2020/08/04/HetkLZE4fRK6qTs.jpg)
 
-1. 点击“矿机挖矿“后面的”矿池挖矿“，点击蓝色字样”点击注册“进入官方矿池Simpool注册页面
 
-![7.11.png](https://i.loli.net/2020/05/07/w4VoHmzpABlsvJ3.png)
-
-2. 根据提示完成Simpool账号注册
-
-![7.12.png](https://i.loli.net/2020/05/07/EqcdHWhTF3xVwtL.png)
-
-3. 注册成功后，在左侧导航栏找到“账户管理”，点击进入
-
-![7.13.png](https://i.loli.net/2020/05/07/b96GIHtQYgOcahC.png)
-
-4. 点击右上角的“新增挖矿账户”；需要您输入“账户名称”和“SIPC支付地址”
-  账户名称：支持英文大小写字母及数字（不支持汉字哦！）
-  SIPC支付地址：该地址即为挖矿收益的接收地址，请填写自己的SIPC钱包账户地址
-
-  ![7.14.png](https://i.loli.net/2020/05/07/AcFJUp942Tm8dkN.png)
-
-  ![7.15.png](https://i.loli.net/2020/05/07/UbqBMPHOugZc6L8.png)
-
-5. 您的钱包账户地址，可以在SimpleNode里面查看；如果您有在使用官方推出的Chainbox钱包和sipc.vip数字资源平台，也可以填入其中您的地址（注意：请正确填入您本人的、支持SIPC的地址，挖矿收益将会打到该地址！）
-
-![7.16.png](https://i.loli.net/2020/05/07/ki9Plv5fuCtZGSo.png)
-
-6. 在Simpool中的操作完成后，回到SimpleNode软件，重新点击“矿机挖矿”后面的“矿池挖矿”，填入矿工名（矿工名即为刚刚在Simpool新增挖矿账户时填写的“账户名称”），点击确认后，点击确认后，挖矿就开始了（矿机的蓝色灯呈闪烁状态）！
-
-![7.17.png](https://i.loli.net/2020/05/07/Zqn1dl5PWVhrcRo.png)

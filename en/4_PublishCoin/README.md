@@ -111,7 +111,7 @@ Preparations for implementing publish coin on the chain include:
 
  **Contract compilation:**
 
-1. Use a browser to open Remix Solidity IDE.
+1. Use a browser to open [Remix Solidity IDE](http://remix.sipc.vip/).
 2. Add ERC20Token.sol and MyToken.sol to the browser folder.
 3. Select the Compile option in the right-side box of the webpage and select the version of the contract compiler (0.4.26 is selected in this article).
 4. Click Start to compile.
