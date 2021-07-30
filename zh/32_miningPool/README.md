@@ -1,4 +1,4 @@
-Sipc目前支持3个矿池进行挖矿，分别是:
+SIMPLE目前支持3个矿池进行挖矿，分别是:
 
 [Matpool](https://matpool.io)
 

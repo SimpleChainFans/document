@@ -17,7 +17,7 @@ EOAs-外部账户(external owned accouts)是由人们通过私钥创建的账户
 
 外部账户特点总结：
 
-1. 拥有sipc余额。
+1. 拥有SIMPLE余额。
 1. 能发送交易，包括转账和执行合约代码。
 1. 被私钥控制。
 1. 没有相关的可执行代码。
@@ -56,7 +56,7 @@ func CreateAddress2(b common.Address, salt [32]byte, inithash []byte) common.Add
 
 合约账户特点总结：
 
-1. 拥有sipc余额。
+1. 拥有SIMPLE余额。
 2. 有相关的可执行代码（合约代码）。
 3. 合约代码能够被交易或者其他合约消息调用。
 4. 合约代码被执行时可再调用其他合约代码。
@@ -116,7 +116,7 @@ st.state.SetNonce(msg.From(), st.state.GetNonce(sender.Address())+1)
 
 这样的附加好处是，一般可将 Nonce 当做账户的交易次数计数器使用，特别是对于合约账户可以准确的记录合约被调用次数。
 
-而`Balance`则记录该账户所拥有的sipc数量，称为账户余额.转移资产(Transfer)是在一个账户的`Balance`上计加，在另外一个账户计减。
+而`Balance`则记录该账户所拥有的SIMPLE数量，称为账户余额.转移资产(Transfer)是在一个账户的`Balance`上计加，在另外一个账户计减。
 
 ```go
 // core/evm.go:94

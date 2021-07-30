@@ -68,7 +68,7 @@ export default web3;
 
 ### 获取合约实例
 
-首先在src下创建目录sipc,并创建文件contracts.js。
+首先在src下创建目录SIMPLE,并创建文件contracts.js。
 
 ABI格式为json格式，可以把ABI拷贝到浏览器的地址栏中格式化为一行再复制回来，这样省空间
 

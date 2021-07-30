@@ -9,7 +9,7 @@
 
 **支持钱包**
 
-[SIPC](https://simplechainfans.github.io/sipc-docs/docs/docs_40)
+[SIMPLE](https://simplechainfans.github.io/sipc-docs/docs/docs_40)
 
 [ChainBox](https://simplechainfans.github.io/sipc-docs/docs/docs_42)
 

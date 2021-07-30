@@ -7,10 +7,10 @@
 + [快速开始](1_quickStart.md)
 + [搭建节点](2_BuildNode/README.md)
 
-##  sipc代币协议
+##  SIMPLE代币协议
 
 + [技术术语](47_techniqueLanguage.md)
-+ [sipc代币](3_sipcCoin.md)
++ [SIMPLE代币](3_sipcCoin.md)
 + [发行代币](4_PublishCoin/README.md)
 
 ## 基础数据结构
@@ -65,7 +65,7 @@
 
 ### 挖矿
 
-+ [sipc挖矿](31_mining.md)
++ [SIMPLE挖矿](31_mining.md)
 + [矿池接入](32_miningPool/README.md)
 + [GPU挖矿](33_gpuMining/README.md)
 + [Simpool挖矿](34_SimPool/README.md)
@@ -74,7 +74,7 @@
 ### 客户端
 
 + [SIPC.VIP](36_SIPC.md)
-+ [sipc全节点钱包](37_wallet/README.md)
++ [SIMPLE全节点钱包](37_wallet/README.md)
 + [ChainBox](38_ChainBox/README.md)
 + [区块链浏览器](39_bolckBrowser/README.md)
 

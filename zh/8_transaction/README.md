@@ -71,7 +71,7 @@ type txdata struct {
 
 - 一是因涉及哈希运算，因此不能随意调整字段定义顺序，非特殊处理情况下必须按要求定义字段。所以`txdata`中定义的字段，是符合Simplechain交易消息内容顺序的。
 
-- 二是在涉及货币计算时，不能因为精度缺失引起计算不准确问题。因此在Simplechain、比特币等所有区块链设计中，货币类型均是整数，但最小值`1`所代表的币值不一样。在[SimpleChain](https://www.simplechain.com/)中一个sipc等于10的18次方Amount，当要表示100亿sipc时，Amount等于10的27次方。已远远超过Uint64所能表示的范围(0-18446744073709551615)。因此[SimpleChain](https://www.simplechain.com/)一律采用Go标准包提供的大数 `big.Int` 进行货币运算和定义货币。这里的`Price`和`Amount`均是 big.Int 指针类型。另外，关于签名的三个值也是因为数字太大，而采用 big.Int 类型。
+- 二是在涉及货币计算时，不能因为精度缺失引起计算不准确问题。因此在Simplechain、比特币等所有区块链设计中，货币类型均是整数，但最小值`1`所代表的币值不一样。在[SimpleChain](https://www.simplechain.com/)中一个SIMPLE等于10的18次方Amount，当要表示100亿SIMPLE时，Amount等于10的27次方。已远远超过Uint64所能表示的范围(0-18446744073709551615)。因此[SimpleChain](https://www.simplechain.com/)一律采用Go标准包提供的大数 `big.Int` 进行货币运算和定义货币。这里的`Price`和`Amount`均是 big.Int 指针类型。另外，关于签名的三个值也是因为数字太大，而采用 big.Int 类型。
 
 - 三是最后的`Hash`字段，这不属于交易内容的一部分，只是为了在交易的JSON中包含交易哈希。为了防止参与哈希运算，该字段被标记为`rlp:"-"`。其次，Transaction 还定义了三个缓存项：交易哈希值(hash)、交易大小(size)和交易发送方(from)。缓存的原因是使用频次高且CPU计算量大。
 

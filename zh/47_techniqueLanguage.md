@@ -2,7 +2,7 @@
 
 ## 专有名词
 
-> **外部账户**：EOAs（External Owned Accounts），关联个人掌握的私钥。可以用于发送交易（转移Sipc或发送消息），形同一张带数字ID的储蓄卡。
+> **外部账户**：EOAs（External Owned Accounts），关联个人掌握的私钥。可以用于发送交易（转移SIMPLE或发送消息），形同一张带数字ID的储蓄卡。
 
 > **合约账户**：Contracts Accounts，可以在Simplechain上存储合约代码与合约数据的账户，外部不能直接操作此账户。只能由外部账户直接或间接调用。
 
