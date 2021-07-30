@@ -60,15 +60,15 @@ After the installation of the driver is completed, insert the mining machine, an
 
 ![](12.png)
 
-4. Click "Add mining account" in the upper right corner; You need to enter "account name" and "SIPC payment address"
+4. Click "Add mining account" in the upper right corner; You need to enter "account name" and "SIMPLE payment address"
 Account name: English uppercase letters and numbers are supported (Chinese characters are not supported!)
-SIPC payment address: This address is the receiving address of mining revenue. Please fill in your SIPC Wallet account address.
+SIMPLE payment address: This address is the receiving address of mining revenue. Please fill in your SIMPLE Wallet account address.
 
   ![](13.png)
 
   ![](14.png)
 
-5. Your Wallet account address can be viewed in SimpleNode; If you are using the official Chainbox wallet and sipc.vip digital resource platform, you can also fill in your address (note: Please fill in your own address that supports SIPC correctly, and the mining revenue will be transferred to this address!)
+5. Your Wallet account address can be viewed in SimpleNode; If you are using the official Chainbox wallet and sipc.vip digital resource platform, you can also fill in your address (note: Please fill in your own address that supports SIMPLE correctly, and the mining revenue will be transferred to this address!)
 
 ![](15.png)
 

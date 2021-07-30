@@ -1,4 +1,4 @@
-#### Sipc API method list:
+#### SIMPLE API method list:
 
 - [`web3_clientVersion`](#web3_clientVersion)
 - [`web3_sha3`](#web3_sha3)
@@ -709,7 +709,7 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 - `to:` DATA, 20 Bytes - 交易目标地址
 - `gas:` QUANTITY - 交易可用 gas 量，可选。eth_call 不消耗 gas，但是某些 执行环节需要这个参数
 - `gasPrice:` QUANTITY - gas 价格，可选
-- `value:` QUANTITY - 交易发送的 sipc 数量，可选
+- `value:` QUANTITY - 交易发送的 SIMPLE 数量，可选
 - `data:` DATA - 方法签名和编码参数的哈希，可选
 - `string:` QUANTITY|TAG - 整数块编号，或字符串"latest"、"earliest"或"pending" 
 
@@ -739,7 +739,7 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 - `to:` DATA, 20 Bytes - 交易目标地址
 - `gas:` QUANTITY - 交易可用 gas 量，可选。eth_call 不消耗 gas，但是某些 执行环节需要这个参数
 - `gasPrice:` QUANTITY - gas 价格，可选
-- `value:` QUANTITY - 交易发送的 sipc 数量，可选
+- `value:` QUANTITY - 交易发送的 SIMPLE 数量，可选
 - `data:` DATA - 方法签名和编码参数的哈希，可选
 - `string:` QUANTITY|TAG - 整数块编号，或字符串"latest"、"earliest"或"pending"
 
@@ -964,7 +964,7 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 - `transactionIndex:` QUANTITY - 交易在块中的索引位置，挂起块该值为 null
 - `from:` DATA, 20 字节 - 交易发送方地址
 - `to:` DATA, 20 字节 - 交易接收方地址，对于合约创建交易，该值为 null
-- `value:` QUANTITY - 发送的 sipc 数量，单位:wei
+- `value:` QUANTITY - 发送的 SIMPLE 数量，单位:wei
 - `gasPrice:` QUANTITY - 发送方提供的 gas 价格，单位:wei 
 - `gas:` QUANTITY - 发送方提供的 gas 可用量
 - `input:` DATA - 随交易发送的数据
@@ -1016,7 +1016,7 @@ curl -X POST localhost:8545  -H "Content-Type:application/json" --data '{"jsonrp
 - `transactionIndex:` QUANTITY - 交易在块中的索引位置，挂起块该值为 null
 - `from:` DATA, 20 字节 - 交易发送方地址
 - `to:` DATA, 20 字节 - 交易接收方地址，对于合约创建交易，该值为 null
-- `value:` QUANTITY - 发送的 sipc 数量，单位:wei
+- `value:` QUANTITY - 发送的 SIMPLE 数量，单位:wei
 - `gasPrice:` QUANTITY - 发送方提供的 gas 价格，单位:wei 
 - `gas:` QUANTITY - 发送方提供的 gas 可用量
 - `input:` DATA - 随交易发送的数据

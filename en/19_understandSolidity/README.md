@@ -1035,9 +1035,9 @@ Here `y` The type of will be `uint24` . Cannot be used for function parameters o
 
 ## Unit and global variables
 
-### sipc unit
+### SIMPLE unit
 
-The conversion between sipc units is to add after the number ``wei``、 ``finney``、 ``szabo`` or ``ether`` to implement, if there is no unit behind, the default is Wei. For example ``2 ether == 2000 finney`` logical judgment value of IS ``true``。
+The conversion between SIMPLE units is to add after the number ``wei``、 ``finney``、 ``szabo`` or ``ether`` to implement, if there is no unit behind, the default is Wei. For example ``2 ether == 2000 finney`` logical judgment value of IS ``true``。
 
 ### Time Unit
 
@@ -1148,7 +1148,7 @@ If padding is required, you can use explicit type conversion: ``keccak256("\x00\
 
 Note that constant values are packaged using the minimum number of bytes required to store them. For example：``keccak256(0) == keccak256(uint8(0))``，``keccak256(0x12345678) == keccak256(uint32(0x12345678))``。
 
-On a private chain, you are likely to encounter ``sha256``、``ripemd160`` or ``ecrecover`` caused by Out-of-Gas. The reason is that these cryptographic functions exist in the form of "precompiled contracts" in Simplechain virtual machines, and it does not really exist until the first time you receive the message (although the contract code is a hard code already existing in EVM). Therefore, messages sent to non-existent contracts are very expensive, so actual execution will lead to Out-of-Gas errors. Before you actually use your contract, send a little Sipc to each contract, such as 1 Wei. This is not a problem on the official network or test network.
+On a private chain, you are likely to encounter ``sha256``、``ripemd160`` or ``ecrecover`` caused by Out-of-Gas. The reason is that these cryptographic functions exist in the form of "precompiled contracts" in Simplechain virtual machines, and it does not really exist until the first time you receive the message (although the contract code is a hard code already existing in EVM). Therefore, messages sent to non-existent contracts are very expensive, so actual execution will lead to Out-of-Gas errors. Before you actually use your contract, send a little SIMPLE to each contract, such as 1 Wei. This is not a problem on the official network or test network.
 
 #### Address-related
 
@@ -1865,7 +1865,7 @@ The following statement is considered to modify the state:
 - `generate an event`。
 - `create smart contract`。
 - use `selfdestruct`。
-- send Sipc coins by calling。
+- send SIMPLE coins by calling。
 - Call any that is not marked `view` Or `pure` The function.
 - Use low-level calls.
 - Use an inline assembly that contains specific opcodes.
@@ -1912,7 +1912,7 @@ Functions can be declared `pure` , in this case, promise not to read or modify t
 
 A contract can have an unnamed function. This function cannot have parameters or return values. If no other function matches the given function identifier (or no call data is provided) in a contract call, the function (fallback function) will be executed.
 
-In addition, this function will be executed every time the contract receives Sipc coins (without any data). In addition, the fallback function must be marked payable . If such a function does not exist, the contract cannot receive Sipc coins through regular transactions.
+In addition, this function will be executed every time the contract receives SIMPLE coins (without any data). In addition, the fallback function must be marked payable . If such a function does not exist, the contract cannot receive SIMPLE coins through regular transactions.
 
 In this context, usually only a few gas can be used to complete this function call (to be exact, 2300 gas), so it is important to make the call of fallback function as cheap as possible. Note that the gas required for transactions calling the fallback function (rather than internal calls) is much higher, because an additional 21000 gas or more is charged for each transaction for signature check and other operations.
 
@@ -1921,7 +1921,7 @@ Specifically, the following operations consume more gas than the fallback functi
 - Write storage
 - Create a contract
 - Call external functions that consume a lot of gas
-- Send Sipc coins
+- Send SIMPLE coins
 
 Make sure that you thoroughly test your fallback function before deploying the contract to ensure that the execution cost is less than 2300 gas.
 
@@ -1929,7 +1929,7 @@ Make sure that you thoroughly test your fallback function before deploying the c
 
 >  A contract that does not define a fallback function directly receives ether coins (no function call, that is, use `send` Or `transfer` ) throws an exception and returns the ether coin (the behavior will be different before Solidity v0.4.0). Therefore, if you want your contract to receive Ether coins, you must implement the fallback function.
 
->  A contract without the payable fallback function can be used coinbase transaction (Also known miner block reward ) the recipient or selfdestruct The target to receive sipc coins.
+>  A contract without the payable fallback function can be used coinbase transaction (Also known miner block reward ) the recipient or selfdestruct The target to receive SIMPLE coins.
 
 >  A contract cannot respond to this ether transfer, so it cannot refuse them either. This is determined by EVM when designing, and Solidity cannot bypass this problem.
 
@@ -2469,7 +2469,7 @@ Compared with contracts, library restrictions:
 
 - No state variables
 - Unable to inherit or be inherited
-- Unable to receive Sipc coins
+- Unable to receive SIMPLE coins
 
 （These restrictions may be lifted in the future）
 

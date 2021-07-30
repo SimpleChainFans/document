@@ -2,15 +2,15 @@
 
 **1.What should I fill in the receiving address?**
 
-We recommend that you fill in the SIPC wallet address, because you have the private key of the currency, which is more secure.
+We recommend that you fill in the SIMPLE wallet address, because you have the private key of the currency, which is more secure.
 
 **2.What coins can SimPool dig ?**
 
-Currently, SIPC mining is supported.
+Currently, SIMPLE mining is supported.
 
 **3. How to mine ？**
 
-The general steps are: register an account-create a mining account-configure a computer-view revenue. For specific steps, see SIPC mining tutorial.
+The general steps are: register an account-create a mining account-configure a computer-view revenue. For specific steps, see SIMPLE mining tutorial.
 
 **4. How high is my computing power?**
 
@@ -32,7 +32,7 @@ First confirm the following points:
 
 The hourly settlement is conducted once every hour, and then the coin is made at 12 a.m. the specific calculation method of personal income (per hour) is as follows:
 
-- Mining pool revenue = average computing power of the mining pool/computing power of the whole network * The number of SIPC output per day of the whole network + super-fast revenue;
+- Mining pool revenue = average computing power of the mining pool/computing power of the whole network * The number of SIMPLE output per day of the whole network + super-fast revenue;
 
 - Personal income = total personal acceptance/total network acceptance * mine pool income;
 

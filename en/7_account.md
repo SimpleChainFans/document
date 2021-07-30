@@ -16,7 +16,7 @@ You can only use a private external account signature.
 
 Summary of external account characteristics:
 
-1. Have sipc balance.
+1. Have SIMPLE balance.
 1. Can send transactions, including transfer and execution of contract codes.
 1. Controlled by the private key.
 1. No relevant executable code.
@@ -50,7 +50,7 @@ func CreateAddress2(b common.Address, salt [32]byte, inithash []byte) common.Add
 
 Summary of contract account characteristics:
 
-1. Have sipc balance.
+1. Have SIMPLE balance.
 2. Relevant executable code (contract code).
 3. Contract codes can be called by transactions or other contract messages.
 4. Other contract codes can be called when the contract code is executed.
@@ -109,7 +109,7 @@ st.state.SetNonce(msg.From(), st.state.GetNonce(sender.Address())+1)
 
 The additional advantage of this is that Nonce can generally be used as the counter for the number of transactions of the account, especially for the contract account, the number of times the contract is called can be accurately recorded.
 
-and Balance Then record the number of sipcs owned by the account, which is called account balance. Transfer assets (Transfer) are in one account Balance Add up and reduce in another account.
+and Balance Then record the number of SIMPLE owned by the account, which is called account balance. Transfer assets (Transfer) are in one account Balance Add up and reduce in another account.
 
 ```go
 // core/evm.go:94

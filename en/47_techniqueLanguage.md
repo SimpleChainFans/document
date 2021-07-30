@@ -2,7 +2,7 @@ We need to know some common terms and nouns before we begin to understand Simple
 
 ## Proper noun
 
-> **External account**：EOAs(External Owned Accounts), associated with personal private key. Can be used to send transactions (transfer Sipc or send messages), like a savings card with a digital ID.
+> **External account**：EOAs(External Owned Accounts), associated with personal private key. Can be used to send transactions (transfer SIMPLE or send messages), like a savings card with a digital ID.
 
 > **Contract account**：Contracts Accounts, which can store contract codes and contract data on Simplechain. External users cannot directly operate this account. It can only be called directly or indirectly from an external account.
 

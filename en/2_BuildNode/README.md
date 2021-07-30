@@ -37,7 +37,7 @@ Open the[official website](https://www.simplechain.com/)of Simplechain and drop 
 
 ![image](1.png)
 
-Download the corresponding version according to your server system. After downloading, follow the prompts to install it. After installation, create a wallet account by using the credential. Then you can pay or receive sipc, mining, and publish contracts.
+Download the corresponding version according to your server system. After downloading, follow the prompts to install it. After installation, create a wallet account by using the credential. Then you can pay or receive SIMPLE, mining, and publish contracts.
 
 **Account：**
 

@@ -16,7 +16,7 @@ In order to convert a state to the next state, the transaction must be valid. In
 
 To add a block to the main chain, a miner must provide this "proof" faster than other miners ". The process of verifying each block through a "proof" of mathematical mechanism provided by miners is called proof of work.
 
-It is proved that miners in a new area will be rewarded with a certain value. What is the reward? Simplechain uses an internal digital token-Sipc as a reward. Every time a miner proves a new block, a new Sipc will be generated and rewarded to the miner.
+It is proved that miners in a new area will be rewarded with a certain value. What is the reward? Simplechain uses an internal digital token-SIMPLE as a reward. Every time a miner proves a new block, a new SIMPLE will be generated and rewarded to the miner.
 
 Whenever multiple paths are generated, a "fork" will appear. We usually want to avoid forking, because they will destroy the system and force people to choose which chain they believe.
 

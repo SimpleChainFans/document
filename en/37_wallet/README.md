@@ -52,11 +52,11 @@
 
 ![1.png](41.9.jpeg)
 
-> After entering the wallet, you can see the total number of sipcs, the current synchronization block height, and the wallet address. Click the collection code to receive the SIPC, as shown in the following figure:
+> After entering the wallet, you can see the total number of SIMPLE, the current synchronization block height, and the wallet address. Click the collection code to receive the SIMPLE, as shown in the following figure:
 
 ![1.png](41.10.png)
 
-> Of course, it can also be used for transfer, click `transaction` on the transfer page, enter the corresponding recipient's address and transfer the number of SIPC. And adjust the Gas fee, then transfer the money. As shown below:
+> Of course, it can also be used for transfer, click `transaction` on the transfer page, enter the corresponding recipient's address and transfer the number of SIMPLE. And adjust the Gas fee, then transfer the money. As shown below:
 
 ![1.png](41.11.png)
 

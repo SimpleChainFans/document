@@ -6,7 +6,7 @@ Compare the current mainstream cross-chain solutions and the comprehensive perfo
 
 In the mode of "Notary Public", the single "notary public" mechanism operates in a relatively centralized way, because the efficiency requirement of "notary public" mechanism is higher than that of decentralization, this leads to obvious black-box risks in a single notary system. But we [Simplechain]() the "free notary mechanism" of precisely makes up for the defects of the "notary" mechanism. It adds mortgage and corresponding punishment mechanism to the process of selecting trusted nodes in different block chain platforms. If a node does evil, it will be punished accordingly, and the "notary" in the network will be automatically replaced by the new notary. Therefore, the free notary mechanism can effectively ensure the complete decentralization, efficiency and safety of the whole cross-chain process.
 
-If the main target of the early cross-chain solution was asset transfer, the cross-chain solution of SIPC was not only asset transfer, but also focused on cross-chain infrastructure. It mainly emphasizes that assets can be realized through smart contracts. The cross-chain technology of SIPC is determined to become a high-performance and decentralized cross-chain infrastructure. It also accesses various cross-chain applications and focuses on commercial implementation. This cross-chain solution enables SIPC to have strong advantages in financial fields, Government chains, and enterprise blockchain solutions, helping the SIPC technology ecosystem become a set of industry blockchain solutions.
+If the main target of the early cross-chain solution was asset transfer, the cross-chain solution of SIMPLE was not only asset transfer, but also focused on cross-chain infrastructure. It mainly emphasizes that assets can be realized through smart contracts. The cross-chain technology of SIMPLE is determined to become a high-performance and decentralized cross-chain infrastructure. It also accesses various cross-chain applications and focuses on commercial implementation. This cross-chain solution enables SIMPLE to have strong advantages in financial fields, Government chains, and enterprise blockchain solutions, helping the SIMPLE technology ecosystem become a set of industry blockchain solutions.
 
 The following is the structure diagram of SimpleChain cross-chain solution:
 
@@ -28,7 +28,7 @@ The cross-chain transaction process is as follows:
 
 ## Advantages of "free and fair man" mechanism
 
-The advantages of the SIPC cross-chain solution are as follows:
+The advantages of the SIMPLE cross-chain solution are as follows:
 
 **(1) Decentralization**
 

@@ -1,8 +1,8 @@
 [SIPC.VIP](http://www.sipc.vip/) the digital resource application ecological platform is controlled by Hong Kong Hash Power `Calforce HoldingLimited` operation，Is serving[SimpleChain](https://www.simplechain.com/) and the important ecological platform of the subchain is an important entrance to the future "new infrastructure construction (new infrastructure)", providing users with safe, convenient, exclusive and standardized services. The platform mainly provides leading "new infrastructure" services for digital resources to global users. At present, the platform has completed the layout of Singapore, the United States, the United Kingdom, Japan, South Korea, Poland, Hong Kong and other countries and regions.
 
-**SIPC Ecology**
+**SIMPLE Ecology**
 
-Integrate multiple `SIPC` tools to create a `SIPC` blockchain ecosystem with multiple business forms
+Integrate multiple `SIMPLE` tools to create a `SIMPLE` blockchain ecosystem with multiple business forms
 
 **Security and trust**
 

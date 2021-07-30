@@ -48,7 +48,7 @@ After the IOS installation is complete, please: `打开设置`———`通用`�
 
 ## Transfer/Collection (function key in the upper left corner to enter)
 
-1. Click SIPC in the wallet to enter the details page: transfer/Collection
+1. Click SIMPLE in the wallet to enter the details page: transfer/Collection
 
 2. Click transfer: ordinary transfer/offline transfer (additional remarks the Data in the advanced transfer options is transfer notes, which are generally not written because of the significant increase in the gas fee of the note information)
 

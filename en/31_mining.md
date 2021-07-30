@@ -1,4 +1,4 @@
-Mining is a way to obtain sipc and also a link to participate in the bottom layer of Simplechain ecology. Currently, there are 3 mining pools that support Simplechain mining. They are:
+Mining is a way to obtain SIMPLE and also a link to participate in the bottom layer of Simplechain ecology. Currently, there are 3 mining pools that support Simplechain mining. They are:
  
 [Matpool](https://matpool.io)
 

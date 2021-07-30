@@ -68,7 +68,7 @@ Obtain the contract address:
 
 ### Obtain a contract instance
 
-First, create the directory sipc under src and create the file contracts.js.
+First, create the directory SIMPLE under src and create the file contracts.js.
 
 The ABI format is in json format. You can copy the ABI to the address bar of the browser and format it into a row and then copy it back to save space.
 

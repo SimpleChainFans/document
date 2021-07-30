@@ -99,7 +99,7 @@ curl -X POST 47.110.48.207:8545  -H "Content-Type:application/json" --data '{"js
 
 ## Connect to the SimpleChain node
 
-Create a sipc.js file and write the following code:
+Create a simple.js file and write the following code:
 
 ```javascript
 const config = require('../../config') //Node serve compile information
@@ -112,7 +112,7 @@ Now we are entering the development phase of the core features of Simplechain wa
 
 ### Create a new Simplechain account
 
-The exchange and payment gateway need to generate a new address for the customer so that the user can recharge the service or pay for the product. Generate an unused sipc Address is the basic requirement of any digital asset service, so let's take a look at the specific implementation.
+The exchange and payment gateway need to generate a new address for the customer so that the user can recharge the service or pay for the product. Generate an unused SIMPLE Address is the basic requirement of any digital asset service, so let's take a look at the specific implementation.
 
 First, create a command.js where we subscribe to messages in the queue. It mainly includes the following steps:
 

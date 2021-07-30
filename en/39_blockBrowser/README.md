@@ -12,7 +12,7 @@ Visit the browser: [Browser Address](https://explorer.simplechain.com/)
 
 **Transaction search**
 
-> You can search for transaction records on this page. You can find the information with the sending transaction address and receiving address, the number of sipcs transmitted, the block height of the transaction record, the corresponding hash and the production time. You can also use the search bar to find specific transactions for hashes.
+> You can search for transaction records on this page. You can find the information with the sending transaction address and receiving address, the number of SIMPLE transmitted, the block height of the transaction record, the corresponding hash and the production time. You can also use the search bar to find specific transactions for hashes.
 
 ![3.png](https://i.loli.net/2020/04/23/xFf3HNpQUwMJInA.png)
 
