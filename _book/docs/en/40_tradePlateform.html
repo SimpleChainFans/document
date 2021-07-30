@@ -146,7 +146,7 @@
 
     
         
-        <li class="header">Sipc Coin Negotiate</li>
+        <li class="header">SIMPLE Coin Negotiate</li>
         
         
     
@@ -168,7 +168,7 @@
                 <a href="3_sipcCoin.html">
             
                     
-                    Sipc Coin
+                    SIMPLE Coin
             
                 </a>
             
@@ -627,7 +627,7 @@
                 <a href="31_mining.html">
             
                     
-                    sipc mining
+                    SIMPLE mining
             
                 </a>
             
@@ -712,7 +712,7 @@
                 <a href="37_wallet/">
             
                     
-                    Sipc
+                    SIMPLE
             
                 </a>
             
@@ -970,7 +970,7 @@ curl -X POST <span class="hljs-number">47.110</span><span class="hljs-number">.4
 <h2 id="create-simplechain-wallet-service"><a name="create-simplechain-wallet-service" class="plugin-anchor" href="#create-simplechain-wallet-service"><i class="fa fa-link" aria-hidden="true"></i></a>Create SimpleChain wallet service</h2>
 <p>Now we are entering the development phase of the core features of Simplechain wallet service.</p>
 <h3 id="create-a-new-simplechain-account"><a name="create-a-new-simplechain-account" class="plugin-anchor" href="#create-a-new-simplechain-account"><i class="fa fa-link" aria-hidden="true"></i></a>Create a new Simplechain account</h3>
-<p>The exchange and payment gateway need to generate a new address for the customer so that the user can recharge the service or pay for the product. Generate an unused sipc Address is the basic requirement of any digital asset service, so let&apos;s take a look at the specific implementation.</p>
+<p>The exchange and payment gateway need to generate a new address for the customer so that the user can recharge the service or pay for the product. Generate an unused SIMPLE Address is the basic requirement of any digital asset service, so let&apos;s take a look at the specific implementation.</p>
 <p>First, create a command.js where we subscribe to messages in the queue. It mainly includes the following steps:</p>
 <p>Connect to the command topic and listen to the new create_account command When a new create_account command is received, a new key pair is created and stored in the password library.</p>
 <p>The account_created topic that generates the account_created message and sends it to the queue.

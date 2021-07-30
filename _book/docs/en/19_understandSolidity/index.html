@@ -146,7 +146,7 @@
 
     
         
-        <li class="header">Sipc Coin Negotiate</li>
+        <li class="header">SIMPLE Coin Negotiate</li>
         
         
     
@@ -168,7 +168,7 @@
                 <a href="../3_sipcCoin.html">
             
                     
-                    Sipc Coin
+                    SIMPLE Coin
             
                 </a>
             
@@ -627,7 +627,7 @@
                 <a href="../31_mining.html">
             
                     
-                    sipc mining
+                    SIMPLE mining
             
                 </a>
             
@@ -712,7 +712,7 @@
                 <a href="../37_wallet/">
             
                     
-                    Sipc
+                    SIMPLE
             
                 </a>
             
@@ -1697,8 +1697,8 @@ var y = x;
 <p>The type can only be inferred from the first assignment, so the loop in the following code is infinite because i The type of IS uint8 , and the maximum value ratio of this type of variable <code>2000</code> Small.<code>for (var i = 0; i &lt; 2000; i++) { ... }</code></p>
 </blockquote>
 <h2 id="unit-and-global-variables"><a name="unit-and-global-variables" class="plugin-anchor" href="#unit-and-global-variables"><i class="fa fa-link" aria-hidden="true"></i></a>Unit and global variables</h2>
-<h3 id="sipc-unit"><a name="sipc-unit" class="plugin-anchor" href="#sipc-unit"><i class="fa fa-link" aria-hidden="true"></i></a>sipc unit</h3>
-<p>The conversion between sipc units is to add after the number <code>wei</code>&#x3001; <code>finney</code>&#x3001; <code>szabo</code> or <code>ether</code> to implement, if there is no unit behind, the default is Wei. For example <code>2 ether == 2000 finney</code> logical judgment value of IS <code>true</code>&#x3002;</p>
+<h3 id="sipc-unit"><a name="sipc-unit" class="plugin-anchor" href="#sipc-unit"><i class="fa fa-link" aria-hidden="true"></i></a>SIMPLE unit</h3>
+<p>The conversion between SIMPLE units is to add after the number <code>wei</code>&#x3001; <code>finney</code>&#x3001; <code>szabo</code> or <code>ether</code> to implement, if there is no unit behind, the default is Wei. For example <code>2 ether == 2000 finney</code> logical judgment value of IS <code>true</code>&#x3002;</p>
 <h3 id="time-unit"><a name="time-unit" class="plugin-anchor" href="#time-unit"><i class="fa fa-link" aria-hidden="true"></i></a>Time Unit</h3>
 <p>Seconds is the default time unit, between time units, followed by numbers <code>seconds</code>&#x3001; <code>minutes</code>&#x3001; <code>hours</code>&#x3001; <code>days</code>&#x3001; <code>weeks</code> and <code>years</code> Can be converted, the basic conversion relationship is as follows:</p>
 <ul>
@@ -1779,7 +1779,7 @@ keccak256(6382179)
 keccak256(97, 98, 99)
 </code></pre><p>If padding is required, you can use explicit type conversion: <code>keccak256(&quot;\x00\x12&quot;)</code> and <code>keccak256(uint16(0x12))</code> it&apos;s the same.</p>
 <p>Note that constant values are packaged using the minimum number of bytes required to store them. For example&#xFF1A;<code>keccak256(0) == keccak256(uint8(0))</code>&#xFF0C;<code>keccak256(0x12345678) == keccak256(uint32(0x12345678))</code>&#x3002;</p>
-<p>On a private chain, you are likely to encounter <code>sha256</code>&#x3001;<code>ripemd160</code> or <code>ecrecover</code> caused by Out-of-Gas. The reason is that these cryptographic functions exist in the form of &quot;precompiled contracts&quot; in Simplechain virtual machines, and it does not really exist until the first time you receive the message (although the contract code is a hard code already existing in EVM). Therefore, messages sent to non-existent contracts are very expensive, so actual execution will lead to Out-of-Gas errors. Before you actually use your contract, send a little Sipc to each contract, such as 1 Wei. This is not a problem on the official network or test network.</p>
+<p>On a private chain, you are likely to encounter <code>sha256</code>&#x3001;<code>ripemd160</code> or <code>ecrecover</code> caused by Out-of-Gas. The reason is that these cryptographic functions exist in the form of &quot;precompiled contracts&quot; in Simplechain virtual machines, and it does not really exist until the first time you receive the message (although the contract code is a hard code already existing in EVM). Therefore, messages sent to non-existent contracts are very expensive, so actual execution will lead to Out-of-Gas errors. Before you actually use your contract, send a little SIMPLE to each contract, such as 1 Wei. This is not a problem on the official network or test network.</p>
 <h4 id="address-related"><a name="address-related" class="plugin-anchor" href="#address-related"><i class="fa fa-link" aria-hidden="true"></i></a>Address-related</h4>
 <p><code>&lt;address&gt;.balance</code> (<code>uint256</code>):in Wei :ref:<code>address</code> balance</p>
 <p><code>&lt;address&gt;.transfer(uint256 amount)</code>:to :ref:<code>address</code> if the number of Wei sent is the amount, an exception is thrown when the error occurs. The miner fee for sending 2300 gas cannot be adjusted.</p>
@@ -2355,7 +2355,7 @@ This feature is not fully available. The compiler does not reserve storage for t
 <li><code>generate an event</code>&#x3002;</li>
 <li><code>create smart contract</code>&#x3002;</li>
 <li>use <code>selfdestruct</code>&#x3002;</li>
-<li>send Sipc coins by calling&#x3002;</li>
+<li>send SIMPLE coins by calling&#x3002;</li>
 <li>Call any that is not marked <code>view</code> Or <code>pure</code> The function.</li>
 <li>Use low-level calls.</li>
 <li>Use an inline assembly that contains specific opcodes.</li>
@@ -2395,20 +2395,20 @@ This feature is not fully available. The compiler does not reserve storage for t
 </blockquote>
 <h4 id="fallback-function"><a name="fallback-function" class="plugin-anchor" href="#fallback-function"><i class="fa fa-link" aria-hidden="true"></i></a>Fallback function</h4>
 <p>A contract can have an unnamed function. This function cannot have parameters or return values. If no other function matches the given function identifier (or no call data is provided) in a contract call, the function (fallback function) will be executed.</p>
-<p>In addition, this function will be executed every time the contract receives Sipc coins (without any data). In addition, the fallback function must be marked payable . If such a function does not exist, the contract cannot receive Sipc coins through regular transactions.</p>
+<p>In addition, this function will be executed every time the contract receives SIMPLE coins (without any data). In addition, the fallback function must be marked payable . If such a function does not exist, the contract cannot receive SIMPLE coins through regular transactions.</p>
 <p>In this context, usually only a few gas can be used to complete this function call (to be exact, 2300 gas), so it is important to make the call of fallback function as cheap as possible. Note that the gas required for transactions calling the fallback function (rather than internal calls) is much higher, because an additional 21000 gas or more is charged for each transaction for signature check and other operations.</p>
 <p>Specifically, the following operations consume more gas than the fallback function:</p>
 <ul>
 <li>Write storage</li>
 <li>Create a contract</li>
 <li>Call external functions that consume a lot of gas</li>
-<li>Send Sipc coins</li>
+<li>Send SIMPLE coins</li>
 </ul>
 <p>Make sure that you thoroughly test your fallback function before deploying the contract to ensure that the execution cost is less than 2300 gas.</p>
 <blockquote>
 <p> Even if the fallback function cannot have parameters, it can still be used <code>msg.data</code> to obtain any valid data provided with the call.</p>
 <p> A contract that does not define a fallback function directly receives ether coins (no function call, that is, use <code>send</code> Or <code>transfer</code> ) throws an exception and returns the ether coin (the behavior will be different before Solidity v0.4.0). Therefore, if you want your contract to receive Ether coins, you must implement the fallback function.</p>
-<p> A contract without the payable fallback function can be used coinbase transaction (Also known miner block reward ) the recipient or selfdestruct The target to receive sipc coins.</p>
+<p> A contract without the payable fallback function can be used coinbase transaction (Also known miner block reward ) the recipient or selfdestruct The target to receive SIMPLE coins.</p>
 <p> A contract cannot respond to this ether transfer, so it cannot refuse them either. This is determined by EVM when designing, and Solidity cannot bypass this problem.</p>
 <p> This also means <code>this.balance</code> can be higher than the sum of some manual accounting implemented in the contract (that is, the accumulator updated in the fallback function).</p>
 </blockquote>
@@ -2866,7 +2866,7 @@ If these addresses are not passed to the compiler as parameters, the compiled he
 <ul>
 <li>No state variables</li>
 <li>Unable to inherit or be inherited</li>
-<li>Unable to receive Sipc coins</li>
+<li>Unable to receive SIMPLE coins</li>
 </ul>
 <p>&#xFF08;These restrictions may be lifted in the future&#xFF09;</p>
 <h4 id="library-call-protection"><a name="library-call-protection" class="plugin-anchor" href="#library-call-protection"><i class="fa fa-link" aria-hidden="true"></i></a>Library call protection</h4>

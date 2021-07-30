@@ -146,7 +146,7 @@
 
     
         
-        <li class="header">Sipc Coin Negotiate</li>
+        <li class="header">SIMPLE Coin Negotiate</li>
         
         
     
@@ -168,7 +168,7 @@
                 <a href="../3_sipcCoin.html">
             
                     
-                    Sipc Coin
+                    SIMPLE Coin
             
                 </a>
             
@@ -627,7 +627,7 @@
                 <a href="../31_mining.html">
             
                     
-                    sipc mining
+                    SIMPLE mining
             
                 </a>
             
@@ -712,7 +712,7 @@
                 <a href="../37_wallet/">
             
                     
-                    Sipc
+                    SIMPLE
             
                 </a>
             
@@ -964,7 +964,7 @@ Or send a message to a smart contract.</p>
 <ul>
 <li><p>First, because hash operation is involved, the order of field definition cannot be adjusted at will, and fields must be defined as required under non-special processing conditions. So <code>txdata</code> The fields defined in conform to the content order of Simplechain transaction messages.</p>
 </li>
-<li><p>Second, when monetary calculation is involved, the problem of inaccurate calculation cannot be caused by lack of accuracy. Therefore, in all blockchain designs such as Simplechain and Bitcoin, the currency type is an integer, but the minimum value 1 The value of the currency represented is different. In<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>a sipc is equal to the 18th power Amount of 10. When 10 billion sipcs are to be represented, the Amount is equal to the 27th power of 10. It has far exceeded the range (0-18446744073709551615) that Uint64 can represent. Therefore<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>all use the large numbers provided by the Go standard package <code>big.Int</code> Perform currency operations and define currencies. Here <code>Price</code> And <code>Amount</code> Both are of the big.Int pointer type. In addition, the three values of the signature also use the big.Int type because the number is too large.</p>
+<li><p>Second, when monetary calculation is involved, the problem of inaccurate calculation cannot be caused by lack of accuracy. Therefore, in all blockchain designs such as Simplechain and Bitcoin, the currency type is an integer, but the minimum value 1 The value of the currency represented is different. In<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>a SIMPLE is equal to the 18th power Amount of 10. When 10 billion SIMPLE are to be represented, the Amount is equal to the 27th power of 10. It has far exceeded the range (0-18446744073709551615) that Uint64 can represent. Therefore<a href="https://www.simplechain.com/" target="_blank">SimpleChain</a>all use the large numbers provided by the Go standard package <code>big.Int</code> Perform currency operations and define currencies. Here <code>Price</code> And <code>Amount</code> Both are of the big.Int pointer type. In addition, the three values of the signature also use the big.Int type because the number is too large.</p>
 </li>
 <li><p>The third is the last <code>Hash</code> Field, which is not part of the transaction content, just to include the transaction hash in the transaction JSON. To prevent participation hash, the field is marked <code>rlp:&quot;-&quot;</code> . In addition, Transaction also defines three cache items: Transaction hash, Transaction size, and Transaction sender (from). The cache is used frequently and consumes a large amount of CPU.</p>
 </li>

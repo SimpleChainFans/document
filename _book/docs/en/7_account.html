@@ -146,7 +146,7 @@
 
     
         
-        <li class="header">Sipc Coin Negotiate</li>
+        <li class="header">SIMPLE Coin Negotiate</li>
         
         
     
@@ -168,7 +168,7 @@
                 <a href="3_sipcCoin.html">
             
                     
-                    Sipc Coin
+                    SIMPLE Coin
             
                 </a>
             
@@ -627,7 +627,7 @@
                 <a href="31_mining.html">
             
                     
-                    sipc mining
+                    SIMPLE mining
             
                 </a>
             
@@ -712,7 +712,7 @@
                 <a href="37_wallet/">
             
                     
-                    Sipc
+                    SIMPLE
             
                 </a>
             
@@ -916,7 +916,7 @@ This is also the only medium for human beings to communicate with Simplechain ac
 You can only use a private external account signature.</p>
 <p>Summary of external account characteristics:</p>
 <ol>
-<li>Have sipc balance.</li>
+<li>Have SIMPLE balance.</li>
 <li>Can send transactions, including transfer and execution of contract codes.</li>
 <li>Controlled by the private key.</li>
 <li>No relevant executable code.</li>
@@ -941,7 +941,7 @@ Its purpose is to facilitate the status channel by determining a stable contract
 </code></pre>
 <p>Summary of contract account characteristics:</p>
 <ol>
-<li>Have sipc balance.</li>
+<li>Have SIMPLE balance.</li>
 <li>Relevant executable code (contract code).</li>
 <li>Contract codes can be called by transactions or other contract messages.</li>
 <li>Other contract codes can be called when the contract code is executed.</li>
@@ -1010,7 +1010,7 @@ The initial Nonce value of the account is 0. The Nonce value is added once for e
 st.state.SetNonce(msg.From(), st.state.GetNonce(sender.Address())+<span class="hljs-number">1</span>)
 </code></pre>
 <p>The additional advantage of this is that Nonce can generally be used as the counter for the number of transactions of the account, especially for the contract account, the number of times the contract is called can be accurately recorded.</p>
-<p>and Balance Then record the number of sipcs owned by the account, which is called account balance. Transfer assets (Transfer) are in one account Balance Add up and reduce in another account.</p>
+<p>and Balance Then record the number of SIMPLE owned by the account, which is called account balance. Transfer assets (Transfer) are in one account Balance Add up and reduce in another account.</p>
 <pre><code class="lang-go"><span class="hljs-comment">// core/evm.go:94</span>
 <span class="hljs-keyword">func</span> Transfer(db vm.StateDB, sender, recipient common.Address, amount *big.Int) {
     db.SubBalance(sender, amount)
